@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Places to visit | London 2019</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <a class="navbar-brand"
+
+        href="#">London 2019</a> <button class="navbar-toggler" type="button" data-toggle="collapse"
+
+        data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+
+        aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span
+
+                class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="places.html">Places
+              to visit</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="dining.html">Places
+              to eat</a> </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron" style="background-image:url(dusk.jpg);background-size: 100%;">
+      <h1 style="color:white;"> Places to visit in London </h1>
+      <h4 style="color:white;"> including Opening Times, Prices, and Nearest
+        Station </h4>
+    </div>
+    <div class="card mb-3">
+      <h3 class="card-header">John Soanes' House</h3>
+      <div class="card-body">
+        <h5 class="card-title">Architecture Museum</h5>
+        <h6 class="card-subtitle text-muted">Lincoln's Inn Fields, Holborn</h6>
+      </div>
+      <img style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba%28255%2C255%2C255%2C.75%29%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+
+        alt="Card image">
+      <div class="card-body">
+        <p class="card-text">The unusual and unique home of Sir John Soane,
+          eccentric architect of the Bank of England, presents a chimera of
+          colors, unusual perspectives and decorative ornaments drawn from many
+          centuries.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Holborn</li>
+        <li class="list-group-item">Friday, Saturday, Sunday<br>
+          10:00 - 17:00</li>
+        <li class="list-group-item"><a href="https://www.soane.org/">soane.org</a></li>
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+
+crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+
+crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+
+crossorigin="anonymous"></script>
+  </body>
+</html>
