@@ -4,6 +4,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
     <title>Places to visit | London 2019</title>
   </head>
   <body>
@@ -81,9 +84,9 @@
           Stadium</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><b>Wembley Park <br>
-            Wembley Stadium (via Marylebone)</b></li>
-        <li class="list-group-item"><b>Free entry</b></li>
+        <li class="list-group-item"><i class="fas fa-train"></i><b>&nbsp;
+            Wembley Park</b> or<b> Wembley Stadium (via Marylebone)</b></li>
+        <li class="list-group-item"><i class="fas fa-coins"></i><b> Free entry</b></li>
         <li class="list-group-item"><b>Friday, Saturday<br>
             10:00 - late</b></li>
         <li class="list-group-item"><a href="https://www.coaldropsyard.com/">coaldropsyard.com</a></li>
