@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css"
-
-      rel="stylesheet" integrity="sha384-SYbiks6VdZNAKT8DNoXQZwXAiuUo5/quw6nMKtFlGO/4WwxW86BSTMtgdzzB9JJl"
-
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-SYbiks6VdZNAKT8DNoXQZwXAiuUo5/quw6nMKtFlGO/4WwxW86BSTMtgdzzB9JJl"
       crossorigin="anonymous">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>London 2019</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <a class="navbar-brand"
-
-        href="#">London 2019</a> <button class="navbar-toggler" type="button" data-toggle="collapse"
-
-        data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <a class="navbar-brand"
+        href="#">London 2019</a> <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
         aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"> <a class="nav-link" href="#">Home <span
-
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span
                 class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Places to visit</a>
-          </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Places to eat</a>
-          </li>
+          <li class="nav-item"> <a class="nav-link" href="places.html">Places
+              to visit</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="dining.html">Places
+              to eat</a> </li>
         </ul>
       </div>
     </nav>
@@ -40,11 +32,6 @@
           <li><a href="dining.html">Restaurant listings</a></li>
         </ul>
       </h3>
-      
-      
-      
-     
     </div>
-    
   </body>
 </html>
