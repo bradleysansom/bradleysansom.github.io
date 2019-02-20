@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css"
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css"
 
       rel="stylesheet" integrity="sha384-SYbiks6VdZNAKT8DNoXQZwXAiuUo5/quw6nMKtFlGO/4WwxW86BSTMtgdzzB9JJl"
 
       crossorigin="anonymous">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>London 2019</title>
   </head>
   <body>
@@ -30,18 +31,19 @@
         </ul>
       </div>
     </nav>
-    <div class="jumbotron" style="background-image:url(dusk.jpg);background-size: 100%;"> 
-    <h1 style="color:white;">
-       London
-      </h1>
+    <div class="jumbotron" style="background-image:url(dusk.jpg);background-size: 100%;">
+      <h1 style="color:white;"> London </h1>
       <h3 style="color:white;">
         <ul>
           <li><a href="places.html">Attractions</a></li>
           <li><a href="dining.html">Restaurant listings</a></li>
         </ul>
       </h3>
-    
-    
+      
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </div>
+    
   </body>
 </html>
