@@ -1,4 +1,52 @@
 @font-face {
+    font-family: 'Proxima Nova Alt Rg';
+    src: url('ProximaNovaA-Bold.woff2') format('woff2'),
+        url('ProximaNovaA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('ProximaNovaT-Thin.woff2') format('woff2'),
+        url('ProximaNovaT-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('ProximaNova-Semibold.woff2') format('woff2'),
+        url('ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Bl';
+    src: url('ProximaNovaA-Black.woff2') format('woff2'),
+        url('ProximaNovaA-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Rg';
+    src: url('ProximaNovaA-Regular.woff2') format('woff2'),
+        url('ProximaNovaA-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Alt Cn Lt';
+    src: url('ProximaNovaACond-Semibold.woff2') format('woff2'),
+        url('ProximaNovaACond-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Beyond The Mountains';
     src: url('BeyondTheMountains.woff2') format('woff2'),
         url('BeyondTheMountains.woff') format('woff');

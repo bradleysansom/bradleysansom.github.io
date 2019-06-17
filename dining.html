@@ -8,9 +8,27 @@
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Places to eat | London 2019</title>
+    <link rel="stylesheet" href="fonts.css">
+    <title>Places to eat down in Cornwall</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .glow {
+            color: #fff;
+            -webkit-animation: glow 5s ease-in-out infinite alternate;
+            -moz-animation: glow 5s ease-in-out infinite alternate;
+            animation: glow 5s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #F68618, 0 0 40px #F68618, 0 0 50px #F68618, 0 0 60px #F68618, 0 0 70px #F68618;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #B15B07, 0 0 40px #B15B07, 0 0 50px #B15B07, 0 0 60px #B15B07, 0 0 70px #B15B07, 0 0 80px #B15B07;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -30,282 +48,13 @@
         </div>
     </nav>
     <div class="jumbotron" style="background-image:url(dusk.jpg);background-size: 100%;">
-        <h1 style="color:white;"> Restaurants in London </h1>
+        <h1 class="glow" style="color:white;font-family: 'Beyond the Mountains';"> Places to eat </h1>
         <h3 style="color:white;">
-            Locations of Restaurants in London
+            Locations of Restaurants in Cornwall
         </h3>
     </div>
-    <div class="card">
-        <ul class="nav nav-tabs" style="align-content:center;padding: 2% 2%">
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#valerie">Patisserie Valerie</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#diner">Ed's Diner</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tasca">La Tasca</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#rouge">Cafe Rouge</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#fridays">TGI Fridays</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#iguanas">Las Iguanas</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#slug">Slug and Lettuce</a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="valerie" class="tab-pane fade in active">
-                <img src="valerie.png" alt="Patisserie Valerie" width="65%">
-                <div class="alert alert-dismissible alert-warning">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <h6 class="alert-heading">
-                        Note: Only restaurants with full menu, according to website, are shown.<br> Others may still serve fries, as the website isn't particularly clear.</h6>
-                </div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Marylebone High Street</th>
-                            <td>Baker Street, Regents Park, Great Portland Street</td>
-                        </tr>
-
-                    </tbody>
-                </table>
 
 
-
-
-
-
-
-            </div>
-            <div id="diner" class="tab-pane fade">
-                <img src="diner.png" alt="Ed's Easy Diner" width="65%">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Victoria Place</th>
-                            <td>Victoria</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Mayfair</th>
-                            <td>Bond Street</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            <div id="tasca" class="tab-pane fade">
-                <img src="tasca.png" alt="La Tasca" width="65%">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Leadenhall Market</th>
-                            <td>Bank, Fenchurch Street</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="rouge" class="tab-pane fade">
-                <img src="rouge.png" alt="Café Rouge" width="65%">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Wellington Street</th>
-                            <td>Temple, Covent Garden</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Hampstead</th>
-                            <td>Hampstead</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Hays Galleria</th>
-                            <td>London Bridge</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Blackheath</th>
-                            <td>Blackheath</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Greenwich</th>
-                            <td>Cutty Sark, Greenwich</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">St Pauls</th>
-                            <td>St Pauls</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Kew Bridge</th>
-                            <td>Kew Bridge</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Victoria Place</th>
-                            <td>Victoria</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Pinner</th>
-                            <td>Pinner</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Kingsway</th>
-                            <td>Holborn</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Canary Wharf</th>
-                            <td>Canary Wharf</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">O<sub>2</sub></th>
-                            <td>North Greenwich</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Highgate</th>
-                            <td>Highgate, Archway</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Dulwich</th>
-                            <td>West Dulwich</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Southgate</th>
-                            <td>Southgate</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">St Katharine's Docks</th>
-                            <td>Tower Hill</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tottenham Court Road</th>
-                            <td>Temple, Covent Garden</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="fridays" class="tab-pane fade">
-                <img src="fridays.png" alt="TGI Fridays" width="65%">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Leicester Square</th>
-                            <td>Leicester Square</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Covent Garden</th>
-                            <td>Covent Garden</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="iguanas" class="tab-pane fade">
-                <img src="iguanas.png" alt="Las Iguanas" width="65%">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Westfield Olympic Park</th>
-                            <td>Stratford, Stratford International</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Brunswick Square</th>
-                            <td>Russell Square</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Royal Festival Hall</th>
-                            <td>Waterloo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">London Designer Outlet</th>
-                            <td>Wembley Park, Wembley Stadium (via Marylebone)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="slug" class="tab-pane fade">
-                <img src="slug.png" alt="The Slug &amp; Lettuce" width="65%">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Location</th>
-                            <th scope="col">Nearest station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Lisle Street</th>
-                            <td>Leicester Square</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">County Hall</th>
-                            <td>Waterloo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Hanover Street</th>
-                            <td>Oxford Circus</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Victoria</th>
-                            <td>Victoria</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">St Pauls</th>
-                            <td>Barbican, St Pauls</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">St Mary Axe</th>
-                            <td>Aldgate, Liverpool Street</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Minories</th>
-                            <td>Aldgate, Tower Hill</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tower Bridge</th>
-                            <td>Tower Hill</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Canary Wharf</th>
-                            <td>Canary Wharf</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">O<sub>2</sub></th>
-                            <td>North Greenwich</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Canary Wharf</th>
-                            <td>Canary Wharf</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 
 
 
