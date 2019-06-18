@@ -190,7 +190,7 @@
             //$('.card').show();
             var filter = $(this).val(); // get the value of the input, which we filter on
             console.log(filter);
-            $('.container').find(".card-header-pills:not(:contains(" + filter + "))").parent().css('display', 'none');
+            $('.container').find(".card-body:not(:contains(" + filter + "))").parent().css('display', 'none');
         });
     </script>
 
