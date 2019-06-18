@@ -6,6 +6,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fonts.css">
@@ -57,146 +59,155 @@
             </ul>
         </div>
     </nav>
-    <div class="jumbotron" style="background-image:url(dusk.jpg);background-size: 100%;">
+    <div class="jumbotron" style="background-image:url(dusk.jpg);background-size:cover;min-width: 100%;
+    min-height: 100%;background-position:center;">
         <h1 class="glow" style="color:white;font-family: 'Beyond the Mountains';"> Places to eat </h1>
         <h3 style="color:white;">
             Locations of Restaurants in Cornwall
         </h3>
     </div>
-    <div style="padding-left: 2%; padding-right: 2%;">
-        <div class="container">
-            <div class="row py-2">
-                <div class="col-sm-4">
-                    <input type="search" placeholder="Start typing.." name="search" class="form-control searchbox-input" required="">
-                </div>
-            </div>
 
-            <div class="card mb-3">
-                <div class="card-header" style="background-color:#FF0000 !important;">
-                    <img src="Frankie.svg" width="70%" alt="Frankie &amp; Benny's">
+
+    <div class="container search-table">
+        <div class="search-box">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Search by brand, cuisine, location...</h5>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Italian American</h5>
-                    <h6 class="card-subtitle text-muted">Old Bus Station site</h6>
+                <div class="col-md-9">
+                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search">
+                    <script>
+                        $(document).ready(function() {
+                            $("#myInput").on("keyup", function() {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                        });
+                    </script>
                 </div>
-                <img style=" width: 100%; display: block;" src="franks.png" alt="Card image">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" style="display:inline-block;"><b>Unit 2<br>The Ark<br>East St<br>Newquay<br>TR7 1DN</b>
-                        <img src="icon-place-red.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50">
-                    </li>
-                    <li class="list-group-item"><b>Monday
-                             9am–10pm<br>
-                            Tuesday
-                             9am–10pm<br>
-                            Wednesday
-                             9am–10pm<br>
-                            Thursday
-                             9am–10pm<br>
-                            Friday
-                             9am–10pm<br>
-                            Saturday
-                             9am–10pm<br>
-                            Sunday
-                             9am–10pm</b><img src="icon-time-red.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
-                    <li class="list-group-item"><a href="https://www.frankieandbennys.com/" style="color:#FF0000 !important;">frankieandbennys.com</a><img src="icon-link-red.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
-                </ul>
-            </div>
-            <div class="card mb-3">
-                <div class="card-header" style="background-color:#1E90FF !important;">
-                    <img src="stavros.png" width="70%" alt="Stavros">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Greek Taverna</h5>
-                    <h6 class="card-subtitle text-muted">Near Aldi</h6>
-                </div>
-                <img style=" width: 100%; display: block;" src="stav.jpg" alt="Card image">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>6 Cliff Road 
-                                <br>Newquay <br>
-                                TR7 1SG</b>
-                        <img src="icon-place-blue.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50"></li>
-                    <li class="list-group-item"><b>Monday
-                                 12pm–11pm<br>
-                                Tuesday
-                                12pm–11pm<br>
-                                Wednesday
-                                12pm–11pm<br>
-                                Thursday
-                                12pm–11pm<br>
-                                Friday
-                                12pm–11pm<br>
-                                Saturday
-                                12pm–11pm<br>
-                                Sunday
-                                12pm–11pm</b>
-                        <img src="icon-time-blue.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;">
-                    </li>
-                    <li class="list-group-item"><a href="https://www.stavrosgreektaverna.co.uk/" style="color:#1E90FF !important;">stavrosgreektaverna.co.uk</a>
-                        <img src="icon-link-blue.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
-                </ul>
-            </div>
-            <div class="card mb-3">
-                <div class="card-header" style="background-color:#FFD700 !important;">
-                    <img src="Chiquitos.svg" width="70%" alt="Chiquito">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Mexican</h5>
-                    <h6 class="card-subtitle text-muted">near Cornwall Hospital</h6>
-                </div>
-                <img style=" width: 100%; display: block;" src="franks.png" alt="Card image">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" style="display:inline-block;"><b>Unit 3<br>West Truro Retail Park<br>Truro<br>TR3 6FT</b>
-                        <img src="icon-place-yellow.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50">
-                    </li>
-                    <li class="list-group-item"><b>Monday	
-                            9:00 AM - 11:00 PM<br>
-                            Tuesday	
-                            9:00 AM - 11:00 PM<br>
-                            Wednesday	
-                            9:00 AM - 11:00 PM<br>
-                            Thursday	
-                            9:00 AM - 11:00 PM<br>
-                            Friday	
-                            9:00 AM - 11:00 PM<br>
-                            Saturday	
-                            9:00 AM - 11:00 PM<br>
-                            Sunday	
-                            9:00 AM - 10:30 PM
-                            </b><img src="icon-time-yellow.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
-                    <li class="list-group-item"><a href="https://www.chiquito.co.uk/" style="color:#FFD700 !important;">chiquito.co.uk</a><img src="icon-link-yellow.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
-                </ul>
             </div>
         </div>
+        <div class="search-list">
+
+            <table class="table" id="myTable">
+
+                <tbody>
+
+
+                    <tr>
+                        <td>
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color:#FF0000 !important;">
+                                    <img src="Frankie.svg" width="70%" alt="Frankie &amp; Benny's">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Italian American</h5>
+                                    <h6 class="card-subtitle text-muted">Old Bus Station site</h6>
+                                </div>
+                                <img style=" width: 100%; display: block;" src="franks.png" alt="Card image">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" style="display:inline-block;"><b>Unit 2<br>The Ark<br>East St<br>Newquay<br>TR7 1DN</b>
+                                        <img src="icon-place-red.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50">
+                                    </li>
+                                    <li class="list-group-item"><b>Monday
+                                             9am–10pm<br>
+                                            Tuesday
+                                             9am–10pm<br>
+                                            Wednesday
+                                             9am–10pm<br>
+                                            Thursday
+                                             9am–10pm<br>
+                                            Friday
+                                             9am–10pm<br>
+                                            Saturday
+                                             9am–10pm<br>
+                                            Sunday
+                                             9am–10pm</b><img src="icon-time-red.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                                    <li class="list-group-item"><a href="https://www.frankieandbennys.com/" style="color:#FF0000 !important;">frankieandbennys.com</a><img src="icon-link-red.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color:#1E90FF !important;">
+                                    <img src="stavros.png" width="70%" alt="Stavros">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Greek Taverna</h5>
+                                    <h6 class="card-subtitle text-muted">Near Aldi</h6>
+                                </div>
+                                <img style=" width: 100%; display: block;" src="stav.jpg" alt="Card image">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><b>6 Cliff Road 
+                                                        <br>Newquay <br>
+                                                        TR7 1SG</b>
+                                        <img src="icon-place-blue.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50"></li>
+                                    <li class="list-group-item"><b>Monday
+                                                         12pm–11pm<br>
+                                                        Tuesday
+                                                        12pm–11pm<br>
+                                                        Wednesday
+                                                        12pm–11pm<br>
+                                                        Thursday
+                                                        12pm–11pm<br>
+                                                        Friday
+                                                        12pm–11pm<br>
+                                                        Saturday
+                                                        12pm–11pm<br>
+                                                        Sunday
+                                                        12pm–11pm</b>
+                                        <img src="icon-time-blue.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;">
+                                    </li>
+                                    <li class="list-group-item"><a href="https://www.stavrosgreektaverna.co.uk/" style="color:#1E90FF !important;">stavrosgreektaverna.co.uk</a>
+                                        <img src="icon-link-blue.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color:#FFD700 !important;">
+                                    <img src="Chiquitos.svg" width="70%" alt="Chiquito">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Mexican</h5>
+                                    <h6 class="card-subtitle text-muted">near Cornwall Hospital</h6>
+                                </div>
+                                <img style=" width: 100%; display: block;" src="franks.png" alt="Card image">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" style="display:inline-block;"><b>Unit 3<br>West Truro Retail Park<br>Truro<br>TR3 6FT</b>
+                                        <img src="icon-place-yellow.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50">
+                                    </li>
+                                    <li class="list-group-item"><b>Monday	
+                                                    9:00 AM - 11:00 PM<br>
+                                                    Tuesday	
+                                                    9:00 AM - 11:00 PM<br>
+                                                    Wednesday	
+                                                    9:00 AM - 11:00 PM<br>
+                                                    Thursday	
+                                                    9:00 AM - 11:00 PM<br>
+                                                    Friday	
+                                                    9:00 AM - 11:00 PM<br>
+                                                    Saturday	
+                                                    9:00 AM - 11:00 PM<br>
+                                                    Sunday	
+                                                    9:00 AM - 10:30 PM
+                                                    </b><img src="icon-time-yellow.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                                    <li class="list-group-item"><a href="https://www.chiquito.co.uk/" style="color:#FFD700 !important;">chiquito.co.uk</a><img src="icon-link-yellow.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        $('.searchbox-input').on('keyup', function() {
-            console.log(filter);
-            //$('.card').show();
-            var filter = $(this).val(); // get the value of the input, which we filter on
-            console.log(filter);
-            $('.container').find(".card-body:not(:contains(" + filter + "))").parent().css('display', 'none');
-        });
-    </script>
-
-
-
-
 
 
 
