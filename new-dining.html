@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Test-->
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    ---- Include the above in your HEAD tag ---------->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fonts.css">
+    <title>Places to eat down in Cornwall</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .glow {
+            color: #fff;
+            -webkit-animation: glow 5s ease-in-out infinite alternate;
+            -moz-animation: glow 5s ease-in-out infinite alternate;
+            animation: glow 5s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #F68618, 0 0 40px #F68618, 0 0 50px #F68618, 0 0 60px #F68618, 0 0 70px #F68618;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #B15B07, 0 0 40px #B15B07, 0 0 50px #B15B07, 0 0 60px #B15B07, 0 0 70px #B15B07, 0 0 80px #B15B07;
+            }
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #F68618, 0 0 40px #F68618, 0 0 50px #F68618, 0 0 60px #F68618, 0 0 70px #F68618;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #B15B07, 0 0 40px #B15B07, 0 0 50px #B15B07, 0 0 60px #B15B07, 0 0 70px #B15B07, 0 0 80px #B15B07;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html"><img src="logoline.png" alt="Down in Cronwall" width="200"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"> <a class="nav-link" href="index.html">Home <span
+
+                class="sr-only">(current)</span></a> </li>
+                <li class="nav-item"> <a class="nav-link" href="places.html">Places
+              to visit</a> </li>
+                <li class="nav-item active"> <a class="nav-link" href="dining.html">Places
+              to eat</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron" style="background-image:url(dusk.jpg);background-size:cover;min-width: 100%;
+    min-height: 100%;background-position:center;">
+        <h1 class="glow" style="color:white;font-family: 'Beyond the Mountains';"> Places to eat </h1>
+        <h3 style="color:white;">
+            Locations of Restaurants in Cornwall
+        </h3>
+    </div>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="container search-table">
+        <div class="search-box">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Search by brand, cuisine, location...</h5>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search">
+                    <script>
+                        $(document).ready(function() {
+                            $("#myInput").on("keyup", function() {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="search-list">
+
+            <table class="table" id="myTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    <tr>
+                        <td>Pigeon</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3B1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
