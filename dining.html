@@ -22,19 +22,19 @@
         
         @-webkit-keyframes glow {
             from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #F68618, 0 0 40px #F68618, 0 0 50px #F68618, 0 0 60px #F68618, 0 0 70px #F68618;
+                text-shadow: 0 0 10 #fff, 0 0 20 #fff, 0 0 30 #F68618, 0 0 40 #F68618, 0 0 50 #F68618, 0 0 60 #F68618, 0 0 70 #F68618;
             }
             to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #B15B07, 0 0 40px #B15B07, 0 0 50px #B15B07, 0 0 60px #B15B07, 0 0 70px #B15B07, 0 0 80px #B15B07;
+                text-shadow: 0 0 20 #fff, 0 0 30 #B15B07, 0 0 40 #B15B07, 0 0 50 #B15B07, 0 0 60 #B15B07, 0 0 70 #B15B07, 0 0 80 #B15B07;
             }
         }
         
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #F68618, 0 0 40px #F68618, 0 0 50px #F68618, 0 0 60px #F68618, 0 0 70px #F68618;
+                text-shadow: 0 0 10 #fff, 0 0 20 #fff, 0 0 30 #F68618, 0 0 40 #F68618, 0 0 50 #F68618, 0 0 60 #F68618, 0 0 70 #F68618;
             }
             to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #B15B07, 0 0 40px #B15B07, 0 0 50px #B15B07, 0 0 60px #B15B07, 0 0 70px #B15B07, 0 0 80px #B15B07;
+                text-shadow: 0 0 20 #fff, 0 0 30 #B15B07, 0 0 40 #B15B07, 0 0 50 #B15B07, 0 0 60 #B15B07, 0 0 70 #B15B07, 0 0 80 #B15B07;
             }
         }
     </style>
@@ -43,7 +43,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.html"><img src="logoline.png" width="200px"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="index.html"><img src="logoline.png" width="200"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
@@ -69,6 +69,15 @@
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#newquay">Newquay</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#truro">Truro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#plymouth">Plymouth</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#falmouth">Falmouth</a>
+            </li>
         </ul>
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade show active" id="plain">
@@ -86,7 +95,7 @@
                     <img style=" width: 100%; display: block;" src="franks.png" alt="Card image">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" style="display:inline-block;"><b>Unit 2<br>The Ark<br>East St<br>Newquay<br>TR7 1DN</b>
-                            <img src="icon-place-red.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50px">
+                            <img src="icon-place-red.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50">
                         </li>
                         <li class="list-group-item"><b>Monday
                              9am–10pm<br>
@@ -101,8 +110,8 @@
                             Saturday
                              9am–10pm<br>
                             Sunday
-                             9am–10pm</b><img src="icon-time-red.png" alt="location" width="50px" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
-                        <li class="list-group-item"><a href="https://www.frankieandbennys.com/" style="color:#FF0000 !important;">frankieandbennys.com</a><img src="icon-link-red.png" alt="location" width="50px" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                             9am–10pm</b><img src="icon-time-red.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                        <li class="list-group-item"><a href="https://www.frankieandbennys.com/" style="color:#FF0000 !important;">frankieandbennys.com</a><img src="icon-link-red.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
                     </ul>
                 </div>
                 <div class="card mb-3">
@@ -118,7 +127,7 @@
                         <li class="list-group-item"><b>6 Cliff Road 
                                 <br>Newquay <br>
                                 TR7 1SG</b>
-                            <img src="icon-place-blue.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50px"></li>
+                            <img src="icon-place-blue.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50"></li>
                         <li class="list-group-item"><b>Monday
                                  12pm–11pm<br>
                                 Tuesday
@@ -133,13 +142,49 @@
                                 12pm–11pm<br>
                                 Sunday
                                 12pm–11pm</b>
-                            <img src="icon-time-blue.png" alt="location" width="50px" style="text-align:right;display:inline-block;float:right;padding-right:2%;">
+                            <img src="icon-time-blue.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;">
                         </li>
-                        <li class="list-group-item"><a href="https://www.stavrosgreektaverna.co.uk/" style="color:#1E90FF !important;">stavrosgreektaverna.co.uk</a><img src="icon-link-blue.png" alt="location" width="50px" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                        <li class="list-group-item"><a href="https://www.stavrosgreektaverna.co.uk/" style="color:#1E90FF !important;">stavrosgreektaverna.co.uk</a>
+                            <img src="icon-link-blue.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="truro">
+                <div class="card mb-3">
+                    <div class="card-header" style="background-color:#FFD700 !important;">
+                        <img src="Chiquito.svg" width="70%" alt="Chiquito">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mexican</h5>
+                        <h6 class="card-subtitle text-muted">near Cornwall Hospital</h6>
+                    </div>
+                    <img style=" width: 100%; display: block;" src="franks.png" alt="Card image">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="display:inline-block;"><b>Unit 3<br>>West Truro Retail Park<br>Truro<br>TR3 6FT</b>
+                            <img src="icon-place-yellow.png" alt="location" style="text-align:right;display:inline-block;float:right;padding-right:2%;" width="50">
+                        </li>
+                        <li class="list-group-item"><b>Monday	
+                            9:00 AM - 11:00 PM<br>
+                            Tuesday	
+                            9:00 AM - 11:00 PM<br>
+                            Wednesday	
+                            9:00 AM - 11:00 PM<br>
+                            Thursday	
+                            9:00 AM - 11:00 PM<br>
+                            Friday	
+                            9:00 AM - 11:00 PM<br>
+                            Saturday	
+                            9:00 AM - 11:00 PM<br>
+                            Sunday	
+                            9:00 AM - 10:30 PM
+                            </b><img src="icon-time-yellow.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
+                        <li class="list-group-item"><a href="https://www.chiquito.co.uk/" style="color:#FFD700 !important;">chiquito.co.uk</a><img src="icon-link-yellow.png" alt="location" width="50" style="text-align:right;display:inline-block;float:right;padding-right:2%;"></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+    </div>
     </div>
 
 
@@ -180,7 +225,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3B1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
