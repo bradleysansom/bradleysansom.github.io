@@ -7,8 +7,334 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fonts.css">
-
-    <title>Places to visit | London 2019</title>
+    <style>
+        .card {
+            padding-top: 20px;
+            margin: 10px 0 20px 0;
+            background-color: rgba(214, 224, 226, 0.2);
+            border-top-width: 0;
+            border-bottom-width: 2px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .card .card-heading {
+            padding: 0 20px;
+            margin: 0;
+        }
+        
+        .card .card-heading.simple {
+            font-size: 20px;
+            font-weight: 300;
+            color: #777;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .card .card-heading.image img {
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+            margin-right: 15px;
+            vertical-align: top;
+            border: 0;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        
+        .card .card-heading.image .card-heading-header {
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        .card .card-heading.image .card-heading-header h3 {
+            margin: 0;
+            font-size: 14px;
+            line-height: 16px;
+            color: #262626;
+        }
+        
+        .card .card-heading.image .card-heading-header span {
+            font-size: 12px;
+            color: #999999;
+        }
+        
+        .card .card-body {
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+        
+        .card .card-media {
+            padding: 0 20px;
+            margin: 0 -14px;
+        }
+        
+        .card .card-media img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .card .card-actions {
+            min-height: 30px;
+            padding: 0 20px 20px 20px;
+            margin: 20px 0 0 0;
+        }
+        
+        .card .card-comments {
+            padding: 20px;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+        
+        .card .card-comments .comments-collapse-toggle {
+            padding: 0;
+            margin: 0 20px 12px 20px;
+        }
+        
+        .card .card-comments .comments-collapse-toggle a,
+        .card .card-comments .comments-collapse-toggle span {
+            padding-right: 5px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #999;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .card-comments .media-heading {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .card.people {
+            position: relative;
+            display: inline-block;
+            width: 170px;
+            height: 300px;
+            padding-top: 0;
+            margin-left: 20px;
+            overflow: hidden;
+            vertical-align: top;
+        }
+        
+        .card.people:first-child {
+            margin-left: 0;
+        }
+        
+        .card.people .card-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 170px;
+            height: 150px;
+            background-color: #ffffff;
+        }
+        
+        .card.people .card-top.green {
+            background-color: #53a93f;
+        }
+        
+        .card.people .card-top.blue {
+            background-color: #427fed;
+        }
+        
+        .card.people .card-info {
+            position: absolute;
+            top: 150px;
+            display: inline-block;
+            width: 100%;
+            height: 101px;
+            overflow: hidden;
+            background: #ffffff;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .card.people .card-info .title {
+            display: block;
+            margin: 8px 14px 0 14px;
+            overflow: hidden;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            color: #404040;
+        }
+        
+        .card.people .card-info .desc {
+            display: block;
+            margin: 8px 14px 0 14px;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 16px;
+            color: #737373;
+            text-overflow: ellipsis;
+        }
+        
+        .card.people .card-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            padding: 10px 20px;
+            line-height: 29px;
+            text-align: center;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .card.hovercard {
+            position: relative;
+            padding-top: 0;
+            overflow: hidden;
+            text-align: center;
+            background-color: rgba(214, 224, 226, 0.2);
+        }
+        
+        #minack1 {
+            background: url("https://www.minack.com/wp-content/uploads/2015/07/chorusofd.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #plymouth1 {
+            background: url("https://content.knightfrank.com/property/btd170272/images/8271bad0-2595-493d-9540-2cb9cb9bdac4-73.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #trago1 {
+            background: url("https://media-cdn.tripadvisor.com/media/photo-s/02/2e/e1/e5/the-new-cafe-at-trago.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #otter1 {
+            background: url("http://www.tamarotters.co.uk/images/dsc_0498.jpg?crc=4169606454");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #padstow1 {
+            background: url("http://www.therockinnrock.co.uk/wp-content/uploads/2018/03/shutterstock_237623488-min-600x600.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #shiver1 {
+            background: url("data:image/jpeg;base64,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");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #rock1 {
+            background: url("https://secure.i.telegraph.co.uk/multimedia/archive/03583/Rock_in_Cornwall_3583600b.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #newquay1 {
+            background: url("https://www.visitcornwall.com/sites/default/files/Newquay_John%20Such_0.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #truro1 {
+            background: url("https://i2-prod.cornwalllive.com/news/cornwall-news/article2136123.ece/ALTERNATES/s615/0_Spring-Hanging-baskets-Visit-Truro.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #falmouth1 {
+            background: url("https://www.telegraph.co.uk/content/dam/Travel/2018/April/Harbour-GettyImages-126367724.jpg?imwidth=450");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #stives1 {
+            background: url("https://www.telegraph.co.uk/content/dam/Travel/2018/May/St-Ives-iStock-179060235.jpg?imwidth=450");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #penzance1 {
+            background: url("https://www.visitcornwall.com/sites/default/files/styles/product_image_breakpoints_theme_visitcornwall2_mobile_2x/public/Penzance%20Harbour%20by%20Paul%20Watts.jpg?itok=9TrinZi-&timestamp=1369736348");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #landsend1 {
+            background: url("https://media-cdn.tripadvisor.com/media/photo-s/08/12/f2/f4/land-s-end-landmark.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        #mevagissey1 {
+            background: url("https://www.cornwalls.co.uk/sites/default/files/photos/Mevagissey_-_1721.jpg");
+            background-size: cover;
+            height: 135px;
+        }
+        
+        .card.hovercard .avatar {
+            position: relative;
+            top: -50px;
+            margin-bottom: -50px;
+        }
+        
+        .card.hovercard .avatar img {
+            width: 100px;
+            height: 100px;
+            max-width: 100px;
+            max-height: 100px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .card.hovercard .info {
+            padding: 4px 8px 10px;
+        }
+        
+        .card.hovercard .info .title {
+            margin-bottom: 4px;
+            font-size: 24px;
+            line-height: 1;
+            color: #262626;
+            vertical-align: middle;
+        }
+        
+        .card.hovercard .info .desc {
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 20px;
+            color: #737373;
+            text-overflow: ellipsis;
+        }
+        
+        .card.hovercard .bottom {
+            padding: 0 20px;
+            margin-bottom: 17px;
+        }
+        
+        .btn {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            line-height: 18px;
+        }
+    </style>
+    <title>Places to visit down in Cornwall</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -19,184 +345,409 @@
       </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"> <a class="nav-link" href="index.html">Home <span
-
-                class="sr-only">(current)</span></a> </li>
+                <li class="nav-item"> <a class="nav-link" href="index.html">Home </a> </li>
                 <li class="nav-item active"> <a class="nav-link" href="places.html">Places
-              to visit</a> </li>
+              to visit<span
+
+              class="sr-only">(current)</span></a> </li>
                 <li class="nav-item"> <a class="nav-link" href="dining.html">Places
               to eat</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="directions.html">Directions and Services</a> </li>
             </ul>
         </div>
     </nav>
     <div class="jumbotron" style="background-image:url(dusk.jpg);background-size: 100%;">
-        <h1 style="color:white;"> Places to visit in London </h1>
-        <h4 style="color:white;"> including Opening Times, Prices, and Nearest Station </h4>
+        <h1 style="color:white;"> Places to visit in Cornwall </h1>
+        <h4 style="color:white;"> including opening times, prices, and how to get there </h4>
     </div>
-    <div class="card mb-3">
-        <h3 class="card-header">Sir John Soane's House</h3>
-        <div class="card-body">
-            <h5 class="card-title">Architecture museum</h5>
-            <h6 class="card-subtitle text-muted">Lincoln's Inn Fields, Holborn</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="soane.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">The unusual and unique home of Sir John Soane, eccentric architect of the Bank of England, presents a chimera of colors, unusual perspectives and decorative ornaments drawn from many centuries.
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Holborn</b></li>
-            <li class="list-group-item"><b>Free</b></li>
-            <li class="list-group-item"><b>Friday, Saturday<br>
-            10:00 - 17:00</b></li>
-            <li class="list-group-item"><a href="https://www.soane.org/">soane.org</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3">
-        <h3 class="card-header">Coal Drops Yard</h3>
-        <div class="card-body">
-            <h5 class="card-title">Shopping centre</h5>
-            <h6 class="card-subtitle text-muted">Granary Square, Kings Cross</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="drops.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">A large selection of independent shops and restaurants housed inside former coal railway warehouses, recently redeveloped by a world-class architecture team.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Kings Cross St Pancras</b></li>
-            <li class="list-group-item"><b>Free</b></li>
-            <li class="list-group-item"><b>Friday, Saturday<br>
-            10:00 - 17:00</b></li>
-            <li class="list-group-item"><a href="https://www.coaldropsyard.com/">coaldropsyard.com</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3">
-        <h3 class="card-header">London Designer Outlet</h3>
-        <div class="card-body">
-            <h5 class="card-title">Shopping centre</h5>
-            <h6 class="card-subtitle text-muted">Empire Way, Wembley Park</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="designer.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">Outlet shops and restaurants next to Wembley Stadium.
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Wembley Park</b> or<b> Wembley
-            Stadium (from Marylebone)</b></li>
-            <li class="list-group-item"><b>Free</b></li>
-            <li class="list-group-item"><b>Friday, Saturday<br>
-            10:00 - late</b></li>
-            <li class="list-group-item"><a href="https://www.londondesigneroutlet.com/">londondesigneroutlet.com</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3">
-        <h3 class="card-header">The O<sub>2</sub></h3>
-        <div class="card-body">
-            <h5 class="card-title">Shopping centre</h5>
-            <h6 class="card-subtitle text-muted">Greenwich Peninsula</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="icon.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">Arena complex with new shopping centre.
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>North Greenwich</b></li>
-            <li class="list-group-item"><b>Free</b></li>
-            <li class="list-group-item"><b>Friday, Saturday<br>
-            10:00 - 22:00</b></li>
-            <li class="list-group-item list-group-item-warning">Avoid on Saturday night due to a boxing match</li>
-            <li class="list-group-item"><a href="https://www.theo2.co.uk/">theo2.co.uk</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3">
-        <h3 class="card-header">120 Fenchurch Street</h3>
-        <div class="card-body">
-            <h5 class="card-title">Roof garden</h5>
-            <h6 class="card-subtitle text-muted">Fenchurch Street, City of London</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="fenchurch.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">Newly-opened roof terrace overlooking central London.
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Fenchurch Street</b> , <b>Tower Hill</b></li>
-            <li class="list-group-item"><b>Free</b></li>
-            <li class="list-group-item"><b>Friday, Saturday<br>
-            10:00 - 17:00</b></li>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
 
-            <li class="list-group-item"><a href="https://thegardenat120.com/">thegardenat120.com</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3">
-        <h3 class="card-header">Postal Museum</h3>
-        <div class="card-body">
-            <h5 class="card-title">Museum about post</h5>
-            <h6 class="card-subtitle text-muted">Mount Pleasant</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="mail.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">Museum about postage, and a chance to travel on the old railway used for transporting mail underneath London.
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>Farringdon</b> , <b>Chancery Lane</b></li>
-            <li class="list-group-item"><b>Paid</b></li>
-            <li class="list-group-item"><b>Saturday<br>
-            13:00</b></li>
+                <div class="card hovercard">
+                    <div class="cardheader" id="minack1">
 
-            <li class="list-group-item"><a href="https://www.postalmuseum.org/">postalmuseum.org</a></li>
-        </ul>
-    </div>
-    <div class="card mb-3">
-        <h3 class="card-header">Clink Prison Museum</h3>
-        <div class="card-body">
-            <h5 class="card-title">Museum about prisons</h5>
-            <h6 class="card-subtitle text-muted">Bankside</h6>
-        </div>
-        <img style=" width: 100%; display: block;" src="clink.jpg" alt="Card image">
-        <div class="card-body">
-            <p class="card-text">The Clink Prison dates back to 1144 making it one of England’s oldest and most notorious prisons. Positioned in the heart of modern-day Southwark and built on the original site, The Clink Prison Museum presents the scandalous truth of Old
-                Bankside through a hands-on educational experience.
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b>London Bridge</b></li>
-            <li class="list-group-item"><b>£22</b></li>
-            <li class="list-group-item"><b>Friday, Saturday<br>
-                10:00 - 18:00</b></li>
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="http://www.thegwt.org.uk/images/Minacklogo.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="https://minack.com/">Minack Theatre</a>
+                        </div>
+                        <div class="desc"><b>Porthcurno</b></div>
+                        <div class="desc">Prehistoric theatre</div>
+                        <div class="desc">Expansive gardens</div>
 
-            <li class="list-group-item"><a href="https://www.clink.co.uk/">clink.co.uk</a></li>
-        </ul>
-    </div>
-    <div class="card border-secondary mb-3">
-        <h3 class="card-header">Borough Market</h3>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>London Bridge</b></li>
+                    </div>
+                    <div class="bottom">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#minackhours">When</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#minackprice">How much</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#minacklocation">Where</a>
+                            </li>
 
-                <li class="list-group-item"><b>Friday, Saturday<br>
-                                10:00 - 17:00</b></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade show" id="minackhours" style="text-align:left !important;">
+                                <h6>Friday 12th 9:30 to 17:30 <br> Saturday 13th 9:30 to 17:30<br> Sunday 14th 9:30 to 17:30 <br>Monday 15th 12:00 to 18:00 <br>Tuesday 16th 9:30 to 11:30 <br>Wednesday 17th 12:00 to 18:00 <br>Thursday 18th 9:30 to 11:30<br>Friday
+                                    19th 12:00 to 18:00</h6>
+                            </div>
+                            <div class="tab-pane fade show" id="minackprice" style="text-align:left !important;">
+                                <h6>£12.50</h6>
+                            </div>
+                            <div class="tab-pane fade show" id="minacklocation" style="text-align:left !important;">
+                                <h6>Porthcurno, Penzance, Cornwall, TR19 6JU</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
-            </ul>
+            <div class="col-lg-3 col-sm-6">
+
+                <div class="card hovercard">
+                    <div class="cardheader" id="trago1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="trago.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="https://trago.co.uk/">Trago Mills</a>
+                        </div>
+                        <div class="desc"><b>Newton Abbot</b></div>
+                        <div class="desc">Huge shopping village</div>
+                        <div class="desc">Model railway</div>
+
+                    </div>
+                    <div class="bottom">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tragohours">When</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tragoprice">How much</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tragolocation">Where</a>
+                            </li>
+
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade show" id="tragohours" style="text-align:left !important;">
+                                <h6>Monday to Friday 9:00 to 20:00<br>Saturday 9:00 to 18:00<br>Sunday 10:00 to 16:00
+                                </h6>
+                            </div>
+                            <div class="tab-pane fade show" id="tragoprice" style="text-align:left !important;">
+                                <h6>Free entry</h6>
+                            </div>
+                            <div class="tab-pane fade show" id="tragolocation" style="text-align:left !important;">
+                                <h6>Off A38, Newton Abbot, Devon, TQ12 6JD</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+
+                <div class="card hovercard">
+                    <div class="cardheader" id="otter1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="http://www.tamarotters.co.uk/images/tamar-main-border(col).png?crc=354210963">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="https://tamarotters.co.uk/">Tamar Otter Centre and Wildlife Park</a>
+                        </div>
+                        <div class="desc"><b>near Launceston</b></div>
+                        <div class="desc">Otters, Owls, Deer, Birds,</div>
+                        <div class="desc">Meerkats, Chipmunks, Polecats</div>
+
+                    </div>
+                    <div class="bottom">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tamarhours">When</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tamarprice">How much</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tamarlocation">Where</a>
+                            </li>
+
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade show" id="tamarhours" style="text-align:left !important;">
+                                <h6>Every day 10:30 to 18:00 <br>Last entry 16:30
+                                </h6>
+                            </div>
+                            <div class="tab-pane fade show" id="tamarprice" style="text-align:left !important;">
+                                <h6>£23.50</h6>
+                            </div>
+                            <div class="tab-pane fade show" id="tamarlocation" style="text-align:left !important;">
+                                <h6>North Petherwin, 5mi NW of Launceston,<br> off B3254 towards Bude</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+
+                <div class="card hovercard">
+                    <div class="cardheader" id="shiver1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="shiver.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="http://www.shivermetimberscornwall.co.uk/">Shiver Me Timbers Reclaimation</a>
+                        </div>
+                        <div class="desc"><b>near Penzance</b></div>
+                        <div class="desc">Homewares, tools, reclaimation</div>
+                        <div class="desc">Wood, materials, remnants</div>
+
+                    </div>
+                    <div class="bottom">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#shiverhours">When</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#shiverprice">How much</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#shiverlocation">Where</a>
+                            </li>
+
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade show" id="shiverhours" style="text-align:left !important;">
+                                <h6>Monday to Saturday 9:00 to 17:00
+                                </h6>
+                            </div>
+                            <div class="tab-pane fade show" id="shiverprice" style="text-align:left !important;">
+                                <h6>Free entry</h6>
+                            </div>
+                            <div class="tab-pane fade show" id="shiverlocation" style="text-align:left !important;">
+                                <h6>Truthwall Industrial Estate<br>Crowlas<br>Penzance<br> TR20 9BW</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="padstow1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/p.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Padstow</a>
+                        </div>
+
+                        <div class="desc">Beautiful harbour</div>
+                        <div class="desc">Antwacky shops</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="rock1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/r.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Rock</a>
+                        </div>
+
+                        <div class="desc">Lovely seaside village</div>
+                        <div class="desc">Opposite Padstow harbour</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="newquay1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/n.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Newquay</a>
+                        </div>
+
+                        <div class="desc">Lively coastal town</div>
+                        <div class="desc">Multitude of beaches</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="truro1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/t.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Truro</a>
+                        </div>
+
+                        <div class="desc">County city of Cornwall</div>
+                        <div class="desc">Range of shops and restaurants</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="falmouth1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/f.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Falmouth</a>
+                        </div>
+
+                        <div class="desc">Riverside town</div>
+                        <div class="desc">Historic harbour</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="stives1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/s.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">St Ives</a>
+                        </div>
+
+                        <div class="desc">Lovely seaside town</div>
+                        <div class="desc">Exciting arts scene</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="penzance1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/p.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Penzance</a>
+                        </div>
+
+                        <div class="desc">Historic seaside town</div>
+                        <div class="desc">Long railway history</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="landsend1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/l.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Land's End</a>
+                        </div>
+
+                        <div class="desc">Most south-westerly point in the UK</div>
+                        <div class="desc">Range of tourist attractions</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="mevagissey1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/m.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Mevagissey</a>
+                        </div>
+
+                        <div class="desc">Idyllic fishing village</div>
+                        <div class="desc">Beautiful panoramic views</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader" id="plymouth1">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="letters/p.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="#">Plymouth</a>
+                        </div>
+
+                        <div class="desc">Large maritime city</div>
+                        <div class="desc">Shopping and restaurants</div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card border-secondary mb-3">
-        <h3 class="card-header">Camden Market</h3>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Camden Town</b></li>
-
-                <li class="list-group-item"><b>Friday, Saturday<br>
-                                    10:00 - 18:00</b></li>
-
-
-            </ul>
-        </div>
     </div>
+
+
+
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
