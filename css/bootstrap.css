@@ -16,7 +16,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 :root {
-    --blue: #F68618;
+    --blue: #6EC0CF;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -29,7 +29,7 @@
     --white: #fff;
     --gray: #666;
     --gray-dark: #222;
-    --primary: #F68618;
+    --primary: #6EC0CF;
     --secondary: #fff;
     --success: #4CAF50;
     --info: #9C27B0;
@@ -179,7 +179,7 @@ sup {
 }
 
 a {
-    color: #F68618;
+    color: #6EC0CF;
     text-decoration: none;
     background-color: transparent;
 }
@@ -2748,9 +2748,9 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
-    border-color: #F68618;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    border-color: #6EC0CF;
 }
 
 .btn-primary:hover {
@@ -2769,8 +2769,8 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #F68618;
-    border-color: #F68618;
+    background-color: #6EC0CF;
+    border-color: #6EC0CF;
     background-image: none;
 }
 
@@ -3099,14 +3099,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-    color: #F68618;
-    border-color: #F68618;
+    color: #6EC0CF;
+    border-color: #6EC0CF;
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #F68618;
-    border-color: #F68618;
+    background-color: #6EC0CF;
+    border-color: #6EC0CF;
 }
 
 .btn-outline-primary:focus,
@@ -3117,7 +3117,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #F68618;
+    color: #6EC0CF;
     background-color: transparent;
 }
 
@@ -3125,8 +3125,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #F68618;
-    border-color: #F68618;
+    background-color: #6EC0CF;
+    border-color: #6EC0CF;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -3404,7 +3404,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #F68618;
+    color: #6EC0CF;
     text-decoration: none;
 }
 
@@ -3718,8 +3718,8 @@ input[type="button"].btn-block {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
 }
 
 .dropdown-item.disabled,
@@ -4113,9 +4113,9 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    border-color: #F68618;
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    border-color: #6EC0CF;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
 }
 
 .custom-control-input:focus~.custom-control-label::before {
@@ -4180,9 +4180,9 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
-    border-color: #F68618;
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    border-color: #6EC0CF;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after {
@@ -4417,8 +4417,8 @@ input[type="button"].btn-block {
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4454,7 +4454,7 @@ input[type="button"].btn-block {
 .custom-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4492,7 +4492,7 @@ input[type="button"].btn-block {
     margin-top: 0;
     margin-right: 0.2rem;
     margin-left: 0.2rem;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4644,7 +4644,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #F68618;
+    background-color: #6EC0CF;
 }
 
 .nav-fill .nav-item {
@@ -5443,7 +5443,7 @@ input[type="button"].btn-block {
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #F68618;
+    color: #6EC0CF;
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
@@ -5477,8 +5477,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #F68618;
-    border-color: #F68618;
+    background-color: #6EC0CF;
+    border-color: #6EC0CF;
 }
 
 .page-item.disabled .page-link {
@@ -5566,7 +5566,7 @@ a.badge:focus {
 
 .badge-primary {
     color: #fff;
-    background-color: #F68618;
+    background-color: #6EC0CF;
 }
 
 a.badge-primary:hover,
@@ -5918,7 +5918,7 @@ a.badge-dark.focus {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #F68618;
+    background-color: #6EC0CF;
     -webkit-transition: width 0.6s ease;
     transition: width 0.6s ease;
 }
@@ -6023,8 +6023,8 @@ a.badge-dark.focus {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #F68618;
-    border-color: #F68618;
+    background-color: #6EC0CF;
+    border-color: #6EC0CF;
 }
 
 .list-group-horizontal {
@@ -7335,8 +7335,8 @@ button.bg-dark:focus {
 }
 
 .bg-gradient-primary {
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x !important;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x !important;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x !important;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x !important;
 }
 
 .bg-gradient-secondary {
@@ -7423,7 +7423,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-    border-color: #F68618 !important;
+    border-color: #6EC0CF !important;
 }
 
 .border-secondary {
@@ -10753,7 +10753,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-    color: #F68618 !important;
+    color: #6EC0CF !important;
 }
 
 a.text-primary:hover,
@@ -11007,7 +11007,7 @@ a.text-dark:focus {
 }
 
 .btn-primary:focus {
-    background-color: #F68618;
+    background-color: #6EC0CF;
     -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
     box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
 }
@@ -11718,7 +11718,7 @@ a.text-dark:focus {
 .btn-link {
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #F68618;
+    color: #6EC0CF;
 }
 
 .btn-link:hover,
@@ -11829,7 +11829,7 @@ a {
 }
 
 .thead-inverse th {
-    background-color: #F68618;
+    background-color: #6EC0CF;
     color: #fff;
 }
 
@@ -11875,8 +11875,8 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
-    -webkit-box-shadow: inset 0 -2px 0 #F68618;
-    box-shadow: inset 0 -2px 0 #F68618;
+    -webkit-box-shadow: inset 0 -2px 0 #6EC0CF;
+    box-shadow: inset 0 -2px 0 #6EC0CF;
 }
 
 textarea[disabled],
@@ -12035,8 +12035,8 @@ select.form-control.input-lg {
 
 select:focus,
 select.form-control:focus {
-    -webkit-box-shadow: inset 0 -2px 0 #F68618;
-    box-shadow: inset 0 -2px 0 #F68618;
+    -webkit-box-shadow: inset 0 -2px 0 #6EC0CF;
+    box-shadow: inset 0 -2px 0 #6EC0CF;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
 }
 
@@ -12059,7 +12059,7 @@ select.form-control[multiple] {
 }
 
 .custom-control-input:checked~.custom-control-label::before {
-    border-color: #F68618;
+    border-color: #6EC0CF;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
@@ -12109,7 +12109,7 @@ select.form-control[multiple] {
 }
 
 .custom-switch .custom-control-input:checked~.custom-control-label::after {
-    background-color: #F68618;
+    background-color: #6EC0CF;
 }
 
 .custom-switch .custom-control-input:hover:not(:disabled)~.custom-control-label::after {
@@ -12277,23 +12277,23 @@ select.form-control[multiple] {
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus:hover {
     background-color: transparent;
-    -webkit-box-shadow: inset 0 -2px 0 #F68618;
-    box-shadow: inset 0 -2px 0 #F68618;
-    color: #F68618;
+    -webkit-box-shadow: inset 0 -2px 0 #6EC0CF;
+    box-shadow: inset 0 -2px 0 #6EC0CF;
+    color: #6EC0CF;
 }
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:focus {
     border: none;
-    -webkit-box-shadow: inset 0 -2px 0 #F68618;
-    box-shadow: inset 0 -2px 0 #F68618;
-    color: #F68618;
+    -webkit-box-shadow: inset 0 -2px 0 #6EC0CF;
+    box-shadow: inset 0 -2px 0 #6EC0CF;
+    color: #6EC0CF;
 }
 
 .nav-tabs .nav-link.active:hover,
 .nav-tabs .nav-link.active:focus:hover {
     border: none;
-    color: #F68618;
+    color: #6EC0CF;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -12337,8 +12337,8 @@ select.form-control[multiple] {
 }
 
 .alert-primary {
-    background: #F68618 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#F68618)) repeat-x;
-    background: #F68618 linear-gradient(180deg, #F8993D, #F68618) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
 }
 
 .alert-secondary {
