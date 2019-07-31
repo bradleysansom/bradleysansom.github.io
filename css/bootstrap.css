@@ -2755,9 +2755,9 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
     color: #fff;
-    background: #B15B07 -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#B15B07)) repeat-x;
-    background: #B15B07 linear-gradient(180deg, #F8993D, #B15B07) repeat-x;
-    border-color: #B15B07;
+    background: #348A9C -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#348A9C)) repeat-x;
+    background: #348A9C linear-gradient(180deg, #F8993D, #348A9C) repeat-x;
+    border-color: #348A9C;
 }
 
 .btn-primary:focus,
@@ -2778,9 +2778,9 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #B15B07;
+    background-color: #348A9C;
     background-image: none;
-    border-color: #B15B07;
+    border-color: #348A9C;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -5572,7 +5572,7 @@ a.badge:focus {
 a.badge-primary:hover,
 a.badge-primary:focus {
     color: #fff;
-    background-color: #B15B07;
+    background-color: #348A9C;
 }
 
 a.badge-primary:focus,
@@ -7247,14 +7247,14 @@ a.close.disabled {
 }
 
 .bg-primary {
-    background-color: #B15B07 !important;
+    background-color: #348A9C !important;
 }
 
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-    background-color: #B15B07 !important;
+    background-color: #348A9C !important;
 }
 
 .bg-secondary {
