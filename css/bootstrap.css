@@ -2748,15 +2748,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
     border-color: #6EC0CF;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background: #348A9C -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#348A9C)) repeat-x;
-    background: #348A9C linear-gradient(180deg, #F8993D, #348A9C) repeat-x;
+    background: #348A9C -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#348A9C)) repeat-x;
+    background: #348A9C linear-gradient(180deg, #348A9C, #348A9C) repeat-x;
     border-color: #348A9C;
 }
 
@@ -3718,8 +3718,8 @@ input[type="button"].btn-block {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
 }
 
 .dropdown-item.disabled,
@@ -4114,8 +4114,8 @@ input[type="button"].btn-block {
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
     border-color: #6EC0CF;
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
 }
 
 .custom-control-input:focus~.custom-control-label::before {
@@ -4181,8 +4181,8 @@ input[type="button"].btn-block {
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
     border-color: #6EC0CF;
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after {
@@ -4417,8 +4417,8 @@ input[type="button"].btn-block {
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4454,7 +4454,7 @@ input[type="button"].btn-block {
 .custom-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4492,7 +4492,7 @@ input[type="button"].btn-block {
     margin-top: 0;
     margin-right: 0.2rem;
     margin-left: 0.2rem;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -7335,8 +7335,8 @@ button.bg-dark:focus {
 }
 
 .bg-gradient-primary {
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x !important;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x !important;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x !important;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x !important;
 }
 
 .bg-gradient-secondary {
@@ -12337,8 +12337,8 @@ select.form-control[multiple] {
 }
 
 .alert-primary {
-    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#F8993D), to(#6EC0CF)) repeat-x;
-    background: #6EC0CF linear-gradient(180deg, #F8993D, #6EC0CF) repeat-x;
+    background: #6EC0CF -webkit-gradient(linear, left top, left bottom, from(#348A9C), to(#6EC0CF)) repeat-x;
+    background: #6EC0CF linear-gradient(180deg, #348A9C, #6EC0CF) repeat-x;
 }
 
 .alert-secondary {
