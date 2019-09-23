@@ -17,12 +17,12 @@ defaults:
     layout: post
     author: 
 bio: Hi! My name is Bradley, and this is apparently my website.
-description: The personal website of world-renowmed style icon, Bradley Sansom
+description: The personal website of world-renowned style icon, Bradley Sansom
 locale: en_GB
-baseurl: ''
-url: ''
-disqus_shortname: default
-analytics-id: default
+baseurl: 
+url: 
+disqus_shortname: bradleysansom-github-io
+analytics-id: UA-148443280-1
 twitter: bradleysans
 pinterest: bradleysans
 github: bradleysansom
