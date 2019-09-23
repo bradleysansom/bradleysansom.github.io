@@ -1,29 +1,13 @@
-# Site
-title:              Bradley Sansom
-bio:                'Hi! My name is Bradley, and this is apparently my website.'
-description:        "The personal website of world-renowmed style icon, Bradley Sansom"
-locale:             en_GB
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-
-# Comments
-disqus_shortname:   default
-
-# Social
-analytics-id:       "default"
-twitter:            bradleysans
-pinterest:          bradleysans
-github:             bradleysansom
-
-# personal
-location:           Bradford, UK
-email:              b-sansom@outlook.com # change this to your email to receive free emails for your contact submissions via Slapform.com
-
-# Other
-background_image:   /images/bg.jpg
-# Tip: The color palette and other styles can be configured in /_sass/lib/_vars.scss
-slapform_thankyou_page: /thank-you
-
+---
+title: Bradley Sansom
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 defaults:
 - scope:
     path: ''
@@ -31,36 +15,55 @@ defaults:
   values:
     permalink: "/blog/:title/"
     layout: post
-    author:
-
-# Jekyll
-permalink:          /blog/:title/
-markdown:           kramdown
-highlighter:        rouge
+    author: 
+bio: Hi! My name is Bradley, and this is apparently my website.
+description: The personal website of world-renowmed style icon, Bradley Sansom
+locale: en_GB
+baseurl: ''
+url: ''
+disqus_shortname: default
+analytics-id: default
+twitter: bradleysans
+pinterest: bradleysans
+github: bradleysansom
+location: Bradford, UK
+email: b-sansom@outlook.com
+background_image: "/images/bg.jpg"
+slapform_thankyou_page: "/thank-you"
+permalink: "/blog/:title/"
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
 sass:
-  sass_dir:         _sass
-  style:            compressed
-
-# Gems
+  sass_dir: _sass
+  style: compressed
 gems:
-  - jekyll-mentions
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-
+- jekyll-mentions
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-gist
+- jekyll-paginate
 paginate: 6
 paginate_path: "/blog/page:num/"
-
 jekyll-mentions:
-    base_url: https://github.com
-
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
+  base_url: https://github.com
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- node_modules
+- gulpfile.js
+- package.json
+- _site
+- src
+- vendor
+- CNAME
+- LICENSE
+- Rakefile
+- old
