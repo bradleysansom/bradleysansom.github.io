@@ -1,7 +1,18 @@
 <!doctype HTML>
 <html>
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+
+
+    <title>General Elections</title>
+    <style>
+        #arjsDebugUIContainer {
+            display: none;
+        }
+    </style>
+</head>
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
