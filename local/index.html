@@ -9,31 +9,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
   div #mainback {
-    background-image: url(https://images.pexels.com/photos/140511/pexels-photo-140511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/140511/pexels-photo-140511.jpeg);
   }
   .middlebox {
-    align
     background-color: #29a19c !important;
+  }
+  * {
+    font-family: 'Bahnschrift' !important;
   }
   
     </style>
-    <title>Information about your local area</title>
+    <title>Where do you live?</title>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Local Dashboard</span>
+    <nav class="navbar navbar-light bg-info">
+  <span class="navbar-brand mb-0 h1">
+    <h2 style="font-family:'Bahnschrift'; color:white;">
+      Where do you live?</h2>
+    <h5>Information about your community</h5>
+      </span>
 </nav>
     <div class="container-fluid" id="mainback">
-      <div style="display:flex;justify-content:center;align-items:center;">
+      <div>
                       
         <h3>Learn more about your local area</h3><br>
         <h5>Type in your postcode below to learn about where you live</h5><br>
         <div class="form-group">
   <label for="postcode">Postcode:</label><br>
   <input type="text" class="form-control" id="postcode">
+          <a href="https://www.bing.com"><input type="submit" value="Explore!"></a>
 </div>
       
       
+        
 
       
       </div>
