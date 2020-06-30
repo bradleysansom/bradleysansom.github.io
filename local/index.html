@@ -7,6 +7,7 @@
     <title>My Local Area</title>
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/big.css">
+    <link rel="stylesheet" href="style/fonts.css">
 </head>
 
 <body>
@@ -14,8 +15,11 @@
         <img src="Logos/Strip.png" height="70" alt="My Local Area">
     </header>
     <div id="cinemascope">
-        <h1>My Local Area</h1>
-        <h3>Unearth the secrets of your neighbourhood</h3>
+        <h1 id="headline">My Local Area</h1>
+        <h3 id="subtitle">Unearth the secrets of your neighbourhood</h3>
+        <form action="postcode" method="post">
+            <input type="text" title="Postcode" placeholder="Enter your postcode...">
+        </form>
     </div>
 </body>
 

@@ -1,14 +1,34 @@
-div#cinemascope {
-    display: block;
-    color: white;
-    background-image: url(../images/pack.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    text-align: right;
-    padding-top: 300px;
-    padding-bottom: 300px;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 2rem;
-}
+                            div#cinemascope {
+                            display: block;
+                            color: white;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position-y: center;
+                            text-align: right;
+                            padding-top: 300px;
+                            padding-bottom: 300px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            font-size: 2rem;
+                            -webkit-animation-name: big-bg;
+                            -webkit-animation-duration: 25s;
+                            -webkit-animation-timing-function: linear;
+                            -webkit-animation-iteration-count: infinite;
+                        }
+                        
+                        @-webkit-keyframes big-bg {
+                            0% {
+                                background-image: url('../images/estate.jpg');
+                            }
+                            25% {
+                                background-image: url('../images/pack.jpg');
+                            }
+                            50% {
+                                background-image: url('../images/keys.jpg');
+                            }
+                            75% {
+                                background-image: url('../images/white.jpg');
+                            }
+                            100% {
+                                background-image: url('../images/estate.jpg');
+                            }
