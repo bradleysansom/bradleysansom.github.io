@@ -1,0 +1,8 @@
+div#cinemascope {
+    color: white;
+    background-image: url(images/packing.jpg);
+    text-align: right;
+    background-size: contain;
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
