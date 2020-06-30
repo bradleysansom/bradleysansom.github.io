@@ -27,18 +27,35 @@ div#cinemascope {
     border-bottom-right-radius: 10px;
 }
 
+div#cinemascope h1,
+div#cinemascope h3 {
+    text-shadow: 2px 2px 10px teal;
+}
+
 @keyframes big-bg {
     0% {
         background-image: url('../images/estate.jpg');
     }
+    15% {
+        background-image: url('../images/pack.jpg');
+    }
     25% {
         background-image: url('../images/pack.jpg');
+    }
+    40% {
+        background-image: url('../images/keys.jpg');
     }
     50% {
         background-image: url('../images/keys.jpg');
     }
+    65% {
+        background-image: url('../images/white.jpg');
+    }
     75% {
         background-image: url('../images/white.jpg');
+    }
+    90% {
+        background-image: url('../images/estate.jpg');
     }
     100% {
         background-image: url('../images/estate.jpg');
