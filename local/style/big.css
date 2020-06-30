@@ -1,57 +1,62 @@
-                    div#cinemascope {
-                        display: block;
-                        color: white;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position-y: center;
-                        text-align: right;
-                        padding-top: 300px;
-                        padding-bottom: 300px;
-                        padding-left: 30px;
-                        padding-right: 30px;
-                        font-size: 2rem;
-                        -webkit-animation-name: big-bg;
-                        -webkit-animation-duration: 25s;
-                        -webkit-animation-timing-function: linear;
-                        -webkit-animation-iteration-count: infinite;
-                        animation-name: big-bg;
-                        animation-duration: 25s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                    }
-                    
-                    @keyframes big-bg {
-                        0% {
-                            background-image: url('../images/estate.jpg');
-                        }
-                        25% {
-                            background-image: url('../images/pack.jpg');
-                        }
-                        50% {
-                            background-image: url('../images/keys.jpg');
-                        }
-                        75% {
-                            background-image: url('../images/white.jpg');
-                        }
-                        100% {
-                            background-image: url('../images/estate.jpg');
-                        }
-                    }
-                    
-                    @-webkit-keyframes big-bg {
-                        0% {
-                            background-image: url('../images/estate.jpg');
-                        }
-                        25% {
-                            background-image: url('../images/pack.jpg');
-                        }
-                        50% {
-                            background-image: url('../images/keys.jpg');
-                        }
-                        75% {
-                            background-image: url('../images/white.jpg');
-                        }
-                        100% {
-                            background-image: url('../images/estate.jpg');
-                        }
-                    }
+html,
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+div#cinemascope {
+    flex-grow: 1;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    text-align: right;
+    overflow: auto;
+    padding-right: 30px;
+    font-size: 2rem;
+    -webkit-animation-name: big-bg;
+    -webkit-animation-duration: 25s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: big-bg;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes big-bg {
+    0% {
+        background-image: url('../images/estate.jpg');
+    }
+    25% {
+        background-image: url('../images/pack.jpg');
+    }
+    50% {
+        background-image: url('../images/keys.jpg');
+    }
+    75% {
+        background-image: url('../images/white.jpg');
+    }
+    100% {
+        background-image: url('../images/estate.jpg');
+    }
+}
+
+@-webkit-keyframes big-bg {
+    0% {
+        background-image: url('../images/estate.jpg');
+    }
+    25% {
+        background-image: url('../images/pack.jpg');
+    }
+    50% {
+        background-image: url('../images/keys.jpg');
+    }
+    75% {
+        background-image: url('../images/white.jpg');
+    }
+    100% {
+        background-image: url('../images/estate.jpg');
+    }
+}

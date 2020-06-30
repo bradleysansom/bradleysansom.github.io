@@ -2,4 +2,23 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: teal;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: teal;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

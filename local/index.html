@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/big.css">
     <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/inputs.css">
     <script src="ie.js"></script>
 </head>
 
@@ -17,12 +18,25 @@
         <img src="Logos/Strip.png" height="70" alt="My Local Area">
     </header>
     <div id="cinemascope">
+
         <h1 id="headline">My Local Area</h1>
         <h3 id="subtitle">Unearth the secrets of your neighbourhood</h3>
-        <form action="postcode" method="post">
-            <input type="text" title="Postcode" placeholder="Enter your postcode...">
-        </form>
+        <div class="myPostcode">
+            <input class="input-text" type="text" id="userPostcode" placeholder="Enter your postcode and then..."><input class="input-submit" type="button" id="submitPostcode" value="Explore">
+
+        </div>
     </div>
+    <footer>
+        <ul>
+            <li>
+                Made with love by <a href="contact">Bradley Sansom</a>
+            </li>
+            <li>
+                <a href="help">Help and Support</a>
+            </li>
+
+        </ul>
+    </footer>
 </body>
 
 </html>
