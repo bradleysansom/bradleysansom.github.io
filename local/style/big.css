@@ -23,6 +23,8 @@ div#cinemascope {
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 @keyframes big-bg {
