@@ -1,3 +1,3 @@
 if (window.document.documentMode) {
-    alert('This website does not work in Internet Explorer. Please use another browser to enjoy My Local Area.')
+    alert('Sorry!\nThis website does not work in Internet Explorer.\nPlease use another browser, such as Google Chrome or Firefox, to enjoy My Local Area.\pInstalling a new browser will also allow you to use new features on other websites.\n\nOnce again, My Local Area apologises for any inconvenience caused.')
 }
