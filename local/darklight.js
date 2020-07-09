@@ -1,4 +1,4 @@
-const darklight = document.querSelection('.toggleDarkTheme');
+const darklight = document.querySelector('.toggleDarkTheme');
 darklight.addEventListener('click', function() {
     document.body.classList.toggle('darkTheme');
 })
