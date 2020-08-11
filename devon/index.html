@@ -41,6 +41,46 @@
       -webkit-mask-box-image: url(http://www.html5rocks.com/en/tutorials/masking/adobe/stampTiles.svg) 35 repeat;
       mask-box-image: url(http://www.html5rocks.com/en/tutorials/masking/adobe/stampTiles.svg) 35 repeat;
     }
+    .stamp {
+      margin-top: 50px;
+      margin-left: 50px;
+      position: relative;
+      width: 500px;
+      height: 300px;
+      background: #bbb;
+      -webkit-filter: drop-shadow(3px 3px 1px black);
+      filter: drop-shadow(0px 0px 5px white);
+    }
+    .stamp:before {
+      position: absolute;
+      top: -20px;
+      display: block;
+      content: "";
+      background: radial-gradient(circle, transparent 15px, #bbb 16px);
+      background-size: 50px 40px;
+      background-position: -20px -20px;
+      width: 100%;
+      height: 40px;
+      z-index: -1;
+    }
+    .stamp:after {
+      position: absolute;
+      bottom: -20px;
+      content: "";
+      display: block;
+      background: radial-gradient(circle, transparent 15px, #bbb 16px);
+      background-size: 50px 40px;
+      background-position: -20px -20px;
+      width: 100%;
+      height: 40px;
+      z-index: -1;
+    }
+    body {
+      margin: 0;
+      background-color: #333;
+    }
+    <div class="stamp">
+    <
 
   </style>
 </head>
