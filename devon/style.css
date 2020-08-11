@@ -139,7 +139,7 @@ div.services {
   filter: brightness(70%);
   background-image: url('services.jpg') !important;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   color: white;
 }
 div.button a {
