@@ -96,7 +96,7 @@ div.nav li a {
   height: 50px;
 }
 .break {
-  background-color: limegreen;
+  background-color: limegreen !important;
   color: black;
 }
 
