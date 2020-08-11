@@ -8,6 +8,7 @@
     }
     div.header {
       background-image: url('sandy.jpg');
+      border-radius: 12px;
     }
     div.header h1 {
       text-align: center;
@@ -26,10 +27,11 @@
     div.nav li {
       list-style-type: none;
       display: inline;
-      padding: 4px 3px 3px 3px;
+      padding: 4px 5px 3px 5px;
       line-height: 160%;
       white-space: nowrap;
       background-color: #ffffff88;
+      border-radius: 30px;
     }
     div.nav li a {
       color: black !important;
@@ -58,16 +60,21 @@
       filter: saturate(150%);
     }
     .nested {
-      margin: 12px 12px 12px 12px;
+      margin: 8px;
       background-color: #dddddd;
       text-align: left;
+      padding-left: 8px;
     }
 
     .address {
-      background-image: url(https://img.icons8.com/material-rounded/24/000000/address.png);
-      background-position: right;
-      background-position: bottom;
-      background-repeat: none;
+      background-image: url(https://img.icons8.com/material-rounded/96/000000/address.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: 70px;
+      line-height: 60%;
+    }
+    .address p:last-of-type {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -100,7 +107,24 @@
     <h2>Our campsite</h2>
     <img class="mainimg" width="100%" src="campsite.jpg">
     <div class="card nested address">
-      35 park road
+      <p>
+        Twelve Oaks Farm Caravan Park
+      </p>
+      <p>
+        Twelve Oaks Farm
+      </p>
+      <p>
+        Teigngrace
+      </p>
+      <p>
+        Newton Abbot
+      </p>
+      <p>
+        Devon
+      </p>
+      <p>
+        TQ12 6QT
+      </p>
     </div>
   </div>
 
