@@ -49,8 +49,25 @@
     }
     .card {
       background-color: #eeeeee;
-      border-radius: 30px;
-      margin 12px 12px 12px 12px;
+      border-radius: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+    }
+    .mainimg {
+      filter: saturate(150%);
+    }
+    .nested {
+      margin: 12px 12px 12px 12px;
+      background-color: #dddddd;
+      text-align: left;
+    }
+
+    .address {
+      background-image: url(https://img.icons8.com/material-rounded/24/000000/address.png);
+      background-position: right;
+      background-position: bottom;
+      background-repeat: none;
     }
   </style>
 </head>
@@ -81,7 +98,10 @@
   </div>
   <div class="card">
     <h2>Our campsite</h2>
-    <img width="100%" src="campsite.jpg">
+    <img class="mainimg" width="100%" src="campsite.jpg">
+    <div class="card nested address">
+      35 park road
+    </div>
   </div>
 
 
