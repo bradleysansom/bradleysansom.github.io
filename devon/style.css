@@ -113,6 +113,7 @@ div.newton {
   background-image: url('newton.jpg') !important;
   background-size: cover;
   background-position: bottom;
+  color: white;
 }
 div.exeter {
   height: 150px;
@@ -121,6 +122,7 @@ div.exeter {
   background-image: url('exeter.jpg') !important;
   background-size: cover;
   background-position: bottom;
+  color: white;
 }
 div.torquay {
   height: 150px;
@@ -129,6 +131,7 @@ div.torquay {
   background-image: url('torquay.jpg') !important;
   background-size: cover;
   background-position: bottom;
+  color: white;
 }
 div.button a {
   padding: 12px;
