@@ -112,6 +112,7 @@ div.newton {
   filter: brightness(70%);
   background-image: url('newton.jpg') !important;
   background-size: cover;
+  background-position: bottom;
 }
 div.exeter {
   height: 150px;
@@ -119,6 +120,7 @@ div.exeter {
   filter: brightness(70%);
   background-image: url('exeter.jpg') !important;
   background-size: cover;
+  background-position: bottom;
 }
 div.torquay {
   height: 150px;
@@ -126,6 +128,7 @@ div.torquay {
   filter: brightness(70%);
   background-image: url('torquay.jpg') !important;
   background-size: cover;
+  background-position: bottom;
 }
 div.button a {
   padding: 12px;
