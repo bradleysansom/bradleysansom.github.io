@@ -93,10 +93,39 @@
       background-size: 70px;
       height: 50px;
     }
+    .website {
+      background-image: url(https://img.icons8.com/material-rounded/96/000000/globe.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: 70px;
+      height: 50px;
+    }
     .telephone a {
       text-decoration: none;
       color: black;
       font-weight: bold;
+    }
+    .website a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .feature {
+      height: 150px;
+      filter: saturate(70%);
+      filter: brightness(70%);
+    }
+    div.button a {
+      padding: 12px;
+      color: white;
+      background-image: url(sandy.jpg);
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .newtonabbot {
+      background-image: url(newton.jpg);
     }
   </style>
 </head>
@@ -121,10 +150,12 @@
       </ul>
     </div>
   </div>
+  <br>
   <div class="postcard">
     <h1>Welcome to Devon</h1>
     <h3>This site provides details of what to do, where to do it, and what to eat.<br><br>Attention is paid to current restrictions to make your holiday as enjoyable and as safe as possible.</h3>
   </div>
+  <br>
   <div class="card">
     <h2>Our campsite</h2><div class="imgholder">
       <img class="mainimg" width="100%" src="campsite.jpg">
@@ -152,13 +183,21 @@
     <div class="card nested telephone">
       <a href="tel:+441626335015">01626 335015</a>
     </div>
+    <div class="card nested website">
+      <a href="https://www.twelveoaksfarm.co.uk/">twelveoaksfarm.co.uk</a>
+    </div>
     <div class="card nested note">
       <br>
       Earliest check in time is <b>12:00 noon</b><br><br>
     </div>
   </div>
-
-
+  <br>
+  <div class="card feature newtonabbot">
+    <h1>Newton Abbot</h1>
+    <div class="button">
+      <a href="newtonabbot.html">Explore</a>
+    </div>
+  </div>
 
 </body>
 </html>
