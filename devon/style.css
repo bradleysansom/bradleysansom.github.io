@@ -60,6 +60,9 @@ div.nav li a {
   text-align: left;
   padding-left: 8px;
 }
+.twice {
+  background-color: #eeeeee;
+}
 
 .address {
   background-image: url(https://img.icons8.com/material-rounded/96/000000/address.png);
@@ -167,10 +170,4 @@ div.button a {
   border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
-}
-.information {
-  background-image: url(https://img.icons8.com/material-rounded/96/000000/information.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 70px;
 }
