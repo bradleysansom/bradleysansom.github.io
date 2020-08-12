@@ -148,6 +148,15 @@ div.services {
   background-position: center;
   color: white;
 }
+div.directions {
+  height: 150px;
+  filter: saturate(70%);
+  filter: brightness(70%);
+  background-image: url('map.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 div.button a {
   padding: 12px;
   color: black;
