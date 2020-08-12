@@ -3,43 +3,113 @@
   <title>Motorway Services | Down in Devon</title>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  <div class="header">
-    <h1 style="padding-top:5px;line-height:100%;">Down in Devon</h1>
-    <div class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li style="background-color:#ffffffff;font-weight:700;"><a href="#">Travelling</a></li>
-        <li><a href="newtonabbot.html">Newton Abbot</a></li>
-        <li><a href="torquay.html">Torquay</a></li>
-        <li><a href="paignton.html">Paignton</a></li>
-        <li><a href="exeter.html">Exeter</a></li>
-        <li><a href="exmouth.html">Exmouth</a></li>
-        <li><a href="dawlish.html">Dawlish Warren</a></li>
-        <li><a href="teignmouth.html">Teignmouth</a></li>
-        <li><a href="sidmouth.html">Sidmouth</a></li>
-        <li><a href="brixham.html">Brixham</a></li>
-        <li><a href="dartmouth.html">Dartmouth</a></li>
-        <li><a href="totnes.html">Totnes</a></li>
-      </ul>
-    </div>
-  </div>
-  <br>
-  <div class="postcard">
-    <h1>Motorway Services</h1>
-    <h3>Details of the amenites at and the locations of the services on the way to Devon</h3>
-  </div>
-  <br>
-  <div class="card">
-    <h2>Hartshead Moor</h2>
-    <h4>M62 between J26 and J25</h4>
-    <div class="card nested break">
-      Welcome Break
-    </div>
+  <style>
+    .nested {
+      text-align: center;
+    }
+    .welcomebreak {
+      background-color: limegreen;
+      color: white;
 
-  </div>
-  <br>
+    }
+    .starbucks {
+      background-color: #2a4226;
+      color: white;
+    }
+    .subway {
+      background-color: #169948;
+      color: white;
+    }
+    .krispykreme {
+      background-color: red;
+      color: white;
+    }
+    .kfc {
+      background-color: darkred;
+      color: white;
+    }
+    .whs {
+      background-color: darkblue;
+      color: white;
+    }
+    .waitrose {
+      background-color: #70ef77;
+    }
+    .motorway {
+      font-weight: bold;
+      background-image: url(https://img.icons8.com/windows/96/000000/autobahn.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position-x: 10px;
+    }
+    .drivethru {
+      background-image: url(https://img.icons8.com/windows/96/000000/car.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position-x: 10px;
+    }
+    .white {
+      background-image: url(https://img.icons8.com/windows/96/ffffff/car.png);
 
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 style="padding-top:5px;line-height:100%;">Down in Devon</h1>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li style="background-color:#ffffffff;font-weight:700;"><a href="#">Travelling</a></li>
+          <li><a href="newtonabbot.html">Newton Abbot</a></li>
+          <li><a href="torquay.html">Torquay</a></li>
+          <li><a href="paignton.html">Paignton</a></li>
+          <li><a href="exeter.html">Exeter</a></li>
+          <li><a href="exmouth.html">Exmouth</a></li>
+          <li><a href="dawlish.html">Dawlish Warren</a></li>
+          <li><a href="teignmouth.html">Teignmouth</a></li>
+          <li><a href="sidmouth.html">Sidmouth</a></li>
+          <li><a href="brixham.html">Brixham</a></li>
+          <li><a href="dartmouth.html">Dartmouth</a></li>
+          <li><a href="totnes.html">Totnes</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div class="postcard">
+      <h1>Motorway Services</h1>
+      <h3>Details of the amenites at and the locations of the services on the way to Devon</h3>
+    </div>
+    <br>
+    <div class="card">
+      <h2>Hartshead Moor</h2>
+      <div class="card nested welcomebreak">
+        Welcome Break
+      </div>
+      <div class="card nested motorway">
+        M62 between J26 and J25
+      </div>
+      <div class="card nested starbucks">
+        Starbucks
+      </div>
+      <div class="card nested starbucks drivethru white">
+        Starbucks Drive Thru
+      </div>
+      <div class="card nested subway">
+        Subway
+      </div>
+      <div class="card nested krispykreme">
+        Krispy Kreme
+      </div>
+      <div class="card nested kfc">
+        KFC
+      </div>
+      <div class="card nested waitrose">
+        Waitrose
+      </div>
+    </div>
+    <br>
+
+  </body>
 </html>
