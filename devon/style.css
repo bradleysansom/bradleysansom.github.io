@@ -171,6 +171,15 @@ div.button a {
   text-decoration: none;
   font-weight: bold;
 }
+div.covidvirus {
+  height: 150px;
+  filter: saturate(70%);
+  filter: brightness(70%);
+  background-image: url('virus.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 .nested {
   padding-right: 50px;
 }
