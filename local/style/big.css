@@ -14,7 +14,8 @@ div#cinemascope {
     text-align: right;
     overflow: auto;
     padding-right: 30px;
-    font-size: 2rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
     -webkit-animation-name: big-bg;
     -webkit-animation-duration: 25s;
     -webkit-animation-timing-function: linear;
@@ -30,6 +31,11 @@ div#cinemascope {
 div#cinemascope h1,
 div#cinemascope h3 {
     text-shadow: 2px 2px 10px teal;
+}
+
+img#headline {
+    filter: drop-shadow(2px 2px 2px teal);
+    -webkit-filter: drop-shadow(2px 2px 2px teal);
 }
 
 @keyframes big-bg {

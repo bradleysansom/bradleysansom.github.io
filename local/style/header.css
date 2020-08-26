@@ -1,6 +1,7 @@
 header {
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
     background-color: teal;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -23,10 +24,15 @@ footer {
     border-bottom-right-radius: 10px;
 }
 
-ul li {
+footer ul li {
     display: inline;
 }
 
-ul li a {
+footer ul li a {
     color: white;
+}
+
+header button#toggleDarkTheme {
+    position: fixed;
+    right: 0px;
 }
