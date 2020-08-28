@@ -17,15 +17,16 @@
 
 <body class="darkTheme || lightTheme">
     <header>
-        <img src="Logos/Strip.png" height="70" alt="My Local Area">
-        <button class="toggleDarkTheme">Toggle day/night</button>
+        <img src="Logos/Strip.png" height="70" alt="My Local Area"><label class="switch">
+        <input type="checkbox" class="toggleDarkTheme"><span class="slider"></span></label>
     </header>
     <div id="cinemascope">
 
-        <img id="headline" src="Logos/Strip.png" width="70%" alt="My Local Area">
+        <img id="headline" src="Logos/Strip.png" style="height:10%;" alt="My Local Area">
         <h3 id="subtitle">Unearth the secrets of your neighbourhood</h3>
         <div class="myPostcode">
-            <input class="input-text" type="text" id="userPostcode" placeholder="Enter your postcode and then..."><input class="input-submit" type="button" id="submitPostcode" value="Explore">
+            <input class="input-text" type="text" id="userPostcode" placeholder="Enter your postcode and then...">
+            <input class="input-submit" type="button" id="submitPostcode" value="Explore">
 
         </div>
     </div>
