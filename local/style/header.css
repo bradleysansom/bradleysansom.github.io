@@ -2,9 +2,13 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
+    padding-right: 20px;
     background-color: teal;
+    transition: .4s;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
@@ -12,6 +16,7 @@ footer {
     padding-bottom: 10px;
     text-align: center;
     background-color: teal;
+    transition: .4s;
     color: white;
     position: fixed;
     bottom: 0px;
@@ -32,7 +37,12 @@ footer ul li a {
     color: white;
 }
 
-header button#toggleDarkTheme {
-    position: fixed;
-    right: 0px;
+.toggleContainer {
+    align-self: flex-end !important;
+}
+
+.toggleContainer img {
+    vertical-align: middle;
+    padding: 5px;
+    padding-top: 10px;
 }

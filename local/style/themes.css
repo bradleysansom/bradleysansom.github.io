@@ -1,20 +1,28 @@
+body.lightTheme {
+    background-color: white;
+    transition: .4s;
+}
+
 body.darkTheme {
     background-color: #4d4d4d;
+    transition: .4s;
 }
 
 body.darkTheme header {
     background-color: #004d4d;
+    transition: .4s;
 }
 
 body.darkTheme footer {
     background-color: #004d4d;
+    transition: .4s;
 }
 
 .switch {
     position: relative;
     display: inline-block;
     width: 100px;
-    height: 30px;
+    height: 34px;
 }
 
 .switch input {
@@ -50,15 +58,11 @@ body.darkTheme footer {
 }
 
 input:checked+.slider {
-    background-color: #004d4d;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #004d4d;
+    background-color: rgb(99, 86, 86);
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
 }

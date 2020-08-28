@@ -2,9 +2,25 @@
     padding: 10px 10px 10px 10px;
     width: 250px;
     margin: 0px 0px 0px 0px;
+    border-radius: 150px;
+    border: 0px;
 }
 
 .input-submit {
     padding: 10px 10px 10px 10px;
     margin: 0px 0px 0px 0px;
+    border-radius: 150px;
+    border: 0px;
+    background-color: teal;
+    transition: .4s;
+    color: white;
+}
+
+body.darkTheme .input-submit {
+    background-color: #004d4d;
+    transition: .4s;
+}
+
+[contenteditable="true"]:focus {
+    outline: none;
 }
