@@ -26,6 +26,8 @@ div#cinemascope {
     animation-iteration-count: infinite;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    font-size: 1.5rem;
+    background-blend-mode: saturation;
 }
 
 div#cinemascope * {
@@ -35,11 +37,31 @@ div#cinemascope * {
 div#cinemascope h1,
 div#cinemascope h3 {
     text-shadow: 2px 2px 10px teal;
+    line-height: 1;
 }
 
-img#headline {
-    filter: drop-shadow(2px 2px 2px teal);
-    -webkit-filter: drop-shadow(2px 2px 2px teal);
+div#locator,
+div#locatorShadow {
+    height: 100%;
+    overflow: auto;
+}
+
+@media only screen and (min-width: 800px) {
+    div#locator {
+        background-image: url('https://img.icons8.com/material-rounded/1000/ffffff/map-marker.png');
+        background-repeat: no-repeat;
+        background-size: 35%;
+    }
+    div#locatorShadow {
+        background-image: url('https://img.icons8.com/material-rounded/1000/008080/map-marker.png');
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position-y: 30px;
+        background-position-x: 30px;
+    }
+    div#toolbox {
+        padding-left: 50%;
+    }
 }
 
 @keyframes big-bg {
@@ -76,14 +98,26 @@ img#headline {
     0% {
         background-image: url('../images/estate.jpg');
     }
+    15% {
+        background-image: url('../images/pack.jpg');
+    }
     25% {
         background-image: url('../images/pack.jpg');
+    }
+    40% {
+        background-image: url('../images/keys.jpg');
     }
     50% {
         background-image: url('../images/keys.jpg');
     }
+    65% {
+        background-image: url('../images/white.jpg');
+    }
     75% {
         background-image: url('../images/white.jpg');
+    }
+    90% {
+        background-image: url('../images/estate.jpg');
     }
     100% {
         background-image: url('../images/estate.jpg');

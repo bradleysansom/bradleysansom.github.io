@@ -17,19 +17,26 @@
 
 <body class="darkTheme || lightTheme">
     <header>
-        <img src="Logos/Strip.png" height="50" alt="My Local Area">
-        <div class="toggleContainer"><img src="https://img.icons8.com/material-rounded/24/ffffff/sun.png" height="24px"><label class="switch">
-            <input type="checkbox" class="toggleDarkTheme" checked><span class="slider"></span></label><img src="https://img.icons8.com/material-rounded/24/ffffff/bright-moon.png" height="24px">
+
+        <h1 id="logo"><span class="sans">My</span> <span class="serif">Local</span> <span class="sans">Area</span></h1>
+        <div class="toggleContainer"><img src="https://img.icons8.com/material-rounded/24/ffffff/sun.png" alt="Light theme" height="24"><label class="switch">
+            <input type="checkbox" class="toggleDarkTheme" checked><span class="slider"></span></label><img src="https://img.icons8.com/material-rounded/24/ffffff/bright-moon.png" alt="Dark theme" height="24">
         </div>
     </header>
     <div id="cinemascope">
+        <div id="locatorShadow">
+            <div id="locator">
+                <div id="toolbox">
+                    <h1 id="headline">Unearth the secrets of your neighbourhood</h1>
+                    <h3 id="subtitle">Just enter your postcode to get started</h3>
 
-        <img id="headline" src="Logos/Strip.png" style="height:10%;" alt="My Local Area">
-        <h3 id="subtitle">Unearth the secrets of your neighbourhood</h3>
-        <div class="myPostcode">
-            <input class="input-text" type="text" id="userPostcode" placeholder="Enter your postcode and then...">
-            <input class="input-submit" type="button" id="submitPostcode" value="Explore">
+                    <div class="myPostcode">
+                        <input class="input-text" type="text" id="userPostcode" placeholder="Enter your postcode and then..." required>
+                        <input class="input-submit" type="button" id="submitPostcode" value="Explore">
 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
@@ -43,6 +50,20 @@
             <li>
                 <a href="help">Help and Support</a>
             </li>
+            <li>
+                •
+            </li>
+            <li>
+                Icons by <a href="https://icons8.com/">Icons8</a>
+            </li>
+
+            <li class="secondaryToggle">
+                •
+            </li>
+            <li class="secondaryToggle">
+                <input type="button" class="secondaryToggleDarkTheme" value="Toggle day/night">
+            </li>
+
 
         </ul>
     </footer>

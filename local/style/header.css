@@ -11,6 +11,21 @@ header {
     justify-content: space-between;
 }
 
+h1#logo {
+    color: white;
+    font-weight: 500;
+}
+
+span.sans {
+    font-family: 'Jost';
+}
+
+span.serif {
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-style: oblique;
+}
+
 footer {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -38,6 +53,7 @@ footer ul li a {
 }
 
 .toggleContainer {
+    display: inline;
     align-self: flex-end !important;
 }
 
@@ -45,4 +61,25 @@ footer ul li a {
     vertical-align: middle;
     padding: 5px;
     padding-top: 10px;
+}
+
+.secondaryToggle {
+    display: none;
+}
+
+@media only screen and (max-width:440px) {
+    div.toggleContainer {
+        display: none;
+    }
+    .secondaryToggle {
+        display: initial;
+    }
+    .secondaryToggle input {
+        background-color: #00000000;
+        border: none;
+        color: white;
+        font-size: inherit;
+        text-decoration: underline;
+        padding: 0px 0px 0px 0px;
+    }
 }
