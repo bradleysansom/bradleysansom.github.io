@@ -1,11 +1,13 @@
 function sendToUrl() {
-    var appendToUrl = "http://bradleysansom.github.io/local/dashboard.html" + document.getElementsByName("keywords")[0].value;
+    var appendToUrl = "http://bradleysansom.github.io/local/dashboard.html" + document.getElementByName("userPostcode")[0].value;
     var sendPostcode = document.getElementById('sendPostcode');
     sendPostcode.action = appendToUrl;
+    var url = window.location.href;
+    var postcodeCurrent = url.split('=')[0];
+    console.log(postcodeCurrent);
 }
-document.getElementById('input-submit').onsubmit {
-    sendToUrl
-}
+
+
 
 /*
 var userPostcode = document.getElementById("userPostcode").value;
