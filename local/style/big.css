@@ -36,7 +36,7 @@ div#cinemascope * {
 
 div#cinemascope h1,
 div#cinemascope h3 {
-    text-shadow: 2px 2px 10px teal;
+    text-shadow: 2px 2px 0px #008080;
     line-height: 1;
 }
 
@@ -54,10 +54,15 @@ div#locatorShadow {
     }
     div#locatorShadow {
         background-image: url('https://img.icons8.com/material-rounded/1000/008080/map-marker.png');
+        transition: .4s;
         background-repeat: no-repeat;
         background-size: 35%;
         background-position-y: 30px;
         background-position-x: 30px;
+    }
+    body.darkTheme div#locatorShadow {
+        background-image: url('https://img.icons8.com/material-rounded/1000/004d4d/map-marker.png');
+        transition: .4s;
     }
     div#toolbox {
         padding-left: 50%;
