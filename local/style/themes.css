@@ -13,7 +13,8 @@ body.darkTheme header {
     transition: .4s;
 }
 
-body.darkTheme footer {
+body.darkTheme footer,
+body.darkTheme div.baseboard {
     background-color: #004d4d;
     transition: .4s;
 }

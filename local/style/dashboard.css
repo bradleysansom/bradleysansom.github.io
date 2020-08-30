@@ -1,0 +1,80 @@
+header {
+    border-radius: 10px;
+}
+
+div.baseboard {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #008080;
+    transition: .4s;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+div.baseboard ul li {
+    display: inline;
+}
+
+div.baseboard ul li a {
+    color: white;
+}
+
+.postcard {
+    background-size: cover;
+    background-position: bottom;
+    outline-offset: -8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    color: white;
+    background-color: #dddddd;
+    height: 200px;
+}
+
+body.lightTheme .postcard {
+    outline: 16px dotted #ffffff;
+    transition: .4s;
+}
+
+body.darkTheme .postcard {
+    outline: 16px dotted #4d4d4d;
+    transition: .4s;
+}
+
+.frank {
+    background-image: url('../images/franked.svg');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position-x: right;
+    background-position-y: -100px;
+}
+
+.postcode {
+    height: 200px;
+    font-size: 2.5rem;
+    padding-left: 20px;
+}
+
+.secondaryToggle {
+    display: none !important;
+}
+
+@media only screen and (max-width:440px) {
+    div.toggleContainer {
+        display: none;
+    }
+    .secondaryToggle {
+        display: initial !important;
+    }
+    .secondaryToggle input {
+        background-color: #00000000;
+        border: none;
+        color: white;
+        font-size: inherit;
+        text-decoration: underline;
+        padding: 0px 0px 0px 0px;
+    }
+}
