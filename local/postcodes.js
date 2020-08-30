@@ -1,14 +1,21 @@
+function savePostcode(userPostcode) {
+    var sendPostcode = document.getElementById('sendPostcode')[0].value;
+    sendPostcode = sendPostcode.replace(/\s+/g, '');
+    sessionStorage.setItem("userPostcode", sendPostcode);
+}
+
+/*
 function sendToUrl() {
     var appendToUrl = "http://bradleysansom.github.io/local/dashboard.html" + document.getElementsByName("userPostcode")[0].value;
     var sendPostcode = document.getElementById('sendPostcode')[0];
     sendPostcode.action = appendToUrl;
     /* var url = window.location.href;
-        var postcodeCurrent = url.split('=')[0]; */
+        var postcodeCurrent = url.split('=')[0]; 
     window.location.href = "http://bradleysansom.github.io/local/dashboard.html";
     document.getElementById('postalCode').innerHTML = postcodeCurrent;
 }
 
-
+*/
 
 /*
 var userPostcode = document.getElementById("userPostcode").value;
