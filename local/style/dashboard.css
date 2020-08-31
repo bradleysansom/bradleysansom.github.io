@@ -44,14 +44,6 @@ body.darkTheme .postcard {
     transition: .4s;
 }
 
-.frank {
-    background-image: url('../images/franked.svg');
-    background-repeat: no-repeat;
-    background-size: 200px;
-    background-position-x: right;
-    background-position-y: -100px;
-}
-
 .postcode {
     height: 200px;
     font-size: 2.5rem;
@@ -77,4 +69,28 @@ body.darkTheme .postcard {
         text-decoration: underline;
         padding: 0px 0px 0px 0px;
     }
+}
+
+@media only screen and (min-width:600px) {
+    .frank {
+        background-image: url('../images/franked.svg');
+        background-repeat: no-repeat;
+        background-size: 200px;
+        background-position-x: right;
+        background-position-y: -100px;
+    }
+}
+
+div.buffet {
+    display: flex;
+}
+
+div.plate {
+    height: 100px;
+    margin: 10px 10px 10px 10px;
+    background-color: green;
+}
+
+div.tray {
+    width: 100%;
 }

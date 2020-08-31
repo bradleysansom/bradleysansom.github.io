@@ -11,13 +11,22 @@
     <link rel="stylesheet" href="style/inputs.css">
     <link rel="stylesheet" href="style/themes.css">
     <link rel="stylesheet" href="style/dashboard.css">
+
     <script src="ie.js"></script>
     <script src="darklight.js"></script>
-    <script src="postcodes.js"></script>
+
+    <script src="receivedPostcode.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        function dashboard() {
+            postcodeHeading();
+            dashboardDarklight();
+        }
+    </script>
 </head>
 
 
-<body class="darkTheme || lightTheme">
+<body class="darkTheme || lightTheme" onload="dashboard()">
     <header>
 
         <h1 id="logo"><span class="sans">My</span> <span class="serif">Local</span> <span class="sans">Area</span></h1>
@@ -28,11 +37,31 @@
     <div class="postcard">
         <div class="frank">
             <div class="postcode">
-                <h1 class="postalCode">postcode</h1>
+                <h1 class="postalCode" id="postalCode">postcode</h1>
             </div>
         </div>
 
     </div>
+    <div class="buffet">
+        <div class="tray">
+            <div class="plate">
+
+            </div>
+            <div class="plate">
+
+            </div>
+        </div>
+        <div class="tray">
+            <div class="plate">
+
+            </div>
+            <div class="plate">
+
+            </div>
+        </div>
+
+    </div>
+
     <div class="baseboard">
         <ul>
             <li>
