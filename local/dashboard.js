@@ -1,55 +1,16 @@
 function dashboard() {
     postcodeHeading();
     dashboardDarklight();
+    loadPostcodeData();
 }
-
-
-
-
-function fetchInfo() {
-
-
-    fetch('https://api.postcodes.io/postcodes/' + cleanPostcode)
-        .then(response => {
-            if (response.ok) {
-                return response.json()
-            } else {
-                return Promise.reject({
-                    status: response.status,
-                    statusText: response.statusText
-                })
-            }
-        })
-        .then(data => {
-            console.log(data)
-        });
-
-}
-
-function displayCountry() {
-    fetch('https://api.postcodes.io/postcodes/' + cleanPostcode)
-        .then(function(response) {
-            return response.json;
-        })
-        .then(function(data) {
-            console.log(data);
-        });
-}
-
-function processPostcodeData() {
-    var postcodeData = JSON.parse(posts);
-    console.log(postcodeData);
-}
-
-
+var posts;
+var adminDistrict;
 const loadPostcodeData = async() => {
-
+    var cleanPostcode = localStorage.getItem("cleanPostcode");
     const response = await fetch('https://api.postcodes.io/postcodes/' + cleanPostcode);
-
-    const posts = await response.json();
-
-    return posts;
-
-    processPostcodeData();
-
-};
+    var posts = await response.json();
+    // console.log(posts);
+    // console.log(posts.result.admin_district.value);
+    var adminDistrict = posts.result.admin_district;
+    localStorage.setItem("adminDistrict", adminDistrict.value);
+}
