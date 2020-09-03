@@ -91,7 +91,7 @@ const plateDemocracy = async() => {
     var parliamentary_constituency = localStorage.getItem("parliamentary_constituency");
     var parliamentary_constituencyPluses = parliamentary_constituency.split(' ').join('+');
     // Fetch information about the MP
-    var parltURL = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/constituency=' + parliamentary_constituencyPluses + '/';
+    var parltURL = 'https://data.parliament.uk/membersdataplatform/services/mnis/members/query/constituency=' + parliamentary_constituencyPluses + '/';
     const xmlFetch = await fetch(parltURL)
     const xmlText = await xmlFetch.text()
     const xml = await (new window.DOMParser()).parseFromString(xmlText, "text/xml")
@@ -151,7 +151,7 @@ const plateDemocracy = async() => {
     document.getElementById("constituency").innerHTML = memberConstituency;
     document.getElementById("memberStartYear").innerHTML = memberStartYear;
     document.getElementById("memberImage").style.backgroundImage =
-        'url(http://data.parliament.uk/membersdataplatform/services/images/MemberPhoto/' + memberId + '/)';
+        'url(https://data.parliament.uk/membersdataplatform/services/images/MemberPhoto/' + memberId + '/)';
     document.getElementById("memberFullName").innerHTML = memberFullName;
     document.getElementById("theyWorkForYouLink").innerHTML = 'See ' + memberPronounPosessiveLowercase + ' voting record and speeches';
     document.getElementById("theyWorkForYouLink").href = theyWorkForYouUrl;
