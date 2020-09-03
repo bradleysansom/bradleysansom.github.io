@@ -197,6 +197,9 @@ const plateDemocracy = async() => {
     } else if (memberParty === "Sinn Féin") {
         document.getElementById("partyImage").style.backgroundImage = "url('Logos/sinn.png')";
         document.getElementById("memberBadges").style.background = "#00cc6d";
+    } else if (memberParty === "Social Democratic & Labour Party") {
+        document.getElementById("partyImage").style.backgroundImage = "url('Logos/sdlp.png')";
+        document.getElementById("memberBadges").style.background = "#00b383";
     } else if (memberParty === "Speaker") {
         document.getElementById("partyImage").style.backgroundImage = "url('Logos/speaker.png')";
         document.getElementById("memberBadges").style.background = "#222222";
