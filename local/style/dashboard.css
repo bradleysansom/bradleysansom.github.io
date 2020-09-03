@@ -30,16 +30,19 @@ div.baseboard ul li a {
     margin-bottom: 12px;
     padding: 12px;
     color: white;
-    background-color: #dddddd;
-    height: 200px;
+    background-color: #222222;
+    line-height: 10px;
+    background-blend-mode: multiply;
 }
 
 body.lightTheme .postcard {
+    background-color: #008080;
     outline: 16px dotted #ffffff;
     transition: .4s;
 }
 
 body.darkTheme .postcard {
+    background-color: #004d4d;
     outline: 16px dotted #4d4d4d;
     transition: .4s;
 }
@@ -48,6 +51,10 @@ body.darkTheme .postcard {
     height: 200px;
     font-size: 2.5rem;
     padding-left: 20px;
+}
+
+.adminDistrict {
+    font-weight: 300;
 }
 
 .secondaryToggle {
@@ -86,9 +93,122 @@ div.buffet {
 }
 
 div.plate {
-    height: 100px;
     margin: 10px 10px 10px 10px;
-    background-color: green;
+    transition: .4s;
+    border-radius: 12px;
+    text-align: center !important;
+    padding: 12px;
+    align-items: center;
+}
+
+body.lightTheme div.plate hr {
+    border-top: 1px dotted #ffffff !important;
+}
+
+body.darkTheme div.plate hr {
+    border-top: 1px dotted #4d4d4d !important;
+}
+
+div.plateTitle {
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: .4s;
+}
+
+span#memberParty {
+    font-weight: 700;
+}
+
+div.plateInfo {
+    line-height: 20px;
+}
+
+span.info {
+    font-weight: 700;
+}
+
+span#memberImage,
+span#partyImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    padding: 0px;
+}
+
+span#memberImage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+span#partyImage {
+    position: absolute;
+    top: 0px;
+    left: 110px;
+}
+
+div#memberBadges {
+    display: inline-block;
+    height: 100px;
+    width: 210px;
+    position: relative;
+    background-color: grey;
+    border-radius: 100px;
+}
+
+body.lightTheme div.plate {
+    background-color: #bbbbbb;
+    color: black;
+}
+
+body.darkTheme div.plate {
+    background-color: #555555;
+    color: white;
+}
+
+body.lightTheme div.plate#weather div.plateTitle {
+    background-color: #33ccff;
+    color: white;
+}
+
+body.darkTheme div.plate#weather div.plateTitle {
+    background-color: #00bfff;
+    color: white;
+}
+
+body.lightTheme div.plate#parliament div.plateTitle {
+    background-color: #373151;
+    color: white;
+}
+
+body.darkTheme div.plate#parliament div.plateTitle {
+    background-color: #201d30;
+    color: white;
+}
+
+body.lightTheme div.plate#parliament div.button {
+    background-color: #373151;
+    color: white;
+}
+
+body.darkTheme div.plate#parliament div.button {
+    background-color: #201d30;
+    color: white;
+}
+
+div.plate div.button {
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 5px 0px;
+    border-radius: 100px;
+    transition: .4s;
+}
+
+div.plate div.button a {
+    color: white;
 }
 
 div.tray {

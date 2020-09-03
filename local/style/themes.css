@@ -39,7 +39,7 @@ body.darkTheme div.baseboard {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #bbbbbb;
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
@@ -59,11 +59,21 @@ body.darkTheme div.baseboard {
 }
 
 input:checked+.slider {
-    background-color: rgb(99, 86, 86);
+    background-color: #555555;
 }
 
 input:checked+.slider:before {
     -webkit-transform: translateX(66px);
     -ms-transform: translateX(66px);
     transform: translateX(66px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    cursor: default;
 }
