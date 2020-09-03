@@ -63,6 +63,7 @@ function storePostcodeData() {
     document.getElementById("postalCode").innerHTML = postcode;
     var welcomeHome = 'Welcome to ' + admin_district;
     document.getElementById("adminDistrict").innerHTML = welcomeHome;
+    document.getElementById("postcard").style.height = "auto";
     // Regional header image
     if (region === "North East") {
         document.getElementById("postcard").style.backgroundImage = "url(images/northEast.jpg)";
@@ -178,7 +179,7 @@ const plateDemocracy = async() => {
     } else if (memberParty === "Liberal Democrat") {
         document.getElementById("partyImage").style.backgroundImage = "url('Logos/lib.png')";
         document.getElementById("memberBadges").style.background = "#fcca36";
-    } else if (memberParty === "Green") {
+    } else if (memberParty === "Green Party") {
         document.getElementById("partyImage").style.backgroundImage = "url('Logos/green.png')";
         document.getElementById("memberBadges").style.background = "#7ec94f";
     } else if (memberParty === "Alliance") {

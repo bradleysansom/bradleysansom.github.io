@@ -28,11 +28,15 @@ div.baseboard ul li a {
     outline-offset: -8px;
     margin-top: 12px;
     margin-bottom: 12px;
-    padding: 12px;
+    padding: 0px 2px 12px 2px;
     color: white;
     background-color: #222222;
-    line-height: 10px;
+    line-height: normal;
     background-blend-mode: multiply;
+}
+
+.frank {
+    display: inline-block;
 }
 
 body.lightTheme .postcard {
@@ -84,15 +88,18 @@ body.darkTheme .postcard {
         background-repeat: no-repeat;
         background-size: 200px;
         background-position-x: right;
-        background-position-y: -100px;
+        background-position-y: -70px;
     }
 }
 
 div.buffet {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 div.plate {
+    flex-grow: 1;
     margin: 10px 10px 10px 10px;
     transition: .4s;
     border-radius: 12px;
