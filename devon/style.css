@@ -1,5 +1,6 @@
 * {
     font-family: Overpass;
+    transition: .4s !important;
 }
 
 body.lightTheme {
