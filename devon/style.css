@@ -20,9 +20,7 @@ body.darkTheme {
     margin-bottom: 12px;
     padding: 0px 2px 12px 2px;
     color: white;
-    background-color: #222222;
     line-height: normal;
-    background-blend-mode: multiply;
 }
 
 body.lightTheme .postcard {
