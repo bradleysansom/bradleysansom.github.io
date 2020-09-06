@@ -206,12 +206,31 @@ body.darkTheme div.plate#parliament div.button {
     color: white;
 }
 
+body.lightTheme div.plate#plateMap div.plateTitle {
+    background-color: #34A853;
+    color: white;
+    z-index: 1;
+}
+
+body.darkTheme div.plate#plateMap div.plateTitle {
+    background-color: #2a8943;
+    color: white;
+    z-index: 1;
+}
+
 div.plate div.button {
     width: fit-content;
     padding: 5px 15px;
     margin: 5px 0px;
     border-radius: 100px;
     transition: .4s;
+}
+
+div.plate#plateMap {
+    flex: 0 0 auto;
+    width: 16em;
+    height: 16em;
+    z-index: -1;
 }
 
 div.plate div.button a {

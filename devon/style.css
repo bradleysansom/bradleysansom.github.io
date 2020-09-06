@@ -1,185 +1,325 @@
 * {
-  font-family: Overpass;
+    font-family: Overpass;
 }
-div.header {
-  background-image: url('sandy.jpg');
-  border-radius: 12px;
-}
-div.header h1 {
-  text-align: center;
-  color: white;
-}
-div.nav {
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-div.nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-div.nav li {
-  list-style-type: none;
-  display: inline;
-  padding: 4px 5px 3px 5px;
-  line-height: 160%;
-  white-space: nowrap;
-  background-color: #ffffff88;
-  border-radius: 30px;
-}
-div.nav li a {
-  color: black !important;
-  text-decoration: none !important;
-}
-.postcard {
-  background-image: url('tent.jpg');
-  background-size: cover;
-  background-position: bottom;
-  outline: 16px dotted #ffffff;
-  outline-offset: -8px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 12px;
-  color: white;
 
+body.lightTheme {
+    background-color: white;
+    transition: .4s;
 }
+
+body.darkTheme {
+    background-color: #4d4d4d;
+    transition: .4s;
+}
+
+.postcard {
+    background-size: cover;
+    background-position: bottom;
+    outline-offset: -8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0px 2px 12px 2px;
+    color: white;
+    background-color: #222222;
+    line-height: normal;
+    background-blend-mode: multiply;
+}
+
+body.lightTheme .postcard {
+    outline: 16px dotted #ffffff;
+    transition: .4s;
+}
+
+body.darkTheme .postcard {
+    outline: 16px dotted #4d4d4d;
+    transition: .4s;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bbbbbb;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #555555;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
+}
+
+.toggleContainer {
+    text-align: center;
+}
+
+div.header {
+    background-image: url('sandy.jpg');
+    border-radius: 12px;
+}
+
+div.header h1 {
+    text-align: center;
+    color: white;
+}
+
+div.nav {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.nav li,
+div.toggleContainer p {
+    list-style-type: none;
+    display: inline;
+    padding: 4px 5px 3px 5px;
+    line-height: 160%;
+    white-space: nowrap;
+    background-color: #ffffff88;
+    border-radius: 30px;
+}
+
+div.nav li a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.postcard {
+    background-image: url('tent.jpg');
+    background-size: cover;
+    background-position: bottom;
+    outline: 16px dotted #ffffff;
+    outline-offset: -8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    color: white;
+}
+
 .card {
-  background-color: #eeeeee;
-  border-radius: 12px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
+    background-color: #eeeeee;
+    border-radius: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
 }
+
+body.darkTheme .card {
+    background-color: #111111;
+    color: white;
+}
+
 .mainimg {
-  filter: saturate(150%);
+    filter: saturate(150%);
 }
+
 .nested {
-  margin: 8px;
-  background-color: #dddddd;
-  text-align: left;
-  padding-left: 8px;
+    margin: 8px;
+    background-color: #dddddd;
+    text-align: left;
+    padding-left: 8px;
 }
+
+body.darkTheme .card {
+    background-color: #000000;
+    color: white;
+}
+
 .twice {
-  background-color: #eeeeee;
+    background-color: #eeeeee;
+}
+
+body.darkTheme .twice {
+    background-color: #111111;
+    color: white;
 }
 
 .address {
-  background-image: url(https://img.icons8.com/material-rounded/96/000000/address.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  line-height: 60%;
+    background-image: url(https://img.icons8.com/material-rounded/96/000000/address.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    line-height: 60%;
 }
+
 .address p:last-of-type {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .note {
-  background-color: #f0f0b0;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-top: 10px dotted #efa040;
-  background-image: url(https://img.icons8.com/material-rounded/96/efa040/error.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 70px;
+    background-color: #f0f0b0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: 10px dotted #efa040;
+    background-image: url(https://img.icons8.com/material-rounded/96/efa040/error.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 70px;
 }
 
 .telephone {
-  background-image: url(https://img.icons8.com/material-rounded/96/000000/phone.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  height: 50px;
+    background-image: url(https://img.icons8.com/material-rounded/96/000000/phone.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    height: 50px;
 }
+
 .fyi {
-  background-image: url(https://img.icons8.com/material-rounded/96/000000/information.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 70px;
+    background-image: url(https://img.icons8.com/material-rounded/96/000000/information.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 70px;
 }
+
 .website {
-  background-image: url(https://img.icons8.com/material-rounded/96/000000/globe.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  height: 50px;
+    background-image: url(https://img.icons8.com/material-rounded/96/000000/globe.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    height: 50px;
 }
 
 .telephone a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-.website a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
+body.darkTheme .telephone a {
+    color: white;
+}
+
+.website a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+body.darkTheme .website a {
+    color: white;
+}
 
 div.newton {
-  height: 150px;
-  filter: saturate(70%);
-  filter: brightness(70%);
-  background-image: url('newton.jpg') !important;
-  background-size: cover;
-  background-position: bottom;
-  color: white;
+    height: 150px;
+    filter: saturate(70%);
+    filter: brightness(70%);
+    background-image: url('newton.jpg') !important;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
 }
+
 div.exeter {
-  height: 150px;
-  filter: saturate(70%);
-  filter: brightness(70%);
-  background-image: url('exeter.jpg') !important;
-  background-size: cover;
-  background-position: bottom;
-  color: white;
+    height: 150px;
+    filter: saturate(70%);
+    filter: brightness(70%);
+    background-image: url('exeter.jpg') !important;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
 }
+
 div.torquay {
-  height: 150px;
-  filter: saturate(70%);
-  filter: brightness(70%);
-  background-image: url('torquay.jpg') !important;
-  background-size: cover;
-  background-position: bottom;
-  color: white;
+    height: 150px;
+    filter: saturate(70%);
+    filter: brightness(70%);
+    background-image: url('torquay.jpg') !important;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
 }
+
 div.services {
-  height: 150px;
-  filter: saturate(70%);
-  filter: brightness(70%);
-  background-image: url('services.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  color: white;
+    height: 150px;
+    filter: saturate(70%);
+    filter: brightness(70%);
+    background-image: url('services.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
+
 div.directions {
-  height: 150px;
-  filter: saturate(70%);
-  filter: brightness(70%);
-  background-image: url('map.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  color: white;
+    height: 150px;
+    filter: saturate(70%);
+    filter: brightness(70%);
+    background-image: url('map.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
+
 div.button a {
-  padding: 12px;
-  color: black;
-  background-color: white;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
+    padding: 12px;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+body.darkTheme div.button a {
+    background-color: white;
+    color: black;
+}
+
 div.covidvirus {
-  height: 150px;
-  filter: saturate(70%);
-  filter: brightness(70%);
-  background-image: url('virus.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  color: white;
+    height: 150px;
+    filter: saturate(70%);
+    filter: brightness(70%);
+    background-image: url('virus.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
+
+body.darkTheme div.covidvirus {
+    color: black;
+}
+
 .information {
-  padding-right: 30px;
+    padding-right: 30px;
 }

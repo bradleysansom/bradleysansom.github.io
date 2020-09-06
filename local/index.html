@@ -21,11 +21,6 @@
         function enter(e) {
             if (e.which == 13) storePostcode();
         }
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            if (document.getElementById("userPostcode").hasFocus()) {
-                document.getElementsByTagName("footer").style.display = "none";
-            }
-        }
     </script>
 </head>
 

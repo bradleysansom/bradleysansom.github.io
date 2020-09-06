@@ -5,6 +5,15 @@
     <title>Brixham | Down in Devon</title>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            const darklight = document.querySelector('.toggleDarkTheme');
+            darklight.addEventListener('click', function() {
+                document.body.classList.toggle('darkTheme');
+            })
+
+        }
+    </script>
     <style>
         .information {
             background-image: url(https://img.icons8.com/material-rounded/96/000000/information.png);
@@ -57,7 +66,7 @@
     </style>
 </head>
 
-<body>
+<body class="darkTheme || lightTheme">
     <div class="header">
         <h1 style="padding-top:5px;line-height:100%;">Down in Devon</h1>
         <div class="nav">
@@ -75,7 +84,13 @@
                 <li style="background-color:#ffffffff;font-weight:700;"><a href="#">Brixham</a></li>
                 <li><a href="dartmouth.html">Dartmouth</a></li>
                 <li><a href="totnes.html">Totnes</a></li>
+
+
             </ul>
+        </div>
+        <div class="toggleContainer"><label class="switch">
+            <input type="checkbox" class="toggleDarkTheme" checked><span class="slider"></span></label><br>
+            <p>Toggle Dark Theme</p>
         </div>
     </div>
     <br>

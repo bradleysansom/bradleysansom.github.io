@@ -208,3 +208,6 @@ const plateDemocracy = async() => {
         document.getElementById("memberBadges").style.background = "#222222";
     }
 }
+const plateWeather = async() => {
+
+}
