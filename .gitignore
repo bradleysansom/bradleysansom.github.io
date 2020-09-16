@@ -3,3 +3,4 @@ _site/
 .DS_Store
 .sass-cache
 *.pptx
+local/.vscode/settings.json
