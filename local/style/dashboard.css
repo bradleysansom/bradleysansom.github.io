@@ -105,7 +105,7 @@ div.plate {
     border-radius: 12px;
     text-align: center !important;
     padding: 12px;
-    align-items: center;
+    justify-content: center !important;
 }
 
 body.lightTheme div.plate hr {
@@ -121,6 +121,10 @@ div.plateTitle {
     text-align: center;
     font-size: 1.5rem;
     transition: .4s;
+}
+
+div.plateClock {
+    min-width: 500px;
 }
 
 span#memberParty {
@@ -206,6 +210,26 @@ body.darkTheme div.plate#parliament div.button {
     color: white;
 }
 
+body.lightTheme div.plate#plateNhs div.plateTitle {
+    background-color: #005EB8;
+    color: white;
+}
+
+body.darkTheme div.plate#plateNhs div.plateTitle {
+    background-color: #003087;
+    color: white;
+}
+
+body.lightTheme div.plate#plateNhs div.button {
+    background-color: #005EB8;
+    color: white;
+}
+
+body.darkTheme div.plate#plateNhs div.button {
+    background-color: #003087;
+    color: white;
+}
+
 body.lightTheme div.plate#plateMap div.plateTitle {
     background-color: #34A853;
     color: white;
@@ -227,10 +251,10 @@ div.plate div.button {
 }
 
 div.plate#plateMap {
-    flex: 0 0 auto;
-    width: 16em;
-    height: 16em;
-    z-index: -1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 85%;
+    height: 250px;
 }
 
 div.plate div.button a {
@@ -239,4 +263,44 @@ div.plate div.button a {
 
 div.tray {
     width: 100%;
+}
+
+div#clockTitle {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    background-color: #222222;
+    line-height: normal;
+    background-blend-mode: multiply;
+    background-position-y: bottom;
+    background-position-x: center;
+}
+
+body.lightTheme div#clockTitle {
+    background-color: #008080;
+    outline: 16px dotted #ffffff;
+    transition: .4s;
+}
+
+body.darkTheme div#clockTitle {
+    background-color: #004d4d;
+    outline: 16px dotted #4d4d4d;
+    transition: .4s;
+}
+
+body.lightTheme div#plateMap {
+    background-color: #008080;
+    outline: 16px dotted #ffffff;
+    transition: .4s;
+}
+
+body.darkTheme div#plateMap {
+    background-color: #004d4d;
+    outline: 16px dotted #4d4d4d;
+    transition: .4s;
+}
+
+.leaflet-layer {
+    filter: opacity(60%);
 }

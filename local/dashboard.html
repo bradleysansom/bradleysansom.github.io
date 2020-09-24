@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/inputs.css">
     <link rel="stylesheet" href="style/themes.css">
     <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <script src="ie.js"></script>
@@ -43,9 +44,16 @@
         </div>
 
     </div>
-    <div id="partybox">&nbsp;</div>
-    <div class="buffet">
 
+    <div class="buffet">
+        <div class="plate" id="clockTitle">
+
+        </div>
+        <div class="plate" id="plateMap">
+
+
+
+        </div>
         <div class="plate" id="weather">
             <div class="plateTitle">
                 Weather
@@ -58,7 +66,7 @@
             <div class="plateInfo">
                 <p>
                     <span class="info" id="memberPostcode"></span> is in the constituency of
-                    <span class="info" id="constituency"></span>. Your MP, since
+                    <span class="info" id="constituency"></span>.<br>Your MP, since
                     <span class="info" id="memberStartYear"></span>, has been
                     <span class="info" id="memberFullName"></span>.<br>
                     <span id="memberPartyContainer">&nbsp;
@@ -88,13 +96,18 @@
             </div>
         </div>
 
-        <div class="plate" id="plateMap">
+
+        <div class="plate" id="plateNhs">
             <div class="plateTitle">
-                Map
+                Health
             </div>
 
-        </div>
-        <div class="plate">
+            <div class="plateInfo">
+                <div class="button" id="nhsInfoButton">
+                    <a id="nhsInfoLink" target="blank" href="#">
+                        &nbsp;</a>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -118,6 +131,12 @@
             <li>
                 Icons by <a href="https://icons8.com/">Icons8</a>
             </li>
+            <li>
+                •
+            </li>
+            <li>
+                <a href="https://www.openstreetmap.org/fixthemap">Report a map problem</a>
+            </li>
 
             <li class="secondaryToggle">
                 •
@@ -129,150 +148,36 @@
 
         </ul>
     </div>
-
-    <script>
-        let plateMap;
-
-        function initMap() {
-            var latitude = Number(localStorage.getItem("latitude"));
-            var longitude = Number(localStorage.getItem("longitude"));
-            var currentTheme = document.getElementsByTagName("body")[0].className;
-            localStorage.setItem("currentTheme", currentTheme);
-            if (currentTheme = "darkTheme || lightTheme") {
-                var darkTheme = true;
-            } else {
-                var darkTheme = false;
-            }
-
-            console.log(latitude, longitude);
-            plateMap = new google.maps.Map(document.getElementById('plateMap'), {
-                center: {
-                    lat: latitude,
-                    lng: longitude
-                },
-                zoom: 16,
-
-                if (darkTheme = true) {
-                    styles: [{
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#242f3e'
-                        }]
-                    }, {
-                        elementType: 'labels.text.stroke',
-                        stylers: [{
-                            color: '#242f3e'
-                        }]
-                    }, {
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#746855'
-                        }]
-                    }, {
-                        featureType: 'administrative.locality',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#d59563'
-                        }]
-                    }, {
-                        featureType: 'poi',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#d59563'
-                        }]
-                    }, {
-                        featureType: 'poi.park',
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#263c3f'
-                        }]
-                    }, {
-                        featureType: 'poi.park',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#6b9a76'
-                        }]
-                    }, {
-                        featureType: 'road',
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#38414e'
-                        }]
-                    }, {
-                        featureType: 'road',
-                        elementType: 'geometry.stroke',
-                        stylers: [{
-                            color: '#212a37'
-                        }]
-                    }, {
-                        featureType: 'road',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#9ca5b3'
-                        }]
-                    }, {
-                        featureType: 'road.highway',
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#746855'
-                        }]
-                    }, {
-                        featureType: 'road.highway',
-                        elementType: 'geometry.stroke',
-                        stylers: [{
-                            color: '#1f2835'
-                        }]
-                    }, {
-                        featureType: 'road.highway',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#f3d19c'
-                        }]
-                    }, {
-                        featureType: 'transit',
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#2f3948'
-                        }]
-                    }, {
-                        featureType: 'transit.station',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#d59563'
-                        }]
-                    }, {
-                        featureType: 'water',
-                        elementType: 'geometry',
-                        stylers: [{
-                            color: '#17263c'
-                        }]
-                    }, {
-                        featureType: 'water',
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#515c6d'
-                        }]
-                    }, {
-                        featureType: 'water',
-                        elementType: 'labels.text.stroke',
-                        stylers: [{
-                            color: '#17263c'
-                        }]
-                    }]
-                }
-
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYqzjIyA5Rd7_9plI-Slsm7UkQ0fzdxF8&callback=initMap" async defer></script>
-
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script>
         async function dashboard() {
+
             postcodeHeading();
             dashboardDarklight();
+            var clockUpdate = setInterval(plateClock, 3000);
+
+            function plateClock() {
+                var currentTime = new Date();
+                var currentHours = currentTime.getHours();
+                var currentMinutes = currentTime.getMinutes();
+                currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+                currentHours = (currentHours == 0) ? 12 : currentHours;
+                var currentTimeString = currentHours + ":" + currentMinutes;
+                document.getElementById("clockTitle").innerHTML = currentTimeString;
+
+            }
+
             await loadPostcodeData();
             await storePostcodeData();
+            plateMap();
+            var region = localStorage.getItem("region");
+            console.log(region);
+
+            document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
+
             await plateDemocracy();
+
+            await plateNhs();
         }
     </script>
 
