@@ -55,10 +55,12 @@ body.darkTheme .postcard {
     height: 200px;
     font-size: 2.5rem;
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .adminDistrict {
     font-weight: 300;
+    line-height: 0;
 }
 
 .secondaryToggle {
@@ -90,6 +92,13 @@ body.darkTheme .postcard {
         background-position-x: right;
         background-position-y: -70px;
     }
+}
+
+div.buttonsrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 div.buffet {
@@ -125,6 +134,10 @@ div.plateTitle {
 
 div.plateClock {
     min-width: 500px;
+}
+
+div.plateDemocracy {
+    flex-basis: auto;
 }
 
 span#memberParty {
@@ -230,16 +243,24 @@ body.darkTheme div.plate#plateNhs div.button {
     color: white;
 }
 
-body.lightTheme div.plate#plateMap div.plateTitle {
-    background-color: #34A853;
+body.lightTheme div.plate#plateTakeaway div.plateTitle {
+    background-color: #99cc00;
     color: white;
-    z-index: 1;
 }
 
-body.darkTheme div.plate#plateMap div.plateTitle {
-    background-color: #2a8943;
+body.darkTheme div.plate#plateTakeaway div.plateTitle {
+    background-color: #739900;
     color: white;
-    z-index: 1;
+}
+
+body.lightTheme div.plate#plateTakeaway div.button {
+    background-color: #99cc00;
+    color: white;
+}
+
+body.darkTheme div.plate#plateTakeaway div.button {
+    background-color: #739900;
+    color: white;
 }
 
 div.plate div.button {
@@ -248,6 +269,7 @@ div.plate div.button {
     margin: 5px 0px;
     border-radius: 100px;
     transition: .4s;
+    flex-grow: 1;
 }
 
 div.plate#plateMap {

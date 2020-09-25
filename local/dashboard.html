@@ -83,15 +83,17 @@
 
                         </span>
                 </div>
-                <div class="button" id="theyWorkForYouButton">
-                    <a id="theyWorkForYouLink" target="blank" href="#">
+                <div class="buttonsrow">
+                    <div class="button" id="theyWorkForYouButton">
+                        <a id="theyWorkForYouLink" target="blank" href="#">
 &nbsp;
                         </a>
-                </div>
-                <div class="button" id="writeToThemButton">
-                    <a id="writeToThemLink" target="blank" href="#">
+                    </div>
+                    <div class="button" id="writeToThemButton">
+                        <a id="writeToThemLink" target="blank" href="#">
 &nbsp;
                         </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,6 +111,38 @@
                 </div>
             </div>
 
+        </div>
+        <div class="plate" id="plateTakeaway">
+            <div class="plateTitle">
+                Food delivery
+            </div>
+            <h3>Find local restaurants and takeaways available for delivery or collection</h3>
+            <div class="buttonsrow">
+                <div class="button" id="justEatButton">
+                    <a id="justEatLink" target="blank" href="#">
+                    Just Eat
+                </a>
+
+                </div>
+                <div class="button" id="foodHubButton">
+                    <a id="foodHubLink" target="blank" href="#">
+                    FoodHub
+                </a>
+
+                </div>
+                <div class="button" id="uberEatsButton">
+                    <a id="uberEatsLink" target="blank" href="https://www.ubereats.com/near-me">
+                    Uber Eats
+                </a>
+
+                </div>
+                <div class="button" id="deliverooButton">
+                    <a id="deliverooLink" target="blank" href="https://deliveroo.co.uk/">
+                    Deliveroo
+                </a>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -164,16 +198,13 @@
                 currentHours = (currentHours == 0) ? 12 : currentHours;
                 var currentTimeString = currentHours + ":" + currentMinutes;
                 document.getElementById("clockTitle").innerHTML = currentTimeString;
-
             }
+            document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
 
             await loadPostcodeData();
             await storePostcodeData();
             plateMap();
-            var region = localStorage.getItem("region");
-            console.log(region);
-
-            document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
+            plateTakeaway();
 
             await plateDemocracy();
 

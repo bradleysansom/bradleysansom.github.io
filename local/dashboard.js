@@ -63,6 +63,30 @@ function storePostcodeData() {
     // Set headings
     document.getElementById("postalCode").innerHTML = postcode;
     var welcomeHome = 'Welcome to ' + admin_district;
+    // Formats certain local areas to be prefixed with 'The' to be gramatically and geographically correct
+    if (admin_district === "Forest of Dean") {
+        welcomeHome = 'Welcome to the Forest of Dean';
+    } else if (admin_district === "New Forest") {
+        welcomeHome = 'Welcome to the New Forest';
+    } else if (admin_district === "City of London") {
+        welcomeHome = 'Welcome to the City of London'
+    } else if (admin_district === "Wirral") {
+        welcomeHome = 'Welcome to the Wirral'
+    } else if (admin_district === "Vale of White Horse") {
+        welcomeHome = 'Welcome to the Vale of White Horse'
+    } else if (admin_district === "Malvern Hills") {
+        welcomeHome = 'Welcome to the Malvern Hills'
+    } else if (admin_district === "Wyre Forest") {
+        welcomeHome = 'Welcome to the Wyre Forest'
+    } else if (admin_district === "Aylesbury Vale") {
+        welcomeHome = 'Welcome to the Aylesbury Vale'
+    } else if (admin_district === "Chiltern") {
+        welcomeHome = 'Welcome to the Chilterns'
+    } else if (admin_district === "Derbyshire Dales") {
+        welcomeHome = 'Welcome to the Derbyshire Dales'
+    } else if (admin_district === "Forest of Dean") {
+        welcomeHome = 'Welcome to the Forest of Dean'
+    }
     document.getElementById("adminDistrict").innerHTML = welcomeHome;
     document.getElementById("postcard").style.height = "auto";
     // Regional header image
@@ -157,12 +181,18 @@ const plateDemocracy = async() => {
     document.getElementById("memberFullName").innerHTML = memberFullName;
     document.getElementById("theyWorkForYouLink").innerHTML = 'See ' + memberPronounPosessiveLowercase + ' voting record and speeches';
     document.getElementById("theyWorkForYouLink").href = theyWorkForYouUrl;
-    document.getElementById("writeToThemLink").innerHTML = 'Send ' + memberPronounPosessiveLowercase + ' a message';
+    document.getElementById("writeToThemLink").innerHTML = 'Send ' + memberPronounObjectiveLowercase + ' a message';
     document.getElementById("writeToThemLink").href = writeToThemUrl;
     if (memberParty === "Speaker") {
         document.getElementById("memberPartyContainer").innerHTML = memberPronoun + " is the Speaker of the House of Commons. Therefore " + memberPronounLowercase + " doesn't vote or participate in debates, and remains neutral on national issues.";
     } else if (memberParty === "Independent") {
-        document.getElementById("memberPartyContainer").innerHTML = "They are an Independent MP.";
+        if (memberFullName === "Rt Hon Dr Julian Lewis MP") {
+            document.getElementById("memberPartyContainer").innerHTML = "He was formerly a Conservative MP, but is now an Independent MP.";
+        } else if (memberFullName === "Jonathan Edwards MP") {
+            document.getElementById("memberPartyContainer").innerHTML = "He was formerly a Plaid Cymru MP, but is now an Independent MP.";
+        } else {
+            document.getElementById("memberPartyContainer").innerHTML = memberPronounPlural + " an Independent MP.";
+        }
     } else if (memberParty === "Sinn Féin") {
         document.getElementById("memberPartyContainer").innerHTML = memberPronounPlural + " an MP for Sinn Féin. They do not attend Parliament as they refuse to take their seats, believing Northern Ireland should be a part of a United Ireland. ";
     } else if (memberParty === "Alliance") {
@@ -281,4 +311,12 @@ function plateMap() {
 
     L.control.scale().addTo(map);
     map.setZoom(17);
+}
+
+function plateTakeaway() {
+    var postcode = localStorage.getItem("cleanPostcode");
+    var justEatUrl = "https://www.just-eat.co.uk/area/" + postcode;
+    document.getElementById("justEatLink").href = justEatUrl;
+    var foodHubUrl = "https://foodhub.co.uk/list/" + postcode;
+    document.getElementById("foodHubLink").href = foodHubUrl;
 }
