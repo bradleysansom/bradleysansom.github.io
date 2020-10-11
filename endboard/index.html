@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Endboard</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .top,
+        .bottom {
+            height: 70px;
+            background-color: #111111;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+        
+        .middle {
+            background-color: #333333;
+        }
+        
+        .top {
+            top: 0px;
+        }
+        
+        .bottom {
+            bottom: 0px;
+        }
+        
+        .generatedimage {
+            width: 1600px;
+            height: 900px;
+            border: 1px solid #000000;
+        }
+        
+        canvas {
+            padding: 0;
+            margin: 0;
+            border: 1px solid red;
+            position: absolute;
+        }
+        
+        #leftbumper {
+            left: 0px;
+            top: 0px;
+        }
+        
+        #rightbumper {
+            left: 1250px;
+            top: 0px;
+        }
+        
+        #topleft {
+            left: 350px;
+            top: 0px;
+        }
+        
+        #topright {
+            left: 800px;
+            top: 0px;
+        }
+        
+        #bottomleft {
+            left: 350px;
+            top: 450px;
+        }
+        
+        #bottomright {
+            left: 800px;
+            top: 450px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="middle">
+        <div class="generatedimage">
+            <canvas id="leftbumper" width="350" height="900">
+    
+</canvas>
+            <canvas id="topleft" width="450" height="450">
+    
+</canvas>
+            <canvas id="bottomleft" width="450" height="450">
+    
+</canvas>
+            <canvas id="topright" width="450" height="450">
+    
+</canvas>
+            <canvas id="bottomright" width="450" height="450">
+    
+</canvas>
+            <canvas id="rightbumper" width="350" height="900">
+    
+</canvas>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="controls">
+            <div class="palette">
+                <canvas id="img1" width="30" height="30"></canvas>
+                <canvas id="img2" width="30" height="30"></canvas>
+                <canvas id="img3" width="30" height="30"></canvas>
+                <canvas id="img4" width="30" height="30"></canvas>
+                <canvas id="img5" width="30" height="30"></canvas>
+                <canvas id="img6" width="30" height="30"></canvas>
+                <canvas id="img7" width="30" height="30"></canvas>
+                <canvas id="img8" width="30" height="30"></canvas>
+                <canvas id="img9" width="30" height="30"></canvas>
+
+            </div>
+
+        </div>
+        <div class="credits">
+            Endboard Generator - Created by Bradley Sansom
+        </div>
+    </div>
+    <script>
+        var blackboard = new Image();
+        blackboard.src = "blackboard.png";
+        var checkerboard = new Image();
+        checkerboard.src = "checkerboard.png";
+        var coloursBlack = new Image();
+        coloursBlack.src = "coloursBlack.png";
+        var coloursWhite = new Image();
+        coloursWhite.src = "coloursWhite.png";
+        var diag = new Image();
+        diag.src = "diag.png";
+        var lines = new Image();
+        lines.src = "lines.png";
+        var moire = new Image();
+        moire.src = "moire.png";
+        var tres = new Image();
+        tres.src = "tres.png";
+        var trois = new Image();
+        trois.src = "trois.png";
+
+        function randomiser() {
+
+            var patternsArray = ["blackboard.png", "checkerboard.png", "coloursBlack.png", "coloursWhite.png", "diag.png", "lines.png", "moire.png", "tres.png", "trois.png"];
+            var img;
+
+            function getRandomImage(imgAr, path) {
+                path = path || 'images/'; // default path here
+                var num = Math.floor(Math.random() * imgAr.length);
+                img = imgAr[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+
+            var leftbumper = document.getElementById("leftbumper"),
+                leftbumperctx = leftbumper.getContext("2d");
+            var rightbumper = document.getElementById("rightbumper"),
+                rightbumperctx = rightbumper.getContext("2d");
+            var topleft = document.getElementById("topleft"),
+                topleftctx = topleft.getContext("2d");
+            var bottomleft = document.getElementById("bottomleft"),
+                bottomleftctx = bottomleft.getContext("2d");
+            var topright = document.getElementById("topright"),
+                toprightctx = topright.getContext("2d");
+            var bottomright = document.getElementById("bottomright"),
+                bottomrightctx = bottomright.getContext("2d");
+
+            pattern = leftbumperctx.createPattern(img, 'repeat');
+            leftbumperctx.fillStyle = pattern;
+            leftbumperctx.fillRect(0, 0);
+        }
+    </script>
+    <!-- <script>
+        function test() {
+            var blackboardPattern;
+            var checkerboardPattern;
+            var coloursBlackPattern;
+            var coloursWhitePattern;
+            var diagPattern;
+            var linesPattern;
+            var moirePattern;
+            var tresPattern;
+            var troisPattern;
+
+            var img1 = document.getElementById("img1"),
+                img1ctx = img1bumper.getContext("2d");
+
+            var leftbumper = document.getElementById("leftbumper"),
+                leftbumperctx = leftbumper.getContext("2d");
+            var rightbumper = document.getElementById("rightbumper"),
+                rightbumperctx = rightbumper.getContext("2d");
+            var topleft = document.getElementById("topleft"),
+                topleftctx = topleft.getContext("2d");
+            var bottomleft = document.getElementById("bottomleft"),
+                bottomleftctx = bottomleft.getContext("2d");
+            var topright = document.getElementById("topright"),
+                toprightctx = topright.getContext("2d");
+            var bottomright = document.getElementById("bottomright"),
+                bottomrightctx = bottomright.getContext("2d");
+
+            var patternsArray = [blackboardPattern, checkerboardPattern, coloursBlackPattern, coloursWhitePattern, diagPattern, linesPattern, moirePattern, tresPattern, troisPattern];
+            var item1 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
+            console.log(item1);
+            var item2 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
+            console.log(item2);
+            var item3 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
+            console.log(item3);
+            var item4 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
+            console.log(item4);
+            var item5 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
+            console.log(item5);
+            var item6 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
+            console.log(item6);
+            leftbumperctx.fillstyle = item1;
+
+
+
+            var blackboard = new Image();
+            blackboard.src = "blackboard.png";
+            blackboard.onload = function() {
+                blackboardPattern = img1.createPattern(blackboard, 'repeat');
+                img1.fillStyle = coloursWhitePattern;
+                img1.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var checkerboard = new Image();
+            checkerboard.src = "checkerboard.png";
+            checkerboard.onload = function() {
+                checkerboardPattern = img2.createPattern(checkerboard, 'repeat');
+                img2.fillStyle = checkerboardPattern;
+                img2.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var coloursBlack = new Image();
+            coloursBlack.src = "coloursBlack.png";
+            coloursBlack.onload = function() {
+                coloursBlackPattern = img3.createPattern(coloursBlack, 'repeat');
+                img3.fillStyle = coloursBlackPattern;
+                img3.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var coloursWhite = new Image();
+            coloursWhite.src = "coloursWhite.png";
+            coloursWhite.onload = function() {
+                coloursWhitePattern = img4.createPattern(coloursWhite, 'repeat');
+                img4.fillStyle = coloursWhitePattern;
+                img4.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var diag = new Image();
+            diag.src = "diag.png";
+            diag.onload = function() {
+                diagPattern = img5.createPattern(diag, 'repeat');
+                img5.fillStyle = diagPattern;
+                img5.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var lines = new Image();
+            lines.src = "lines.png";
+            lines.onload = function() {
+                linesPattern = img6.createPattern(lines, 'repeat');
+                img6.fillStyle = linesPattern;
+                img6.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var moire = new Image();
+            moire.src = "moire.png";
+            moire.onload = function() {
+                moirePattern = img7.createPattern(moire, 'repeat');
+                img7.fillStyle = moirePattern;
+                img7.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var tres = new Image();
+            tres.src = "tres.png";
+            tres.onload = function() {
+                tresPattern = img8.createPattern(tres, 'repeat');
+                img8.fillStyle = tresPattern;
+                img8.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+            var trois = new Image();
+            trois.src = "trois.png";
+            trois.onload = function() {
+                troisPattern = img9.createPattern(trois, 'repeat');
+                img9.fillStyle = troisPattern;
+                img9.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+            }
+
+
+
+
+
+        }
+    </script> -->
+</body>
+
+
+
+</html>
