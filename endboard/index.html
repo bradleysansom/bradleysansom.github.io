@@ -38,41 +38,75 @@
             border: 1px solid #000000;
         }
         
-        canvas {
+        img {
             padding: 0;
             margin: 0;
-            border: 1px solid red;
             position: absolute;
         }
         
         #leftbumper {
             left: 0px;
             top: 0px;
+            height: 900px;
+            width: 350px;
+            background-size: contain;
+            background-repeat: repeat;
         }
         
         #rightbumper {
             left: 1250px;
             top: 0px;
+            height: 900px;
+            width: 350px;
         }
         
         #topleft {
             left: 350px;
             top: 0px;
+            height: 450px;
+            width: 450px;
         }
         
         #topright {
             left: 800px;
             top: 0px;
+            height: 450px;
+            width: 450px;
         }
         
         #bottomleft {
             left: 350px;
             top: 450px;
+            height: 450px;
+            width: 450px;
         }
         
         #bottomright {
             left: 800px;
             top: 450px;
+            height: 450px;
+            width: 450px;
+        }
+        
+        .proginfo {
+            background-color: white;
+            padding: 20px;
+            color: black;
+            font-family: sans-serif;
+            position: absolute;
+            max-width: 300px;
+            left: 820px;
+            top: 100px;
+            font-weight: bold;
+        }
+        
+        .title {
+            font-size: 3rem;
+        }
+        
+        .day,
+        .time {
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -81,40 +115,36 @@
 
     <div class="middle">
         <div class="generatedimage">
-            <canvas id="leftbumper" width="350" height="900">
-    
-</canvas>
-            <canvas id="topleft" width="450" height="450">
-    
-</canvas>
-            <canvas id="bottomleft" width="450" height="450">
-    
-</canvas>
-            <canvas id="topright" width="450" height="450">
-    
-</canvas>
-            <canvas id="bottomright" width="450" height="450">
-    
-</canvas>
-            <canvas id="rightbumper" width="350" height="900">
-    
-</canvas>
+            <img src="initial.png" alt="initial" id="leftbumper" width="350" height="900">
+
+
+            <img src="initial.png" alt="initial" id="topleft" width="450" height="450">
+
+
+            <img src="initial.png" alt="initial" id="bottomleft" width="450" height="450">
+
+
+            <img src="initial.png" alt="initial" id="topright" width="450" height="450">
+
+
+            <img src="initial.png" alt="initial" id="bottomright" width="450" height="450">
+
+
+            <img src="initial.png" alt="initial" id="rightbumper" width="350" height="900">
+            <div class="proginfo">
+                <span class="title"> </span><br><br>
+                <span class="day"> </span><br>
+                <span class="time"> </span>
+            </div>
+
         </div>
     </div>
     <div class="bottom">
         <div class="controls">
-            <div class="palette">
-                <canvas id="img1" width="30" height="30"></canvas>
-                <canvas id="img2" width="30" height="30"></canvas>
-                <canvas id="img3" width="30" height="30"></canvas>
-                <canvas id="img4" width="30" height="30"></canvas>
-                <canvas id="img5" width="30" height="30"></canvas>
-                <canvas id="img6" width="30" height="30"></canvas>
-                <canvas id="img7" width="30" height="30"></canvas>
-                <canvas id="img8" width="30" height="30"></canvas>
-                <canvas id="img9" width="30" height="30"></canvas>
-
-            </div>
+            <input type="button" value="Generate new endboard" onclick="randomiser()">
+            <input type="text" value="Programme title" id="progTitle">
+            <input type="text" value="Day" id="progDay">Time:
+            <input type="time" value="" id="progTime">
 
         </div>
         <div class="credits">
@@ -142,34 +172,68 @@
         trois.src = "trois.png";
 
         function randomiser() {
-
             var patternsArray = ["blackboard.png", "checkerboard.png", "coloursBlack.png", "coloursWhite.png", "diag.png", "lines.png", "moire.png", "tres.png", "trois.png"];
             var img;
+            var progTitle = document.getElementById('progTitle').value;
+            document.getElementsByClassName('title')[0].innerHTML = progTitle;
+            var progDay = document.getElementById('progDay').value;
+            document.getElementsByClassName('day')[0].innerHTML = progDay;
+            var progTime = document.getElementById('progTime').value;
+            document.getElementsByClassName('time')[0].innerHTML = progTime;
 
-            function getRandomImage(imgAr, path) {
-                path = path || 'images/'; // default path here
-                var num = Math.floor(Math.random() * imgAr.length);
-                img = imgAr[num];
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
                 console.log(img);
             }
             getRandomImage(patternsArray);
+            document.getElementById('leftbumper').src = img;
 
-            var leftbumper = document.getElementById("leftbumper"),
-                leftbumperctx = leftbumper.getContext("2d");
-            var rightbumper = document.getElementById("rightbumper"),
-                rightbumperctx = rightbumper.getContext("2d");
-            var topleft = document.getElementById("topleft"),
-                topleftctx = topleft.getContext("2d");
-            var bottomleft = document.getElementById("bottomleft"),
-                bottomleftctx = bottomleft.getContext("2d");
-            var topright = document.getElementById("topright"),
-                toprightctx = topright.getContext("2d");
-            var bottomright = document.getElementById("bottomright"),
-                bottomrightctx = bottomright.getContext("2d");
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('rightbumper').src = img;
 
-            pattern = leftbumperctx.createPattern(img, 'repeat');
-            leftbumperctx.fillStyle = pattern;
-            leftbumperctx.fillRect(0, 0);
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('topleft').src = img;
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('bottomleft').src = img;
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('topright').src = img;
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('bottomright').src = img;
         }
     </script>
     <!-- <script>
