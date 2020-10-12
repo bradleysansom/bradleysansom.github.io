@@ -221,16 +221,16 @@
             const reader = new FileReader();
           const  fileInput = document.getElementById("progImage");
             
-if (fileInput.files.length == 0) {
+
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
                 img = patternsArray[num];
                 console.log(img);
-            }
+            
             getRandomImage(patternsArray);
             document.getElementById('bottomleft').src = img;
-} else {
+
     const reader = new FileReader();
           const  fileInput = document.getElementById("progImage");
             const progImg = document.getElementById("bottomleft");
@@ -242,7 +242,7 @@ if (fileInput.files.length == 0) {
                 const f = e.target.files[0];
                 reader.readAsDataURL(f);
             })
-};
+
           
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
