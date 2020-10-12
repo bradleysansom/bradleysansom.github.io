@@ -216,8 +216,10 @@
             getRandomImage(patternsArray);
             document.getElementById('topleft').src = img;
 
+            const reader = new FileReader();
+            const fileInput = document.getElementById("progImage");
             
-
+if (fileInput === null) {
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
@@ -226,9 +228,9 @@
             }
             getRandomImage(patternsArray);
             document.getElementById('bottomleft').src = img;
-            const reader = new FileReader();
-            const fileInput = document.getElementById("progImage");
+} else {
             const progImg = document.getElementById("bottomleft");
+           
             reader.onload = e => {
                 progImg.src = e.target.result;
             }
@@ -236,7 +238,7 @@
                 const f = e.target.files[0];
                 reader.readAsDataURL(f);
             })
-
+};
           
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
