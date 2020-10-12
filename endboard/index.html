@@ -151,7 +151,7 @@
             <input type="text" value="Programme title" id="progTitle">
             <input type="text" value="Day" id="progDay">Time:
             <input type="time" value="" id="progTime">
-            <input type="file" id="progImage">
+            <input type="file" id="progImage" accept="image/*">
 
         </div>
         <div class="credits">
@@ -179,7 +179,7 @@
         trois.src = "trois.png";
 
         function randomiser() {
-            const programmeImage = document.getElementById('progImage').files[0];
+           
             var patternsArray = ["blackboard.png", "checkerboard.png", "coloursBlack.png", "coloursWhite.png", "diag.png", "lines.png", "moire.png", "tres.png", "trois.png"];
             var img;
             var progTitle = document.getElementById('progTitle').value;
@@ -215,9 +215,18 @@
             }
             getRandomImage(patternsArray);
             document.getElementById('topleft').src = img;
-if (programmeImage != null) {
-    document.getElementById('bottomleft').src = programmeImage;
-} else {
+
+     const reader = new FileReader();
+const fileInput = document.getElementById("progImage");
+const img = document.getElementById("bottomleft");
+reader.onload = e => {
+  img.src = e.target.result;
+}
+fileInput.addEventListener('change', e => {
+  const f = e.target.files[0];
+  reader.readAsDataURL(f);
+})
+
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
@@ -226,7 +235,7 @@ if (programmeImage != null) {
             }
             getRandomImage(patternsArray);
             document.getElementById('bottomleft').src = img;
-}
+
           
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
