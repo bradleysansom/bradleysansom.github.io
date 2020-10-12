@@ -216,7 +216,8 @@
             getRandomImage(patternsArray);
             document.getElementById('topleft').src = img;
 
-            
+            const reader = new FileReader();
+          const  fileInput = document.getElementById("progImage");
             
 if (fileInput.files.length == 0) {
             function getRandomImage(patternsArray, path) {
@@ -229,7 +230,7 @@ if (fileInput.files.length == 0) {
             document.getElementById('bottomleft').src = img;
 } else {
     const reader = new FileReader();
-            const fileInput = document.getElementById("progImage");
+          const  fileInput = document.getElementById("progImage");
             const progImg = document.getElementById("bottomleft");
            
             reader.onload = e => {
