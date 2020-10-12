@@ -219,7 +219,7 @@
             const reader = new FileReader();
             const fileInput = document.getElementById("progImage");
             
-if (fileInput === null) {
+if (fileInput.files.length == 0) {
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
