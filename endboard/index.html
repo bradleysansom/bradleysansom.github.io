@@ -139,7 +139,7 @@
 
             <img src="initial.png" alt="initial" id="rightbumper" width="350" height="900">
             <img src="8.png" alt="eight" id="eight" width="350" height="649">
-            <div class="proginfo">
+            <div class="proginfo" id="proginfo">
                 <span class="title"> </span><br><br>
                 <span class="day"> </span><br>
                 <span class="time"> </span>
@@ -181,7 +181,7 @@
         trois.src = "trois.png";
 
         function randomiser() {
-           document.getElementsByClassName('proginfo')[0].style.display = "initial";
+           document.getElementById('proginfo').style.display = "initial";
             var patternsArray = ["blackboard.png", "checkerboard.png", "coloursBlack.png", "coloursWhite.png", "diag.png", "lines.png", "moire.png", "tres.png", "trois.png"];
             var img;
             var progTitle = document.getElementById('progTitle').value;
