@@ -216,16 +216,16 @@
             getRandomImage(patternsArray);
             document.getElementById('topleft').src = img;
 
-     const reader = new FileReader();
-const fileInput = document.getElementById("progImage");
-const img = document.getElementById("bottomleft");
-reader.onload = e => {
-  img.src = e.target.result;
-}
-fileInput.addEventListener('change', e => {
-  const f = e.target.files[0];
-  reader.readAsDataURL(f);
-})
+            const reader = new FileReader();
+            const fileInput = document.getElementById("progImage");
+            const progImg = document.getElementById("bottomleft");
+            reader.onload = e => {
+                progImg.src = e.target.result;
+            }
+            fileInput.addEventListener('change', e => {
+                const f = e.target.files[0];
+                reader.readAsDataURL(f);
+            })
 
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
