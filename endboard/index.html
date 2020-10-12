@@ -216,6 +216,16 @@
             getRandomImage(patternsArray);
             document.getElementById('topleft').src = img;
 
+            
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('bottomleft').src = img;
             const reader = new FileReader();
             const fileInput = document.getElementById("progImage");
             const progImg = document.getElementById("bottomleft");
@@ -226,15 +236,6 @@
                 const f = e.target.files[0];
                 reader.readAsDataURL(f);
             })
-
-            function getRandomImage(patternsArray, path) {
-                path = path || ''; // default path here
-                var num = Math.floor(Math.random() * patternsArray.length);
-                img = patternsArray[num];
-                console.log(img);
-            }
-            getRandomImage(patternsArray);
-            document.getElementById('bottomleft').src = img;
 
           
             function getRandomImage(patternsArray, path) {
