@@ -154,6 +154,7 @@
             <input type="text" value="Day" id="progDay">Time:
             <input type="time" value="" id="progTime">
             <input type="file" id="progImage" accept="image/*">
+            <input type="button" value="Autogenerate" onclick="repeatRandomise()">
 
         </div>
         <div class="credits">
@@ -245,6 +246,15 @@
             getRandomImage(patternsArray);
             document.getElementById('bottomright').src = img;
             }}
+        function repeatRandomise(){
+    randomise();
+
+    setTimeout(repeatRandomise, 1000);
+}
+
+
+        
+            
     </script>
    
 </body>
