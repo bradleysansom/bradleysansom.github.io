@@ -18,6 +18,7 @@
             text-align: center;
             color: white;
             font-family: sans-serif;
+            
         }
         
         .middle {
@@ -87,6 +88,11 @@
             height: 450px;
             width: 450px;
         }
+        #eight {
+            left: 625px;
+            top: 125.5px;
+            transition: 10s;
+        }
         
         .proginfo {
             background-color: white;
@@ -98,6 +104,7 @@
             left: 820px;
             top: 100px;
             font-weight: bold;
+            display:none;
         }
         
         .title {
@@ -131,7 +138,8 @@
 
 
             <img src="initial.png" alt="initial" id="rightbumper" width="350" height="900">
-            <div class="proginfo">
+            <img src="8.png" alt="eight" id="eight" width="350" height="649">
+            <div class="proginfo" id="proginfo">
                 <span class="title"> </span><br><br>
                 <span class="day"> </span><br>
                 <span class="time"> </span>
@@ -145,34 +153,20 @@
             <input type="text" value="Programme title" id="progTitle">
             <input type="text" value="Day" id="progDay">Time:
             <input type="time" value="" id="progTime">
+            <input type="file" id="progImage" accept="image/*">
+            <input type="button" value="Autogenerate" onclick="repeatRandomise()">
 
         </div>
         <div class="credits">
-            Endboard Generator - Created by Bradley Sansom
+            Endboard Generator - Created by Bradley Sansom 
         </div>
     </div>
     <script>
-        var blackboard = new Image();
-        blackboard.src = "blackboard.png";
-        var checkerboard = new Image();
-        checkerboard.src = "checkerboard.png";
-        var coloursBlack = new Image();
-        coloursBlack.src = "coloursBlack.png";
-        var coloursWhite = new Image();
-        coloursWhite.src = "coloursWhite.png";
-        var diag = new Image();
-        diag.src = "diag.png";
-        var lines = new Image();
-        lines.src = "lines.png";
-        var moire = new Image();
-        moire.src = "moire.png";
-        var tres = new Image();
-        tres.src = "tres.png";
-        var trois = new Image();
-        trois.src = "trois.png";
+        
 
         function randomiser() {
-            var patternsArray = ["blackboard.png", "checkerboard.png", "coloursBlack.png", "coloursWhite.png", "diag.png", "lines.png", "moire.png", "tres.png", "trois.png"];
+            document.getElementById('proginfo').style.display = "initial";
+            var patternsArray = ["saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
             var img;
             var progTitle = document.getElementById('progTitle').value;
             document.getElementsByClassName('title')[0].innerHTML = progTitle;
@@ -208,15 +202,32 @@
             getRandomImage(patternsArray);
             document.getElementById('topleft').src = img;
 
+            const reader = new FileReader();
+          const  fileInput = document.getElementById("progImage");
+            
+
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
                 img = patternsArray[num];
                 console.log(img);
-            }
+            
             getRandomImage(patternsArray);
             document.getElementById('bottomleft').src = img;
 
+    const reader = new FileReader();
+          const  fileInput = document.getElementById("progImage");
+            const progImg = document.getElementById("bottomleft");
+           
+            reader.onload = e => {
+                progImg.src = e.target.result;
+            }
+            fileInput.addEventListener('change', e => {
+                const f = e.target.files[0];
+                reader.readAsDataURL(f);
+            })
+
+          
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
@@ -234,123 +245,18 @@
             }
             getRandomImage(patternsArray);
             document.getElementById('bottomright').src = img;
-        }
+            }}
+        function repeatRandomise(){
+    randomiser();
+
+    setTimeout(repeatRandomise, 1000);
+}
+
+
+        
+            
     </script>
-    <!-- <script>
-        function test() {
-            var blackboardPattern;
-            var checkerboardPattern;
-            var coloursBlackPattern;
-            var coloursWhitePattern;
-            var diagPattern;
-            var linesPattern;
-            var moirePattern;
-            var tresPattern;
-            var troisPattern;
-
-            var img1 = document.getElementById("img1"),
-                img1ctx = img1bumper.getContext("2d");
-
-            var leftbumper = document.getElementById("leftbumper"),
-                leftbumperctx = leftbumper.getContext("2d");
-            var rightbumper = document.getElementById("rightbumper"),
-                rightbumperctx = rightbumper.getContext("2d");
-            var topleft = document.getElementById("topleft"),
-                topleftctx = topleft.getContext("2d");
-            var bottomleft = document.getElementById("bottomleft"),
-                bottomleftctx = bottomleft.getContext("2d");
-            var topright = document.getElementById("topright"),
-                toprightctx = topright.getContext("2d");
-            var bottomright = document.getElementById("bottomright"),
-                bottomrightctx = bottomright.getContext("2d");
-
-            var patternsArray = [blackboardPattern, checkerboardPattern, coloursBlackPattern, coloursWhitePattern, diagPattern, linesPattern, moirePattern, tresPattern, troisPattern];
-            var item1 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
-            console.log(item1);
-            var item2 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
-            console.log(item2);
-            var item3 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
-            console.log(item3);
-            var item4 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
-            console.log(item4);
-            var item5 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
-            console.log(item5);
-            var item6 = patternsArray[Math.floor(Math.random() * patternsArray.length)];
-            console.log(item6);
-            leftbumperctx.fillstyle = item1;
-
-
-
-            var blackboard = new Image();
-            blackboard.src = "blackboard.png";
-            blackboard.onload = function() {
-                blackboardPattern = img1.createPattern(blackboard, 'repeat');
-                img1.fillStyle = coloursWhitePattern;
-                img1.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var checkerboard = new Image();
-            checkerboard.src = "checkerboard.png";
-            checkerboard.onload = function() {
-                checkerboardPattern = img2.createPattern(checkerboard, 'repeat');
-                img2.fillStyle = checkerboardPattern;
-                img2.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var coloursBlack = new Image();
-            coloursBlack.src = "coloursBlack.png";
-            coloursBlack.onload = function() {
-                coloursBlackPattern = img3.createPattern(coloursBlack, 'repeat');
-                img3.fillStyle = coloursBlackPattern;
-                img3.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var coloursWhite = new Image();
-            coloursWhite.src = "coloursWhite.png";
-            coloursWhite.onload = function() {
-                coloursWhitePattern = img4.createPattern(coloursWhite, 'repeat');
-                img4.fillStyle = coloursWhitePattern;
-                img4.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var diag = new Image();
-            diag.src = "diag.png";
-            diag.onload = function() {
-                diagPattern = img5.createPattern(diag, 'repeat');
-                img5.fillStyle = diagPattern;
-                img5.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var lines = new Image();
-            lines.src = "lines.png";
-            lines.onload = function() {
-                linesPattern = img6.createPattern(lines, 'repeat');
-                img6.fillStyle = linesPattern;
-                img6.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var moire = new Image();
-            moire.src = "moire.png";
-            moire.onload = function() {
-                moirePattern = img7.createPattern(moire, 'repeat');
-                img7.fillStyle = moirePattern;
-                img7.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var tres = new Image();
-            tres.src = "tres.png";
-            tres.onload = function() {
-                tresPattern = img8.createPattern(tres, 'repeat');
-                img8.fillStyle = tresPattern;
-                img8.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-            var trois = new Image();
-            trois.src = "trois.png";
-            trois.onload = function() {
-                troisPattern = img9.createPattern(trois, 'repeat');
-                img9.fillStyle = troisPattern;
-                img9.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
-            }
-
-
-
-
-
-        }
-    </script> -->
+   
 </body>
 
 
