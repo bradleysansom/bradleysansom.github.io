@@ -50,8 +50,9 @@
             top: 0px;
             height: 900px;
             width: 350px;
-            background-size: contain;
+            background-size: cover;
             background-repeat: repeat;
+            
         }
         
         #rightbumper {
@@ -59,6 +60,8 @@
             top: 0px;
             height: 900px;
             width: 350px;
+            background-size: cover;
+            background-repeat: repeat;
         }
         
         #topleft, #topleftcurve {
@@ -204,7 +207,7 @@
             document.getElementById('topleft').src = img;
 
             const reader = new FileReader();
-          const  fileInput = document.getElementById("progImage");
+            const  fileInput = document.getElementById("progImage");
             
 
             function getRandomImage(patternsArray, path) {
