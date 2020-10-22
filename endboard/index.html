@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Endboard</title>
+    <meta charset="UTF-8">
+    <script src="test.js"></script>
+
+    <title>8 Endboard</title>
     <style>
         body {
             padding: 0;
@@ -30,6 +33,7 @@
         
         .bottom {
             bottom: 0px;
+            z-index: 20;
         }
         
         .generatedimage {
@@ -38,6 +42,13 @@
             border: 1px solid #000000;
         }
         
+        #leftbumper,
+        #rightbumper,
+        #topleft,
+        #topright,
+        #bottomleft,
+        #bottomright,
+        #programmeimage,
         img {
             padding: 0;
             margin: 0;
@@ -50,7 +61,7 @@
             height: 900px;
             width: 350px;
             background-size: 200px 200px;
-            background-repeat: repeat;
+            background-repeat: round;
         }
         
         #rightbumper {
@@ -59,10 +70,18 @@
             height: 900px;
             width: 350px;
             background-size: 200px 200px;
-            background-repeat: repeat;
+            background-repeat: round;
         }
         
-        #topleft,
+        #topleft {
+            left: 350px;
+            top: 0px;
+            height: 450px;
+            width: 450px;
+            background-size: 200px 200px;
+            background-repeat: round;
+        }
+        
         #topleftcurve {
             left: 350px;
             top: 0px;
@@ -75,6 +94,8 @@
             top: 0px;
             height: 450px;
             width: 450px;
+            background-size: 200px 200px;
+            background-repeat: round;
         }
         
         #bottomleft {
@@ -82,9 +103,20 @@
             top: 450px;
             height: 450px;
             width: 450px;
+            background-size: 200px 200px;
+            background-repeat: round;
+            z-index: 1;
         }
         
-        #bottomright,
+        #bottomright {
+            left: 800px;
+            top: 450px;
+            height: 450px;
+            width: 450px;
+            background-size: 200px 200px;
+            background-repeat: round;
+        }
+        
         #bottomrightcurve {
             left: 800px;
             top: 450px;
@@ -96,6 +128,7 @@
             left: 625px;
             top: 125.5px;
             transition: 10s;
+            z-index: 11;
         }
         
         .proginfo {
@@ -109,6 +142,7 @@
             top: 100px;
             font-weight: bold;
             display: none;
+            z-index: 11;
         }
         
         .title {
@@ -119,31 +153,41 @@
         .time {
             font-size: 1.5rem;
         }
+        
+        #programmeimage {
+            left: 350px;
+            top: 450px;
+            height: 450px;
+            width: 450px;
+            z-index: 10;
+            background-size: cover;
+            background-position-x: center;
+        }
     </style>
 </head>
 
-<body>
-
+<body onload="preloader()">
     <div class="middle">
         <div class="generatedimage">
-            <img src="initial.png" alt="initial" id="leftbumper" width="350" height="900">
+            <div id="leftbumper"></div>
 
+            <div id="topleft"></div>
 
-            <img src="initial.png" alt="initial" id="topleft" width="450" height="450">
             <img src="tl.png" alt="initial" id="topleftcurve" width="450" height="450">
 
-            <img src="initial.png" alt="initial" id="bottomleft" width="450" height="450">
+            <div id="bottomleft"></div>
+            <div id="programmeimage"></div>
 
+            <div id="topright"></div>
 
-            <img src="initial.png" alt="initial" id="topright" width="450" height="450">
+            <div id="bottomright"></div>
 
-
-            <img src="initial.png" alt="initial" id="bottomright" width="450" height="450">
             <img src="br.png" alt="initial" id="bottomrightcurve" width="450" height="450">
 
+            <div id="rightbumper"></div>
 
-            <img src="initial.png" alt="initial" id="rightbumper" width="350" height="900">
             <img src="8.png" alt="eight" id="eight" width="350" height="649">
+
             <div class="proginfo" id="proginfo">
                 <span class="title"> </span><br><br>
                 <span class="day"> </span><br>
@@ -160,106 +204,13 @@
             <input type="time" value="" id="progTime">
             <input type="file" id="progImage" accept="image/*">
             <input type="button" value="Autogenerate" onclick="repeatRandomise()">
+            <input type="button" value="Save image" onclick="generate()">
 
         </div>
         <div class="credits">
             Endboard Generator - Created by Bradley Sansom
         </div>
     </div>
-    <script>
-        function randomiser() {
-            document.getElementById('proginfo').style.display = "initial";
-            var patternsArray = ["circles.png", "waves.png", "saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
-            var img;
-            var progTitle = document.getElementById('progTitle').value;
-            document.getElementsByClassName('title')[0].innerHTML = progTitle;
-            var progDay = document.getElementById('progDay').value;
-            document.getElementsByClassName('day')[0].innerHTML = progDay;
-            var progTime = document.getElementById('progTime').value;
-            document.getElementsByClassName('time')[0].innerHTML = progTime;
-
-            function getRandomImage(patternsArray, path) {
-                path = path || ''; // default path here
-                var num = Math.floor(Math.random() * patternsArray.length);
-                img = patternsArray[num];
-                console.log(img);
-            }
-            getRandomImage(patternsArray);
-            document.getElementById('leftbumper').src = img;
-
-            function getRandomImage(patternsArray, path) {
-                path = path || ''; // default path here
-                var num = Math.floor(Math.random() * patternsArray.length);
-                img = patternsArray[num];
-                console.log(img);
-            }
-            getRandomImage(patternsArray);
-            document.getElementById('rightbumper').src = img;
-
-            function getRandomImage(patternsArray, path) {
-                path = path || ''; // default path here
-                var num = Math.floor(Math.random() * patternsArray.length);
-                img = patternsArray[num];
-                console.log(img);
-            }
-            getRandomImage(patternsArray);
-            document.getElementById('topleft').src = img;
-
-            const reader = new FileReader();
-            const fileInput = document.getElementById("progImage");
-
-
-            function getRandomImage(patternsArray, path) {
-                path = path || ''; // default path here
-                var num = Math.floor(Math.random() * patternsArray.length);
-                img = patternsArray[num];
-                console.log(img);
-
-                getRandomImage(patternsArray);
-                document.getElementById('bottomleft').src = img;
-
-                const reader = new FileReader();
-                const fileInput = document.getElementById("progImage");
-                const progImg = document.getElementById("bottomleft");
-
-                reader.onload = e => {
-                    progImg.src = e.target.result;
-                }
-                fileInput.addEventListener('change', e => {
-                    const f = e.target.files[0];
-                    reader.readAsDataURL(f);
-                })
-
-
-                function getRandomImage(patternsArray, path) {
-                    path = path || ''; // default path here
-                    var num = Math.floor(Math.random() * patternsArray.length);
-                    img = patternsArray[num];
-                    console.log(img);
-                }
-                getRandomImage(patternsArray);
-                document.getElementById('topright').src = img;
-
-                function getRandomImage(patternsArray, path) {
-                    path = path || ''; // default path here
-                    var num = Math.floor(Math.random() * patternsArray.length);
-                    img = patternsArray[num];
-                    console.log(img);
-                }
-                getRandomImage(patternsArray);
-                document.getElementById('bottomright').src = img;
-            }
-        }
-
-        function repeatRandomise() {
-            randomiser();
-
-            setTimeout(repeatRandomise, 1000);
-        }
-    </script>
-
 </body>
-
-
 
 </html>

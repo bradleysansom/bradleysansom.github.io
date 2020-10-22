@@ -126,23 +126,23 @@
 
     <div class="middle">
         <div class="generatedimage">
-            <div id="leftbumper">
-            </div>
+            <img src="initial.png" alt="initial" id="leftbumper" width="350" height="900">
 
-            <div id="topleft"></div>
+
+            <img src="initial.png" alt="initial" id="topleft" width="450" height="450">
             <img src="tl.png" alt="initial" id="topleftcurve" width="450" height="450">
 
-            <div id="bottomleft"></div>
+            <img src="initial.png" alt="initial" id="bottomleft" width="450" height="450">
 
 
-            <div id="topright"></div>
+            <img src="initial.png" alt="initial" id="topright" width="450" height="450">
 
 
-            <div id="bottomright"></div>
+            <img src="initial.png" alt="initial" id="bottomright" width="450" height="450">
             <img src="br.png" alt="initial" id="bottomrightcurve" width="450" height="450">
 
 
-            <div id="rightbumper"></div>
+            <img src="initial.png" alt="initial" id="rightbumper" width="350" height="900">
             <img src="8.png" alt="eight" id="eight" width="350" height="649">
             <div class="proginfo" id="proginfo">
                 <span class="title"> </span><br><br>
@@ -181,13 +181,11 @@
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
                 var num = Math.floor(Math.random() * patternsArray.length);
-                img = "url(" + patternsArray[num] + ")";
-                console.log("hello" + img);
-                console.log("HELLO HELLO");
+                img = patternsArray[num];
+                console.log(img);
             }
             getRandomImage(patternsArray);
-            document.getElementById('leftbumper').backgroundImage = img;
-            console.log("test test");
+            document.getElementById('leftbumper').src = img;
 
             function getRandomImage(patternsArray, path) {
                 path = path || ''; // default path here
