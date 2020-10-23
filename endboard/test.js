@@ -21,6 +21,14 @@ function preloader() {
     (new Image()).src = "rgbtriangles.png";
     (new Image()).src = "triangles.png";
     (new Image()).src = "3d.png";
+    (new Image()).src = "crosshairs.png";
+    (new Image()).src = "super.png";
+    (new Image()).src = "moremoire.png";
+    (new Image()).src = "moregrey.png";
+    (new Image()).src = "morestripes.png";
+    (new Image()).src = "wavy.png";
+
+
 
 }
 
@@ -32,7 +40,7 @@ function randomiser() {
     document.getElementsByClassName('day')[0].innerHTML = progDay;
     var progTime = document.getElementById('progTime').value;
     document.getElementsByClassName('time')[0].innerHTML = progTime;
-    var patternsArray = ["3d.png", "bullseye.png", "circles.png", "waves.png", "saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
+    var patternsArray = ["wavy.png", "moremoire.png", "moregrey.png", "morestripes.png", "super.png", "crosshairs.png", "3d.png", "bullseye.png", "circles.png", "waves.png", "saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
     const chooseRandom = (patternsArray, num = 1) => {
         const res = [];
         for (let i = 0; i < num;) {
@@ -67,7 +75,7 @@ window.addEventListener('load', function() {
         if (this.files && this.files[0]) {
             var img = document.getElementById('programmeimage'); // $('img')[0]
             img.style.backgroundImage = "url('" + URL.createObjectURL(this.files[0]) + "')"; // set src to blob url
-            img.onload = imageIsLoaded;
+            // img.onload = imageIsLoaded;
         }
     });
 });
