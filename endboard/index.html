@@ -14,13 +14,14 @@
         
         .top,
         .bottom {
-            height: 70px;
+            height: 100px;
             background-color: #111111;
             position: fixed;
             width: 100%;
             text-align: center;
             color: white;
             font-family: sans-serif;
+            padding: 10px 10px 10px 10px;
         }
         
         .middle {
@@ -164,6 +165,26 @@
             background-position-x: center;
             filter: opacity(0.8);
         }
+        
+        .controls {
+            display: flex;
+        }
+        
+        .formsection {
+            padding: 7px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        
+        #colourselector {
+            background-image: url('black bars.png');
+            background-size: cover;
+            transition: 1s;
+        }
     </style>
 </head>
 
@@ -199,18 +220,32 @@
     </div>
     <div class="bottom">
         <div class="controls">
-            <input type="button" value="Generate new endboard" onclick="randomiser()">
-            <input type="text" value="Programme title" id="progTitle">
-            <input type="text" value="Day" id="progDay">Time:
-            <input type="time" value="" id="progTime">
-            <input type="file" id="progImage" accept="image/*">
-            <input type="button" value="Autogenerate" onclick="repeatRandomise()">
-
-
+            <span class="formsection">
+                Programme info:
+                <input type="text" value="Programme title" id="progTitle">
+                <input type="text" value="Day" id="progDay">Time:
+                <input type="time" value="" id="progTime">
+                <input type="file" id="progImage" accept="image/*">
+            </span>
+            <span class="formsection" id="colourselector">
+                Colours:
+                <input type="radio" id="colours" name="theme" value="colours">
+                <label for="colours">Colours</label>
+                <input type="radio" id="bw" name="theme" value="bw">
+                <label for="bw">Greyscale</label>
+                <input type="radio" id="coloursbw" name="theme" value="coloursbw" checked>
+                <label for="coloursbw">Colours and Greys</label>
+            </span>
+            <span class="formsection">
+                <input type="button" value="Generate new endboard" onclick="randomiser()">
+                <input type="button" value="Autogenerate" id="repeatbutton" onclick="repeatRandomise()">
+                <input type="button" value="Stop Autogenerate" id="stoprepeat" onclick="stopRandomise()" style="display:none;">
+            </span>
+            <span class="formsection">
+                Bradley Sansom
+            </span>
         </div>
-        <div class="credits">
-            Endboard Generator - Created by Bradley Sansom
-        </div>
+
     </div>
 </body>
 

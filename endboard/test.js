@@ -1,3 +1,5 @@
+var A;
+
 function preloader() {
     (new Image()).src = "circles.png";
     (new Image()).src = "bullseye.png";
@@ -40,7 +42,21 @@ function randomiser() {
     document.getElementsByClassName('day')[0].innerHTML = progDay;
     var progTime = document.getElementById('progTime').value;
     document.getElementsByClassName('time')[0].innerHTML = progTime;
-    var patternsArray = ["wavy.png", "moremoire.png", "moregrey.png", "morestripes.png", "super.png", "crosshairs.png", "3d.png", "bullseye.png", "circles.png", "waves.png", "saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
+    if (document.getElementById("colours").checked === true) {
+        document.getElementById('colourselector').style.backgroundImage = "url('bars.png')";
+        var patternsArray = ["wavy.png", "morestripes.png", "super.png", "bullseye.png", "circles.png", "waves.png", "stripes.png", "bars.png", "black bars.png", "blue.png", "green.png", "red.png", "rgb.png", "rgbtriangles.png"];
+
+    } else if (document.getElementById("bw").checked === true) {
+        document.getElementById('colourselector').style.backgroundImage = "url('greys.png')";
+        var patternsArray = ["moremoire.png", "moregrey.png", "crosshairs.png", "3d.png", "saw.gif", "greystripe.png", "blackboard.png", "checkerboard.png", "greys.png", "lines.png", "moire.png", "triangles.png"];
+
+    } else if (document.getElementById("coloursbw").checked === true) {
+        document.getElementById('colourselector').style.backgroundImage = "url('black bars.png')";
+        var patternsArray = ["wavy.png", "moremoire.png", "moregrey.png", "morestripes.png", "super.png", "crosshairs.png", "3d.png", "bullseye.png", "circles.png", "waves.png", "saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
+
+    } else {
+        alert("error");
+    };
     const chooseRandom = (patternsArray, num = 1) => {
         const res = [];
         for (let i = 0; i < num;) {
@@ -84,6 +100,13 @@ window.addEventListener('load', function() {
 
 function repeatRandomise() {
     randomiser();
+    a = setTimeout(repeatRandomise, 1000);
+    document.getElementById('repeatbutton').style.display = "none";
+    document.getElementById('stoprepeat').style.display = "initial";
+};
 
-    setTimeout(repeatRandomise, 1000);
+function stopRandomise() {
+    clearTimeout(a);
+    document.getElementById('repeatbutton').style.display = "initial";
+    document.getElementById('stoprepeat').style.display = "none";
 };
