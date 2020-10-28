@@ -57,6 +57,25 @@ function randomiser() {
     } else {
         alert("error");
     };
+    if (document.getElementById("panel").checked === true) {
+        document.getElementById('proginfo').style.display = "initial";
+    } else {
+        document.getElementById('proginfo').style.display = "none";
+    };
+    if (document.getElementById("logo").checked === true) {
+        document.getElementById('eight').style.display = "initial";
+    } else {
+        document.getElementById('eight').style.display = "none";
+    };
+    if (document.getElementById("rings").checked === true) {
+        document.getElementById('topleftcurve').style.display = "initial";
+        document.getElementById('bottomrightcurve').style.display = "initial";
+    } else {
+        document.getElementById('topleftcurve').style.display = "none";
+        document.getElementById('bottomrightcurve').style.display = "none";
+    };
+
+
     const chooseRandom = (patternsArray, num = 1) => {
         const res = [];
         for (let i = 0; i < num;) {
@@ -110,3 +129,7 @@ function stopRandomise() {
     document.getElementById('repeatbutton').style.display = "initial";
     document.getElementById('stoprepeat').style.display = "none";
 };
+
+function np() {
+    window.location.href = "../index.html";
+}

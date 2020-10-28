@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <script src="test.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 
     <title>8 Endboard</title>
     <style>
         body {
             padding: 0;
             margin: 0;
+            background-color: #333333;
+            font-family: Jost !important;
         }
         
         .top,
         .bottom {
-            height: 100px;
             background-color: #111111;
             position: fixed;
             width: 100%;
@@ -22,10 +24,7 @@
             color: white;
             font-family: sans-serif;
             padding: 10px 10px 10px 10px;
-        }
-        
-        .middle {
-            background-color: #333333;
+            font-family: 'jost';
         }
         
         .top {
@@ -38,9 +37,9 @@
         }
         
         .generatedimage {
+            background-color: white;
             width: 1600px;
             height: 900px;
-            border: 1px solid #000000;
         }
         
         #leftbumper,
@@ -144,6 +143,7 @@
             font-weight: bold;
             display: none;
             z-index: 11;
+            font-family: 'Jost';
         }
         
         .title {
@@ -176,14 +176,67 @@
             margin-bottom: 20px;
             margin-left: 20px;
             margin-right: 20px;
-            border: 1px solid white;
-            border-radius: 5px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            line-height: 2rem;
         }
         
         #colourselector {
             background-image: url('black bars.png');
             background-size: cover;
             transition: 1s;
+        }
+        
+        #credit {
+            background-image: url('waves.png');
+            background-size: cover;
+            transition: 1s;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+            line-height: initial;
+            display: flex;
+            align-items: center
+        }
+        
+        .formsection .title {
+            font-weight: 600;
+            font-size: medium;
+            color: black;
+            background-color: white;
+            border-radius: 50px;
+            padding: 3px 10px;
+            margin: 5px;
+        }
+        
+        .formsection input {
+            font-family: 'Jost' !important;
+            color: black;
+            font-weight: 700;
+            background-color: white;
+            border-radius: 50px;
+            padding: 3px 10px;
+            margin: 5px;
+        }
+        
+        .formsection label {
+            font-family: 'Jost' !important;
+        }
+        
+        #generate {
+            background-color: white;
+        }
+        
+        #generate input {
+            background-color: black;
+            color: white;
+            font-weight: 500;
+        }
+        
+        #credit span {
+            background-color: #ffffff88;
+            padding: 3px;
+            border-radius: 3px;
         }
     </style>
 </head>
@@ -221,28 +274,42 @@
     <div class="bottom">
         <div class="controls">
             <span class="formsection">
-                Programme info:
-                <input type="text" value="Programme title" id="progTitle">
-                <input type="text" value="Day" id="progDay">Time:
-                <input type="time" value="" id="progTime">
-                <input type="file" id="progImage" accept="image/*">
-            </span>
-            <span class="formsection" id="colourselector">
-                Colours:
-                <input type="radio" id="colours" name="theme" value="colours">
-                <label for="colours">Colours</label>
-                <input type="radio" id="bw" name="theme" value="bw">
-                <label for="bw">Greyscale</label>
-                <input type="radio" id="coloursbw" name="theme" value="coloursbw" checked>
-                <label for="coloursbw">Colours and Greys</label>
+                <span class="title">Programme info:</span>
+            <input type="text" value="Programme title" id="progTitle">
+            <input type="text" value="Day" id="progDay">Time:
+            <input type="time" value="" id="progTime">
+
             </span>
             <span class="formsection">
+                <span class="title">Programme image:</span>
+            <input type="file" id="progImage" accept="image/*">
+            </span>
+            <span class="formsection" id="colourselector">
+                <span class="title">Colours:</span>
+            <input type="radio" id="colours" name="theme" value="colours">
+            <label for="colours">Colours</label>
+            <input type="radio" id="bw" name="theme" value="bw">
+            <label for="bw">Greyscale</label>
+            <input type="radio" id="coloursbw" name="theme" value="coloursbw" checked>
+            <label for="coloursbw">Colours and Greys</label>
+            </span>
+            <span class="formsection" id="options">
+                <span class="title">Options:</span>
+            <input type="checkbox" id="panel" name="panel" checked>
+            <label for="panel">Show programme information</label>
+            <input type="checkbox" id="rings" name="rings" checked>
+            <label for="rings">Show rings</label>
+            <input type="checkbox" id="logo" name="logo" checked>
+            <label for="logo">Show logo</label>
+            </span>
+            <span class="formsection" id="generate">
                 <input type="button" value="Generate new endboard" onclick="randomiser()">
                 <input type="button" value="Autogenerate" id="repeatbutton" onclick="repeatRandomise()">
                 <input type="button" value="Stop Autogenerate" id="stoprepeat" onclick="stopRandomise()" style="display:none;">
             </span>
-            <span class="formsection">
-                Bradley Sansom
+
+            <span class="formsection" id="credit" onclick="np()">
+               <span> Bradley Sansom</span>
             </span>
         </div>
 
