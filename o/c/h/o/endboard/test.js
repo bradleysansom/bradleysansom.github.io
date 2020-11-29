@@ -32,7 +32,13 @@ function preloader() {
 
 
 
-}
+};
+
+function noanim() {
+    document.getElementById('topleftcurve').classList.remove('tlcanim');
+    document.getElementById('bottomrightcurve').classList.remove('brcanim');
+    document.getElementById('eight').classList.remove('eightanim');
+};
 
 function randomiser() {
     document.getElementById('proginfo').style.display = "initial";
@@ -64,12 +70,17 @@ function randomiser() {
     };
     if (document.getElementById("logo").checked === true) {
         document.getElementById('eight').style.display = "initial";
+        document.getElementById('eight').classList.add('eightanim');
+        setTimeout(noanim, 700);
     } else {
         document.getElementById('eight').style.display = "none";
     };
     if (document.getElementById("rings").checked === true) {
         document.getElementById('topleftcurve').style.display = "initial";
         document.getElementById('bottomrightcurve').style.display = "initial";
+        document.getElementById('topleftcurve').classList.add('tlcanim');
+        document.getElementById('bottomrightcurve').classList.add('brcanim');
+        setTimeout(noanim, 700);
     } else {
         document.getElementById('topleftcurve').style.display = "none";
         document.getElementById('bottomrightcurve').style.display = "none";
