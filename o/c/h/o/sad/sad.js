@@ -1,8 +1,3 @@
-document.getElementById("flagSubtitles").style.display = "none";
-document.getElementById("flagAudio").style.display = "none";
-document.getElementById("flagSigned").style.display = "none";
-
-
 function fadeoutfin() {
 
     document.getElementById('alert').style.display = "none";
