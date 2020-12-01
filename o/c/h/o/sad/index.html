@@ -389,10 +389,11 @@
             animation: slide-out-top 0.5s ease-in-out both;
         }
         
-        .toplineoftext,
-        .bottomlineoftext {
-            display: inline-block;
-            vertical-align: middle;
+        .flagSubtiles,
+        .flagAudio,
+        .flagSigned {
+            height:90px;
+            
         }
         
         .toplineoftext {
@@ -413,8 +414,9 @@
 
                 </div>
                 <div id="paneltext">
-                    <span class="toplineoftext"></span><br>
-                    <span class="bottomlineoftext"></span>
+                    <span class="flagSubtitles"></span>
+                    <span class="flagAudio"></span>
+                    <span class="flagSigned"></span>
                 </div>
 
             </div>
@@ -423,24 +425,18 @@
     </div>
     <div class="bottom">
         <div class="controls">
-            <span class="formsection">
-                <span class="title">Information to show:</span>
-            <input type="text" value="Top line" id="topLine">
-            <input type="text" value="Bottom line" id="bottomLine">
-            </span>
-
             <span class="formsection" id="colourselector">
                 <span class="title">Theme:</span>
-            <input type="radio" id="circle" name="theme" value="circle" checked>
-            <label for="circle">Circle</label>
-            <input type="radio" id="wavy" name="theme" value="wavy">
-            <label for="wavy">Colour waves</label>
-            <input type="radio" id="moire" name="theme" value="moire">
-            <label for="moire">Scan lines</label>
+            <input type="checkbox" id="subtitles" name="theme" value="subtitles" checked>
+            <label for="subtitles">Subtitles</label>
+            <input type="checkbox" id="audio" name="theme" value="audio">
+            <label for="audio">Audio description</label>
+            <input type="checkbox" id="bsl" name="theme" value="bsl">
+            <label for="bsl">Sign language</label>
             </span>
 
             <span class="formsection" id="generate">
-                <input type="button" value="Generate alert" onclick="generate()">
+                <input type="button" value="Generate flag" onclick="generate()">
                
             </span>
 
