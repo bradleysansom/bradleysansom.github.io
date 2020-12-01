@@ -1,3 +1,4 @@
+console.log("16:35");
 function fadeoutfin() {
 
     document.getElementById('alert').style.display = "none";
