@@ -1,4 +1,4 @@
-console.log("16:35");
+console.log("17:00");
 function fadeoutfin() {
 
     document.getElementById('alert').style.display = "none";
@@ -15,7 +15,9 @@ function fadeout() {
 
 function generate() {
     document.getElementById('alert').style.display = "initial";
-    
+    document.getElementById('bumper').style.display = "initial";
+    document.getElementById('panel').style.display = "initial";
+    document.getElementById('paneltext').style.display = "initial";
     if (document.getElementById("subtitles").checked === true) {
         document.getElementById("flagSubtitles").style.display = "initial";
     } 
