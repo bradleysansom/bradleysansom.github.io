@@ -1,3 +1,8 @@
+document.getElementById("flagSubtitles").style.display = "none";
+document.getElementById("flagAudio").style.display = "none";
+document.getElementById("flagSigned").style.display = "none";
+
+
 function fadeoutfin() {
 
     document.getElementById('alert').style.display = "none";
@@ -14,19 +19,15 @@ function fadeout() {
 
 function generate() {
     document.getElementById('alert').style.display = "initial";
-    var topLine = document.getElementById('topLine').value;
-    document.getElementsByClassName('toplineoftext')[0].innerHTML = topLine;
-    var bottomLine = document.getElementById('bottomLine').value;
-    document.getElementsByClassName('bottomlineoftext')[0].innerHTML = bottomLine;
-    if (document.getElementById("circle").checked === true) {
-        document.getElementById("bumper").style.backgroundImage = "url('super.png')";
-        document.getElementById("panel").style.backgroundImage = "url('super0.png')";
-    } else if (document.getElementById("wavy").checked === true) {
-        document.getElementById("bumper").style.backgroundImage = "url('wavy.png')";
-        document.getElementById("panel").style.backgroundImage = "url('wavy.png')";
-    } else if (document.getElementById("moire").checked === true) {
-        document.getElementById("bumper").style.backgroundImage = "url('lines.png')";
-        document.getElementById("panel").style.backgroundImage = "url('lines0.png')";
+    
+    if (document.getElementById("subtitles").checked === true) {
+        document.getElementById("flagSubtitles").style.display = "initial";
+    } 
+    if (document.getElementById("audio").checked === true) {
+        document.getElementById("flagAudio").style.display = "initial";
+    } 
+    if (document.getElementById("bsl").checked === true) {
+        document.getElementById("flagSigned").style.display = "initial";
     };
 
     document.getElementById('bumper').classList.add('bumperanim');
