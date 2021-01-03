@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradley Sansom - Portfolio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+        body {
+            background-color: #111111;
+            font-family: 'Oxygen';
+            background-image: url('monogram.png');
+            background-size: 40px;
+            background-repeat: round;
+        }
+        
+        div {
+            padding: 10px;
+            background-color: #000000;
+            border-radius: 10px;
+            margin: 10px;
+            color: white;
+        }
+        
+        .header,
+        .footer,
+        .seperator {
+            text-align: center;
+            color: white;
+            background: rgb(44, 103, 159);
+            background: linear-gradient(90deg, rgba(44, 103, 159, 1) 0%, rgba(121, 210, 184, 1) 100%);
+        }
+        
+        .name {
+            font-family: 'Bevan';
+            font-size: 3rem;
+        }
+        
+        .subtitle {
+            font-family: 'Oxygen';
+            font-size: 2rem;
+        }
+        
+        .welcome {
+            border: 2px solid rgba(121, 210, 184, 1);
+            padding: 150px;
+        }
+        
+        .greeting,
+        .thanks {
+            font-family: 'Bevan';
+            font-size: 1rem;
+        }
+        
+        .blurb {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+        
+        .blurb a {
+            color: white;
+        }
+        
+        .gallery {
+            background-color: #cccccc;
+            text-align: center;
+        }
+        
+        .gallery img {
+            width: 65vw;
+        }
+        
+        .button {
+            text-align: center;
+            width: fit-content;
+            background: rgb(44, 103, 159);
+            background: linear-gradient(90deg, rgba(44, 103, 159, 1) 0%, rgba(121, 210, 184, 1) 100%);
+            transition: 1s;
+        }
+        
+        .button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .button:hover {
+            background-color: white;
+            color: rgb(44, 103, 159);
+            transition: 1s
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <span class="name">
+            Bradley Sansom
+       </span><br>
+        <span class="subtitle">Portfolio</span>
+    </div>
+    <div class="main">
+        <div class="welcome">
+            <span class="greeting" id="greetingText">Good day</span><br> Welcome to my portfolio. Below, please find a selection of the works I have created over the last couple of years.
+            <br><span class="thanks">Thanks</span>
+        </div>
+        <div class="seperator">
+            Infographics project
+        </div>
+        <div class="blurb">
+            As part of a project looking at the ways that infographics are used to present information in a graphical manner, I produced a poster which aims to explain how general elections work to first-time voters.
+        </div>
+        <div class="blurb">
+            I developed my ideas with sketches, and settled on a basic design centred on a river motif. The impression of a flowing 'river' would lead from the Thames outside Big Ben, taking on the forms of ballot papers, an electoral roll, and finally a racecourse
+            (extending the <a href="https://en.wikipedia.org/wiki/First-past-the-post_voting">'First Past the Post'</a> metaphor). With each sketch, I added annotations so that the next version of the infographic would be informed by the weaknesses
+            of the last one.
+        </div>
+        <div class="gallery">
+            <img src="progression.png" alt="The development of my infographic">
+        </div>
+        <div class="blurb">
+            I then moved on to the computer, using Illustrator to develop a final version of my infographic.
+        </div>
+        <div class="gallery">
+            <img src="infographic.png" alt="How a British General Election works">
+            <div class="button">
+                <a href="https://drive.google.com/file/d/12h0AHF3GpHjj_Bh9ZzMPn8WEupSc8SS1/view?usp=sharing">View PDF</a>
+            </div>
+        </div>
+        <div class="seperator">
+            Hello
+        </div>
+        Hello
+    </div>
+    <div class="footer">
+        Thank you
+    </div>
+    <script>
+        var today = new Date();
+        var hour = today.getHours();
+        console.log(hour);
+        if (hour <= 5) {
+            var greeting = "Good night";
+        } else if (hour <= 11) {
+            var greeting = "Good morning";
+        } else if (hour <= 17) {
+            var greeting = "Good afternoon";
+        } else if (hour <= 22) {
+            var greeting = "Good evening";
+        } else {
+            var greeting = "Good night";
+        }
+        document.getElementById('greetingText').innerHTML = greeting;
+    </script>
+</body>
+
+
+</html>
