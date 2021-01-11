@@ -89,37 +89,44 @@
             transition: 1s;
             padding: 10px 30px;
             margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
         }
         
         .button a {
+            display: block;
             color: white;
             text-decoration: none;
             font-weight: 600;
         }
         
-        .button a:hover > .button {
-            background-color: white;
+        .button:hover a {
             color: rgb(44, 103, 159);
-            transition: 1s
+            transition: 0.5s;
         }
         
-        
+        .button:hover {
+            background: white;
+            transition: 0.5s;
+        }
         
         .gallery video {
             width: 70vw;
         }
         
         @media only screen and (max-width: 600px) {
-body {
-font-size:1em; }
+            body {
+                font-size: 1em;
+            }
             .blurb,
             .welcome {
                 padding-left: 10px;
                 padding-right: 10px;
             }
-.all {
-width:90vw;
-}
+            .all {
+                width: 90vw;
+            }
         }
     </style>
 
@@ -321,6 +328,11 @@ width:90vw;
             </div>
             <div class="seperator">
                 <img src="broadcast.png" alt="Broadcast design">
+            </div>
+            <div class="blurb">
+                My most recent project involves creating the branding for a local TV channel. As part of the preparation for the project, I wrote a Statement of Intent summarising my aims in the project. </div>
+            <div class="button">
+                <a href="https://drive.google.com/file/d/1FN9b_sBRnPeQ1ixlt-91vXNHRgDCeg3x/view?usp=sharing">View statement of intent</a>
             </div>
             <div class="gallery">
                 <video controls>
