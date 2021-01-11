@@ -55,12 +55,19 @@
             border: 2px solid rgba(121, 210, 184, 1);
             background-image: url('concrete.jpg');
             padding: 150px;
+            font-size: 1.5rem;
         }
         
-        .greeting,
-        .thanks {
-            font-family: 'Bevan';
-            font-size: 1rem;
+        img.greeting {
+            height: 8vw;
+            max-width: 50vw;
+            padding-bottom: 10px;
+        }
+        
+        img.thanks {
+            padding-top: 10px;
+            height: 5vw;
+            max-width: 50vw;
         }
         
         .blurb {
@@ -129,6 +136,7 @@
         .navigation ul {
             margin: 0;
             padding: 0;
+            padding-top: 10px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -177,8 +185,8 @@
 
         <div class="main">
             <div class="welcome">
-                <span class="greeting" id="greetingText"> </span><br> Welcome to my portfolio. Below, please find a selection of the works I have created over the last couple of years.
-                <br><span class="thanks">Thanks</span>
+                <img class="greeting" id="greetingText" src="goodday.png" alt="Good day"> <br> Welcome to my portfolio. Below, please find a selection of the works I have created over the last couple of years.
+                <br><img class="thanks" src="thanks.png" alt="Thanks">
             </div>
             <div class="navigation">
                 <span class="jumpto">Jump to:</span>
@@ -204,7 +212,7 @@
                 As part of a project looking at the ways that infographics are used to present information in a graphical manner, I produced a poster which aims to explain how general elections work to first-time voters.
             </div>
             <div class="gallery">
-                <video controls>
+                <video poster="thumnailinfographics.png" controls>
                     <source src="infographic_development.mp4" type="video/mp4">
                 </video>
             </div>
@@ -536,17 +544,17 @@
         var hour = today.getHours();
         console.log(hour);
         if (hour <= 5) {
-            var greeting = "Good night";
+            var greeting = "goodnight.png";
         } else if (hour <= 11) {
-            var greeting = "Good morning";
+            var greeting = "goodmorning.png";
         } else if (hour <= 17) {
-            var greeting = "Good afternoon";
+            var greeting = "goodafternoon.png";
         } else if (hour <= 22) {
-            var greeting = "Good evening";
+            var greeting = "goodevening.png";
         } else {
-            var greeting = "Good night";
+            var greeting = "goodnight.png";
         }
-        document.getElementById('greetingText').innerHTML = greeting;
+        document.getElementById('greetingText').src = greeting;
     </script>
 </body>
 
