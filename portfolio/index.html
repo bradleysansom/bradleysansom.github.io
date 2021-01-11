@@ -170,6 +170,11 @@
             .all {
                 width: 90vw;
             }
+            img.greeting,
+            img.thanks {
+                height: 12vw;
+                max-width: 50vw;
+            }
         }
     </style>
 
@@ -187,6 +192,23 @@
                 <img class="greeting" id="greetingText" src="goodday.png" alt="Good day"> <br> Welcome to my portfolio. Below, please find a selection of the works I have created over the last couple of years.
                 <br><img class="thanks" src="thanks.png" alt="Thanks">
             </div>
+            <script>
+                var today = new Date();
+                var hour = today.getHours();
+                console.log(hour);
+                if (hour <= 5) {
+                    var greeting = "goodnight.png";
+                } else if (hour <= 11) {
+                    var greeting = "goodmorning.png";
+                } else if (hour <= 17) {
+                    var greeting = "goodafternoon.png";
+                } else if (hour <= 22) {
+                    var greeting = "goodevening.png";
+                } else {
+                    var greeting = "goodnight.png";
+                }
+                document.getElementById('greetingText').src = greeting;
+            </script>
             <div class="navigation">
                 <span class="jumpto">Jump to:</span>
                 <ul>
@@ -538,23 +560,7 @@
             Thank you
         </div>
     </div>
-    <script>
-        var today = new Date();
-        var hour = today.getHours();
-        console.log(hour);
-        if (hour <= 5) {
-            var greeting = "goodnight.png";
-        } else if (hour <= 11) {
-            var greeting = "goodmorning.png";
-        } else if (hour <= 17) {
-            var greeting = "goodafternoon.png";
-        } else if (hour <= 22) {
-            var greeting = "goodevening.png";
-        } else {
-            var greeting = "goodnight.png";
-        }
-        document.getElementById('greetingText').src = greeting;
-    </script>
+
 </body>
 
 
