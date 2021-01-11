@@ -86,7 +86,7 @@
             width: fit-content;
             background: rgb(44, 103, 159);
             background: linear-gradient(90deg, rgba(44, 103, 159, 1) 0%, rgba(121, 210, 184, 1) 100%);
-            transition: 1s;
+            transition: 0.5s;
             padding: 10px 30px;
             margin: auto;
             margin-top: 10px;
@@ -99,6 +99,7 @@
             color: white;
             text-decoration: none;
             font-weight: 600;
+            transition: 0.5s;
         }
         
         .button:hover a {
@@ -113,6 +114,41 @@
         
         .gallery video {
             width: 70vw;
+        }
+        
+        .navigation {
+            text-align: center;
+        }
+        
+        span#jumpto {
+            margin: auto;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+        }
+        
+        .navigation ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .navigation li {
+            border-radius: 10px;
+            transition: 0.5s;
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px 30px;
+        }
+        
+        .navigation li img {
+            height: 4vw;
+        }
+        
+        .navigation li:hover {
+            background-color: #ffffff33;
+            transition: 0.5s;
         }
         
         @media only screen and (max-width: 600px) {
@@ -138,12 +174,30 @@
             <img src="signature.png" alt="Bradley Sansom">
         </div>
 
+
         <div class="main">
             <div class="welcome">
                 <span class="greeting" id="greetingText"> </span><br> Welcome to my portfolio. Below, please find a selection of the works I have created over the last couple of years.
                 <br><span class="thanks">Thanks</span>
             </div>
-            <div class="seperator">
+            <div class="navigation">
+                <span class="jumpto">Jump to:</span>
+                <ul>
+                    <li>
+                        <a href="#infographics"><img src="infographics.png" alt="Infographics"></a>
+                    </li>
+                    <li>
+                        <a href="#branding"><img src="branding.png" alt="Branding"></a>
+                    </li>
+                    <li>
+                        <a href="#wayfinding"><img src="wayfinding.png" alt="Wayfinding"></a>
+                    </li>
+                    <li>
+                        <a href="#broadcasting"><img src="broadcast.png" alt="Broadcast design"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="seperator" id="infographics">
                 <img src="infographics.png" alt="Infographics">
             </div>
             <div class="blurb">
@@ -176,7 +230,7 @@
                     <a href="https://drive.google.com/file/d/12h0AHF3GpHjj_Bh9ZzMPn8WEupSc8SS1/view?usp=sharing">View PDF</a>
                 </div>
             </div>
-            <div class="seperator">
+            <div class="seperator" id="branding">
                 <img src="branding.png" alt="Branding">
             </div>
             <div class="blurb">
@@ -248,7 +302,7 @@
                 I enjoyed the chance to work on a live brief, a limitation which also helped me get used to working on tight deadlines and forced me to consider to a greater extent the desires of the client. The live brief was a design competition, in which I came second
                 and received positive feedback from the client.
             </div>
-            <div class="seperator">
+            <div class="seperator" id="wayfinding">
                 <img src="wayfinding.png" alt="Wayfinding design">
             </div>
             <div class="gallery">
@@ -329,7 +383,7 @@
             <div class="blurb">
                 Please note that the above pieces of work used imagery from Google Street View. Ideally, I'd have been able to use primary photographs to edit. However, this was not possible due to the coronavirus lockdown.
             </div>
-            <div class="seperator">
+            <div class="seperator" id="broadcasting">
                 <img src="broadcast.png" alt="Broadcast design">
             </div>
             <div class="blurb">
