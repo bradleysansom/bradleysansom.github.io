@@ -4,21 +4,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spheres</title>
+    <title>Bradley Sansom</title>
+
     <style>
-        a {
-            font-size: 5rem;
-            color: black;
-            font-family: 'Jost', 'Century Gothic', 'Futura', 'Gill Sans', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+        body {
+            background-color: #111111;
+            font-family: 'Oxygen';
+            background-image: url('monogram.png');
+            font-size: 1.2em;
+            background-size: 40px;
+            background-repeat: round;
+        }
+        
+        div {
+            padding: 10px;
+            background-color: #000000;
+            border-radius: 10px;
+            margin: 10px;
+            color: white;
+        }
+        
+        .all {
+            width: 80vw;
+            margin: auto;
+            background-color: initial;
+        }
+        
+        .header,
+        .footer,
+        .seperator {
+            text-align: center;
+            color: white;
+            background: rgb(44, 103, 159);
+            background: linear-gradient(90deg, rgba(44, 103, 159, 1) 0%, rgba(121, 210, 184, 1) 100%);
+        }
+        
+        .header img {
+            height: 10vw;
+            max-width: 70vw;
+        }
+        
+        .seperator img {
+            height: 10vw;
+            max-width: 70vw;
+        }
+        
+        .welcome {
+            border: 2px solid rgba(121, 210, 184, 1);
+            background-image: url('concrete.jpg');
+            padding: 30px;
+            font-size: 1.5rem;
+        }
+        
+        img.greeting {
+            height: 8vw;
+            max-width: 50vw;
+            padding-bottom: 10px;
+        }
+        
+        img.thanks {
+            padding-top: 10px;
+            height: 5vw;
+            max-width: 50vw;
+        }
+        
+        .blurb {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+        
+        .blurb a {
+            color: white;
+        }
+        
+        .gallery {
+            background-color: #cccccc;
+            text-align: center;
+        }
+        
+        .gallery img {
+            width: 65vw;
+        }
+        
+        .button {
+            text-align: center;
+            width: fit-content;
+            background: rgb(44, 103, 159);
+            background: linear-gradient(90deg, rgba(44, 103, 159, 1) 0%, rgba(121, 210, 184, 1) 100%);
+            transition: 0.5s;
+            padding: 10px 30px;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .button a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+        
+        .button:hover a {
+            color: rgb(44, 103, 159);
+            transition: 0.5s;
+        }
+        
+        .button:hover {
+            background: white;
+            transition: 0.5s;
+        }
+        
+        .gallery video {
+            width: 70vw;
+        }
+        
+        .navigation {
+            text-align: center;
+        }
+        
+        span#jumpto {
+            margin: auto;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+        }
+        
+        .navigation ul {
+            margin: 0;
+            padding: 0;
+            padding-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .navigation li {
+            border-radius: 10px;
+            transition: 0.5s;
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px 30px;
+        }
+        
+        .navigation li img {
+            height: 4vw;
+        }
+        
+        .navigation li:hover {
+            background-color: #ffffff33;
+            transition: 0.5s;
+        }
+        
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+            text-align: center;
+            background-size: 100%;
+            background-position: center;
+            transition: 0.5s;
+        }
+        
+        .option a {
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px auto;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        
+        .option:hover {
+            background-size: 150%;
+            transition: 0.5s;
+        }
+        
+        .option:hover a {
+            filter: drop-shadow(5px 5px 5px #2E6AA0);
+            transition: 0.5s;
+        }
+        
+        #jacobs {
+            background-image: url('round.jpg');
+        }
+        
+        #darley {
+            background-image: url('shops.jpg');
+        }
+        
+        #nelson {
+            background-image: url('stn.jpg');
+        }
+        
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 1em;
+            }
+            .blurb,
+            .welcome {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .all {
+                width: 90vw;
+            }
         }
     </style>
+
 </head>
 
 <body>
-    <h1>360* photo spheres</h1>
-    <a href="darley-street">Darley Street</a>
-    <a href="jacobs-well">Jacobs Well</a>
-    <a href="interchange">Interchange</a>
+    <div class="all">
+        <div class="header">
+            <img src="signature.png" alt="Bradley Sansom">
+        </div>
+
+
+        <div class="main">
+            <div class="welcome">
+                Wayfinding project - Photo spheres
+            </div>
+            <div class="menu">
+                <div class="option" id="jacobs">
+                    <a href="jacobs-well/">Jacobs Well subways</a>
+                </div>
+                <div class="option" id="darley">
+                    <a href="darley-street/">Kirkgate - Darley St</a>
+                </div>
+                <div class="option" id="nelson">
+                    <a href="interchange/">Interchange - Nelson St</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            &nbsp;
+        </div>
+    </div>
+
 </body>
+
 
 </html>
