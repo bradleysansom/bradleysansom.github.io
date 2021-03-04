@@ -1,0 +1,17 @@
+{
+    "name": "My Local Area",
+    "short_name": "My Local Area",
+    "description": "Unearth the secrets of your neighbourhood! Just enter your postcode to get started, and find out all about your area's weather, politics, council, schools, hospitals, police, and more.",
+    "lang": "en-GB",
+    "start_url": "https://bradleysansom.github.io/local/",
+    "scope": "https://bradleysansom.github.io/local/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#008080",
+    "icons": [{
+        "src": "favicon.png",
+        "sizes": "864x863",
+        "type": "image/png"
+    }],
+    "background_color": "#ffffff"
+}
