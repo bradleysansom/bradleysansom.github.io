@@ -1,0 +1,110 @@
+body {
+    background-color: white !important;
+    color: black !important;
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+}
+
+header,
+div.plate,
+div.baseboard {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black;
+}
+
+header h1 {
+    color: black !important;
+}
+
+header h1::after {
+    content: "\A View online for the most up-to-date information";
+    white-space: pre-wrap;
+    font-size: 1.2rem;
+}
+
+header .toggleContainer {
+    display: none !important;
+}
+
+h1#postalCode,
+h3#adminDistrict {
+    margin-block: 0;
+    padding: 10px;
+}
+
+div.postcode {
+    height: unset;
+    padding-bottom: 10px;
+}
+
+header a,
+div.baseboard a {
+    color: black !important;
+}
+
+div.baseboard ul li#credit a,
+div.baseboard ul li#iconslink a {
+    text-decoration: none !important;
+}
+
+div.baseboard ul li#bullet2,
+div.baseboard ul li#helplink,
+div.baseboard ul li#bullet4,
+div.baseboard ul li#printthis {
+    display: none !important;
+}
+
+div.baseboard ul li#mapreport a {
+    text-decoration: none !important;
+}
+
+div.baseboard ul li#mapreport a::after {
+    content: " at www.openstreetmap.org/fixthemap";
+}
+
+div.buffet {
+    display: initial !important;
+    margin: none !important;
+}
+
+div.postcard,
+div#clockTitle,
+div#plateMap {
+    background-image: none !important;
+    background-color: white !important;
+    color: black !important;
+    outline: none !important;
+    border: 2px solid black;
+    border-radius: 12px !important;
+}
+
+div.plate div.button {
+    display: none !important;
+}
+
+div.plate#plateTakeaway {
+    display: none !important;
+}
+
+div.plate div.plateTitle {
+    background-color: black !important;
+    color: white !important;
+}
+
+div#memberBadges {
+    background-color: white !important;
+    border: 2px solid black;
+}
+
+div#memberBadges span#partyImage {
+    filter: grayscale(100%) invert(100%) contrast(1000%);
+}
+
+div.leaflet-top {
+    display: none !important;
+}
+
+div.leaflet-bottom a {
+    color: black !important;
+}

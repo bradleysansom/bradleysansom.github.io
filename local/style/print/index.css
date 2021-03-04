@@ -1,0 +1,59 @@
+body {
+    background-color: white !important;
+    color: black !important;
+}
+
+header h1 {
+    color: black !important;
+}
+
+header,
+div#cinemascope,
+footer {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black;
+}
+
+header a,
+footer a {
+    color: black !important;
+}
+
+header .toggleContainer {
+    display: none !important;
+}
+
+div#cinemascope {
+    background-image: none !important;
+    background-color: white !important;
+}
+
+div#cinemascope h1,
+div#cinemascope h3 {
+    color: black !important;
+    text-shadow: none !important;
+}
+
+div#cinemascope input {
+    color: black !important;
+    border: 2px solid black;
+}
+
+div#cinemascope input.input-submit {
+    display: initial;
+    background-color: black !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 150px !important;
+}
+
+footer ul li#credit a,
+footer ul li#iconslink a {
+    text-decoration: none !important;
+}
+
+footer ul li#bullet2,
+footer ul li#helplink {
+    display: none !important;
+}

@@ -202,37 +202,37 @@ const plateDemocracy = async() => {
     }
 
     if (memberParty === "Conservative") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/tory.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/tory.png')";
         document.getElementById("memberBadges").style.background = "#00bfff";
     } else if (memberParty === "Labour") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/lab.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/lab.png')";
         document.getElementById("memberBadges").style.background = "#e91639";
     } else if (memberParty === "Liberal Democrat") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/lib.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/lib.png')";
         document.getElementById("memberBadges").style.background = "#fcca36";
     } else if (memberParty === "Green Party") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/green.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/green.png')";
         document.getElementById("memberBadges").style.background = "#7ec94f";
     } else if (memberParty === "Alliance") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/alliance.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/alliance.png')";
         document.getElementById("memberBadges").style.background = "#ffcc33";
     } else if (memberParty === "Democratic Unionist Party") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/dup.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/dup.png')";
         document.getElementById("memberBadges").style.background = "#243c5c";
     } else if (memberParty === "Plaid Cymru") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/plaid.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/plaid.png')";
         document.getElementById("memberBadges").style.background = "#ffd633";
     } else if (memberParty === "Scottish National Party") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/snp.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/snp.png')";
         document.getElementById("memberBadges").style.background = "#fff2cc";
     } else if (memberParty === "Sinn Féin") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/sinn.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/sinn.png')";
         document.getElementById("memberBadges").style.background = "#00cc6d";
     } else if (memberParty === "Social Democratic & Labour Party") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/sdlp.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/sdlp.png')";
         document.getElementById("memberBadges").style.background = "#00b383";
     } else if (memberParty === "Speaker") {
-        document.getElementById("partyImage").style.backgroundImage = "url('Logos/speaker.png')";
+        document.getElementById("partyImage").style.backgroundImage = "url('logos/speaker.png')";
         document.getElementById("memberBadges").style.background = "#222222";
     } else {
         document.getElementById("partyImage").style.background = "#000000";

@@ -2,25 +2,35 @@
 <html lang="en">
 
 <head>
+    <title>Loading... | My Local Area</title>
+
+    <!--Meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading... | My Local Area</title>
-    <link rel="stylesheet" href="style/header.css">
+    <meta name="keywords" content="Postcode, Local, Help, Assistance, Services, Council, Weather, Web app">
+    <meta name="description" content="Moving to a new area? Discover the secrets of your local area with this handy tool. UK only.">
+    <meta name="author" content="Bradley Sansom">
 
+    <!--Social Media card metadata is not included as this page should not be linked to-->
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="style/inputs.css">
     <link rel="stylesheet" href="style/themes.css">
     <link rel="stylesheet" href="style/dashboard.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="style/print/dashboard.css" media="print">
+
+    <!--Icons-->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
+
+    <!--Scripts-->
     <script src="ie.js"></script>
     <script src="darklight.js"></script>
-
     <script src="receivedPostcode.js"></script>
     <script src="dashboard.js"></script>
-
-
 </head>
 
 
@@ -150,29 +160,36 @@
 
     <div class="baseboard">
         <ul>
-            <li>
+            <li id="credit">
                 Made with love by <a href="contact">Bradley Sansom</a>
             </li>
-            <li>
+            <li class="bullet" id="bullet1">
                 •
             </li>
-            <li>
+            <li id="helplink">
                 <a href="help">Help and Support</a>
             </li>
-            <li>
+            <li class="bullet" id="bullet2">
                 •
             </li>
-            <li>
+            <li id="iconslink">
                 Icons by <a href="https://icons8.com/">Icons8</a>
             </li>
-            <li>
+            <li class="bullet" id="bullet3">
                 •
             </li>
-            <li>
+            <li id="mapreport">
                 <a href="https://www.openstreetmap.org/fixthemap">Report a map problem</a>
             </li>
+            <li class="bullet" id="bullet4">
+                •
+            </li>
+            <li id="printthis">
+                <a href="#" onclick="window.print();return false;">Print this page</a>
+            </li>
 
-            <li class="secondaryToggle">
+            <!--Theme toggle for small screens-->
+            <li class="secondaryToggle" id="bullet5">
                 •
             </li>
             <li class="secondaryToggle">
