@@ -4,7 +4,7 @@ body.lightTheme {
 }
 
 body.darkTheme {
-    background-color: #000000;
+    background-color: #000;
     transition: .4s;
 }
 
