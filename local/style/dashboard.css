@@ -47,7 +47,7 @@ body.lightTheme .postcard {
 
 body.darkTheme .postcard {
     background-color: #004d4d;
-    outline: 16px dotted #4d4d4d;
+    outline: 16px dotted #000000;
     transition: .4s;
 }
 
@@ -122,7 +122,7 @@ body.lightTheme div.plate hr {
 }
 
 body.darkTheme div.plate hr {
-    border-top: 1px dotted #4d4d4d !important;
+    border-top: 1px dotted #000000 !important;
 }
 
 div.plateTitle {
@@ -184,12 +184,12 @@ div#memberBadges {
 }
 
 body.lightTheme div.plate {
-    background-color: #bbbbbb;
+    background-color: #dddddd;
     color: black;
 }
 
 body.darkTheme div.plate {
-    background-color: #555555;
+    background-color: #222222;
     color: white;
 }
 
@@ -307,7 +307,7 @@ body.lightTheme div#clockTitle {
 
 body.darkTheme div#clockTitle {
     background-color: #004d4d;
-    outline: 16px dotted #4d4d4d;
+    outline: 16px dotted #000000;
     transition: .4s;
 }
 
@@ -319,7 +319,7 @@ body.lightTheme div#plateMap {
 
 body.darkTheme div#plateMap {
     background-color: #004d4d;
-    outline: 16px dotted #4d4d4d;
+    outline: 16px dotted #000000;
     transition: .4s;
 }
 

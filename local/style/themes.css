@@ -4,7 +4,7 @@ body.lightTheme {
 }
 
 body.darkTheme {
-    background-color: #4d4d4d;
+    background-color: #000000;
     transition: .4s;
 }
 
@@ -39,7 +39,7 @@ body.darkTheme div.baseboard {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #bbbbbb;
+    background-color: #dddddd;
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
@@ -59,7 +59,7 @@ body.darkTheme div.baseboard {
 }
 
 input:checked+.slider {
-    background-color: #555555;
+    background-color: #222222;
 }
 
 input:checked+.slider:before {
