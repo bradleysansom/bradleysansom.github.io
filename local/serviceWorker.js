@@ -25,7 +25,7 @@ self.addEventListener("install", function(event) {
                 '/local/images/housing.jpg',
                 '/local/images/keys.jpg',
                 '/local/images/northEast.jpg',
-                '/local/images/northWest.png',
+                '/local/images/northWest.jpg',
                 '/local/images/pack.jpg',
                 '/local/images/southEast.jpg',
                 '/local/images/southWest.jpg',
