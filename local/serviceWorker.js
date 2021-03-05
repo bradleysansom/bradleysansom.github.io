@@ -6,18 +6,8 @@ self.addEventListener("install", function(event) {
         .open(version + 'fundamentals')
         .then(function(cache) {
             return cache.addAll([
-                '/local/logos/alliance.png',
-                '/local/logos/dup.png',
-                '/local/logos/green.png',
-                '/local/logos/lab.png',
-                '/local/logos/lib.png',
-                '/local/logos/plaid.png',
-                '/local/logos/sdlp.png',
-                '/local/logos/sinn.png',
-                '/local/logos/snp.png',
-                '/local/logos/speaker.png',
-                '/local/logos/Strip.png',
-                '/local/logos/tory.png',
+                '/',
+                '/local/',
                 '/local/images/eastMidlands.jpg',
                 '/local/images/eastOfEngland.jpg',
                 '/local/images/estate.jpg',
@@ -31,7 +21,19 @@ self.addEventListener("install", function(event) {
                 '/local/images/southWest.jpg',
                 '/local/images/westMidlands.jpg',
                 '/local/images/white.jpg',
-                '/local/images/yorkshire.jpg'
+                '/local/images/yorkshire.jpg',
+                '/local/logos/alliance.png',
+                '/local/logos/dup.png',
+                '/local/logos/green.png',
+                '/local/logos/lab.png',
+                '/local/logos/lib.png',
+                '/local/logos/plaid.png',
+                '/local/logos/sdlp.png',
+                '/local/logos/sinn.png',
+                '/local/logos/snp.png',
+                '/local/logos/speaker.png',
+                '/local/logos/Strip.png',
+                '/local/logos/tory.png'
 
             ]);
         })
