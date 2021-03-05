@@ -9,9 +9,9 @@
     "orientation": "portrait",
     "theme_color": "#008080",
     "icons": [{
-        "src": "favicon.png",
-        "sizes": "886x886",
+        "src": "icon-white.png",
+        "sizes": "1000x1000",
         "type": "image/png"
     }],
-    "background_color": "#ffffff"
+    "background_color": "#008080"
 }
