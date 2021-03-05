@@ -47,6 +47,16 @@
             if (e.which == 13) storePostcode();
         }
     </script>
+    <script>
+        //Script to register the service worker
+
+        if (navigator.serviceWorker) {
+            console.log('Registering service worker...');
+            navigator.serviceWorker.register('serviceWorker.js');
+            console.log('Service worker successfully registered!');
+        }
+    </script>
+
 
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
