@@ -101,6 +101,17 @@
             margin: 10px;
         }
     </style>
+    <script>
+        //Script to register the service worker
+
+        if (navigator.serviceWorker) {
+            console.log('This website is dedicated to the memory of Nicholas Parsons');
+            console.log('Registering service worker...');
+            console.log('Version 6/3/21 02:32');
+            navigator.serviceWorker.register('serviceWorker.js');
+            console.log('Service worker successfully registered!');
+        }
+    </script>
 </head>
 <script>
     var CCOUNT = 60.00;
@@ -192,6 +203,7 @@
         introduction();
     }
 </script>
+
 
 <body onload="cdreset()">
     <audio style="display:none;" id="whistle" src="whistle.mp3" preload="auto"></audio>
