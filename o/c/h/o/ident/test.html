@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Endboard</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .top,
+        .bottom {
+            height: 70px;
+            background-color: #111111;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+        
+        .middle {
+            background-color: #333333;
+        }
+        
+        .top {
+            top: 0px;
+        }
+        
+        .bottom {
+            bottom: 0px;
+        }
+        
+        .generatedimage {
+            width: 1600px;
+            height: 900px;
+            border: 1px solid #000000;
+        }
+        
+        img {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+        }
+        
+        #leftbumper {
+            left: 0px;
+            top: 0px;
+            height: 900px;
+            width: 350px;
+            background-size: 200px 200px;
+            background-repeat: repeat;
+        }
+        
+        #rightbumper {
+            left: 1250px;
+            top: 0px;
+            height: 900px;
+            width: 350px;
+            background-size: 200px 200px;
+            background-repeat: repeat;
+        }
+        
+        #topleft,
+        #topleftcurve {
+            left: 350px;
+            top: 0px;
+            height: 450px;
+            width: 450px;
+        }
+        
+        #topright {
+            left: 800px;
+            top: 0px;
+            height: 450px;
+            width: 450px;
+        }
+        
+        #bottomleft {
+            left: 350px;
+            top: 450px;
+            height: 450px;
+            width: 450px;
+        }
+        
+        #bottomright,
+        #bottomrightcurve {
+            left: 800px;
+            top: 450px;
+            height: 450px;
+            width: 450px;
+        }
+        
+        #eight {
+            left: 625px;
+            top: 125.5px;
+            transition: 10s;
+        }
+        
+        .proginfo {
+            background-color: white;
+            padding: 20px;
+            color: black;
+            font-family: sans-serif;
+            position: absolute;
+            max-width: 300px;
+            left: 820px;
+            top: 100px;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .title {
+            font-size: 3rem;
+        }
+        
+        .day,
+        .time {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="middle">
+        <div class="generatedimage">
+            <div id="leftbumper">
+            </div>
+
+            <div id="topleft"></div>
+            <img src="tl.png" alt="initial" id="topleftcurve" width="450" height="450">
+
+            <div id="bottomleft"></div>
+
+
+            <div id="topright"></div>
+
+
+            <div id="bottomright"></div>
+            <img src="br.png" alt="initial" id="bottomrightcurve" width="450" height="450">
+
+
+            <div id="rightbumper"></div>
+            <img src="8.png" alt="eight" id="eight" width="350" height="649">
+            <div class="proginfo" id="proginfo">
+                <span class="title"> </span><br><br>
+                <span class="day"> </span><br>
+                <span class="time"> </span>
+            </div>
+
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="controls">
+            <input type="button" value="Generate new endboard" onclick="randomiser()">
+            <input type="text" value="Programme title" id="progTitle">
+            <input type="text" value="Day" id="progDay">Time:
+            <input type="time" value="" id="progTime">
+            <input type="file" id="progImage" accept="image/*">
+            <input type="button" value="Autogenerate" onclick="repeatRandomise()">
+
+        </div>
+        <div class="credits">
+            Endboard Generator - Created by Bradley Sansom
+        </div>
+    </div>
+    <script>
+        function randomiser() {
+            document.getElementById('proginfo').style.display = "initial";
+            var patternsArray = ["circles.png", "waves.png", "saw.gif", "stripes.png", "greystripe.png", "bars.png", "black bars.png", "blackboard.png", "blue.png", "checkerboard.png", "checkerboards.gif", "diag.png", "green.png", "greys.png", "lines.png", "moire.png", "red.png", "rgb.png", "rgbtriangles.png", "triangles.png"];
+            var img;
+            var progTitle = document.getElementById('progTitle').value;
+            document.getElementsByClassName('title')[0].innerHTML = progTitle;
+            var progDay = document.getElementById('progDay').value;
+            document.getElementsByClassName('day')[0].innerHTML = progDay;
+            var progTime = document.getElementById('progTime').value;
+            document.getElementsByClassName('time')[0].innerHTML = progTime;
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = "url(" + patternsArray[num] + ")";
+                console.log("hello" + img);
+                console.log("HELLO HELLO");
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('leftbumper').backgroundImage = img;
+            console.log("test test");
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('rightbumper').src = img;
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+            }
+            getRandomImage(patternsArray);
+            document.getElementById('topleft').src = img;
+
+            const reader = new FileReader();
+            const fileInput = document.getElementById("progImage");
+
+
+            function getRandomImage(patternsArray, path) {
+                path = path || ''; // default path here
+                var num = Math.floor(Math.random() * patternsArray.length);
+                img = patternsArray[num];
+                console.log(img);
+
+                getRandomImage(patternsArray);
+                document.getElementById('bottomleft').src = img;
+
+                const reader = new FileReader();
+                const fileInput = document.getElementById("progImage");
+                const progImg = document.getElementById("bottomleft");
+
+                reader.onload = e => {
+                    progImg.src = e.target.result;
+                }
+                fileInput.addEventListener('change', e => {
+                    const f = e.target.files[0];
+                    reader.readAsDataURL(f);
+                })
+
+
+                function getRandomImage(patternsArray, path) {
+                    path = path || ''; // default path here
+                    var num = Math.floor(Math.random() * patternsArray.length);
+                    img = patternsArray[num];
+                    console.log(img);
+                }
+                getRandomImage(patternsArray);
+                document.getElementById('topright').src = img;
+
+                function getRandomImage(patternsArray, path) {
+                    path = path || ''; // default path here
+                    var num = Math.floor(Math.random() * patternsArray.length);
+                    img = patternsArray[num];
+                    console.log(img);
+                }
+                getRandomImage(patternsArray);
+                document.getElementById('bottomright').src = img;
+            }
+        }
+
+        function repeatRandomise() {
+            randomiser();
+
+            setTimeout(repeatRandomise, 1000);
+        }
+    </script>
+
+</body>
+
+
+
+</html>
