@@ -31,6 +31,9 @@
     <script src="darklight.js"></script>
     <script src="receivedPostcode.js"></script>
     <script src="dashboard.js"></script>
+    <script src="plateDemocracy.js"></script>
+    <script src="smallbusiness.js"></script>
+
 
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
@@ -232,7 +235,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script>
         async function dashboard() {
-
+            console.log('VERSION Friday 26th Feb 2021 at 10:48am');
             postcodeHeading();
             dashboardDarklight();
             var clockUpdate = setInterval(plateClock, 3000);
@@ -248,7 +251,8 @@
             }
             document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
 
-            await loadPostcodeData();
+            //await loadPostcodeData();
+            await postcodeHandler();
             await storePostcodeData();
             plateMap();
             plateTakeaway();
@@ -256,6 +260,7 @@
             await plateDemocracy();
 
             await plateNhs();
+            plateSmallBusiness();
         }
     </script>
 
