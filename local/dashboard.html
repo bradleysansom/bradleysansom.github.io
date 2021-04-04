@@ -31,12 +31,6 @@
     <script src="darklight.js"></script>
     <script src="receivedPostcode.js"></script>
     <script src="dashboard.js"></script>
-    <script src="plateDemocracy.js"></script>
-    <script src="smallbusiness.js"></script>
-    <script src="plateMap.js"></script>
-    <script src="plateTakeaway.js"></script>
-    <script src="plateNhs.js"></script>
-    <script src="plateWeather.js"></script>
 
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
@@ -144,7 +138,20 @@
             </div>
 
         </div>
-
+        <div class="plate" id="plateShopSmall">
+            <div class="plateTitle">
+                Small Businesses
+            </div>
+            <h3>Find small businesses near you</h3>
+            <div class="buttonsrow">
+                <div class="button" id="shopSmallButton">
+                    <a id="shopSmallLink" target="blank" href="#">
+                        Shop Small
+                    </a>
+                </div>
+            </div>
+            <h5>Shop Small is a service provided by American Express</h5>
+        </div>
         <div class="plate" id="plateTakeaway">
             <div class="plateTitle">
                 Food delivery
@@ -225,14 +232,9 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script>
         async function dashboard() {
-            console.log('VERSION Sun 4th April 2021 at 13:30');
-            await loadPostcodeData();
-            await storePostcodeData();
-            await postcodeHeading();
-            await dashboardDarklight();
 
-
-
+            postcodeHeading();
+            dashboardDarklight();
             var clockUpdate = setInterval(plateClock, 3000);
 
             function plateClock() {
@@ -246,15 +248,14 @@
             }
             document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
 
-
-
-            await plateMap();
-            await plateTakeaway();
+            await loadPostcodeData();
+            await storePostcodeData();
+            plateMap();
+            plateTakeaway();
 
             await plateDemocracy();
 
             await plateNhs();
-            await plateSmallBusiness();
         }
     </script>
 
