@@ -33,7 +33,10 @@
     <script src="dashboard.js"></script>
     <script src="plateDemocracy.js"></script>
     <script src="smallbusiness.js"></script>
-
+    <script src="plateMap.js"></script>
+    <script src="plateTakeaway.js"></script>
+    <script src="plateNhs.js"></script>
+    <script src="plateWeather.js"></script>
 
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
@@ -235,9 +238,14 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script>
         async function dashboard() {
-            console.log('VERSION Friday 26th Feb 2021 at 11:20am');
-            postcodeHeading();
-            dashboardDarklight();
+            console.log('VERSION Sun 4th April 2021 at 13:30');
+            await loadPostcodeData();
+            await storePostcodeData();
+            await postcodeHeading();
+            await dashboardDarklight();
+
+
+
             var clockUpdate = setInterval(plateClock, 3000);
 
             function plateClock() {
@@ -251,16 +259,15 @@
             }
             document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
 
-            await loadPostcodeData();
-            //await postcodeHandler();
-            await storePostcodeData();
-            plateMap();
-            plateTakeaway();
+
+
+            await plateMap();
+            await plateTakeaway();
 
             await plateDemocracy();
 
             await plateNhs();
-            plateSmallBusiness();
+            await plateSmallBusiness();
         }
     </script>
 

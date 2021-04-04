@@ -1,10 +1,10 @@
-function dashboard() {
-    postcodeHeading();
-    dashboardDarklight();
+//function dashboard() {
+//  postcodeHeading();
+//    dashboardDarklight();
+//
+//}
 
-}
-
-const loadPostcodeData = async() => {
+async function loadPostcodeData() {
     var cleanPostcode = localStorage.getItem("cleanPostcode");
 
     const response = await fetch('https://api.postcodes.io/postcodes/' + cleanPostcode);
@@ -27,7 +27,8 @@ function postcodeHandler() {
         .catch(error => console.log('error is', error));
 }
 
-function storePostcodeData() {
+async function storePostcodeData() {
+    console.log("storing started");
     var stringPosts = localStorage.getItem("posts");
     var arrayPosts = JSON.parse(stringPosts);
     var resultsPosts = arrayPosts.result;
@@ -74,6 +75,7 @@ function storePostcodeData() {
     localStorage.setItem("primary_care_trust", primary_care_trust);
     var region = resultsPosts.region;
     localStorage.setItem("region", region);
+    console.log("storing finished");
     // Set headings
     document.getElementById("postalCode").innerHTML = postcode;
     var welcomeHome = 'Welcome to ' + admin_district;
@@ -125,87 +127,4 @@ function storePostcodeData() {
     } else {
         document.getElementById("postcard").style.backgroundImage = "url(images/housing.jpg)";
     }
-}
-
-
-const plateWeather = async() => {
-
-}
-
-const plateNhs = async() => {
-    var country = localStorage.getItem("country");
-    var healthServiceName;
-    if (country === "England") {
-        healthServiceName = "NHS";
-        document.getElementById("plateNhs").getElementsByClassName("plateTitle")[0].innerHTML = healthServiceName;
-        // var nhsApiKey = prompt("Insert NHS API key:");
-        var postcode = localStorage.getItem("cleanPostcode");
-        var nhsApiUrl = 'https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=' + postcode;
-        let data = {
-            "filter": "(OrganisationTypeID eq 'SCL') or (OrganisationTypeID eq 'CLI') or (OrganisationTypeID eq 'DEN') or (OrganisationTypeID eq 'GPB') or (OrganisationTypeID eq 'GPP') or (OrganisationTypeID eq 'HOS') or (OrganisationTypeID eq 'MIU') or (OrganisationTypeID eq 'OPT') or (OrganisationTypeID eq 'PHA') or (OrganisationTypeID eq 'UC')",
-            "top": 25,
-            "skip": 0,
-            "count": true
-        };
-        //  const response = await fetch(nhsApiUrl, {
-        //    headers: {
-        //      credentials: 'include',
-        //    "Content-Type": "application/json",
-        //          "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
-        //    },
-        //  data: data
-        //  });
-        //   var posts = await response.json();
-        // console.log(posts);
-
-        // localStorage.setItem("posts", JSON.stringify(posts));
-    } else if (country === "Scotland") {
-        healthServiceName = "NHS";
-        document.getElementById("plateNhs").getElementsByClassName("plateTitle")[0].innerHTML = healthServiceName;
-        var nhsInfoUrl = 'https://www.nhsinform.scot/scotlands-service-directory#maincontent';
-        document.getElementById("nhsInfoLink").innerHTML = 'See your local health services on NHS Inform';
-        document.getElementById("nhsInfoLink").href = nhsInfoUrl;
-    } else if (country === "Wales") {
-        healthServiceName = "NHS";
-        document.getElementById("plateNhs").getElementsByClassName("plateTitle")[0].innerHTML = healthServiceName;
-        var postcode = localStorage.getItem("cleanPostcode");
-        var nhsInfoUrl = 'http://www.wales.nhs.uk/ourservices/directory/postcodesearch?pc=' + postcode + '&dentist=1&gp=1&optician=1&pharmacy=1&dist=2'
-        document.getElementById("nhsInfoLink").innerHTML = 'See your local health services on NHS Wales';
-        document.getElementById("nhsInfoLink").href = nhsInfoUrl;
-    } else if (country === "Northern Ireland") {
-        healthServiceName = "HSC";
-        document.getElementById("plateNhs").getElementsByClassName("plateTitle")[0].innerHTML = healthServiceName;
-
-        var nhsInfoUrl = 'http://www.hscboard.hscni.net/health-services-useful-information/';
-        document.getElementById("nhsInfoLink").innerHTML = 'See your local health services on HSCNI';
-        document.getElementById("nhsInfoLink").href = nhsInfoUrl;
-    } else {
-        document.getElementById("plateNhs").style.display = "none";
-    }
-}
-
-function plateMap() {
-    var latitude = localStorage.getItem("latitude");
-    var longitude = localStorage.getItem("longitude");
-
-    var map = L.map('plateMap').setView({ lon: longitude, lat: latitude }, 2);
-
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-
-        maxZoom: 18,
-        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
-
-
-    L.control.scale().addTo(map);
-    map.setZoom(17);
-}
-
-function plateTakeaway() {
-    var postcode = localStorage.getItem("cleanPostcode");
-    var justEatUrl = "https://www.just-eat.co.uk/area/" + postcode;
-    document.getElementById("justEatLink").href = justEatUrl;
-    var foodHubUrl = "https://foodhub.co.uk/list/" + postcode;
-    document.getElementById("foodHubLink").href = foodHubUrl;
 }
