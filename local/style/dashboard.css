@@ -95,14 +95,9 @@ body.darkTheme .postcard {
 
 div.buttonsrow {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: space-between;
-}
-
-div.buttonsrow div.button {
-    flex-grow: 2;
-    margin: 5px;
 }
 
 div.buffet {
