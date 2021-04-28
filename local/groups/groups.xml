@@ -1,4 +1,6 @@
-<group category=”bookClub”>
+<?xml version="1.0" encoding="UTF-8"?>
+<community>
+<group category='bookClub'>
 	<name>West Yorkshire Detective Novels Club</name>
 	<description>A club for over 60s to discuss detective and crime fiction with like-minded people. A chance to make friends and meet others interested in reading.</description>
 	<address>
@@ -18,14 +20,15 @@
 <service>
 	<name>Waterflower Trust - Help at home</name>
 	<description>Free charity services to help older people to live independent lives.</description>
-	<area-covered>
+	<areas>
 		<outcode>BD1<outcode>
 		<outcode>BD2<outcode>
 		<outcode>BD3<outcode>
-	</area-covered>
+    </areas>
 	<links>
 		<website>https://www.waterflower-trust.org/</website>
 		<facebook>https://www.facebook.com/waterflower.trust</facebook>
 		<twitter>https://www.twitter.com/@waterflowertrust</twitter>
 	</links>
 </service>
+</community>

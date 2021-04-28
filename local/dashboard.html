@@ -32,6 +32,8 @@
     <script src="receivedPostcode.js"></script>
     <script src="dashboard.js"></script>
     <script src="plateCommunity.js"></script>
+    <script src="plateWeather.js"></script>
+    <script src="plateBankHolidays.js"></script>
 
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
@@ -85,6 +87,9 @@
             <div class="plateTitle">
                 Weather
             </div>
+            <button onClick="plateWeather()">
+                Press to start weather
+            </button>
         </div>
         <div class="plate" id="parliament">
             <div class="plateTitle">
@@ -113,12 +118,12 @@
                 <div class="buttonsrow">
                     <div class="button" id="theyWorkForYouButton">
                         <a id="theyWorkForYouLink" target="blank" href="#">
-&nbsp;
+                            &nbsp;
                         </a>
                     </div>
                     <div class="button" id="writeToThemButton">
                         <a id="writeToThemLink" target="blank" href="#">
-&nbsp;
+                            &nbsp;
                         </a>
                     </div>
                 </div>
@@ -139,6 +144,17 @@
             </div>
 
         </div>
+        <div class="plate" id="plateBankHolidays">
+            <div class="plateTitle">
+                Bank Holidays
+            </div>
+
+            <div class="plateInfo">
+                The next bank holiday in <span id="nation"></span> is <span id="bankHolidayName"></span> on <span id="bankHolidayDate"></span>
+            </div>
+
+        </div>
+
         <div class="plate" id="plateShopSmall">
             <div class="plateTitle">
                 Small Businesses
@@ -253,12 +269,15 @@
             await storePostcodeData();
             plateMap();
             plateTakeaway();
+            await plateBankHolidays();
 
             await plateDemocracy();
 
             await plateNhs();
 
             await plateCommunity();
+
+
         }
     </script>
 
