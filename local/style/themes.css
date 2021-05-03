@@ -4,7 +4,7 @@ body.lightTheme {
 }
 
 body.darkTheme {
-    background-color: #000;
+    background-color: #000000;
     transition: .4s;
 }
 
@@ -17,6 +17,30 @@ body.darkTheme footer,
 body.darkTheme div.baseboard {
     background-color: #004d4d;
     transition: .4s;
+}
+
+body.lightTheme body::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+body.lightTheme body::-webkit-scrollbar-thumb {
+    background-color: #008080;
+}
+
+body.darkTheme body::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+body.darkTheme body::-webkit-scrollbar-thumb {
+    background-color: #004d4d;
+}
+
+body.lightTheme {
+    scrollbar-color: #008080 #ffffff;
+}
+
+body.darkTheme {
+    scrollbar-color: #004d4d #000000;
 }
 
 .switch {

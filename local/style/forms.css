@@ -5,11 +5,8 @@ body {
 }
 
 header {
-    flex: 0 1;
-}
-
-footer {
-    flex: 0 1 auto;
+    height: 110px;
+    border-radius: 10px;
 }
 
 div#main {
@@ -19,16 +16,61 @@ div#main {
 }
 
 div#main iframe {
+    padding-top: 8px;
     position: absolute;
     width: calc(100% - 16px);
-    /* height: 100%; */
+    height: calc(100% - 172px);
     /* flex-grow: 1; */
     border: none !important;
     font-family: 'Jost' !important;
     display: block;
 }
 
-
-/* body {
+body {
     overflow: hidden;
-} */
+}
+
+div#palette {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    margin-top: 8px;
+}
+
+div.half {
+    flex-grow: 1;
+    min-height: 260px;
+    color: #000000;
+    padding: 16px;
+    padding-right: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background-color: #008080;
+    cursor: pointer;
+    background-size: cover;
+    filter: grayscale();
+    transition: .5s;
+}
+
+div.half h1 {
+    font-weight: 500;
+}
+
+div.half#formLink {
+    background-image: url('../images/housing.jpg');
+    background-position-x: left;
+}
+
+div.half#addLink {
+    background-image: url('../images/housing.jpg');
+    background-position-x: right;
+}
+
+div.half:hover {
+    color: #008080;
+    filter: grayscale(0);
+    transition: .5s;
+}
