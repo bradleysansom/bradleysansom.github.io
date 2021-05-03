@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../style/themes.css">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
     <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <script src="../darklight.js"></script>
+
 
 </head>
 
@@ -30,8 +32,12 @@
         </div>
     </header>
     <div id="main">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJXO3VpfhC0Jroox3c8tLAOC2mP4RFEBq31CbdBSyEpyRRfg/viewform?embedded=true"></iframe>
-
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJXO3VpfhC0Jroox3c8tLAOC2mP4RFEBq31CbdBSyEpyRRfg/viewform?embedded=true" id="form"></iframe>
+        <script>
+            document.getElementById('form').onload = function() {
+                document.getElementById('form').height = document.getElementById('form').contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>
     </div>
     <footer>
         <ul>

@@ -1,13 +1,34 @@
-div.main {
+body {
     display: flex;
-    width: 100%;
+    flex-flow: column;
     height: 100%;
-    overflow: hidden;
 }
 
-div.main iframe {
-    flex-grow: 1;
-    border: none;
-    margin: 0;
-    padding: 0;
+header {
+    flex: 0 1;
 }
+
+footer {
+    flex: 0 1 auto;
+}
+
+div#main {
+    flex: 1 1 auto;
+    /* display: flex; */
+    max-height: 100%;
+}
+
+div#main iframe {
+    position: absolute;
+    width: calc(100% - 16px);
+    /* height: 100%; */
+    /* flex-grow: 1; */
+    border: none !important;
+    font-family: 'Jost' !important;
+    display: block;
+}
+
+
+/* body {
+    overflow: hidden;
+} */
