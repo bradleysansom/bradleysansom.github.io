@@ -17,4 +17,7 @@ function plateBankHolidays() {
         .then(data => {
             console.log(data)
         });
+
+    //var site = fetch("https://www.gov.uk/bank-holidays");
+    //site.querySelector("#england-and-wales > div.gem-c-panel.govuk-panel.govuk-panel--confirmation > h2 > span.govuk-panel__title-text");
 }

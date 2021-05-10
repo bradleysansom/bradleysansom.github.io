@@ -34,6 +34,7 @@
     <script src="plateCommunity.js"></script>
     <script src="plateWeather.js"></script>
     <script src="plateBankHolidays.js"></script>
+    <script src="plateCouncil.js"></script>
 
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
@@ -85,7 +86,7 @@
         </div>
         <div class="plate" id="weather">
             <div class="plateTitle">
-                Weather
+                <span class="sans">My </span><span class="serif">Weather</span>
             </div>
             <button onClick="plateWeather()">
                 Press to start weather
@@ -93,7 +94,7 @@
         </div>
         <div class="plate" id="parliament">
             <div class="plateTitle">
-                Parliament
+                <span class="sans">My </span><span class="serif">MP</span>
             </div>
             <div class="plateInfo">
                 <p>
@@ -130,10 +131,29 @@
             </div>
         </div>
 
+        <div class="plate" id="plateCouncil">
+            <div class="plateTitle">
+                <span class="sans">My </span><span class="serif">Council</span>
+            </div>
 
+            <div class="plateInfo">
+                <span id="councilPostcode">&nbsp;</span> is in the ward of <span id="councilWard">&nbsp;</span> under <span id="councilCouncil">&nbsp;</span> Council.
+                <div class="buttonsrow">
+                    <div class="button" id="councilWebsiteButton">
+                        <a id="councilWebsiteLink" target="blank" href="#">
+                            Visit the <span id="councilLinkCouncil">&nbsp;</span> Council website
+                        </a>
+                    </div>
+                </div>
+                <div class="parish" id="parishBox">
+                    <span id="parishPostcode">&nbsp;</span> is under the parish of <span id="parishCouncil">&nbsp;</span>.
+                </div>
+            </div>
+
+        </div>
         <div class="plate" id="plateNhs">
             <div class="plateTitle">
-                Health
+                <span class="sans">My </span><span class="serif" id="healthServiceName">Health</span>
             </div>
 
             <div class="plateInfo">
@@ -146,7 +166,7 @@
         </div>
         <div class="plate" id="plateBankHolidays">
             <div class="plateTitle">
-                Bank Holidays
+                <span class="sans">My </span><span class="serif">Bank Holidays</span>
             </div>
 
             <div class="plateInfo">
@@ -157,7 +177,7 @@
 
         <div class="plate" id="plateShopSmall">
             <div class="plateTitle">
-                Small Businesses
+                <span class="sans">My </span><span class="serif">Local Businesses</span>
             </div>
             <h3>Find small businesses near you</h3>
             <div class="buttonsrow">
@@ -171,7 +191,7 @@
         </div>
         <div class="plate" id="plateTakeaway">
             <div class="plateTitle">
-                Food delivery
+                <span class="sans">My </span><span class="serif">Food Delivery</span>
             </div>
             <h3>Find local restaurants and takeaways available for delivery or collection</h3>
             <div class="buttonsrow">
@@ -269,6 +289,7 @@
             await storePostcodeData();
             plateMap();
             plateTakeaway();
+            plateCouncil();
             await plateBankHolidays();
 
             await plateDemocracy();
