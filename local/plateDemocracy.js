@@ -1,4 +1,4 @@
-const plateDemocracy = async() => {
+const plateOfDemocracy = async() => {
     // Fetch information about the constituency of the user
     var parliamentary_constituency = localStorage.getItem("parliamentary_constituency");
     // Remove spaces and replace with pluses to fit the format required by the API
