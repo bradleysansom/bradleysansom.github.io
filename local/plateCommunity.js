@@ -4,7 +4,14 @@ function plateCommunity() {
         .then(data => {
 
             console.log(data);
+            var parser = new DOMParser();
+            var communityOrgs = parser.parseFromString(data, "text/xml");
+            var community = (communityOrgs.getElementsByTagName('community'));
+            var services = (community.getElementsByTagName('service'));
+
+
             var applicableOutcode = localStorage.getItem('outcode');
+            var outcodeQuery = "<outcode>" + applicableOutcode;
 
 
             function communityGroup() {
@@ -14,6 +21,7 @@ function plateCommunity() {
             function communityService() {
 
             }
+
         });
 
 };

@@ -4,7 +4,7 @@ const plateNhs = async() => {
     if (country === "England") {
         healthServiceName = "NHS";
         document.getElementById("healthServiceName").innerHTML = healthServiceName;
-        // var nhsApiKey = prompt("Insert NHS API key:");
+        /* var nhsApiKey = prompt("Insert NHS API key:");
         var postcode = localStorage.getItem("cleanPostcode");
         var nhsApiUrl = 'https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=' + postcode;
         let data = {
@@ -13,16 +13,17 @@ const plateNhs = async() => {
             "skip": 0,
             "count": true
         };
-        //  const response = await fetch(nhsApiUrl, {
-        //    headers: {
-        //      credentials: 'include',
-        //    "Content-Type": "application/json",
-        //          "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
-        //    },
-        //  data: data
-        //  });
-        //   var posts = await response.json();
-        // console.log(posts);
+        const response = await fetch(nhsApiUrl, {
+            headers: {
+                credentials: 'include',
+                "Content-Type": "application/json",
+                "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
+            },
+            data: data
+        });
+        var posts = await response.json();
+        console.log(posts);   */
+
 
         // localStorage.setItem("posts", JSON.stringify(posts));
     } else if (country === "Scotland") {
