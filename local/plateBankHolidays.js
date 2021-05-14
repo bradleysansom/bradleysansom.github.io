@@ -5,8 +5,8 @@ function plateBankHolidays() {
     fetch(fetchUrl, {
         method: "GET",
         headers: {
-            "Content-Type": "application/json",
-            "mode": "no-cors"
+            "Content-Type": "text/plain",
+            "Access-Control-Allow-Origin": "https://bradleysansom.github.io"
         }
 
     })

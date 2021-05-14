@@ -15,5 +15,4 @@ function plateMap() {
 
     L.control.scale().addTo(map);
     map.setZoom(17);
-    setTimeout(function(){ map.invalidateSize()}, 400);
 }
