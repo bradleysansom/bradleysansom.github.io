@@ -329,3 +329,56 @@ body.darkTheme div#plateMap {
 .leaflet-layer {
     filter: opacity(60%);
 }
+
+.gpLoc, .dentLoc {
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.gpNum, .dentNum {
+    width:50px;
+    
+}
+.gpNum {
+    margin: 0px 10px 10px 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    background-image: url('https://img.icons8.com/material-rounded/24/ffffff/stethoscope--v1.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 10px;
+}
+.dentNum {
+    margin: 0px 10px 10px 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    background-image: url('https://img.icons8.com/material-rounded/24/ffffff/smiling-mouth.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 10px;
+}
+
+.gpInfo, .dentInfo {
+    text-align:left;
+}
+body.lightTheme .gpNum, body.lightTheme .dentNum {
+    background-color: #005EB8;
+}
+body.darkTheme .gpNum, body.darkTheme .dentNum {
+    background-color: #003087;
+}
+
+#gp1Telephone, #gp2Telephone, #dent1Telephone, #dent2Telephone {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/phone-not-being-used.png');
+    list-style-position: inside; 
+}
+#gp1Email, #gp2Email, #dent1Email, #dent2Email {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/open-envelope.png');
+    list-style-position: inside; 
+}
+#gp1Website, #gp2Website, #dent1Website, #dent2Website {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/globe--v1.png');
+    list-style-position: inside; 
+}
+

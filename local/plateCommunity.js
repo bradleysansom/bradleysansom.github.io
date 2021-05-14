@@ -7,7 +7,6 @@ function plateCommunity() {
             var parser = new DOMParser();
             var communityOrgs = parser.parseFromString(data, "text/xml");
             var community = (communityOrgs.getElementsByTagName('community'));
-            var services = (community.getElementsByTagName('service'));
 
 
             var applicableOutcode = localStorage.getItem('outcode');
@@ -19,8 +18,16 @@ function plateCommunity() {
             }
 
             function communityService() {
+                var services = communityOrgs.getElementsByTagName('service');
+                console.log(services);
+                var outcodes = communityOrgs.getElementsByTagName('service')[0].getElementsByTagName('areas')[0];
+                console.log(outcodes);
+                var iOutcodes;
+
+
 
             }
+            communityService();
 
         });
 

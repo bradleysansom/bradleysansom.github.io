@@ -34,6 +34,7 @@
     <script src="plateDemocracy.js"></script>
     <script src="plateCommunity.js"></script>
     <script src="plateWeather.js"></script>
+    <script src="plateNhs.js"></script>
     <script src="plateBankHolidays.js"></script>
     <script src="plateCouncil.js"></script>
 
@@ -138,7 +139,7 @@
             </div>
 
             <div class="plateInfo">
-                <span id="councilPostcode">&nbsp;</span> is in the ward of <span id="councilWard">&nbsp;</span> under <span id="councilCouncil">&nbsp;</span> Council.
+                <span id="councilPostcode">&nbsp;</span> is in the ward of <span id="councilWard">&nbsp;</span>, part of <span id="councilCouncil">&nbsp;</span> Council.
                 <div class="buttonsrow">
                     <div class="button" id="councilWebsiteButton">
                         <a id="councilWebsiteLink" target="blank" href="#">
@@ -149,6 +150,18 @@
                 <div class="parish" id="parishBox">
                     <span id="parishPostcode">&nbsp;</span> is under the parish of <span id="parishCouncil">&nbsp;</span>.
                 </div>
+                <div class="buttonsrow">
+                    <div class="button" id="fixMyStreetButton">
+                        <a id="fixMyStreetLink" target="blank" href="#">
+                            Report problems such as graffiti or flytipping
+                        </a>
+                    </div>
+                    <div class="button" id="planningButton">
+                        <a id="planningLink" target="blank" href="#">
+                            Search planning applications and decisions
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -158,6 +171,81 @@
             </div>
 
             <div class="plateInfo">
+                <div id="nhsEnglandPlate" style="display:none;">
+                    NHS services are provided in <span id="nhsAdminDistrict">&nbsp;</span> by<br><span id="nhsHa" style="display:none;">&nbsp;</span><br><span id="nhsCcg" style="display:none;">&nbsp;</span><br><span id="nhsPct" style="display:none;">&nbsp;</span><br>
+                    <div class="plateTitle">
+                        <span class="sans">My </span><span class="serif">Doctors</span>
+                    </div>
+                    <div class="plateGps">
+                        The nearest NHS GPs to <span id="gpsPostcode">&nbsp;</span> are: <br>
+                        <div class="gpLoc" id="gpLoc1">
+                            <div class="gpNum">1</div>
+                            <div class="gpInfo">
+                                <span id="gp1Name">&nbsp;</span><br>
+                                <span id="gp1Address1">&nbsp;</span><br>
+                                <span id="gp1Address2">&nbsp;</span><br>
+                                <span id="gp1Address3">&nbsp;</span><br>
+                                <span id="gp1City">&nbsp;</span><br>
+                                <span id="gp1County">&nbsp;</span><br>
+                                <span id="gp1Postcode">&nbsp;</span><br>
+                                <span id="gp1Telephone">&nbsp;</span><br>
+                                <span id="gp1Email">&nbsp;</span><br>
+                                <span id="gp1Website">&nbsp;</span><br>
+                            </div>
+                        </div>
+                        <div class="gpLoc" id="gpLoc2">
+                            <div class="gpNum">2</div>
+                            <div class="gpInfo">
+                                <span id="gp2Name">&nbsp;</span><br>
+                                <span id="gp2Address1">&nbsp;</span><br>
+                                <span id="gp2Address2">&nbsp;</span><br>
+                                <span id="gp2Address3">&nbsp;</span><br>
+                                <span id="gp2City">&nbsp;</span><br>
+                                <span id="gp2County">&nbsp;</span><br>
+                                <span id="gp2Postcode">&nbsp;</span><br>
+                                <span id="gp2Telephone">&nbsp;</span><br>
+                                <span id="gp2Email">&nbsp;</span><br>
+                                <span id="gp2Website">&nbsp;</span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plateTitle">
+                        <span class="sans">My </span><span class="serif">Dentists</span>
+                    </div>
+                    <div class="plateDents">
+                        The nearest NHS dentists to <span id="dentsPostcode">&nbsp;</span> are: <br>
+                        <div class="dentLoc" id="dentLoc1">
+                            <div class="dentNum">1</div>
+                            <div class="dentInfo">
+                                <span id="dent1Name">&nbsp;</span><br>
+                                <span id="dent1Address1">&nbsp;</span><br>
+                                <span id="dent1Address2">&nbsp;</span><br>
+                                <span id="dent1Address3">&nbsp;</span><br>
+                                <span id="dent1City">&nbsp;</span><br>
+                                <span id="dent1County">&nbsp;</span><br>
+                                <span id="dent1Postcode">&nbsp;</span><br>
+                                <span id="dent1Telephone">&nbsp;</span><br>
+                                <span id="dent1Email">&nbsp;</span><br>
+                                <span id="dent1Website">&nbsp;</span><br>
+                            </div>
+                        </div>
+                        <div class="dentLoc" id="dentLoc2">
+                            <div class="dentNum">2</div>
+                            <div class="dentInfo">
+                                <span id="dent2Name">&nbsp;</span><br>
+                                <span id="dent2Address1">&nbsp;</span><br>
+                                <span id="dent2Address2">&nbsp;</span><br>
+                                <span id="dent2Address3">&nbsp;</span><br>
+                                <span id="dent2City">&nbsp;</span><br>
+                                <span id="dent2County">&nbsp;</span><br>
+                                <span id="dent2Postcode">&nbsp;</span><br>
+                                <span id="dent2Telephone">&nbsp;</span><br>
+                                <span id="dent2Email">&nbsp;</span><br>
+                                <span id="dent2Website">&nbsp;</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="button" id="nhsInfoButton">
                     <a id="nhsInfoLink" target="blank" href="#">
                         &nbsp;</a>
@@ -293,7 +381,7 @@
             plateCouncil();
             await plateBankHolidays();
 
-            await plateOfDemocracy();
+            await plateDemocracy();
 
             await plateNhs();
 
