@@ -121,7 +121,7 @@ function storePostcodeData() {
 
 
 
-function plateMap() {
+/*function plateMap() {
     var latitude = localStorage.getItem("latitude");
     var longitude = localStorage.getItem("longitude");
 
@@ -137,7 +137,7 @@ function plateMap() {
 
     L.control.scale().addTo(map);
     map.setZoom(17);
-}
+} */
 
 function plateTakeaway() {
     var postcode = localStorage.getItem("cleanPostcode");
