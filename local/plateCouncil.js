@@ -13,6 +13,7 @@ function plateCouncil() {
     if (parish.includes('unparished')) {
         document.getElementById('parishBox').style.display = "none";
     } else {
+        document.getElementById('parishPostcode').innerHTML = postcode;
         document.getElementById('parishCouncil').innerHTML = parish;
     }
     var linkToFix = "https://www.fixmystreet.com/around?js=1&pc=" + cleanPostcode;

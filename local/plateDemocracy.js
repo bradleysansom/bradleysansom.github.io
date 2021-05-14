@@ -9,7 +9,7 @@ const plateDemocracy = async() => {
     const xmlText = await xmlFetch.text()
     const xml = await (new window.DOMParser()).parseFromString(xmlText, "text/xml");
     console.log(xml);
-    if (xml.getElementsByTagName("Members")[0].nodeValue === null) {
+    if (xml.getElementsByTagName("Members")[0].hasChildNodes() === false) {
         console.log("Seat is vacant.");
         var vacantSeatGoogleNewsUrl = "https://news.google.com/search?q=" + parliamentary_constituencyPluses;
         document.querySelector("#parliament > div.plateInfo").innerHTML = "The constituency of " + parliamentary_constituency + " does not currently have an MP. <br> <a href=" + vacantSeatGoogleNewsUrl + ">Find out more information</a>";

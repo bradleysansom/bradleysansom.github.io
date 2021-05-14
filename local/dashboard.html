@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Postcode, Local, Help, Assistance, Services, Council, Weather, Web app">
-    <meta name="description" content="Moving to a new area? Discover the secrets of your local area with this handy tool. UK only.">
+    <meta name="description"
+        content="Moving to a new area? Discover the secrets of your local area with this handy tool. UK only.">
     <meta name="author" content="Bradley Sansom">
 
     <!--Social Media card metadata is not included as this page should not be linked to-->
@@ -19,7 +20,9 @@
     <link rel="stylesheet" href="style/inputs.css">
     <link rel="stylesheet" href="style/themes.css">
     <link rel="stylesheet" href="style/dashboard.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
     <link rel="stylesheet" href="style/print/dashboard.css" media="print">
 
     <!--Icons-->
@@ -38,7 +41,7 @@
     <script src="plateNhs.js"></script>
     <script src="plateBankHolidays.js"></script>
     <script src="plateCouncil.js"></script>
-
+    <script src="platePolice.js"></script>
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
 
@@ -60,9 +63,12 @@
 <body class="darkTheme || lightTheme" onload="dashboard()">
     <header>
 
-        <h1 id="logo" style="cursor:pointer;" onClick="location.href = 'index.html'"><span class="sans">My</span> <span class="serif">Local</span> <span class="sans">Area</span></h1>
-        <div class="toggleContainer"><img src="https://img.icons8.com/material-rounded/24/ffffff/sun.png" alt="Light theme" height="24"><label class="switch">
-            <input type="checkbox" class="toggleDarkTheme" checked><span class="slider"></span></label><img src="https://img.icons8.com/material-rounded/24/ffffff/bright-moon.png" alt="Dark theme" height="24">
+        <h1 id="logo" style="cursor:pointer;" onClick="location.href = 'index.html'"><span class="sans">My</span> <span
+                class="serif">Local</span> <span class="sans">Area</span></h1>
+        <div class="toggleContainer"><img src="https://img.icons8.com/material-rounded/24/ffffff/sun.png"
+                alt="Light theme" height="24"><label class="switch">
+                <input type="checkbox" class="toggleDarkTheme" checked><span class="slider"></span></label><img
+                src="https://img.icons8.com/material-rounded/24/ffffff/bright-moon.png" alt="Dark theme" height="24">
         </div>
     </header>
     <div class="postcard" id="postcard">
@@ -80,12 +86,8 @@
 
     <div class="buffet">
         <div class="plate" id="clockTitle">
-
         </div>
         <div class="plate" id="plateMap">
-
-
-
         </div>
         <div class="plate" id="weather">
             <div class="plateTitle">
@@ -106,18 +108,18 @@
                     <span class="info" id="memberStartYear"></span>, has been
                     <span class="info" id="memberFullName"></span>.<br>
                     <span id="memberPartyContainer">&nbsp;
-                        
-                        </span>
+
+                    </span>
                     <span id="memberParty">&nbsp;
-                        </span>
+                    </span>
                 </p>
                 <div id="memberBadges">
                     <span id="memberImage">
 
-                        </span>
+                    </span>
                     <span id="partyImage">
 
-                        </span>
+                    </span>
                 </div>
                 <div class="buttonsrow">
                     <div class="button" id="theyWorkForYouButton">
@@ -133,14 +135,14 @@
                 </div>
             </div>
         </div>
-
         <div class="plate" id="plateCouncil">
             <div class="plateTitle">
                 <span class="sans">My </span><span class="serif">Council</span>
             </div>
 
             <div class="plateInfo">
-                <span id="councilPostcode">&nbsp;</span> is in the ward of <span id="councilWard">&nbsp;</span>, part of <span id="councilCouncil">&nbsp;</span> Council.
+                <span id="councilPostcode">&nbsp;</span> is in the ward of <span id="councilWard">&nbsp;</span>, part of
+                <span id="councilCouncil">&nbsp;</span> Council.
                 <div class="buttonsrow">
                     <div class="button" id="councilWebsiteButton">
                         <a id="councilWebsiteLink" target="blank" href="#">
@@ -149,7 +151,8 @@
                     </div>
                 </div>
                 <div class="parish" id="parishBox">
-                    <span id="parishPostcode">&nbsp;</span> is under the parish of <span id="parishCouncil">&nbsp;</span>.
+                    <span id="parishPostcode">&nbsp;</span> is under the parish of <span
+                        id="parishCouncil">&nbsp;</span>.
                 </div>
                 <div class="buttonsrow">
                     <div class="button" id="fixMyStreetButton">
@@ -173,86 +176,91 @@
 
             <div class="plateInfo">
                 <div id="nhsEnglandPlate" style="display:none;">
-                    NHS services are provided in <span id="nhsAdminDistrict">&nbsp;</span> by<br><span id="nhsHa" style="display:none;">&nbsp;</span><br><span id="nhsCcg" style="display:none;">&nbsp;</span><br><span id="nhsPct" style="display:none;">&nbsp;</span><br>
-                    <div class="plateTitle">
-                        <span class="sans">My </span><span class="serif">Doctors</span>
-                    </div>
-                    <div class="plateGps">
-                        The nearest NHS GPs to <span id="gpsPostcode">&nbsp;</span> are: <br>
-                        <div class="gpLoc" id="gpLoc1">
-                            <div class="gpNum">1</div>
-                            <div class="gpInfo">
-                                <span id="gp1Name">&nbsp;</span><br>
-                                <span id="gp1Address1">&nbsp;</span><br>
-                                <span id="gp1Address2">&nbsp;</span><br>
-                                <span id="gp1Address3">&nbsp;</span><br>
-                                <span id="gp1City">&nbsp;</span><br>
-                                <span id="gp1County">&nbsp;</span><br>
-                                <span id="gp1Postcode">&nbsp;</span><br>
-                                <span id="gp1Telephone">&nbsp;</span><br>
-                                <span id="gp1Email">&nbsp;</span><br>
-                                <span id="gp1Website">&nbsp;</span><br>
-                            </div>
-                        </div>
-                        <div class="gpLoc" id="gpLoc2">
-                            <div class="gpNum">2</div>
-                            <div class="gpInfo">
-                                <span id="gp2Name">&nbsp;</span><br>
-                                <span id="gp2Address1">&nbsp;</span><br>
-                                <span id="gp2Address2">&nbsp;</span><br>
-                                <span id="gp2Address3">&nbsp;</span><br>
-                                <span id="gp2City">&nbsp;</span><br>
-                                <span id="gp2County">&nbsp;</span><br>
-                                <span id="gp2Postcode">&nbsp;</span><br>
-                                <span id="gp2Telephone">&nbsp;</span><br>
-                                <span id="gp2Email">&nbsp;</span><br>
-                                <span id="gp2Website">&nbsp;</span><br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="plateTitle">
-                        <span class="sans">My </span><span class="serif">Dentists</span>
-                    </div>
-                    <div class="plateDents">
-                        The nearest NHS dentists to <span id="dentsPostcode">&nbsp;</span> are: <br>
-                        <div class="dentLoc" id="dentLoc1">
-                            <div class="dentNum">1</div>
-                            <div class="dentInfo">
-                                <span id="dent1Name">&nbsp;</span><br>
-                                <span id="dent1Address1">&nbsp;</span><br>
-                                <span id="dent1Address2">&nbsp;</span><br>
-                                <span id="dent1Address3">&nbsp;</span><br>
-                                <span id="dent1City">&nbsp;</span><br>
-                                <span id="dent1County">&nbsp;</span><br>
-                                <span id="dent1Postcode">&nbsp;</span><br>
-                                <span id="dent1Telephone">&nbsp;</span><br>
-                                <span id="dent1Email">&nbsp;</span><br>
-                                <span id="dent1Website">&nbsp;</span><br>
-                            </div>
-                        </div>
-                        <div class="dentLoc" id="dentLoc2">
-                            <div class="dentNum">2</div>
-                            <div class="dentInfo">
-                                <span id="dent2Name">&nbsp;</span><br>
-                                <span id="dent2Address1">&nbsp;</span><br>
-                                <span id="dent2Address2">&nbsp;</span><br>
-                                <span id="dent2Address3">&nbsp;</span><br>
-                                <span id="dent2City">&nbsp;</span><br>
-                                <span id="dent2County">&nbsp;</span><br>
-                                <span id="dent2Postcode">&nbsp;</span><br>
-                                <span id="dent2Telephone">&nbsp;</span><br>
-                                <span id="dent2Email">&nbsp;</span><br>
-                                <span id="dent2Website">&nbsp;</span><br>
-                            </div>
-                        </div>
-                    </div>
+                    NHS services are provided in <span id="nhsAdminDistrict">&nbsp;</span> by<br><span id="nhsHa"
+                        style="display:none;">&nbsp;</span><br><span id="nhsCcg"
+                        style="display:none;">&nbsp;</span><br><span id="nhsPct" style="display:none;">&nbsp;</span><br>
                 </div>
                 <div class="button" id="nhsInfoButton">
                     <a id="nhsInfoLink" target="blank" href="#">
                         &nbsp;</a>
                 </div>
             </div>
-
+        </div>
+        <div class="plate" id="plateDoctors">
+            <div class="plateTitle">
+                <span class="sans">My </span><span class="serif">Doctors</span>
+            </div>
+            <div class="plateGps">
+                The nearest NHS GPs to <span id="gpsPostcode">&nbsp;</span> are: <br>
+                <div class="gpLoc" id="gpLoc1">
+                    <div class="gpNum">1</div>
+                    <div class="gpInfo">
+                        <span id="gp1Name">&nbsp;</span><br>
+                        <span id="gp1Address1">&nbsp;</span><br>
+                        <span id="gp1Address2">&nbsp;</span><br>
+                        <span id="gp1Address3">&nbsp;</span><br>
+                        <span id="gp1City">&nbsp;</span><br>
+                        <span id="gp1County">&nbsp;</span><br>
+                        <span id="gp1Postcode">&nbsp;</span><br>
+                        <span id="gp1Telephone">&nbsp;</span><br>
+                        <span id="gp1Email">&nbsp;</span><br>
+                        <span id="gp1Website">&nbsp;</span><br>
+                    </div>
+                </div>
+                <div class="gpLoc" id="gpLoc2">
+                    <div class="gpNum">2</div>
+                    <div class="gpInfo">
+                        <span id="gp2Name">&nbsp;</span><br>
+                        <span id="gp2Address1">&nbsp;</span><br>
+                        <span id="gp2Address2">&nbsp;</span><br>
+                        <span id="gp2Address3">&nbsp;</span><br>
+                        <span id="gp2City">&nbsp;</span><br>
+                        <span id="gp2County">&nbsp;</span><br>
+                        <span id="gp2Postcode">&nbsp;</span><br>
+                        <span id="gp2Telephone">&nbsp;</span><br>
+                        <span id="gp2Email">&nbsp;</span><br>
+                        <span id="gp2Website">&nbsp;</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plate" id="plateDentists">
+            <div class="plateTitle">
+                <span class="sans">My </span><span class="serif">Dentists</span>
+            </div>
+            <div class="plateDents">
+                The nearest NHS dentists to <span id="dentsPostcode">&nbsp;</span> are: <br>
+                <div class="dentLoc" id="dentLoc1">
+                    <div class="dentNum">1</div>
+                    <div class="dentInfo">
+                        <span id="dent1Name">&nbsp;</span><br>
+                        <span id="dent1Address1">&nbsp;</span><br>
+                        <span id="dent1Address2">&nbsp;</span><br>
+                        <span id="dent1Address3">&nbsp;</span><br>
+                        <span id="dent1City">&nbsp;</span><br>
+                        <span id="dent1County">&nbsp;</span><br>
+                        <span id="dent1Postcode">&nbsp;</span><br>
+                        <span id="dent1Telephone">&nbsp;</span><br>
+                        <span id="dent1Email">&nbsp;</span><br>
+                        <span id="dent1Website">&nbsp;</span><br>
+                    </div>
+                </div>
+                <div class="dentLoc" id="dentLoc2">
+                    <div class="dentNum">2</div>
+                    <div class="dentInfo">
+                        <span id="dent2Name">&nbsp;</span><br>
+                        <span id="dent2Address1">&nbsp;</span><br>
+                        <span id="dent2Address2">&nbsp;</span><br>
+                        <span id="dent2Address3">&nbsp;</span><br>
+                        <span id="dent2City">&nbsp;</span><br>
+                        <span id="dent2County">&nbsp;</span><br>
+                        <span id="dent2Postcode">&nbsp;</span><br>
+                        <span id="dent2Telephone">&nbsp;</span><br>
+                        <span id="dent2Email">&nbsp;</span><br>
+                        <span id="dent2Website">&nbsp;</span><br>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="plate" id="plateBankHolidays">
             <div class="plateTitle">
@@ -260,11 +268,26 @@
             </div>
 
             <div class="plateInfo">
-                The next bank holiday in <span id="nation"></span> is <span id="bankHolidayName"></span> on <span id="bankHolidayDate"></span>
+                The next bank holiday in <span id="nation"></span> is <span id="bankHolidayName"></span> on <span
+                    id="bankHolidayDate"></span>
             </div>
 
         </div>
+        <div class="plate" id="platePolice">
+            <div class="plateTitle">
+                <span class="sans">My </span><span class="serif">Police</span>
+            </div>
 
+            <div class="plateInfo">
+                <span id="policePostcode">&nbsp;</span> is served by <span id="policeForce">&nbsp;</span>, in the <span
+                    id="policeNeighbourhood">&nbsp;</span> neighbourhood.
+                <div class="button" id="policeInfoButton">
+                    <a id="policeInfoLink" target="blank" href="#">
+                        &nbsp;</a>
+                </div>
+            </div>
+
+        </div>
         <div class="plate" id="plateShopSmall">
             <div class="plateTitle">
                 <span class="sans">My </span><span class="serif">Local Businesses</span>
@@ -287,26 +310,26 @@
             <div class="buttonsrow">
                 <div class="button" id="justEatButton">
                     <a id="justEatLink" target="blank" href="#">
-                    Just Eat
-                </a>
+                        Just Eat
+                    </a>
 
                 </div>
                 <div class="button" id="foodHubButton">
                     <a id="foodHubLink" target="blank" href="#">
-                    FoodHub
-                </a>
+                        FoodHub
+                    </a>
 
                 </div>
                 <div class="button" id="uberEatsButton">
                     <a id="uberEatsLink" target="blank" href="https://www.ubereats.com/near-me">
-                    Uber Eats
-                </a>
+                        Uber Eats
+                    </a>
 
                 </div>
                 <div class="button" id="deliverooButton">
                     <a id="deliverooLink" target="blank" href="https://deliveroo.co.uk/">
-                    Deliveroo
-                </a>
+                        Deliveroo
+                    </a>
 
                 </div>
             </div>
@@ -356,7 +379,9 @@
 
         </ul>
     </div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <script>
         async function dashboard() {
 
@@ -387,6 +412,7 @@
             await plateNhs();
 
             await plateCommunity();
+            await platePolice();
 
 
         }

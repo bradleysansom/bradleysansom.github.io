@@ -1,4 +1,4 @@
-const plateNhs = async() => {
+const plateNhs = async () => {
     console.log("helloooo");
     var country = localStorage.getItem("country");
     var healthServiceName;
@@ -34,20 +34,20 @@ const plateNhs = async() => {
             var url = "https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=" + postcode;
             console.log(url);
             fetch(url, {
-                    method: "POST",
-                    body: JSON.stringify({
-                        "filter": "(OrganisationTypeID eq 'GPB') or (OrganisationTypeID eq 'GPP')",
-                        "select": "OrganisationName,Address1,Address2,Address3,City,County,Postcode,Contacts",
-                        "top": 2,
-                        "skip": 0,
-                        "count": true
-                    }),
-                    headers: {
-                        "Content-Type": "application/json",
-                        "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
-                    }
+                method: "POST",
+                body: JSON.stringify({
+                    "filter": "(OrganisationTypeID eq 'GPB') or (OrganisationTypeID eq 'GPP')",
+                    "select": "OrganisationName,Address1,Address2,Address3,City,County,Postcode,Contacts",
+                    "top": 2,
+                    "skip": 0,
+                    "count": true
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                    "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
+                }
 
-                })
+            })
                 .then(response => response.json())
                 .then(json => {
                     console.log(json);
@@ -83,7 +83,7 @@ const plateNhs = async() => {
                         var gpTwoTelephone = gpTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Telephone")['0'].OrganisationContactValue;
                     };
                     if (gpOneContactsParsed.filter(record => record.OrganisationContactMethodType === "Email").length != 0) {
-                        var gpOneEmail = gpOneContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;  
+                        var gpOneEmail = gpOneContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;
                     };
                     if (gpTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email").length != 0) {
                         var gpTwoEmail = gpTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;
@@ -94,8 +94,8 @@ const plateNhs = async() => {
                     if (gpTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email").length != 0) {
                         var gpTwoWebsite = gpTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;
                     }
-                    
-                    
+
+
                     var gpOnePostcode = arrayNearGps.value['0'].Postcode;
                     var gpTwoPostcode = arrayNearGps.value['1'].Postcode;
 
@@ -127,20 +127,20 @@ const plateNhs = async() => {
             var url = "https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=" + postcode;
             console.log(url);
             fetch(url, {
-                    method: "POST",
-                    body: JSON.stringify({
-                        "filter": "OrganisationTypeID eq 'DEN'",
-                        "select": "OrganisationName,Address1,Address2,Address3,City,County,Postcode,Contacts",
-                        "top": 2,
-                        "skip": 0,
-                        "count": true
-                    }),
-                    headers: {
-                        "Content-Type": "application/json",
-                        "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
-                    }
+                method: "POST",
+                body: JSON.stringify({
+                    "filter": "OrganisationTypeID eq 'DEN'",
+                    "select": "OrganisationName,Address1,Address2,Address3,City,County,Postcode,Contacts",
+                    "top": 2,
+                    "skip": 0,
+                    "count": true
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                    "subscription-key": "769d38008e5a4a22affd1ab0c440e476"
+                }
 
-                })
+            })
                 .then(response => response.json())
                 .then(json => {
                     console.log(json);
@@ -176,7 +176,7 @@ const plateNhs = async() => {
                         var dentTwoTelephone = dentTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Telephone")['0'].OrganisationContactValue;
                     };
                     if (dentOneContactsParsed.filter(record => record.OrganisationContactMethodType === "Email").length != 0) {
-                        var dentOneEmail = dentOneContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;  
+                        var dentOneEmail = dentOneContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;
                     };
                     if (dentTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email").length != 0) {
                         var dentTwoEmail = dentTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;
@@ -187,8 +187,8 @@ const plateNhs = async() => {
                     if (dentTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email").length != 0) {
                         var dentTwoWebsite = dentTwoContactsParsed.filter(record => record.OrganisationContactMethodType === "Email")['0'].OrganisationContactValue;
                     }
-                    
-                    
+
+
                     var dentOnePostcode = arrayNearDents.value['0'].Postcode;
                     var dentTwoPostcode = arrayNearDents.value['1'].Postcode;
 
@@ -215,8 +215,8 @@ const plateNhs = async() => {
 
                 });
         };
-        nearestGps();
-        nearestDentists();
+        // nearestGps();
+        // nearestDentists();
 
 
 

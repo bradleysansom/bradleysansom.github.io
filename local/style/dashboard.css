@@ -98,6 +98,7 @@ div.buttonsrow {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 div.buttonsrow div.button {
