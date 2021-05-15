@@ -61,6 +61,12 @@ body.darkTheme .postcard {
 .adminDistrict {
     font-weight: 300;
 }
+h1#postalCode {
+    margin-bottom: 0;
+}
+h3#adminDistrict {
+    margin-top: 0;
+}
 
 .secondaryToggle {
     display: none !important;
@@ -337,9 +343,10 @@ body.darkTheme div#plateMap {
     margin-bottom: 10px;
 }
 .gpNum, .dentNum, .serviceBanner, .groupBanner {
-    width:50px;
-    
+    width: 50px;
+    min-width: 50px;  
 }
+
 .gpNum {
     margin: 0px 10px 10px 10px;
     border-radius: 10px;
@@ -366,10 +373,16 @@ body.lightTheme .gpNum, body.lightTheme .dentNum {
 body.darkTheme .gpNum, body.darkTheme .dentNum {
     background-color: #003087;
 }
-.serviceInfo span::after { 
+.serviceInfo span::after, .groupInfo span::after { 
     content: '\A'; white-space: pre; 
 }
-
+span.groupInfoAddressLine1, span.groupInfoPostcode {
+    line-height: 2;
+}
+span.groupInfoName, span.serviceInfoName {
+    font-family: 'Merriweather';
+    font-weight:700;
+}
 #gp1Telephone, #gp2Telephone, #dent1Telephone, #dent2Telephone, .serviceInfoTelephone, .groupInfoTelephone {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/phone-not-being-used.png');
@@ -385,4 +398,20 @@ body.darkTheme .gpNum, body.darkTheme .dentNum {
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/globe--v1.png');
     list-style-position: inside; 
 }
+
+.serviceInfoFacebook, .groupInfoFacebook {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/facebook-new.png');
+    list-style-position: inside; 
+}
+.serviceInfoTwitter, .groupInfoTwitter {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/twitter.png');
+    list-style-position: inside; 
+}
+
+.gpInfo a, .dentInfo a, .serviceInfo a, .groupInfo a {
+    color:white;
+}
+
 
