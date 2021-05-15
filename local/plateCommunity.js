@@ -23,17 +23,21 @@ function plateCommunity() {
                 var ind = i - 1;
                 console.log(i);
                 console.log(groups[ind]);
-                var groupPostcode = groups[ind].address.postcode;
-                const response = await fetch('https://api.postcodes.io/postcodes/' + groupPostcode);
-                var groupPosts = await response.json();
-                console.log(groupPosts);
-                var stringGroupPosts = JSON.stringify(groupPosts);
-                var arrayGroupPosts = JSON.parse(stringGroupPosts);
-                var resultsGroupPosts = arrayGroupPosts.result;
-                var groupLatitude = resultsGroupPosts.latitude;
-                var groupLongitude = resultsGroupPosts.longitude;
-                console.log(groupLatitude);
-                console.log(groupLongitude);
+                async function getCoords() {
+                    var groupPostcode = groups[ind].address.postcode;
+                    const response = await fetch('https://api.postcodes.io/postcodes/' + groupPostcode);
+                    const json = await response.json();
+                    console.log(json);
+                    var stringGroupPosts = JSON.stringify(json);
+                    var arrayGroupPosts = JSON.parse(stringGroupPosts);
+                    var resultsGroupPosts = arrayGroupPosts.result;
+                    var groupLatitude = resultsGroupPosts.latitude;
+                    var groupLongitude = resultsGroupPosts.longitude;
+                    console.log(groupLatitude);
+                    console.log(groupLongitude);
+                };
+                await getCoords();
+                i = i + 1;
             }
             groups.forEach(renderGroup);
 
@@ -102,7 +106,7 @@ function plateCommunity() {
                     serviceInfoTelephone.className = "serviceInfoTelephone";
                     serviceInfoTelephone.innerHTML = tel;
                 };
-                i += 1;
+                i = i + 1;
             }
             applicableServices.forEach(renderService);
 
