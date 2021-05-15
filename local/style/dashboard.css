@@ -331,12 +331,12 @@ body.darkTheme div#plateMap {
     filter: opacity(60%);
 }
 
-.gpLoc, .dentLoc {
+.gpLoc, .dentLoc, .service, .group {
     display:flex;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.gpNum, .dentNum {
+.gpNum, .dentNum, .serviceBanner, .groupBanner {
     width:50px;
     
 }
@@ -357,7 +357,7 @@ body.darkTheme div#plateMap {
     background-position: center bottom 10px;
 }
 
-.gpInfo, .dentInfo {
+.gpInfo, .dentInfo, .serviceInfo, .groupInfo {
     text-align:left;
 }
 body.lightTheme .gpNum, body.lightTheme .dentNum {
@@ -366,8 +366,11 @@ body.lightTheme .gpNum, body.lightTheme .dentNum {
 body.darkTheme .gpNum, body.darkTheme .dentNum {
     background-color: #003087;
 }
+.serviceInfo span::after { 
+    content: '\A'; white-space: pre; 
+}
 
-#gp1Telephone, #gp2Telephone, #dent1Telephone, #dent2Telephone {
+#gp1Telephone, #gp2Telephone, #dent1Telephone, #dent2Telephone, .serviceInfoTelephone, .groupInfoTelephone {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/phone-not-being-used.png');
     list-style-position: inside; 
@@ -377,7 +380,7 @@ body.darkTheme .gpNum, body.darkTheme .dentNum {
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/open-envelope.png');
     list-style-position: inside; 
 }
-#gp1Website, #gp2Website, #dent1Website, #dent2Website {
+#gp1Website, #gp2Website, #dent1Website, #dent2Website, .serviceInfoWebsite, .groupInfoWebsite {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/globe--v1.png');
     list-style-position: inside; 

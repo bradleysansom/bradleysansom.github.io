@@ -1,6 +1,6 @@
 {
-    "groups": {
-        "West Yorkshire Detective Novels Club": {
+    "groups": [
+        {
             "type": "group",
             "name": "West Yorkshire Detective Novels Club",
             "description": "A club for over 60s to discuss detective and crime fiction with like-minded people. A chance to make friends and meet others interested in reading.",
@@ -18,7 +18,7 @@
                 "twitter": "https://www.twitter.com/@wydnc"
             }
         }
-    },
+    ],
     "services": [
         {
             "type": "service",
@@ -32,7 +32,8 @@
             "links": {
                 "website": "https://www.waterflower-trust.org/",
                 "facebook": "https://www.facebook.com/waterflower.trust",
-                "twitter": "https://www.twitter.com/@waterflowertrust"
+                "twitter": "https://www.twitter.com/@waterflowertrust",
+                "telephone": ""
             }
         },
         {
@@ -47,7 +48,8 @@
             "links": {
                 "website": "https://www.kirkleeskitties.net/",
                 "facebook": "https://www.facebook.com/kirkleeskitties",
-                "twitter": "https://www.twitter.com/@kirkleeskitties"
+                "twitter": "https://www.twitter.com/@kirkleeskitties",
+                "telephone": ""
             }
         }
     ]
