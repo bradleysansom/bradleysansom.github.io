@@ -93,9 +93,9 @@
             <div class="plateTitle">
                 <span class="sans">My </span><span class="serif">Weather</span>
             </div>
-            <button onClick="plateWeather()">
-                Press to start weather
-            </button>
+            <div class="plateInfo">
+
+            </div>
         </div>
         <div class="plate" id="parliament">
             <div class="plateTitle">
@@ -149,12 +149,6 @@
                             Visit the <span id="councilLinkCouncil">&nbsp;</span> Council website
                         </a>
                     </div>
-                </div>
-                <div class="parish" id="parishBox">
-                    <span id="parishPostcode">&nbsp;</span> is under the parish of <span
-                        id="parishCouncil">&nbsp;</span>.
-                </div>
-                <div class="buttonsrow">
                     <div class="button" id="fixMyStreetButton">
                         <a id="fixMyStreetLink" target="blank" href="#">
                             Report problems such as graffiti or flytipping
@@ -165,6 +159,9 @@
                             Search planning applications and decisions
                         </a>
                     </div>
+                </div>
+                <div class="parish" id="parishBox">
+                    <span id="parishPostcode">&nbsp;</span> is in the parish of <span id="parishCouncil">&nbsp;</span>.
                 </div>
             </div>
 
@@ -420,6 +417,7 @@
             plateTakeaway();
             plateCouncil();
             await plateBankHolidays();
+            await plateWeather();
 
             await plateDemocracy();
 

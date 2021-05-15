@@ -4,7 +4,7 @@ function plateCouncil() {
     var council = localStorage.getItem('admin_district');
     var ward = localStorage.getItem('admin_ward');
     var parish = localStorage.getItem('parish');
-    var website = "https://www.gov.uk/find-local-council/" + council.toLowerCase();
+    var website = "https://www.gov.uk/find-local-council/" + council.replace(/\s/g, "-").toLowerCase();
     document.getElementById('councilPostcode').innerHTML = postcode;
     document.getElementById('councilCouncil').innerHTML = council;
     document.getElementById('councilWard').innerHTML = ward;
@@ -18,7 +18,7 @@ function plateCouncil() {
     }
     var linkToFix = "https://www.fixmystreet.com/around?js=1&pc=" + cleanPostcode;
     document.getElementById('fixMyStreetLink').href = linkToFix;
-    var linkToPlanning = "https://www.gov.uk/search-register-planning-decisions/" + council.toLowerCase();
+    var linkToPlanning = "https://www.gov.uk/search-register-planning-decisions/" + council.replace(/\s/g, "-").toLowerCase();
     document.getElementById('planningLink').href = linkToPlanning;
 
 }

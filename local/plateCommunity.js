@@ -1,4 +1,6 @@
 function plateCommunity() {
+    var groupsRendered = false;
+    var servicesRendered = false;
     fetch('https://bradleysansom.github.io/local/groups/groups.json')
         .then(response => response.json())
         .then(data => {
@@ -67,7 +69,7 @@ function plateCommunity() {
                 var distanceToGroup = distance(latitude, longitude, groupLatitude, groupLongitude, 'M')
                 console.log(distanceToGroup);
                 if (distanceToGroup < 7.5) {
-
+                    groupsRendered = true;
                     var name = groups[gnd].name;
                     var description = groups[gnd].description;
                     var website = groups[gnd].links.website;
@@ -179,7 +181,7 @@ function plateCommunity() {
             console.log(applicableServices);
             var i = 1;
             function renderService() {
-
+                servicesRendered = true;
                 var ind = i - 1;
                 console.log(i);
                 console.log(applicableServices[ind]);
@@ -248,5 +250,7 @@ function plateCommunity() {
 
 
         });
-
+    if (groupsRendered === false && servicesRendered === false) {
+        document.getElementById('plateCommunity').style.display = "none";
+    }
 };
