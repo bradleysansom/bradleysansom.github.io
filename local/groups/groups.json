@@ -1,0 +1,54 @@
+{
+    "groups": {
+        "West Yorkshire Detective Novels Club": {
+            "type": "group",
+            "name": "West Yorkshire Detective Novels Club",
+            "description": "A club for over 60s to discuss detective and crime fiction with like-minded people. A chance to make friends and meet others interested in reading.",
+            "address": {
+                "addressLine1": "Pudsey House",
+                "addressLine2": "Market Place",
+                "addressLine3": "Pudsey",
+                "addressLine4": "Leeds",
+                "postcode": "LS28 7BE"
+            },
+            "times": "Meets every Wednesday morning, 10:00 to 12:00",
+            "links": {
+                "website": "https://www.pudseyhouse.org.uk/book-club/",
+                "facebook": "https://www.facebook.com/groups/west-yorkshire-detective-novels-club",
+                "twitter": "https://www.twitter.com/@wydnc"
+            }
+        }
+    },
+    "services": {
+        "Waterflower Trust - Help at home": {
+            "type": "service",
+            "name": "Waterflower Trust - Help at home",
+            "description": "Free charity services to help older people to live independent lives.",
+            "areas": [
+                "BD1",
+                "BD2",
+                "BD3"
+            ],
+            "links": {
+                "website": "https://www.waterflower-trust.org/",
+                "facebook": "https://www.facebook.com/waterflower.trust",
+                "twitter": "https://www.twitter.com/@waterflowertrust"
+            }
+        },
+        "Care for Kirklees Felines": {
+            "type": "service",
+            "name": "Care for Kirklees Felines",
+            "description": ">Helping homeless cats and kittens in the district.",
+            "areas": [
+                "WF17",
+                "WF18",
+                "WF19"
+            ],
+            "links": {
+                "website": "https://www.kirkleeskitties.net/",
+                "facebook": "https://www.facebook.com/kirkleeskitties",
+                "twitter": "https://www.twitter.com/@kirkleeskitties"
+            }
+        }
+    }
+}
