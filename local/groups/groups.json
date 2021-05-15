@@ -21,35 +21,33 @@
     },
     "services": [
         {
-            "Waterflower Trust - Help at home": {
-                "type": "service",
-                "name": "Waterflower Trust - Help at home",
-                "description": "Free charity services to help older people to live independent lives.",
-                "areas": [
-                    "BD1",
-                    "BD2",
-                    "BD3"
-                ],
-                "links": {
-                    "website": "https://www.waterflower-trust.org/",
-                    "facebook": "https://www.facebook.com/waterflower.trust",
-                    "twitter": "https://www.twitter.com/@waterflowertrust"
-                }
-            },
-            "Care for Kirklees Felines": {
-                "type": "service",
-                "name": "Care for Kirklees Felines",
-                "description": ">Helping homeless cats and kittens in the district.",
-                "areas": [
-                    "WF17",
-                    "WF18",
-                    "WF19"
-                ],
-                "links": {
-                    "website": "https://www.kirkleeskitties.net/",
-                    "facebook": "https://www.facebook.com/kirkleeskitties",
-                    "twitter": "https://www.twitter.com/@kirkleeskitties"
-                }
+            "type": "service",
+            "name": "Waterflower Trust - Help at home",
+            "description": "Free charity services to help older people to live independent lives.",
+            "areas": [
+                "BD1",
+                "BD2",
+                "BD3"
+            ],
+            "links": {
+                "website": "https://www.waterflower-trust.org/",
+                "facebook": "https://www.facebook.com/waterflower.trust",
+                "twitter": "https://www.twitter.com/@waterflowertrust"
+            }
+        },
+        {
+            "type": "service",
+            "name": "Care for Kirklees Felines",
+            "description": ">Helping homeless cats and kittens in the district.",
+            "areas": [
+                "WF17",
+                "WF18",
+                "WF19"
+            ],
+            "links": {
+                "website": "https://www.kirkleeskitties.net/",
+                "facebook": "https://www.facebook.com/kirkleeskitties",
+                "twitter": "https://www.twitter.com/@kirkleeskitties"
             }
         }
     ]
