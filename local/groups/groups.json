@@ -15,7 +15,27 @@
             "links": {
                 "website": "https://www.pudseyhouse.org.uk/book-club/",
                 "facebook": "https://www.facebook.com/groups/west-yorkshire-detective-novels-club",
-                "twitter": "https://www.twitter.com/@wydnc"
+                "twitter": "https://www.twitter.com/@wydnc",
+                "telephone": ""
+            }
+        },
+        {
+            "type": "group",
+            "name": "Hips and Thighs",
+            "description": "Tone your hips and build your thighs with this new exercise class, open to all, led by Sarah Sunderland",
+            "address": {
+                "addressLine1": "Thornbury Methodist Church",
+                "addressLine2": "110 Leeds Old Road",
+                "addressLine3": "Thornbury",
+                "addressLine4": "Bradford",
+                "postcode": "BD3 8JS"
+            },
+            "times": "Every weekday, 12:00 to 13:00",
+            "links": {
+                "website": "",
+                "facebook": "https://www.facebook.com/page/sarahs-hips-and-thighs-thornbury",
+                "twitter": "",
+                "telephone": "01274669556"
             }
         }
     ],
