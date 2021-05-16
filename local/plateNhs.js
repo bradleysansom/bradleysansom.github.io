@@ -49,7 +49,14 @@ const plateNhs = async () => {
                 }
 
             })
-                .then(response => response.json())
+                .then(response => {
+                    if (response.ok) {
+                        return response.json()
+                    } else if (response.status === 404) {
+                        console.log("GPs data not found");
+                        document.getElementById('plateGps').style.display = "none";
+                    }
+                })
                 .then(json => {
                     console.log(json);
                     var stringNearGps = JSON.stringify(json);

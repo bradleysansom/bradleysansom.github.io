@@ -3,7 +3,14 @@ function plateBankHolidays() {
 
     var fetchUrl = "https://www.gov.uk/bank-holidays.json";
     fetch('https://www.gov.uk/bank-holidays.json')
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            } else if (response.status === 404) {
+                console.log("Bank holiday data not found");
+                document.getElementById('plateBankHolidays').style.display = "none";
+            }
+        })
         .then(data => {
             console.log(data);
             var stringOfHolidays = JSON.stringify(data);

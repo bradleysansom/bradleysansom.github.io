@@ -4,7 +4,14 @@ async function platePolice() {
     var postcode = localStorage.getItem('postcode');
     var neighbourhoodUrl = "https://data.police.uk/api/locate-neighbourhood?q=" + latitude + "," + longitude;
     fetch(neighbourhoodUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            } else if (response.status === 404) {
+                console.log("Police force data not found");
+                document.getElementById('platePolice').style.display = "none";
+            }
+        })
         .then(json => {
             console.log(json);
             var stringOfPoliceForce = JSON.stringify(json);
@@ -30,7 +37,14 @@ async function platePolice() {
             var policeNeighbourhood = arrayOfPoliceForce.neighbourhood;
             var policeNeighbourhoodUrl = "https://data.police.uk/api/" + policeForceName + "/" + policeNeighbourhood;
             fetch(policeNeighbourhoodUrl)
-                .then(response => response.json())
+                .then(response => {
+                    if (response.ok) {
+                        return response.json()
+                    } else if (response.status === 404) {
+                        console.log("Police neighbourhood data not found");
+                        document.getElementById('platePolice').style.display = "none";
+                    }
+                })
                 .then(json => {
                     console.log(json);
                     var stringOfPoliceNeighbourhood = JSON.stringify(json);

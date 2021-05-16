@@ -4,7 +4,14 @@ function plateWeather() {
     var weatherFirstUrl = encodeURI("https://goweather.herokuapp.com/weather/" + city);
     console.log(weatherFirstUrl);
     fetch(weatherFirstUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            } else if (response.status === 404) {
+                console.log("Weather not found");
+                document.getElementById('weather').style.display = "none";
+            }
+        })
         .then(data => {
             console.log(data);
             var stringOfWeather = JSON.stringify(data);
