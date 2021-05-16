@@ -451,22 +451,22 @@
             }
             document.getElementById("clockTitle").style.backgroundImage = "url(images/housing.jpg)";
 
-            await loadPostcodeData();
-            await storePostcodeData();
-            plateMap();
-            plateTakeaway();
-            plateCouncil();
-            await plateBankHolidays();
-            await plateWeather();
+            if (await loadPostcodeData()) {
+                await storePostcodeData();
+                plateMap();
+                plateTakeaway();
+                plateCouncil();
+                await plateBankHolidays();
+                await plateWeather();
 
-            await plateDemocracy();
+                await plateDemocracy();
 
-            await plateNhs();
+                await plateNhs();
 
-            await plateCommunity();
-            plateSmallBusiness();
-            await platePolice();
-
+                await plateCommunity();
+                plateSmallBusiness();
+                await platePolice();
+            }
 
         }
     </script>

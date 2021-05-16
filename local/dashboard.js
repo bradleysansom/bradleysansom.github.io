@@ -11,6 +11,7 @@ const loadPostcodeData = async () => {
         var posts = await response.json();
         console.log(posts);
         localStorage.setItem("posts", JSON.stringify(posts));
+        return true;
     } else if (response.status === 404) {
         document.getElementsByClassName('buffet')[0].style.display = "none";
         document.getElementById('postalCode').innerHTML = cleanPostcode;
@@ -20,7 +21,10 @@ const loadPostcodeData = async () => {
         goBack.innerHTML = "Go back and try again";
         goBack.href = "javascript:history.back()";
         goBack.style.color = "white";
+        document.getElementById('adminDistrict').style.marginBottom = "0";
         container.appendChild(goBack);
+
+        return false;
     }
 }
 
