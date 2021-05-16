@@ -1,6 +1,8 @@
 function plateCommunity() {
-    var groupsRendered = false;
-    var servicesRendered = false;
+    var groupsRendered = "false";
+    localStorage.setItem("groupsRendered", groupsRendered);
+    var servicesRendered = "false";
+    localStorage.setItem("servicesRendered", servicesRendered);
     fetch('https://bradleysansom.github.io/local/groups/groups.json')
         .then(response => response.json())
         .then(data => {
@@ -69,7 +71,8 @@ function plateCommunity() {
                 var distanceToGroup = distance(latitude, longitude, groupLatitude, groupLongitude, 'M')
                 console.log(distanceToGroup);
                 if (distanceToGroup < 7.5) {
-                    groupsRendered = true;
+                    var groupsRenderedAgain = "true";
+                    localStorage.setItem("groupsRenderedAgain", groupsRenderedAgain);
                     var name = groups[gnd].name;
                     var description = groups[gnd].description;
                     var website = groups[gnd].links.website;
@@ -81,6 +84,7 @@ function plateCommunity() {
                     var addressLine2 = groups[gnd].address.addressLine2;
                     var addressLine3 = groups[gnd].address.addressLine3;
                     var addressLine4 = groups[gnd].address.addressLine4;
+                    document.getElementById('groupHeader').style.display = "initial";
                     var groupContainer = document.getElementById('communityGroups');
                     var newGroup = document.createElement('div');
                     newGroup.className = "group";
@@ -181,7 +185,8 @@ function plateCommunity() {
             console.log(applicableServices);
             var i = 1;
             function renderService() {
-                servicesRendered = true;
+                var servicesRenderedAgain = "true";
+                localStorage.setItem("servicesRenderedAgain", servicesRenderedAgain);
                 var ind = i - 1;
                 console.log(i);
                 console.log(applicableServices[ind]);
@@ -192,6 +197,7 @@ function plateCommunity() {
                 var facebook = applicableServices[ind].links.facebook;
                 var twitter = applicableServices[ind].links.twitter;
                 var tel = applicableServices[ind].links.telephone;
+                document.getElementById('serviceHeader').style.display = "initial";
                 var serviceContainer = document.getElementById('communityServices');
                 var newService = document.createElement('div');
                 newService.className = "service";
@@ -250,7 +256,6 @@ function plateCommunity() {
 
 
         });
-    if (groupsRendered === false && servicesRendered === false) {
-        document.getElementById('plateCommunity').style.display = "none";
-    }
+
+
 };

@@ -161,6 +161,91 @@ div.plateInfo {
 span.info {
     font-weight: 700;
 }
+div.weatherContainer {
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+body.lightTheme div#weather div a {
+    color:#000000;
+}
+body.darkTheme div#weather div a {
+    color:#ffffff;
+}
+body.lightTheme div#plateCommunity div a {
+    color:#000000;
+}
+body.darkTheme div#plateCommunity div a {
+    color:#ffffff;
+}
+
+
+div.todaysWeather {
+    background-image:url('../images/clouds.jpg');
+    background-size:cover;
+    height:auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height:1.5;
+    border-radius:12px;
+}
+div.todaysWeather span::after {
+    content: '\A'; white-space: pre;     
+}
+div.todaysWeather span#todaysTemperature {
+    font-size:2.5rem;
+}
+div.todaysWeather span#todaysDescription {
+font-family: 'Merriweather';
+font-size: 1.5rem;
+}
+body.darkTheme div.todaysWeather, body.lightTheme div.todaysWeather {
+    color:#ffffff
+}
+
+div.weatherForecast {
+    margin-top:10px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: stretch;
+}
+div.aDaysWeather {
+    display:flex;
+    flex-direction:column;
+    line-height:1.5;
+}
+body.lightTheme span.windForecast {
+    display: list-item;
+    list-style-image: url("https://img.icons8.com/material-rounded/12/000000/wind.png");
+    list-style-position: inside; 
+}
+body.lightTheme div.todaysWeather span.windForecast {
+    display: list-item;
+    list-style-image: url("https://img.icons8.com/material-rounded/12/ffffff/wind.png");
+    list-style-position: inside; 
+}
+body.darkTheme span.windForecast {
+    display: list-item;
+    list-style-image: url("https://img.icons8.com/material-rounded/12/ffffff/wind.png");
+    list-style-position: inside; 
+}
+body.darkTheme div.todaysWeather span.windForecast {
+    display: list-item;
+    list-style-image: url("https://img.icons8.com/material-rounded/12/ffffff/wind.png");
+    list-style-position: inside; 
+}
+
+span.dayName {
+    text-transform:uppercase;
+    font-family: 'Merriweather';
+}
+span.tempForecast {
+    font-size:1.5rem;
+}
 
 span#memberImage,
 span#partyImage {
@@ -233,22 +318,30 @@ body.darkTheme div.plate#parliament div.button {
     color: white;
 }
 
-body.lightTheme div.plate#plateNhs div.plateTitle {
+body.lightTheme div.plate#plateNhs div.plateTitle,
+body.lightTheme div.plate#plateDoctors div.plateTitle,
+body.lightTheme div.plate#plateDentists div.plateTitle {
     background-color: #005EB8;
     color: white;
 }
 
-body.darkTheme div.plate#plateNhs div.plateTitle {
+body.darkTheme div.plate#plateNhs div.plateTitle,
+body.darkTheme div.plate#plateDoctors div.plateTitle,
+body.darkTheme div.plate#plateDentists div.plateTitle {
     background-color: #003087;
     color: white;
 }
 
-body.lightTheme div.plate#plateNhs div.button {
+body.lightTheme div.plate#plateNhs div.button,
+body.lightTheme div.plate#plateDoctors div.button,
+body.lightTheme div.plate#plateDentists div.button {
     background-color: #005EB8;
     color: white;
 }
 
-body.darkTheme div.plate#plateNhs div.button {
+body.darkTheme div.plate#plateNhs div.button,
+body.darkTheme div.plate#plateDoctors div.button,
+body.darkTheme div.plate#plateDentists div.button {
     background-color: #003087;
     color: white;
 }
@@ -272,6 +365,103 @@ body.darkTheme div.plate#plateTakeaway div.button {
     background-color: #739900;
     color: white;
 }
+body.lightTheme div.plate#plateCouncil div.plateTitle {
+    background-color: #b800e6;
+    color: white;
+}
+
+body.darkTheme div.plate#plateCouncil div.plateTitle {
+    background-color: #8f00b3;
+    color: white;
+}
+
+body.lightTheme div.plate#plateCouncil div.button {
+    background-color: #b800e6;
+    color: white;
+}
+
+body.darkTheme div.plate#plateCouncil div.button {
+    background-color: #8f00b3;
+    color: white;
+}
+body.lightTheme div.plate#plateBankHolidays div.plateTitle {
+    background-color: 	 #e60000;
+    color: white;
+}
+
+body.darkTheme div.plate#plateBankHolidays div.plateTitle {
+    background-color:   #b30000;
+    color: white;
+}
+
+body.lightTheme div.plate#plateBankHolidays div.button {
+    background-color: 	 #e60000;
+    color: white;
+}
+
+body.darkTheme div.plate#plateBankHolidays div.button {
+    background-color:   #b30000;
+    color: white;
+}
+body.lightTheme div.plate#platePolice div.plateTitle {
+    background-color: 	 #0000e6;
+    color: white;
+}
+
+body.darkTheme div.plate#platePolice div.plateTitle {
+    background-color:   #0000b3;
+    color: white;
+}
+
+body.lightTheme div.plate#platePolice div.button {
+    background-color: 	 #0000e6;
+    color: white;
+}
+
+body.darkTheme div.plate#platePolice div.button {
+    background-color:   #0000b3;
+    color: white;
+}
+body.lightTheme div.plate#plateShopSmall div.plateTitle {
+    background-color: 	 #00ace6;
+    color: white;
+}
+
+body.darkTheme div.plate#plateShopSmall div.plateTitle {
+    background-color:   #0086b3;
+    color: white;
+}
+
+body.lightTheme div.plate#plateShopSmall div.button {
+    background-color: 	 #00ace6;
+    color: white;
+}
+
+body.darkTheme div.plate#plateShopSmall div.button {
+    background-color:   #0086b3;
+    color: white;
+}
+
+body.lightTheme div.plate#plateCommunity div.plateTitle {
+    background-color: 	  #e65c00;
+    color: white;
+}
+
+body.darkTheme div.plate#plateCommunity div.plateTitle {
+    background-color:   #b34700;
+    color: white;
+}
+
+body.lightTheme div.plate#plateCommunity div.button {
+    background-color: 	  #e65c00;
+    color: white;
+}
+
+body.darkTheme div.plate#plateCommunity div.button {
+    background-color:   #b34700;
+    color: white;
+}
+
 
 div.plate div.button {
     width: fit-content;
@@ -288,10 +478,13 @@ div.plate#plateMap {
     flex-basis: 85%;
     height: 250px;
 }
-
-div.plate div.button a {
+body.lightTheme div.plate div.button a {
     color: white;
 }
+body.darkTheme div.plate div.button a {
+    color: white;
+}
+
 
 div.tray {
     width: 100%;
@@ -346,6 +539,28 @@ body.darkTheme div#plateMap {
     width: 50px;
     min-width: 50px;  
 }
+body.lightTheme .serviceBanner, body.lightTheme .groupBanner {
+    margin: 0px 10px 10px 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    background-image: url('https://img.icons8.com/material-rounded/24/ffffff/group-task.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 10px;
+}
+body.lightTheme .gpNum, body.lightTheme .dentNum {
+    color: #ffffff;
+}
+body.darkTheme .gpNum, body.darkTheme .dentNum {
+    color: #ffffff;
+}
+body.lightTheme .groupBanner, body.lightTheme .serviceBanner {
+    background-color: 	  #e65c00;
+    color: #ffffff;
+}
+body.darkTheme .groupBanner, body.darkTheme .serviceBanner {
+    background-color:   #b34700;
+    color: #ffffff;
+}
 
 .gpNum {
     margin: 0px 10px 10px 10px;
@@ -383,35 +598,86 @@ span.groupInfoName, span.serviceInfoName {
     font-family: 'Merriweather';
     font-weight:700;
 }
-#gp1Telephone, #gp2Telephone, #dent1Telephone, #dent2Telephone, .serviceInfoTelephone, .groupInfoTelephone {
+body.lightTheme #gp1Telephone, body.lightTheme #gp2Telephone, body.lightTheme #dent1Telephone, body.lightTheme #dent2Telephone, body.lightTheme .serviceInfoTelephone, body.lightTheme .groupInfoTelephone {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/000000/phone-not-being-used.png');
+    list-style-position: inside; 
+}
+body.darkTheme #gp1Telephone, body.darkTheme #gp2Telephone, body.darkTheme #dent1Telephone, body.darkTheme #dent2Telephone, body.darkTheme .serviceInfoTelephone, body.darkTheme .groupInfoTelephone {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/phone-not-being-used.png');
     list-style-position: inside; 
 }
-#gp1Email, #gp2Email, #dent1Email, #dent2Email {
+body.lightTheme #gp1Email, body.lightTheme #gp2Email, body.lightTheme #dent1Email, body.lightTheme #dent2Email {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/000000/open-envelope.png');
+    list-style-position: inside; 
+}
+body.darkTheme #gp1Email, body.darkTheme #gp2Email, body.darkTheme #dent1Email, body.darkTheme #dent2Email {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/open-envelope.png');
     list-style-position: inside; 
 }
-#gp1Website, #gp2Website, #dent1Website, #dent2Website, .serviceInfoWebsite, .groupInfoWebsite {
+body.lightTheme #gp1Website, body.lightTheme #gp2Website, body.lightTheme #dent1Website, body.lightTheme #dent2Website, body.lightTheme .serviceInfoWebsite, body.lightTheme .groupInfoWebsite {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/000000/globe--v1.png');
+    list-style-position: inside; 
+}
+body.darkTheme #gp1Website, body.darkTheme #gp2Website, body.darkTheme #dent1Website, body.darkTheme #dent2Website, body.darkTheme .serviceInfoWebsite, body.darkTheme .groupInfoWebsite {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/globe--v1.png');
     list-style-position: inside; 
 }
 
-.serviceInfoFacebook, .groupInfoFacebook {
+body.lightTheme .serviceInfoFacebook, body.lightTheme .groupInfoFacebook {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/000000/facebook-new.png');
+    list-style-position: inside; 
+}
+body.darkTheme .serviceInfoFacebook, body.darkTheme .groupInfoFacebook {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/facebook-new.png');
     list-style-position: inside; 
 }
-.serviceInfoTwitter, .groupInfoTwitter {
+body.lightTheme .serviceInfoTwitter, body.lightTheme .groupInfoTwitter {
+    display: list-item;
+    list-style-image: url('https://img.icons8.com/material-rounded/12/000000/twitter.png');
+    list-style-position: inside; 
+}
+body.darkTheme .serviceInfoTwitter, body.darkTheme .groupInfoTwitter {
     display: list-item;
     list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/twitter.png');
     list-style-position: inside; 
 }
 
-.gpInfo a, .dentInfo a, .serviceInfo a, .groupInfo a {
+
+body.lightTheme .gpInfo a, body.lightTheme .dentInfo a, body.lightTheme .serviceInfo a, body.lightTheme .groupInfo a {
+    color:black;
+}
+body.darkTheme .gpInfo a, body.darkTheme .dentInfo a, body.darkTheme .serviceInfo a, body.darkTheme .groupInfo a {
     color:white;
 }
+
+div.plateTitle {
+    margin-bottom: 15px;
+}
+
+div#plateBankHolidays div.plateInfo span::after{
+    content: '\A'; white-space: pre; 
+}
+
+span#nation, span#bankHolidayName, span#bankHolidayDay, span#bankHolidayMonth, span#bankHolidayYear {
+    line-height: 1.5;
+    font-family: 'Merriweather';
+    font-size: 1.5rem;
+}
+span#bankHolidayName {
+    text-transform:capitalize;
+}
+span#bankHolidayDay, span#bankHolidayMonth, span#bankHolidayYear { 
+    font-size: 1.7rem;
+    font-weight:700;
+}
+
 
 

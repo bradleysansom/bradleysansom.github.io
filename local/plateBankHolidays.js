@@ -60,11 +60,14 @@ function plateBankHolidays() {
                 nextBankHolidayDateMonthName = "December";
             };
 
+
             var nextBankHolidayDateDay = nextBankHolidayDateSplit['2'];
             console.log(nextBankHolidayDateDay + " " + nextBankHolidayDateMonthName + " " + nextBankHolidayDateYear);
             document.getElementById('nation').innerHTML = nation;
             document.getElementById('bankHolidayName').innerHTML = nextBankHolidayName;
-            document.getElementById('bankHolidayDate').innerHTML = nextBankHolidayDate;
+            document.getElementById('bankHolidayDay').innerHTML = nextBankHolidayDateDay;
+            document.getElementById('bankHolidayMonth').innerHTML = nextBankHolidayDateMonthName;
+            document.getElementById('bankHolidayYear').innerHTML = nextBankHolidayDateYear;
         });
 
 }

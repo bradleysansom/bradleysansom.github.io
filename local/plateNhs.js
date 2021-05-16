@@ -5,7 +5,8 @@ const plateNhs = async () => {
     if (country === "England") {
         healthServiceName = "NHS";
         document.getElementById("healthServiceName").innerHTML = healthServiceName;
-        document.getElementById("nhsInfoLink").style.display = "none";
+        document.getElementById("nhsInfoLink").href = "https://www.nhs.uk/nhs-services/";
+        document.getElementById("nhsInfoLink").innerHTML = "See your local health services on nhs.uk";
         document.getElementById("nhsEnglandPlate").style.display = "initial";
         var ha = localStorage.getItem("nhs_ha");
         var ccg = localStorage.getItem("ccg");

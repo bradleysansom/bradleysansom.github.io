@@ -42,6 +42,8 @@
     <script src="plateBankHolidays.js"></script>
     <script src="plateCouncil.js"></script>
     <script src="platePolice.js"></script>
+    <script src="plateSmallBusiness.js"></script>
+
     <!--Progressive web app manifest-->
     <link rel="manifest" href="manifest.json">
 
@@ -94,7 +96,32 @@
                 <span class="sans">My </span><span class="serif">Weather</span>
             </div>
             <div class="plateInfo">
-
+                <div class="weatherContainer">
+                    <div class="todaysWeather">
+                        <span id="todaysDay" class="dayName">Today</span>
+                        <span id="todaysTemperature">&nbsp;</span>
+                        <span id="todaysWind" class="windForecast">&nbsp;</span>
+                        <span id="todaysDescription">&nbsp;</span>
+                    </div>
+                    <div class="weatherForecast">
+                        <div class="aDaysWeather" id="tomorrowsWeather">
+                            <span id="tomorrowsDay" class="dayName">&nbsp;</span>
+                            <span id="tomorrowsTemperature" class="tempForecast">&nbsp;</span>
+                            <span id="tomorrowsWind" class="windForecast">&nbsp;</span>
+                        </div>
+                        <div class="aDaysWeather" id="dayAftersWeather">
+                            <span id="dayAfterDay" class="dayName">&nbsp;</span>
+                            <span id="dayAfterTemperature" class="tempForecast">&nbsp;</span>
+                            <span id="dayAfterWind" class="windForecast">&nbsp;</span>
+                        </div>
+                        <div class="aDaysWeather" id="dayAfterThatsWeather">
+                            <span id="dayAfterThatDay" class="dayName">&nbsp;</span>
+                            <span id="dayAfterThatTemperature" class="tempForecast">&nbsp;</span>
+                            <span id="dayAfterThatWind" class="windForecast">&nbsp;</span>
+                        </div>
+                    </div>
+                </div>
+                Weather provided by <a href="https://github.com/robertoduessmann/weather-api">GoWeather</a>
             </div>
         </div>
         <div class="plate" id="parliament">
@@ -172,12 +199,13 @@
             </div>
             <div class="plateInfo">
                 <div id="communityGroups">
-                    <span id="groupHeader">Community groups</span>
+                    <span id="groupHeader" style="display:none;">Community groups</span>
                 </div>
                 <div id="communityServices">
-                    <span id="serviceHeader">Community services</span>
+                    <span id="serviceHeader" style="display:none;">Community services</span>
 
                 </div>
+                <a href="add/index.html">Add a community organisation</a>
             </div>
         </div>
         <div class="plate" id="plateNhs">
@@ -191,10 +219,14 @@
                         style="display:none;">&nbsp;</span><br><span id="nhsCcg"
                         style="display:none;">&nbsp;</span><br><span id="nhsPct" style="display:none;">&nbsp;</span><br>
                 </div>
-                <div class="button" id="nhsInfoButton">
-                    <a id="nhsInfoLink" target="blank" href="#">
-                        &nbsp;</a>
+                <div class="buttonsrow">
+                    <div class="button" id="nhsInfoButton">
+                        <a id="nhsInfoLink" target="blank" href="#">
+                            &nbsp;</a>
+                    </div>
                 </div>
+                <a href="https://www.nhs.uk/"><img src="https://www.nhs.uk/nhscwebservices/documents/logo1.jpg"
+                        height="50" alt="NHS logo" style="border:5px solid white;"></a>
             </div>
         </div>
         <div class="plate" id="plateDoctors">
@@ -279,8 +311,14 @@
             </div>
 
             <div class="plateInfo">
-                The next bank holiday in <span id="nation"></span> is <span id="bankHolidayName"></span> on <span
-                    id="bankHolidayDate"></span>
+                <span id="theNext">The next bank holiday in</span>
+                <span id="nation"></span>
+                <span id="is">is</span>
+                <span id="bankHolidayName"></span>
+                <span id="on">on</span>
+                <span id="bankHolidayDay"></span>
+                <span id="bankHolidayMonth"></span>
+                <span id="bankHolidayYear"></span>
             </div>
 
         </div>
@@ -292,9 +330,11 @@
             <div class="plateInfo">
                 <span id="policePostcode">&nbsp;</span> is served by <span id="policeForce">&nbsp;</span>, in the <span
                     id="policeNeighbourhood">&nbsp;</span> neighbourhood.
-                <div class="button" id="policeInfoButton">
-                    <a id="policeInfoLink" target="blank" href="#">
-                        &nbsp;</a>
+                <div class="buttonsrow" id="policeRow">
+                    <div class="button" id="policeInfoButton">
+                        <a id="policeInfoLink" target="blank" href="#">
+                            &nbsp;</a>
+                    </div>
                 </div>
             </div>
 
@@ -424,6 +464,7 @@
             await plateNhs();
 
             await plateCommunity();
+            plateSmallBusiness();
             await platePolice();
 
 

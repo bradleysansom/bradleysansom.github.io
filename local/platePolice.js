@@ -40,9 +40,15 @@ async function platePolice() {
                     localStorage.setItem('arrayOfPoliceNeighbourhood', arrayOfPoliceNeighbourhood);
                     var policeNeighbourhoodName = arrayOfPoliceNeighbourhood.name;
                     var policeNeighbourhoodUrl = arrayOfPoliceNeighbourhood.url_force;
+                    console.log(policeNeighbourhoodUrl);
                     document.getElementById('policeNeighbourhood').innerHTML = policeNeighbourhoodName;
-                    document.getElementById('policeInfoLink').innerHTML = "Contact the " + policeNeighbourhoodName + " neighbourhood team";
-                    document.getElementById('policeInfoLink').href = policeNeighbourhoodUrl;
+                    if (policeNeighbourhoodUrl.includes(".uk")) {
+                        document.getElementById('policeInfoLink').innerHTML = "Contact the " + policeNeighbourhoodName + " neighbourhood team";
+                        document.getElementById('policeInfoLink').href = policeNeighbourhoodUrl;
+                    } else {
+                        document.getElementById('policeInfoLink').innerHTML = "Find the " + policeForceNameTitleCase + " website";
+                        document.getElementById('policeInfoLink').href = encodeURI("https://www.google.com/search?hl=en&q=" + policeForceNameLowercase + " police");
+                    }
 
                 });
 
