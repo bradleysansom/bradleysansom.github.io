@@ -4,12 +4,25 @@ function dashboard() {
 
 }
 
-const loadPostcodeData = async() => {
+const loadPostcodeData = async () => {
     var cleanPostcode = localStorage.getItem("cleanPostcode");
     const response = await fetch('https://api.postcodes.io/postcodes/' + cleanPostcode);
-    var posts = await response.json();
-    console.log(posts);
-    localStorage.setItem("posts", JSON.stringify(posts));
+    if (response.ok) {
+        var posts = await response.json();
+        console.log(posts);
+        localStorage.setItem("posts", JSON.stringify(posts));
+    } else if (response.status === 404) {
+
+        document.getElementsByClassName('buffet')[0].style.display = "none";
+        document.getElementById('postalCode').innerHTML = cleanPostcode;
+        document.getElementById('adminDistrict').innerHTML = "Postcode not found";
+        var container = document.getElementsByClassName('postcode')[0];
+        var goBack = document.createElement('a');
+        goBack.innerHTML = "Go back and try again";
+        goBack.href = "javascript:history.back()";
+        goBack.style.color = "white";
+        container.appendChild(goBack);
+    }
 }
 
 
