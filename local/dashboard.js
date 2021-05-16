@@ -12,7 +12,6 @@ const loadPostcodeData = async () => {
         console.log(posts);
         localStorage.setItem("posts", JSON.stringify(posts));
     } else if (response.status === 404) {
-
         document.getElementsByClassName('buffet')[0].style.display = "none";
         document.getElementById('postalCode').innerHTML = cleanPostcode;
         document.getElementById('adminDistrict').innerHTML = "Postcode not found";
