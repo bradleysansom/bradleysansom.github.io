@@ -1,6 +1,5 @@
 _site
-_site/
-.DS_Store
 .sass-cache
-*.pptx
-local/.vscode/settings.json
+.jekyll-cache
+.jekyll-metadata
+vendor
