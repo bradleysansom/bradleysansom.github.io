@@ -10,7 +10,7 @@
         body {
             transition: .5s;
             margin: 10px;
-            background-color: black;
+            background-color: #000000;
             font-family: 'Overpass';
         }
 
@@ -44,19 +44,19 @@
         .nav ul li {
             transition: .5s;
             display: inline;
-            color: white;
+            color: #ffffff;
             font-size: 1.5rem;
             padding: 10px 20px;
         }
 
         .nav ul li a {
             transition: .5s;
-            color: white;
+            color: #ffffff;
             text-decoration: none;
         }
 
         .nav ul li:hover {
-            background-color: white;
+            background-color: #ffffff;
             transition: .5s;
         }
 
@@ -71,15 +71,20 @@
 
             transition: .5s;
             display: inline;
-            color: white;
+            color: #ffffff;
             font-size: 1rem;
             padding: 10px 20px;
         }
 
         .links ul li a {
             transition: .5s;
-            color: white;
+            color: #ffffff;
             text-decoration: none;
+        }
+
+        .links ul li:hover {
+            transition: .5s;
+            background-color: #ffffff;
         }
 
         .links ul li:hover a {
@@ -87,13 +92,24 @@
             color: #008080;
         }
 
-        #github::before {
-            display: block;
-            content: " ";
+        .links ul li svg {
 
-            background-size: 20px 20px;
+            vertical-align: middle;
             width: 20px;
             height: 20px;
+        }
+
+        .links ul li svg use {
+            transition: .5s;
+        }
+
+        .links ul li:hover svg use {
+            transition: .5s;
+            fill: #008080;
+        }
+
+        .links ul {
+            padding-left: 0;
 
         }
 
@@ -107,7 +123,7 @@
         </div>
         <div class="nav">
             <ul>
-                <li><a href="https://bradleysansom.github.io/projects">Blog</a></li>
+                <li><a href="https://bradleysansom.github.io/blog">Blog</a></li>
                 <li><a href="https://bradleysansom.github.io/projects">Projects</a></li>
                 <li><a href="https://bradleysansom.github.io/portfolio">Portfolio</a></li>
                 <li><a href="https://bradleysansom.github.io/about">About</a></li>
@@ -124,9 +140,21 @@
     <footer>
         <div class="links">
             <ul>
-                <li id="github"><a href="https://github.com/bradleysansom">{{ site.github_username }}</a></li>
-                <li id="email"><a href="mailto:bradley-sansom@outlook.com">{{ site.email }}</a></li>
-                <li id="flickr"><a href="https://flickr.com/people/bradleysans/">{{ site.flickr }}</a></li>
+                <li id="github">
+
+                    <a href="https://github.com/bradleysansom"><svg class="svg-icon" width="20px" height="20px">
+                            <use xlink:href="/assets/minima-social-icons.svg#github" fill="#ffffff"></use>
+                        </svg>{{ site.github_username }}</a>
+                </li>
+                <li id="email">
+                    <a href="mailto:bradley-sansom@outlook.com"><b>@</b> {{ site.email }}</a>
+                </li>
+                <li id="flickr"><a href="https://flickr.com/people/bradleysans/"><svg class="svg-icon" width="20px"
+                            height="20px">
+                            <use xlink:href="/assets/minima-social-icons.svg#flickr" fill="#ffffff"></use>
+                        </svg>{{ site.flickr }}</a>
+                </li>
+
 
             </ul>
         </div>
