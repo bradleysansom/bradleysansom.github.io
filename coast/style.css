@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+body {
+    max-width:750px;
+    
+    margin:10px auto;
+    
+    text-align:center;
+    font-family: 'Hammersmith One';
+}
+
+header {
+    margin:10px;
+    padding:30px;
+    border-radius:10px;
+    color: white;
+    background-color:teal;
+    text-align:center;
+    font-size:2rem;
+}
