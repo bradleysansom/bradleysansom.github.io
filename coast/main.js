@@ -1,5 +1,5 @@
 var options = {
-    valueNames: ['name', 'city']
+    valueNames: ['name', 'born']
 };
 
-var hackerList = new List('places', options);
+var userList = new List('users', options);
