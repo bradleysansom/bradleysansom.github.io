@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-    <script src="main.js"></script>
+
     <title>South Coast</title>
 </head>
+
 <body>
     <header>
         South Coast
     </header>
-    <div id="users">
-        <input class="search" placeholder="Search" />
+    <div id="places">
+        <input class="search" placeholder="Search" autofocus>
         <button class="sort" data-sort="name">
-          Sort by name
+            Sort by name
         </button>
-      
+        <button class="sort" data-sort="locality">
+            Sort by location
+        </button>
+        <button class="sort" data-sort="type">
+            Sort by type
+        </button>
+
         <ul class="list">
-          <li>
-            <h3 class="name">Jonny Stromberg</h3>
-            <p class="born">1986</p>
-          </li>
-          <li>
-            <h3 class="name">Jonas Arnklint</h3>
-            <p class="born">1985</p>
-          </li>
-          <li>
-            <h3 class="name">Martina Elm</h3>
-            <p class="born">1986</p>
-          </li>
-          <li>
-            <h3 class="name">Gustaf Lindqvist</h3>
-            <p class="born">1983</p>
-          </li>
+            <li>
+                <h4 class="type restaurant">Restaurant</h4>
+                <h3 class="name">Maritimo Lounge</h3>
+                <p class="address">1 Moresby Tower<br>Admiral's Quay<br>Ocean Way</p>
+                <h4 class="locality">Southampton</h4>
+                <h4 class="postcode">SO14 3LG</h4>
+                <h4 class="telephone"><a href="tel:+442380211791">02380 211 791</a></h4>
+                <h4 class="website"><a href="https://thelounges.co.uk/maritimo/">thelounges.co.uk/maritimo</a></h4>
+                <h4 class="hours">Sunday - Friday 9am – 11pm<br>Saturday 9am – midnight</h4>
+            </li>
+            <li>
+                <h4 class="type restaurant">Restaurant</h4>
+                <h3 class="name">Santo Lounge</h3>
+                <p class="address">429 Shirley Road</p>
+                <h4 class="locality">Southampton</h4>
+                <h4 class="postcode">SO15 3JF</h4>
+                <h4 class="telephone"><a href="tel:+442380878996">02380 878 996</a></h4>
+                <h4 class="website"><a href="https://thelounges.co.uk/santo/">thelounges.co.uk/santo</a></h4>
+                <h4 class="hours">Monday - Sunday 9am – 11pm</h4>
+            </li>
+
+
         </ul>
-      
-      </div>
-      
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <!-- partial -->
+    <script src="main.js"></script>
+
+
 </body>
+
 </html>
