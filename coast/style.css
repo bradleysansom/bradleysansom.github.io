@@ -1,111 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
-    max-width:750px;
-    
-    margin:10px auto;
-    
-    text-align:center;
-    font-family: 'Hammersmith One';
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Barlow';
 }
 
 header {
-    margin:10px;
-    padding:30px;
-    border-radius:10px;
-    color: white;
-    background-color:teal;
-    text-align:center;
-    font-size:2rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background-color: #008080;
+  background-image: url('port.jpg');
+  background-size: cover;
+  background-position: middle;
+
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: +6px;
 }
 
-h2 {
-    font-family:sans-serif;
-  }
+
 .list {
-    font-family:sans-serif;
-    margin:0;
-    padding:20px 0 0;
-  }
-  .list > li {
-    display:block;
-    background-color: #eee;
-    padding:10px;
-    box-shadow: inset 0 1px 0 #fff;
-  }
-  .avatar {
-    max-width: 150px;
-  }
-  img {
-    max-width: 100%;
-  }
-  h3 {
-    font-size: 16px;
-    margin:0 0 0.3rem;
-    font-weight: normal;
-    font-weight:bold;
-  }
-  p {
-    margin:0;
-  }
-  
-  input {
-    border:solid 1px #ccc;
-    border-radius: 5px;
-    padding:7px 14px;
-    margin-bottom:10px
-  }
-  input:focus {
-    outline:none;
-    border-color:#aaa;
-  }
-  .sort {
-    padding:8px 30px;
-    border-radius: 6px;
-    border:none;
-    display:inline-block;
-    color:#fff;
-    text-decoration: none;
-    background-color: #28a8e0;
-    height:30px;
-  }
-  .sort:hover {
-    text-decoration: none;
-    background-color:#1b8aba;
-  }
-  .sort:focus {
-    outline:none;
-  }
-  .sort:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    content:"";
-    position: relative;
-    top:-10px;
-    right:-5px;
-  }
-  .sort.asc:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #fff;
-    content:"";
-    position: relative;
-    top:13px;
-    right:-5px;
-  }
-  .sort.desc:after {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #fff;
-    content:"";
-    position: relative;
-    top:-10px;
-    right:-5px;
-  }
+
+  padding: 10px;
+
+}
+
+.list>li {
+  display: block;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+
+}
+
+#placemat {
+  height: 500px;
+  background-image: url('needles.jpg');
+  color: #008080;
+}
+
+#placemat h2 {
+  font-size: 2rem;
+  font-family: 'Satisfy';
+}
+
+
+input {
+
+  width: 300px;
+  border: solid 1px #cccccc;
+  border-radius: 10px;
+  padding: 7px 14px;
+  margin-bottom: 10px;
+}
+
+
+input:focus {
+  outline: none;
+  border-color: #aaaaaa;
+}
+
+.sort {
+  padding: 8px 30px;
+  border-radius: 10px;
+  border: none;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #008080;
+  height: 30px;
+}
+
+input,
+button {
+  font-family: 'Barlow';
+  font-weight: 700;
+}
+
+.sort:hover {
+  text-decoration: none;
+  background-color: #005050;
+}
+
+.sort:focus {
+  outline: none;
+}
+
+.sort:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content: "";
+  position: relative;
+  top: -10px;
+  right: -5px;
+}
+
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content: "";
+  position: relative;
+  top: 13px;
+  right: -5px;
+}
+
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content: "";
+  position: relative;
+  top: -10px;
+  right: -5px;
+}
+
+.type {
+  font-weight: 700;
+  margin-block-start: 10px;
+  margin-block-end: 0;
+}
+
+.name {
+  margin-block-start: 10px;
+  font-size: 2rem;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  margin-block-end: 10px;
+}
+
+.type.restaurant+.name {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/dining-room.png');
+  list-style-position: inside;
+
+}
+
+.telephone {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/18/000000/ringing-phone.png');
+  list-style-position: inside;
+  font-weight: 900;
+}
+
+.website {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/18/000000/domain--v2.png');
+  list-style-position: inside;
+  font-weight: 900;
+}
+
+.telephone a,
+.website a {
+  color: black !important;
+
+}
+
+.hours {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/18/000000/clock.png');
+  list-style-position: inside;
+}
+
+.address {
+  margin-block-end: 0;
+}
+
+.locality {
+  margin-block-start: 0;
+  font-weight: 700;
+}
+
+.postcode {
+  font-weight: 700;
+}
+
+.altname {
+  display: none;
+}
