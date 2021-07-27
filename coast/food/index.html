@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>South Coast</title>
+</head>
+
+<body>
+    <header>
+        South Coast
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../visit/index.html">Places to visit</a>
+            </li>
+            <li class="current">
+                <a href="#">Places to eat</a>
+            </li>
+            <li>
+                <a href="https://goo.gl/maps/zm8xS4p9LfAFHiP4A">Map</a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <div id="places">
+        <input class="search" placeholder="Search" autofocus id="searchbar">
+        <br>
+        <button class="sort" data-sort="name">
+            Sort by name
+        </button>
+        <button class="sort" data-sort="locality">
+            Sort by location
+        </button>
+        <button class="sort" data-sort="type">
+            Sort by type
+        </button>
+
+        <ul class="list">
+            <li id="placemat">
+                <!--Placemat-->
+                <h2>Welcome to the South Coast</h2>
+                <h3>Use the search bar above to find places to eat</h3>
+                <h3>Type in the name of an establishment, city, or town to get started</h3>
+            </li>
+            <li>
+                <!--Maritimo Lounge, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Maritimo
+                    Lounge</p>
+                <p class="address">1 Moresby Tower<br>Admiral's Quay<br>Ocean Way</p>
+                <p class="locality">Southampton (Ocean Village)</p>
+                <p class="postcode">SO14 3LG</p>
+                <p class="telephone"><a href="tel:+442380211791">02380 211 791</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/maritimo/">thelounges.co.uk/maritimo</a></p>
+                <p class="hours">Sunday - Friday 9am – 11pm<br>Saturday 9am – midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Santo Lounge, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Santo
+                    Lounge</p>
+                <p class="address">429 Shirley Road</p>
+                <p class="locality">Southampton (Shirley)</p>
+                <p class="postcode">SO15 3JF</p>
+                <p class="telephone"><a href="tel:+442380878996">02380 878 996</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/santo/">thelounges.co.uk/santo</a></p>
+                <p class="hours">Monday - Sunday 9am – 11pm</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Trago Lounge, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Trago
+                    Lounge</p>
+                <p class="address">190-192 Portswood Road</p>
+                <p class="locality">Southampton (Portswood)</p>
+                <p class="postcode">SO17 2LB</p>
+                <p class="telephone"><a href="tel:+442380678433">02380 678 433</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/trago/">thelounges.co.uk/trago</a></p>
+                <p class="hours">Sunday - Wednesday 9am - 11pm<br>Thursday - Saturday 9am - midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Claro Lounge, Bournemouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Circo
+                    Lounge</p>
+                <p class="address">66 Poole Road<br>Westbourne</p>
+                <p class="locality">Bournemouth (Westbourne)</p>
+                <p class="postcode">BH4 9DZ</p>
+                <p class="telephone"><a href="tel:+441202540823">01202 540 823</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/circo/">thelounges.co.uk/circo</a></p>
+                <p class="hours">Monday – Sunday 9am – 11pm</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Conto Lounge, Bournemouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Conto
+                    Lounge</p>
+                <p class="address">418 Wimborne Road<br>Winton</p>
+                <p class="locality">Bournemouth (Winton)</p>
+                <p class="postcode">BH9 2HB</p>
+                <p class="telephone"><a href="tel:+441202539274">01202 539 274</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/conto/">thelounges.co.uk/conto</a></p>
+                <p class="hours">Monday – Sunday 9am – 11pm</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Delfino Lounge, Poole-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Delfino
+                    Lounge</p>
+                <p class="address">8-9 Falkland Square<br>Dolphin Centre</p>
+                <p class="locality">Poole (centre)</p>
+                <p class="postcode">BH15 1ER</p>
+                <p class="telephone"><a href="tel:+441202649274">01202 649 274</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/delfino/">thelounges.co.uk/delfino</a></p>
+                <p class="hours">Sunday - Wednesday 9am - 11pm<br>Thursday - Saturday 9am - midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Ludo Lounge, Bournemouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Ludo Lounge
+                </p>
+                <p class="address">34 Southbourne Grove<br>Southbourne</p>
+                <p class="locality">Bournemouth (Southbourne)</p>
+                <p class="postcode">BH6 3RA</p>
+                <p class="telephone"><a href="tel:+441202430699">01202 430 699</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/ludo/">thelounges.co.uk/ludo</a></p>
+                <p class="hours">Monday – Sunday 9am – 11pm</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Panero Lounge, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:mediumorchid;font-family:'Goblin One';text-transform:uppercase;">Panero
+                    Lounge</p>
+                <p class="address">36 - 38 Palmerston Road<br>Southsea</p>
+                <p class="locality">Portsmouth (Southsea)</p>
+                <p class="postcode">PO5 3QH</p>
+                <p class="telephone"><a href="tel:+442392298269">02392 298 269</a></p>
+                <p class="website"><a href="https://thelounges.co.uk/panero/">thelounges.co.uk/panero</a></p>
+                <p class="hours">Sunday - Wednesday 9am - 11pm<br>Thursday - Saturday 9am - midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Cosy Club, Bath-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:midnightblue;font-family:'Montserrat';text-transform:uppercase;">Cosy Club
+                </p>
+                <p class="address">Unit R4<br>Southgate</p>
+                <p class="locality">Bath (centre)</p>
+                <p class="postcode">BA1 1AP</p>
+                <p class="telephone"><a href="tel:+441255464161">01225 464 161</a></p>
+                <p class="website"><a href="https://cosyclub.co.uk/location/bath/">cosyclub.co.uk/location/bath/</a></p>
+                <p class="hours">Monday - Sunday 09:00 - midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Cosy Club, Bournemouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:midnightblue;font-family:'Montserrat';text-transform:uppercase;">Cosy Club
+                </p>
+                <p class="address">34 Old Christchurch Road</p>
+                <p class="locality">Bournemouth (centre)</p>
+                <p class="postcode">BH1 1LG</p>
+                <p class="telephone"><a href="tel:+441202509723">01202 509 723</a></p>
+                <p class="website"><a
+                        href="https://cosyclub.co.uk/location/bournemouth/">cosyclub.co.uk/location/bournemouth/</a></p>
+                <p class="hours">Monday - Sunday 09:00 - midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Cosy Club, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:midnightblue;font-family:'Montserrat';text-transform:uppercase;">Cosy Club
+                </p>
+                <p class="address">28-29 North Building</p>
+                <p class="locality">Portsmouth (Gunwharf Quays)</p>
+                <p class="postcode">PO1 3TT</p>
+                <p class="telephone"><a href="tel:+442392395804">02392 395 804</a></p>
+                <p class="website"><a
+                        href="https://cosyclub.co.uk/location/portsmouth/">cosyclub.co.uk/location/portsmouth/</a></p>
+                <p class="hours">Monday - Sunday 09:00 - midnight</p>
+                <p class="altname">lounge lounger lounges cosy club cosyclub</p>
+            </li>
+            <li>
+                <!--Cafe Rouge, Bath-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:brown;font-family:'Montserrat';text-transform:uppercase;">Café
+                    Rouge</p>
+                <p class="address">15 Milson Street</p>
+                <p class="locality">Bath (centre)</p>
+                <p class="postcode">BA1 1DE</p>
+                <p class="telephone"><a href="tel:+441225982905">01225 982 905</a></p>
+                <p class="website"><a
+                        href="https://www.caferouge.com/bistro-brasserie/bath/milsom-street">caferouge.com/bistro-brasserie/bath</a>
+                </p>
+                <p class="hours">Monday - Sunday 10:00 - 21:00</p>
+                <p class="altname">Cafe Rouge</p>
+            </li>
+            <li>
+                <!--Cafe Rouge, Bournemouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:brown;font-family:'Montserrat';text-transform:uppercase;">Café
+                    Rouge</p>
+                <p class="address">67 Seamoor Road</p>
+                <p class="locality">Bournemouth (Westbourne)</p>
+                <p class="postcode">BH4 9AE</p>
+                <p class="telephone"><a href="tel:+441202119976">01202 119 976</a></p>
+                <p class="website"><a
+                        href="https://www.caferouge.com/bistro-brasserie/bournemouth/seamoor-road">caferouge.com/bistro-brasserie/bournemouth</a>
+                </p>
+                <p class="hours">Monday - Sunday 10:00 - 21:00</p>
+                <p class="altname">Cafe Rouge</p>
+            </li>
+            <li>
+                <!--Cafe Rouge, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:brown;font-family:'Montserrat';text-transform:uppercase;">Café
+                    Rouge</p>
+                <p class="address">Unit R24 & 94 Canalside</p>
+                <p class="locality">Portsmouth (Gunwharf Quays)</p>
+                <p class="postcode">PO1 3FA</p>
+                <p class="telephone"><a href="tel:+442394318960">02394 318 960</a></p>
+                <p class="website"><a
+                        href="https://www.caferouge.com/bistro-brasserie/portsmouth/gunwharf-quays">caferouge.com/bistro-brasserie/portsmouth</a>
+                </p>
+                <p class="hours">Monday - Sunday 10:00 - 21:00</p>
+                <p class="altname">Cafe Rouge</p>
+            </li>
+            <li>
+                <!--Las Iguanas, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumvioletred;"><span
+                        style="font-family:'Sacramento';">las</span><span
+                        style="font-family:'Syncopate';font-size:0.7em;"> I</span><span
+                        style="font-family:'Syncopate';font-size:1em;vertical-align:-3px;">G</span><span
+                        style="font-family:'Syncopate';font-size:0.7em;">UANAS</span></p>
+                <p class="address">108-111 East Side Plaza</p>
+                <p class="locality">Portsmouth (Gunwharf Quays)</p>
+                <p class="postcode">PO1 3SY</p>
+                <p class="telephone"><a href="tel:+442394318964">02394 318 964</a></p>
+                <p class="website"><a
+                        href="https://www.iguanas.co.uk/restaurants/portsmouth">iguanas.co.uk/restaurants/portsmouth</a>
+                </p>
+                <p class="hours">Monday - Sunday 11:00 - 22:30</p>
+                <p class="altname">lasiguanas las iguanas Las Iguanas</p>
+            </li>
+            <li>
+                <!--Las Iguanas, Bath-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumvioletred;"><span
+                        style="font-family:'Sacramento';">las</span><span
+                        style="font-family:'Syncopate';font-size:0.7em;"> I</span><span
+                        style="font-family:'Syncopate';font-size:1em;vertical-align:-3px;">G</span><span
+                        style="font-family:'Syncopate';font-size:0.7em;">UANAS</span></p>
+                <p class="address">12 Seven Dials<br>Sawclose</p>
+                <p class="locality">Bath (centre)</p>
+                <p class="postcode">BA1 1EN</p>
+                <p class="telephone"><a href="tel:+441225982906">01225 982 906</a></p>
+                <p class="website"><a
+                        href="https://www.iguanas.co.uk/restaurants/bath">iguanas.co.uk/restaurants/bath</a></p>
+                <p class="hours">Monday - Sunday 11:00 - 22:30</p>
+                <p class="altname">lasiguanas las iguanas Las Iguanas</p>
+            </li>
+            <li>
+                <!--Chiquito, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name"
+                    style="background-color:lightsalmon;font-family:'Germania One';text-transform:uppercase;">Chiquito
+                </p>
+                <p class="address">Central Buildings</p>
+                <p class="locality">Portsmouth (Gunwharf Quays)</p>
+                <p class="postcode">PO1 3TU</p>
+                <p class="telephone"><a href="tel:+442392899760">02392 899 760</a></p>
+                <p class="website"><a
+                        href="https://www.chiquito.co.uk/restaurants/portsmouth-gunwharf-quay">chiquito.co.uk/restaurants/portsmouth-gunwharf-quay</a>
+                </p>
+                <p class="hours">Monday - Sunday 12:00 - 22:00</p>
+                <p class="altname">chiquitos</p>
+            </li>
+            <li>
+                <!--Harvester, Whiteley-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:darkgreen;font-family:'Lobster';">Harvester</p>
+                <p class="address">Unit E1</p>
+                <p class="locality">Whiteley</p>
+                <p class="postcode">PO15 7PD</p>
+                <p class="telephone"><a href="tel:+441489579522">01489 579 522</a></p>
+                <p class="website"><a
+                        href="https://www.harvester.co.uk/restaurants/southeast/harvesterwhiteleyfareham">harvester.co.uk/whiteley</a>
+                </p>
+                <p class="hours">Monday - Sunday 09:00 - 21:00</p>
+                <p class="altname">harvesters</p>
+            </li>
+            <li>
+                <!--Harvester, Port Solent-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:darkgreen;font-family:'Lobster';">Harvester</p>
+                <p class="address">15 The Boardwalk</p>
+                <p class="locality">Port Solent</p>
+                <p class="postcode">PO6 4TP</p>
+                <p class="telephone"><a href="tel:+442392201012">02392 201 012</a></p>
+                <p class="website"><a
+                        href="https://www.harvester.co.uk/restaurants/southeast/harvesterportsolentportsmouth">harvester.co.uk/portsolent</a>
+                </p>
+                <p class="hours">Monday - Sunday 09:00 - 22:00</p>
+                <p class="altname">harvesters</p>
+            </li>
+            <li>
+                <!--Harvester, Staunton Arms-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:darkgreen;font-family:'Lobster';">Harvester</p>
+                <p class="address">The Staunton Arms<br>1 Whichers Gate Road<br>Rowlands Castle</p>
+                <p class="locality">Portsmouth (Rowlands Castle)</p>
+                <p class="postcode">PO9 6BB</p>
+                <p class="telephone"><a href="tel:+442392413761">02392 413 761</a></p>
+                <p class="website"><a
+                        href="https://www.harvester.co.uk/restaurants/southeast/thestauntonarmsportsmouth">harvester.co.uk/stauntonarms</a>
+                </p>
+                <p class="hours">Monday - Sunday 09:00 - 21:00</p>
+                <p class="altname">harvesters</p>
+            </li>
+            <li>
+                <!--Harvester, Great Salterns-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:darkgreen;font-family:'Lobster';">Harvester</p>
+                <p class="address">The Great Salterns Mansion<br>Eastern Road<br>Copnor</p>
+                <p class="locality">Portsmouth (Copnor)</p>
+                <p class="postcode">PO3 6QB</p>
+                <p class="telephone"><a href="tel:+442392651051">02392 651 051</a></p>
+                <p class="website"><a
+                        href="https://www.harvester.co.uk/restaurants/southeast/thegreatsalternsmansionportsmouth">harvester.co.uk/greatsalterns</a>
+                </p>
+                <p class="hours">Monday - Sunday 09:00 - 21:00</p>
+                <p class="altname">harvesters</p>
+            </li>
+            <li>
+                <!--Harvester, Eastleigh-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:darkgreen;font-family:'Lobster';">Harvester</p>
+                <p class="address">Unit L1B<br>The Swan Centre<br>Wells Place</p>
+                <p class="locality">Eastleigh (centre)</p>
+                <p class="postcode">SO50 5FX</p>
+                <p class="telephone"><a href="tel:+442380641304">02380 641 304</a></p>
+                <p class="website"><a
+                        href="https://www.harvester.co.uk/restaurants/southeast/harvesterswancentreeastleigh">harvester.co.uk/eastleigh</a>
+                </p>
+                <p class="hours">Monday - Sunday 11:30 - 21:00</p>
+                <p class="altname">harvesters</p>
+            </li>
+            <li>
+                <!--Harvester, Fareham-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:darkgreen;font-family:'Lobster';">Harvester</p>
+                <p class="address">The Buccaneer<br>14 The Avenue</p>
+                <p class="locality">Fareham (centre)</p>
+                <p class="postcode">PO14 1NS</p>
+                <p class="telephone"><a href="tel:+441329230800">01329 230 800</a></p>
+                <p class="website"><a
+                        href="https://www.harvester.co.uk/restaurants/southeast/thebuccaneerfareham">harvester.co.uk/fareham</a>
+                </p>
+                <p class="hours">Monday - Sunday 09:00 - 22:00</p>
+                <p class="altname">harvesters</p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Bath-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">5-6 Edgar Buildings<br>George Street</p>
+                <p class="locality">Bath (centre)</p>
+                <p class="postcode">BA1 2EE</p>
+                <p class="telephone"><a href="tel:+441255789050">01255 789 050</a></p>
+                <p class="website"><a href="https://www.slugandlettuce.co.uk/bath">slugandlettuce.co.uk/bath</a></p>
+                <p class="hours">Monday - Sunday 10:00 - 23:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Bournemouth 1-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">2 Dean Park Crescent<br>Old Christchurch Street</p>
+                <p class="locality">Bournemouth (Christchurch)</p>
+                <p class="postcode">BH1 1HL</p>
+                <p class="telephone"><a href="tel:+441202298612">01202 298 612</a></p>
+                <p class="website"><a
+                        href="https://www.slugandlettuce.co.uk/bournemouth-oldchristchurchroad">slugandlettuce.co.uk/bournemouth-christchurch</a>
+                </p>
+                <p class="hours">Monday - Sunday 10:00 - 22:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Bournemouth 2-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">4–15 Bourne Avenue<br>Richmond Hill</p>
+                <p class="locality">Bournemouth (centre)</p>
+                <p class="postcode">BH2 6DT</p>
+                <p class="telephone"><a href="tel:+441202317686">01202 317 686</a></p>
+                <p class="website"><a
+                        href="https://www.slugandlettuce.co.uk/bournemouth">slugandlettuce.co.uk/bournemouth</a></p>
+                <p class="hours">Monday - Sunday 10:00 - 22:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Fareham-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">64 West Street</p>
+                <p class="locality">Fareham (centre)</p>
+                <p class="postcode">PO16 0JN</p>
+                <p class="telephone"><a href="tel:+441329236213">01329 236 213</a></p>
+                <p class="website"><a href="https://www.slugandlettuce.co.uk/fareham">slugandlettuce.co.uk/fareham</a>
+                </p>
+                <p class="hours">Monday - Sunday 10:00 - 22:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">Unit R07</p>
+                <p class="locality">Portsmouth (Gunwharf Quays)</p>
+                <p class="postcode">PO1 3TR</p>
+                <p class="telephone"><a href="tel:+442392007602">02392 007 602</a></p>
+                <p class="website"><a
+                        href="https://www.slugandlettuce.co.uk/portsmouth">slugandlettuce.co.uk/portsmouth</a></p>
+                <p class="hours">Monday - Sunday 10:00 - 22:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Newport-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">23-26 High Street</p>
+                <p class="locality">Isle of Wight (Newport)</p>
+                <p class="postcode">PO30 1SS</p>
+                <p class="telephone"><a href="tel:+441983537311">01983 537 311</a></p>
+                <p class="website"><a
+                        href="https://www.slugandlettuce.co.uk/isle-of-wight">slugandlettuce.co.uk/isle=of-wight</a></p>
+                <p class="hours">Monday - Sunday 10:00 - 22:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Slug and Lettuce, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:mediumseagreen;font-family:'Tourney';text-transform:uppercase;">
+                    Slug & Lettuce</p>
+                <p class="address">103-103 Above Bar Street</p>
+                <p class="locality">Southampton (centre)</p>
+                <p class="postcode">SO14 7FG</p>
+                <p class="telephone"><a href="tel:+442380236825">02380 236 825</a></p>
+                <p class="website"><a
+                        href="https://www.slugandlettuce.co.uk/southampton">slugandlettuce.co.uk/southampton</a></p>
+                <p class="hours">Monday - Sunday 10:00 - 22:00</p>
+                <p class="altname">slug and lettuce lettice lettuse lettise slugs + </p>
+            </li>
+            <li>
+                <!--Frankie and Bennys, Whiteley-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Damion';">Frankie & Benny's</p>
+                <p class="address">Unit D10</p>
+                <p class="locality">Whiteley</p>
+                <p class="postcode">PO15 7PD</p>
+                <p class="telephone"><a href="tel:+441489584483">01489 584 483</a></p>
+                <p class="website"><a
+                        href="https://www.frankieandbennys.com/restaurants/south-east/whiteley/whiteley">frankieandbennys.com/whiteley</a>
+                </p>
+                <p class="hours">Sunday - Thursday 10:00 - 21:00<br>Friday - Saturday 10:00 - 23:00</p>
+                <p class="altname">frankie and bennys franky bennie bennies bennys bennie's bennies' frankey</p>
+            </li>
+            <li>
+                <!--Frankie and Bennys, Eastleigh-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Damion';">Frankie & Benny's</p>
+                <p class="address">Unit L2<br>Swan Centre</p>
+                <p class="locality">Eastleigh (centre)</p>
+                <p class="postcode">SO50 5SF</p>
+                <p class="telephone"><a href="tel:+441489584483">02380 622 610</a></p>
+                <p class="website"><a
+                        href="https://www.frankieandbennys.com/restaurants/south-east/eastleigh/eastleigh">frankieandbennys.com/eastleigh</a>
+                </p>
+                <p class="hours">Sunday - Thursday 12:00 - 22:00<br>Friday - Saturday 12:00 - 23:00</p>
+                <p class="altname">frankie and bennys franky bennie bennies bennys bennie's bennies' frankey</p>
+            </li>
+            <li>
+                <!--Frankie and Bennys, Portsmouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Damion';">Frankie & Benny's</p>
+                <p class="address">Unit 76<br>First Floor</p>
+                <p class="locality">Plymouth (Gunwharf Quays)</p>
+                <p class="postcode">PO1 3TZ</p>
+                <p class="telephone"><a href="tel:+442392732151">02392 732 151</a></p>
+                <p class="website"><a
+                        href="https://www.frankieandbennys.com/restaurants/south-east/portsmouth/portsmouth">frankieandbennys.com/portsmouth</a>
+                </p>
+                <p class="hours">Sunday - Thursday 10:00 - 22:00<br>Friday - Saturday 10:00 - 23:00</p>
+                <p class="altname">frankie and bennys franky bennie bennies bennys bennie's bennies' frankey</p>
+            </li>
+            <li>
+                <!--TGI Fridays, Bournemouth-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Montserrat';text-transform:uppercase;">TGI
+                    Fridays</p>
+                <p class="address">Exeter Crescent</p>
+                <p class="locality">Bournemouth (centre)</p>
+                <p class="postcode">BH2 5DD</p>
+                <p class="telephone"><a href="tel:+443304605532">03304 605 532</a></p>
+                <p class="website"><a
+                        href="https://www.tgifridays.co.uk/locations/bournemouth/">tgifridays.co.uk/locations/bournemouth</a>
+                </p>
+                <p class="hours">Monday - Sunday 12:00 - 21:00</p>
+                <p class="altname">tgi friday's tgis tgi's t.g.i. t.g.i.'s</p>
+            </li>
+            <li>
+                <!--TGI Fridays, Fareham-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Montserrat';text-transform:uppercase;">TGI
+                    Fridays</p>
+                <p class="address">87 Southampton Road<br>Park Gate</p>
+                <p class="locality">Fareham (outskirts)</p>
+                <p class="postcode">SO31 6AF</p>
+                <p class="telephone"><a href="tel:+443304605542">03304 605 542</a></p>
+                <p class="website"><a
+                        href="https://www.tgifridays.co.uk/locations/fareham/">tgifridays.co.uk/locations/fareham</a>
+                </p>
+                <p class="hours">Monday - Sunday 12:00 - 21:00</p>
+                <p class="altname">tgi friday's tgis tgi's t.g.i. t.g.i.'s</p>
+            </li>
+            <li>
+                <!--TGI Fridays, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Montserrat';text-transform:uppercase;">TGI
+                    Fridays</p>
+                <p class="address">3 Harbour Parade</p>
+                <p class="locality">Southampton (centre)</p>
+                <p class="postcode">SO15 1BA</p>
+                <p class="telephone"><a href="tel:+443304605553">03304 605 553</a></p>
+                <p class="website"><a
+                        href="https://www.tgifridays.co.uk/locations/southampton-retail-park/">tgifridays.co.uk/locations/southampton</a>
+                </p>
+                <p class="hours">Monday - Sunday 12:00 - 21:00</p>
+                <p class="altname">tgi friday's tgis tgi's t.g.i. t.g.i.'s</p>
+            </li>
+            <li>
+                <!--TGI Fridays, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;font-family:'Montserrat';text-transform:uppercase;">TGI
+                    Fridays</p>
+                <p class="address">Level 2<br>West Quay</p>
+                <p class="locality">Southampton (centre)</p>
+                <p class="postcode">SO15 1DE</p>
+                <p class="telephone"><a href="tel:+443304605533">03304 605 533</a></p>
+                <p class="website"><a
+                        href="https://www.tgifridays.co.uk/locations/west-quay/">tgifridays.co.uk/locations/west-quay</a>
+                </p>
+                <p class="hours">Monday - Sunday 12:00 - 21:00</p>
+                <p class="altname">tgi friday's tgis tgi's t.g.i. t.g.i.'s</p>
+            </li>
+            <li>
+                <!--Eds Diner, Southampton-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background-color:red;"><span style="font-family:'Londrina Shadow';">Ed's
+                    </span><span style="font-family:'Dancing Script';">Easy Diner</span></p>
+                <p class="address">Unit R4<br>West Quay</p>
+                <p class="locality">Southampton (centre)</p>
+                <p class="postcode">SO15 1QF</p>
+                <p class="telephone"><a href="tel:+442380635050">02380 635 050</a></p>
+                <p class="website"><a
+                        href="https://edseasydiner.com/locations/southampton">edseasydiner.com/locations/southampton</a>
+                </p>
+                <p class="hours">Monday - Friday 10:00 - 20:00<br>Saturday 10:00 - 18:00<br>Sunday 11:00 - 16:00</p>
+                <p class="altname">eds</p>
+            </li>
+            <li>
+                <!--Subway-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background: rgb(255,194,20);
+                    background: linear-gradient(75deg, rgba(255,194,20,1) 51.5%, rgba(15,146,70,1) 51.5%);">
+                    <img src="sub.svg" height="30px">
+                </p>
+                <p class="website"><a href="https://www.subway.com/en-GB/FindAStore">subway.com/find</a>
+                </p>
+                <p class="altname">sub way subway subs ways subways southampton portsmouth bath whiteley fareham isle of
+                    wight white ile south east north
+                    west central newport needles shanklin bournemouth poole</p>
+
+            </li>
+            <li>
+                <!--McDonald's-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background: red;">
+                    <img src="mcd.svg" height="30px">
+                </p>
+                <p class="website"><a
+                        href="https://www.mcdonalds.com/gb/en-gb/restaurant-locator.html">mcdonalds.com/find</a>
+                </p>
+                <p class="altname">mcdonalds mcdonald's McDonald's Mcdonald mcDonald's mcDonalds McDonald mcd's mcds
+                    maccy macca macdonalds macdonald's Macdonalds MacDonalds macDonald's southampton portsmouth bath
+                    whiteley fareham isle of wight white ile south east north
+                    west central newport needles shanklin bournemouth poole</p>
+            </li>
+            <li>
+                <!--Greggs-->
+                <p class="type restaurant">Restaurant</p>
+                <p class="name" style="background: royalblue;font-family:'Montserrat';text-transform:uppercase;">
+                    Greggs
+                </p>
+                <p class="website"><a href="https://www.greggs.co.uk/shop-finder">greggs.co.uk/find</a>
+                </p>
+                <p class="altname">greggs gregs gregg's greg's southampton portsmouth bath whiteley fareham isle of
+                    wight white ile south east north
+                    west central newport needles shanklin bournemouth poole</p>
+            </li>
+        </ul>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <!-- partial -->
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

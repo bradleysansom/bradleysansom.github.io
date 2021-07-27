@@ -1,17 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Damion&family=Dancing+Script:wght@700&family=Germania+One&family=Goblin+One&family=Lobster&family=Londrina+Shadow&family=Montserrat:wght@700&family=Sacramento&family=Satisfy&family=Syncopate&family=Tourney:wght@300&display=swap');
 
 body {
+  overflow-y: scroll;
   max-width: 750px;
   margin: auto;
   text-align: center;
@@ -19,8 +9,7 @@ body {
 }
 
 header {
-  margin-left: 10px;
-  margin-right: 10px;
+
   margin-bottom: 10px;
   padding: 30px;
   border-bottom-left-radius: 10px;
@@ -37,6 +26,60 @@ header {
   letter-spacing: +6px;
 }
 
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  padding: 12px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+  margin: auto;
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  background-color: #dddddd;
+
+
+}
+
+nav ul li.current {
+  background-color: #005050;
+}
+
+nav ul li a {
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul li.current a {
+  color: #ffffff;
+}
+
+nav ul li:hover {
+  background-color: #008080;
+
+}
+
+nav ul li.current:hover {
+  background-color: #005050;
+}
+
+nav ul li:hover a {
+  color: #ffffff;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+#places {
+  background-color: #005050;
+  padding-top: 20px;
+  border-radius: 10px;
+}
 
 .list {
 
@@ -46,7 +89,7 @@ header {
 
 .list>li {
   display: block;
-  background-color: #eee;
+  background-color: #ffffff;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -207,4 +250,64 @@ button {
 
 .altname {
   display: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #000000;
+  }
+
+  nav ul li {
+    background-color: #008080;
+  }
+
+  nav ul li a {
+    color: #ffffff;
+  }
+
+  nav ul li.current {
+    background-color: #ffffff;
+  }
+
+  nav ul li.current a {
+    color: #000000;
+  }
+
+  nav ul li:hover {
+    background-color: #005050;
+  }
+
+  nav ul li.current:hover {
+    background-color: #ffffff;
+  }
+
+  #places {
+    background-color: #ffffff;
+  }
+
+  .list>li {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .telephone a,
+  .website a {
+    color: #ffffff !important;
+
+  }
+
+
+  .telephone {
+    list-style-image: url('https://img.icons8.com/material-rounded/18/ffffff/ringing-phone.png');
+  }
+
+  .website {
+    list-style-image: url('https://img.icons8.com/material-rounded/18/ffffff/domain--v2.png');
+  }
+
+  .hours {
+    list-style-image: url('https://img.icons8.com/material-rounded/18/ffffff/clock.png');
+  }
 }
