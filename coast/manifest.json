@@ -5,7 +5,6 @@
   "background_color": "#005050",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "https://bradleysansom.github.io/coast/",
   "start_url": "/",
   "icons": [
     {
