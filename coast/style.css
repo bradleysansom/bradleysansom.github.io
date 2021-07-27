@@ -33,11 +33,14 @@ nav ul {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: flex-end;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 nav ul li {
+  padding: 10px;
+
   align-self: flex-end;
-  padding: 12px 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: none;
