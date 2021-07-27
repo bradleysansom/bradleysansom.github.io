@@ -290,13 +290,30 @@ button {
   display: none;
 }
 
-.restaurants a {
+
+
+.restaurants a,
+.directions a {
   padding: 3px 12px;
   font-weight: 700;
   color: #ffffff;
   background-color: #008080;
   border-radius: 10px;
+  display: list-item;
+  list-style-position: inside;
+  vertical-align: middle;
 }
+
+.restaurants a {
+  list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/dining-room.png');
+}
+
+.directions a {
+  list-style-image: url('https://img.icons8.com/material-rounded/12/ffffff/gps-device.png');
+}
+
+
+
 
 
 @media (prefers-color-scheme: dark) {
