@@ -122,6 +122,10 @@ input {
   border-radius: 10px;
   padding: 7px 14px;
   margin-bottom: 10px;
+  background-image: url('https://img.icons8.com/material-rounded/24/008080/search.png');
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: 296px center;
 }
 
 
@@ -130,7 +134,9 @@ input:focus {
   border-color: #aaaaaa;
 }
 
-.sort {
+.sort,
+.location {
+  margin: 5px;
   padding: 8px 30px;
   border-radius: 10px;
   border: none;
@@ -147,12 +153,15 @@ button {
   font-weight: 700;
 }
 
-.sort:hover {
+.sort:hover,
+.location:hover {
   text-decoration: none;
-  background-color: #005050;
+  background-color: #ffffff;
+  color: #005050;
 }
 
-.sort:focus {
+.sort:focus,
+.location:hover {
   outline: none;
 }
 
@@ -215,6 +224,24 @@ button {
 
 }
 
+.type.place.shop+.name {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/shopping-bag.png');
+  list-style-position: inside;
+}
+
+.type.place.seaside+.name {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/beach.png');
+  list-style-position: inside;
+}
+
+.type.place.city+.name {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/beach.png');
+  list-style-position: inside;
+}
+
 .telephone {
   display: list-item;
   list-style-image: url('https://img.icons8.com/material-rounded/18/000000/ringing-phone.png');
@@ -233,6 +260,11 @@ button {
 .website a {
   color: black !important;
 
+}
+
+.showcase {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .hours {
@@ -258,6 +290,14 @@ button {
   display: none;
 }
 
+.restaurants a {
+  padding: 3px 12px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #008080;
+  border-radius: 10px;
+}
+
 
 @media (prefers-color-scheme: dark) {
 
@@ -273,25 +313,38 @@ button {
     color: #ffffff;
   }
 
-  nav ul li.current {
+  /* nav ul li.current {
     background-color: #ffffff;
   }
 
   nav ul li.current a {
     color: #000000;
-  }
+  } */
 
   nav ul li:hover {
-    background-color: #005050;
-  }
-
-  nav ul li.current:hover {
     background-color: #ffffff;
   }
+
+  nav ul li:hover a {
+    color: #005050;
+  }
+
+  nav ul li.current:hover a {
+    color: #ffffff;
+  }
+
+  /*
 
   #places {
     background-color: #ffffff;
+  }  */
+
+  input {
+    background-color: #000000;
+    color: white;
+    background-image: url('https://img.icons8.com/material-rounded/24/ffffff/search.png');
   }
+
 
   .list>li {
     background-color: #000000;
@@ -316,4 +369,7 @@ button {
   .hours {
     list-style-image: url('https://img.icons8.com/material-rounded/18/ffffff/clock.png');
   }
+
+
+
 }

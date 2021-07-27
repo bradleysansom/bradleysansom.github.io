@@ -33,7 +33,7 @@
 
     </nav>
     <div id="places">
-        <input class="search" placeholder="Search" autofocus id="searchbar">
+        <input class="search" placeholder="Search" autofocus id="searchbar" spellcheck="false">
         <br>
         <button class="sort" data-sort="name">
             Sort by name
@@ -41,8 +41,24 @@
         <button class="sort" data-sort="locality">
             Sort by location
         </button>
-        <button class="sort" data-sort="type">
-            Sort by type
+        <br>
+        <button class="location"
+            onclick="document.querySelector('#searchbar').value = 'Southampton';userList.search('Southampton');">
+            Southampton
+        </button>
+        <button class="location"
+            onclick="document.querySelector('#searchbar').value = 'Portsmouth';userList.search('Portsmouth');">
+            Portsmouth
+        </button>
+        <button class="location" onclick="document.querySelector('#searchbar').value = 'Bath';userList.search('Bath');">
+            Bath
+        </button>
+        <button class="location"
+            onclick="document.querySelector('#searchbar').value = 'Isle of Wight';userList.search('Isle of Wight');">
+            Isle of Wight
+        </button>
+        <button class="location" onclick="document.querySelector('#searchbar').value = '';userList.search('');">
+            All
         </button>
 
         <ul class="list">
