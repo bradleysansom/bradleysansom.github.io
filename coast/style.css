@@ -238,7 +238,13 @@ button {
 
 .type.place.city+.name {
   display: list-item;
-  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/beach.png');
+  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/city.png');
+  list-style-position: inside;
+}
+
+.type.place.town+.name {
+  display: list-item;
+  list-style-image: url('https://img.icons8.com/material-rounded/24/ffffff/apartment.png');
   list-style-position: inside;
 }
 
