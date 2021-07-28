@@ -44,6 +44,14 @@
         <button class="sort" data-sort="type">
             Sort by type
         </button>
+        <br>
+        <button class="location"
+            onclick="document.querySelector('#searchbar').value = 'Isle of Wight';userList.search('Isle of Wight');">
+            Isle of Wight only
+        </button>
+        <button class="location" onclick="document.querySelector('#searchbar').value = '';userList.search('');">
+            All
+        </button>
 
         <ul class="list">
             <li id="placemat">
