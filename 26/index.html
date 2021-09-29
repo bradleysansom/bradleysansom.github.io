@@ -29,12 +29,23 @@ main {
     margin:auto;
     text-align:center;
 }
+.heading {
+    height: 291px;
+    margin-top:12px;
+    margin-bottom:12px;
+    text-align:center;
+    background-color:black;
+    color:white;
+}
         .grid {
+            transition: 3s;
             display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr; 
   gap: 12px 12px;
         }
         .grid div {
+            background-color:black;
+            transition:3s;
             height: 291px;
             background-size:cover;
         }
@@ -213,10 +224,21 @@ main {
 </body>
 <script>
     function popout(choice) {
-                    alert(choice);
+        var element = document.getElementById(choice);
+        document.title = choice.toUpperCase() + " | 26 | Bradley Sansom";
+        
+        var pop = document.createElement('div');
+        document.getElementsByClassName('grid')[0].style.display = "none";
+        pop.style.width = "1000px";
+        pop.style.height = "1000px";
+        var image = window.getComputedStyle(document.getElementById(choice)).backgroundImage;
+        pop.style.backgroundImage = image;
+        pop.style.backgroundSize = "cover";
+        document.getElementsByTagName('main')[0].appendChild(pop);
                 }
-    document.addEventListener('click', function(e) {
-                var choice = e.target.id;
+    document.addEventListener('click', function(choose) {
+                var choice = choose.target.id;
+                
                 popout(choice);
             }, false);
    
