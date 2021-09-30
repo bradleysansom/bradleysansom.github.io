@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>26 | Bradley Sansom</title>
     <style>
+        body {
+            font-family: 'Bahnschrift', 'DIN', 'DIN 1451', 'FF DIN', 'Roboto', sans-serif;
+        }
         .header{
             padding: 10px;
             display: flex;
@@ -25,17 +28,23 @@
             max-width: 70vw;
         }
 main {
-            width:1200px;
+            max-width:1200px;
     margin:auto;
     text-align:center;
 }
 .heading {
-    height: 291px;
+    aspect-ratio:4;
     margin-top:12px;
     margin-bottom:12px;
     text-align:center;
     background-color:black;
+    background-image: url('river.jpg');
+    background-size:cover;
     color:white;
+    display:flex;
+    font-size:5rem;
+    justify-content: center;
+    align-items: center;
 }
         .grid {
             transition: 3s;
@@ -46,14 +55,15 @@ main {
         .grid div {
             background-color:black;
             transition:3s;
-            height: 291px;
+            aspect-ratio: 1;
+            /* height: 291px; */
             background-size:cover;
         }
         #a {
             background-image:url('letters/a/animated.gif');
         }
         #b {
-            background-image:url('letters/b/bin.jpg');
+            background-image:url('letters/b/animated.gif');
         }
         #c {
             background-image:url('letters/c/animated.gif');
@@ -74,13 +84,13 @@ main {
             background-image:url('letters/h/animated.gif');
         }
         #i {
-            background-image:url('letters/blank/Slide9.PNG');
+            background-image:url('letters/i/animated.gif');
         }
         #j {
             background-image:url('letters/blank/Slide10.PNG');
         }
         #k {
-            background-image:url('letters/blank/Slide11.PNG');
+            background-image:url('letters/k/light.jpg');
         }
         #l {
             background-image:url('letters/l/animated.gif');
@@ -125,7 +135,15 @@ main {
             background-image:url('letters/y/animated.gif');
         }
         #z {
-            background-image:url('letters/blank/Slide26.PNG');
+            background-image:url('letters/z/frame.jpg');
+        }
+        #information {
+            max-width:1000px;
+            margin:auto;
+            text-align:center;
+        }
+        #letter {
+            font-size:5rem;
         }
 
     </style>
@@ -137,8 +155,8 @@ main {
         
     </div>
     <main>
-        <div class="heading">
-26
+        <div class="heading" id="behind">
+            26
         </div>
         <div class="grid">
             <div class="letter" id="a">
@@ -220,7 +238,14 @@ main {
                 
             </div>
         </div>
+        
     </main>
+    <div class="info" id="information" style="display:none;">
+        <h1 id="letter"></h1>
+        <h3 id="location"></h3>
+        <h4 id="blurb"></h4>
+    </div>
+    
 </body>
 <script>
     function popout(choice) {
@@ -229,18 +254,36 @@ main {
         
         var pop = document.createElement('div');
         document.getElementsByClassName('grid')[0].style.display = "none";
-        pop.style.width = "1000px";
-        pop.style.height = "1000px";
+        pop.style.maxWidth = "1000px";
+        pop.style.aspectRatio = "1";
         var image = window.getComputedStyle(document.getElementById(choice)).backgroundImage;
         pop.style.backgroundImage = image;
+        pop.style.margin = "auto";
         pop.style.backgroundSize = "cover";
+        document.getElementById('behind').innerHTML = "← back";
+        document.getElementById("information").style.display = "initial";
         document.getElementsByTagName('main')[0].appendChild(pop);
-                }
+        document.getElementById("letter").innerHTML = choice.toUpperCase();
+        
+        document.addEventListener('click', function(choose) {
+            var choice = choose.target.id;
+            if (choice === "behind") {
+                document.title = "26 | Bradley Sansom";
+                pop.remove();
+                document.getElementById('behind').innerHTML = "26";
+                document.getElementById("information").style.display = "none";
+                document.getElementsByClassName('grid')[0].style.display = "grid";
+
+            } 
+        }, false);
+    }
+    
     document.addEventListener('click', function(choose) {
-                var choice = choose.target.id;
-                
-                popout(choice);
-            }, false);
+        var choice = choose.target.id;
+        if (choice !== "behind") {
+            popout(choice);
+        } 
+    }, false);
    
 </script>
 </html>
