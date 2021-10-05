@@ -41,18 +41,27 @@
         }
 
         .heading {
-            aspect-ratio: 4;
+            aspect-ratio: 3;
             margin-top: 12px;
             margin-bottom: 12px;
             text-align: center;
             background-color: black;
-            background-image: url('river.jpg');
+            background-image: url('26-books.gif');
             background-size: cover;
             color: white;
             display: flex;
-            font-size: 5rem;
+            font-size: 8rem;
             justify-content: center;
             align-items: center;
+        }
+
+        .subtitle {
+            background-image: url('pages.gif');
+            background-size: cover;
+            font-size: 3rem;
+            padding: 30px;
+            color: black;
+            text-transform: uppercase;
         }
 
         .grid {
@@ -88,10 +97,10 @@
         }
 
         .title {
-            background-color: black;
+            background-size: cover;
             padding: 30px;
             font-size: 2rem;
-            color: white;
+            color: black;
             margin-top: 12px;
             margin-bottom: 12px;
         }
@@ -179,6 +188,14 @@
             max-height: 36px;
             border-radius: 0 !important;
         }
+
+        .title.a {
+            background-image: url('pages-alt.gif');
+        }
+
+        .title.b {
+            background-image: url('pages.gif');
+        }
     </style>
 </head>
 
@@ -190,84 +207,172 @@
     </div>
     <main>
         <div class="heading" id="behind">
-            26
+
         </div>
         <div class="subtitle">
             Found alphabet project
         </div>
-        <div class="section" id="research">
-            <div class="title">
-                Research
-            </div>
-            <div class="content">
+        <div id="sections">
+            <div class="section" id="research">
+                <div class="title a">
+                    Research
+                </div>
+                <div class="content">
 
-            </div>
-        </div>
-        <div class="section" id="takingphotos">
-            <div class="title">
-                Taking photographs
-            </div>
-            <div class="content">
-                <div class="text">
-                    The first few photographs were taken inside and just outside Benzie building. My eye was immediately
-                    caught by the metal framework of the staircases and bridges, within which numerous letterforms could
-                    be made out.
-                </div>
-                <div class="locator">
-                    <img src="loc.png"> <span class="place">Benzie Building, Manchester</span><img src="cloudy.png">
-                </div>
-                <div class="gallery">
-                    <img src="benzie.png">
                 </div>
             </div>
-        </div>
-        <div class="section" id="first">
-            <div class="title">
-                First prototype
-            </div>
-            <div class="content">
-                <div class="text">
-                    After taking some photos and then cropping them, I assembled them into a simple grid
-                    format using HTML
-                    and CSS.
+            <div class="section" id="takingphotos">
+                <div class="title b">
+                    Taking photographs
                 </div>
+                <div class="content">
+                    <div class="text">
+                        The first few photographs were taken inside and just outside Benzie building. My eye was
+                        immediately
+                        caught by the metal framework of the staircases and bridges, within which numerous letterforms
+                        could
+                        be made out.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Benzie Building, M15</span><img src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="benzie.png">
+                    </div>
+                    <div class="text">
+                        After leaving the building, the striking arched windows of the back of the Grosvenor building
+                        quickly caught my eye, forming the shape of a lowercase <b>m</b>. I knew from then that I
+                        definitely wanted to take lots of photos of parts of buildings where letterforms could be found.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Manchester Metropolitan University, M15</span><img
+                            src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="campus.png">
+                    </div>
+                    <div class="text">
+                        Walking up Oxford Road, I began to notice letter shapes in a variety of places, especially in
+                        street furniture, looking at it in a way I never had done before. I experimented with the
+                        negative space of the blank sky around a lamppost, perhaps forming a <b>G</b>.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Oxford Rd, M1</span><img src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="oxrd.png">
+                    </div>
+                    <div class="text">
+                        The recently-built Circle Square development had some interesting architectural finishes, with
+                        textured metal creating some interesting shapes and perhaps hints of letters.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Circle Square, M1</span><img src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="circle.png">
+                    </div>
+                    <div class="text">
+                        Around the corner was a delightful old tiled pub, where I found a hook attached to the wall
+                        which formed a <b>c</b>. I also photographed some of the road markings, where the double yellow
+                        lines formed various letterforms in positive and negative space.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Charles St, M1</span><img src="rainy.gif">
+                    </div>
+                    <div class="gallery">
+                        <img src="roads.png">
+                    </div>
+                    <div class="text">
+                        The smaller buildings and the pubs and bars of the Gay Village offered a chance to look at some
+                        smaller shapes and details, such as the corner of a frame, or the finial atop a fence.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Gay Village, M1</span><img src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="gay.png">
+                    </div>
+                    <div class="text">
+                        The backstreets behind Piccadilly were home to bits of detritus, and less modern, clean
+                        buildings, which made for more interesting photographs and letterforms.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Sackville St, M1</span><img src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="nq.png">
+                    </div>
+                    <div class="text">
+                        I found that the more modern buildings around the Arndale are less interesting to photograph and
+                        contain far fewer details which resemble letterforms. One exception was the curious spire over
+                        the National Football Museum, and the anti-skateboarding spikes on the benches in front, which I
+                        thought had an interesting shape. I also found what I believe was half the base of a traffic
+                        cone, which looked a bit like a <b>D</b>.
+                    </div>
+                    <div class="locator">
+                        <img src="loc.png"> <span class="place">Cathedral Gardens, M4</span><img src="cloudy.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="urbis.png">
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="first">
+                <div class="title a">
+                    First prototype
+                </div>
+                <div class="content">
+                    <div class="text">
+                        After taking some photos and then cropping them, I assembled them into a simple grid
+                        format using HTML
+                        and CSS.
+                    </div>
 
-                <iframe src="26-v1/index-without-fancy-bits.html" width="1200px" height="2100px"></iframe>
-                <div class="popout"><a href="26-v1/index.html"><img src="embiggen.png" height="18px"
-                            style="border-radius:0 !important;">View in full
-                        screen</a></div>
-                <div class="text">
-                    I wasn't able to find any for some letters, and found duplicates for others, for which cases I
-                    produced animated GIFs which cycle through the candidates.
-                </div>
-                <div class="text">
-                    It's become clear that there are two predominant themes in the photographs I've taken: nature, such
-                    as parts of trees and foliage; and architecture, where the letters are formed by parts of buildings.
-                    Having
-                    discussed this with my tutor group, it may be a good idea for me to develop two alphabets, one for
-                    each theme. There is a clear thematic contrast between the materials exhibited in the two sets,
-                    which could be a good thing to show in the alphabets.
-                </div>
-                <div class="comparison">
-                    <div class="compared">
-                        <span class="compared-title">Natural forms</span>
-                        <img src="nature.png">
-                        <img src="pallete-nature.png" class="pallete">
+                    <iframe src="26-v1/index-without-fancy-bits.html" width="1200px" height="2100px"></iframe>
+                    <div class="popout"><a href="26-v1/index.html"><img src="embiggen.png" height="18px"
+                                style="border-radius:0 !important;">View in full
+                            screen</a></div>
+                    <div class="text">
+                        I wasn't able to find any for some letters, and found duplicates for others, for which cases I
+                        produced animated GIFs which cycle through the candidates.
                     </div>
-                    <div class="compared">
-                        <span class="compared-title">Architectural forms</span>
-                        <img src="architecture.png">
-                        <img src="pallete-architecture.png" class="pallete">
+                    <div class="text">
+                        It's become clear that there are two predominant themes in the photographs I've taken: nature,
+                        such
+                        as parts of trees and foliage; and architecture, where the letters are formed by parts of
+                        buildings.
+                        Having
+                        discussed this with my tutor group, it may be a good idea for me to develop two alphabets, one
+                        for
+                        each theme. There is a clear thematic contrast - the 'real' with the 'fake', if you will -
+                        between
+                        the materials exhibited in the two sets,
+                        which could be a good thing to show in the alphabets.
                     </div>
-                </div>
-                <div class="text">
-                    I am probably most drawn to the colours of the architectural selection; the oranges, browns, the
-                    copper colours. My favourite is the image of the hook on the tiles, which are such a lovely shade.
-                </div>
-                <div class="text">
-                    After examining the depth of the two groups when seperated, it becomes obvious that I will need to
-                    take more
-                    photographs if I'm to develop two complete alphabets.
+                    <div class="comparison">
+                        <div class="compared">
+                            <span class="compared-title">Natural forms</span>
+                            <img src="nature.png">
+                            <img src="pallete-nature.png" class="pallete">
+                        </div>
+                        <div class="compared">
+                            <span class="compared-title">Architectural forms</span>
+                            <img src="architecture.png">
+                            <img src="pallete-architecture.png" class="pallete">
+                        </div>
+                    </div>
+                    <div class="text">
+                        I am probably most drawn to the colours of the architectural selection; the oranges, browns, the
+                        copper colours. My favourite is the image of the hook on the tiles, which are such a lovely
+                        shade.
+                    </div>
+                    <div class="text">
+                        After examining the depth of the two groups when seperated, it becomes obvious that I will need
+                        to
+                        take more
+                        photographs if I'm to develop two complete alphabets.
+                    </div>
                 </div>
             </div>
         </div>
