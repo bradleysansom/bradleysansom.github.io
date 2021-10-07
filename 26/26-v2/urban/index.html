@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26 | Bradley Sansom</title>
+    <style>
+        body {
+            font-family: 'Bahnschrift', 'DIN', 'DIN 1451', 'FF DIN', 'Roboto', sans-serif;
+        }
+
+        .header {
+            padding: 10px;
+            display: flex;
+
+            text-align: left;
+
+            background: linear-gradient(90deg, #008080 0%, #79d2b8 100%);
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .header img {
+            height: 30px;
+            max-width: 70vw;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .heading {
+            aspect-ratio: 4;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            text-align: center;
+            background-color: black;
+            background-image: url('river.jpg');
+            background-size: cover;
+            color: white;
+            display: flex;
+            font-size: 5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid {
+            transition: 3s;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px 20px;
+        }
+
+        .grid div {
+            background-color: black;
+            transition: 3s;
+            aspect-ratio: 1;
+            /* height: 291px; */
+            background-size: cover;
+        }
+
+        #twentysix {
+            background-color: #BC7654;
+            color: white;
+            font-size: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #a {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/a/masonry.jpg');
+        }
+
+        #b {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/b/box.jpg');
+        }
+
+        #c {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/c/gandhi.jpg');
+        }
+
+        #d {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/d/detritus.jpg');
+        }
+
+        #e {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/e/tactile.jpg');
+        }
+
+        #f {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/f/railing.jpg');
+        }
+
+        #g {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/g/railing.jpg');
+        }
+
+        #h {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/h/bench.jpg');
+        }
+
+        #i {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/i/window.jpg');
+        }
+
+        #j {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/j/note.jpg');
+        }
+
+        #k {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/k/light.jpg');
+        }
+
+        #l {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/l/dean.jpg');
+        }
+
+        #m {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/m/townhall.jpg');
+        }
+
+        #n {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/n/brace.jpg');
+        }
+
+        #o {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/o/roof.jpg');
+        }
+
+        #p {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/p/uplighter.jpg');
+        }
+
+        #q {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/q/bag.jpg');
+        }
+
+        #r {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/r/sign.jpg');
+        }
+
+        #s {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/s/shadow.jpg');
+        }
+
+        #t {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/t/redbrick.jpg');
+        }
+
+        #u {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/u/chair.jpg');
+        }
+
+        #v {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/v/frame.jpg');
+        }
+
+        #w {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/w/cemetery.jpg');
+        }
+
+        #x {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/x/wall.jpg');
+        }
+
+        #y {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/y/drainpipes.jpg');
+        }
+
+        #z {
+            background-color: #BC7654;
+            background-image: url('../../26-v1/letters/z/frame.jpg');
+        }
+
+        #qr {
+            display: flex;
+            background-color: #BC7654;
+            color: white;
+            text-align: right;
+            padding: 12px;
+            font-size: 2rem;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        #information {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #letter {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="grid">
+            <div class="letter" id="twentysix">
+                26
+            </div>
+            <div class="letter" id="a">
+
+            </div>
+            <div class="letter" id="b">
+
+            </div>
+            <div class="letter" id="c">
+
+            </div>
+            <div class="letter" id="d">
+
+            </div>
+            <div class="letter" id="e">
+
+            </div>
+            <div class="letter" id="f">
+
+            </div>
+            <div class="letter" id="g">
+
+            </div>
+            <div class="letter" id="h">
+
+            </div>
+            <div class="letter" id="i">
+
+            </div>
+            <div class="letter" id="j">
+
+            </div>
+            <div class="letter" id="k">
+
+            </div>
+            <div class="letter" id="l">
+
+            </div>
+            <div class="letter" id="m">
+
+            </div>
+            <div class="letter" id="n">
+
+            </div>
+            <div class="letter" id="o">
+
+            </div>
+            <div class="letter" id="p">
+
+            </div>
+            <div class="letter" id="q">
+
+            </div>
+            <div class="letter" id="r">
+
+            </div>
+            <div class="letter" id="s">
+
+            </div>
+            <div class="letter" id="t">
+
+            </div>
+            <div class="letter" id="u">
+
+            </div>
+            <div class="letter" id="v">
+
+            </div>
+            <div class="letter" id="w">
+
+            </div>
+            <div class="letter" id="x">
+
+            </div>
+            <div class="letter" id="y">
+
+            </div>
+            <div class="letter" id="z">
+
+            </div>
+            <div class="letter" id="qr">
+                Urban<br>
+                Bradley Sansom
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+
+
+</html>
