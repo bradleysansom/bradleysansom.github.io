@@ -225,6 +225,17 @@
         #letter {
             font-size: 5rem;
         }
+
+        #advisory {
+            margin-top: 12px;
+        }
+
+        #behind {
+            text-transform: uppercase;
+            color: #5EA231;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
     </style>
 </head>
 
@@ -321,7 +332,7 @@
                 Bradley Sansom
             </div>
         </div>
-        CLICK ANY PHOTO TO SEE WHAT IT'S OF AND WHERE IT WAS TAKEN
+        <span id="advisory">CLICK ANY PHOTO TO SEE WHAT IT'S OF AND WHERE IT WAS TAKEN</span>
     </main>
     <div class="info" id="information" style="display:none;">
         <h1 id="letter"></h1>
@@ -345,6 +356,7 @@
         pop.style.backgroundSize = "cover";
         document.getElementById('behind').innerHTML = "← back";
         document.getElementById("information").style.display = "initial";
+        document.getElementById('advisory').style.display = "none";
         document.getElementsByTagName('main')[0].appendChild(pop);
         document.getElementById("letter").innerHTML = choice.toUpperCase();
         var loc;
@@ -491,6 +503,7 @@
                 pop.remove();
                 document.getElementById('behind').innerHTML = "&nbsp;";
                 document.getElementById("information").style.display = "none";
+                document.getElementById('advisory').style.display = "initial";
                 document.getElementsByClassName('grid')[0].style.display = "grid";
 
             }
