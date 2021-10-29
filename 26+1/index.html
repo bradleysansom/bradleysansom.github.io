@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26 + 1 | Bradley Sansom</title>
+    <style>
+        * {
+            border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Bahnschrift', 'DIN', 'DIN 1451', 'FF DIN', 'Roboto', sans-serif;
+            display: flex;
+            height: calc(100vh - 16px);
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 10px;
+            display: flex;
+
+            text-align: left;
+
+            background: linear-gradient(90deg, #008080 0%, #79d2b8 100%);
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+
+        .header img {
+            height: 30px;
+            max-width: 70vw;
+        }
+
+        main {
+            flex-grow: 1;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contents {
+            flex-grow: 1;
+            display: flex;
+            width: calc(100vw - 16px);
+            margin-bottom: 30px;
+        }
+
+        .half {
+            flex-grow: 1;
+            display: flex;
+            align-content: stretch;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 30px;
+            color: transparent;
+            border: 0px solid white;
+            font-size: 2rem;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: .5s;
+        }
+
+        .evaluation {
+            padding: 30px;
+            background-image: url('pages.gif');
+            background-size: cover;
+            border: 0px solid white;
+            font-size: 2rem;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: .5s;
+        }
+
+        .half:hover {
+            cursor: pointer;
+            border: 10px solid black;
+            color: black;
+            font-weight: bold;
+            text-decoration-color: black;
+            filter: brightness(1.5);
+            transition: .5s;
+        }
+
+        .evaluation:hover {
+            cursor: pointer;
+            border: 10px solid black;
+            font-weight: bold;
+            text-decoration-color: black;
+            filter: brightness(1.5);
+            transition: .5s;
+        }
+
+
+        .plus {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            padding: 30px;
+            font-size: 8rem;
+        }
+
+
+
+        #twentysix {
+            background-image: url('../26/26-books.gif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #one {
+            background-image: url('../1/1.gif');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><a href="/"><img src="https://bradleysansom.github.io/signature.png" alt="Bradley Sansom"></a>
+        </div>
+
+    </div>
+    <main style="font-family:monospace;font-size:1.5rem;">
+        <div class="contents">
+            <div class="half" id="twentysix">
+                found alphabet project
+            </div>
+            <div class="plus">
+                +
+            </div>
+            <div class="half" id="one">
+                letterspace project
+            </div>
+
+        </div>
+        <div class="evaluation">
+            evaluation
+        </div>
+
+
+    </main>
+
+
+</body>
+<script>
+    document.getElementById("twentysix").addEventListener("click", goto26);
+    document.getElementById("one").addEventListener("click", goto1);
+    document.getElementsByClassName("evaluation")[0].addEventListener("click", gotoeval);
+
+    function goto26() {
+        window.location.href = "../26/index.html";
+    }
+    function goto1() {
+        window.location.href = "../1/index.html";
+    }
+    function gotoeval() {
+        window.location.href = "evaluation/index.html";
+    }
+
+</script>
+
+</html>

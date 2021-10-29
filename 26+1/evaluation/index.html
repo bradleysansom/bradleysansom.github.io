@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation of 26+1 | Bradley Sansom</title>
+    <style>
+        * {
+            border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Bahnschrift', 'DIN', 'DIN 1451', 'FF DIN', 'Roboto', sans-serif;
+        }
+
+        .header {
+            padding: 10px;
+            display: flex;
+
+            text-align: left;
+
+            background: linear-gradient(90deg, #008080 0%, #79d2b8 100%);
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .header img {
+            height: 30px;
+            max-width: 70vw;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .heading {
+            aspect-ratio: 3;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            text-align: center;
+            background-color: black;
+            background-image: url('pages-alt.gif');
+            background-size: cover;
+            background-position: center;
+            color: black;
+            display: flex;
+            font-size: 8rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .subtitle {
+            background-image: url('pages.gif');
+            background-size: cover;
+            font-size: 3rem;
+            padding: 30px;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            transition: 3s;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px 12px;
+        }
+
+        .grid div {
+            background-color: black;
+            transition: 3s;
+            aspect-ratio: 1;
+            /* height: 291px; */
+            background-size: cover;
+        }
+
+        #information {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #letter {
+            font-size: 5rem;
+        }
+
+        iframe {
+            max-width: 1300px;
+            border: 2px solid black;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .title {
+            background-size: cover;
+            padding: 30px;
+            font-size: 2rem;
+            color: black;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .text {
+            font-size: 1.3rem;
+            max-width: 800px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: auto;
+            text-align: left;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .popout {
+            background-color: black;
+            font-size: 18px;
+            padding: 12px;
+            margin: 12px;
+            display: inline-block;
+        }
+
+        .popout img {
+            padding-right: 12px;
+        }
+
+        .popout a {
+            color: white;
+        }
+
+        .comparison {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .comparison {
+            font-size: 24px;
+            border: 2px solid black;
+            padding: 12px;
+        }
+
+        .compared img {
+            max-width: 500px;
+            border-radius: 0;
+        }
+
+        .pallete {
+            margin-top: 20px;
+            height: 150px;
+            border-radius: 12px !important;
+
+        }
+
+        .compared-title {
+            display: block;
+            padding: 12px;
+            color: white;
+            margin-bottom: 12px;
+            background-color: black;
+        }
+
+        .gallery img {
+            border-radius: 0 !important;
+            max-width: 1000px;
+        }
+
+        .locator {
+            max-width: 1000px;
+            margin: auto;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .locator img {
+            max-height: 36px;
+            border-radius: 0 !important;
+        }
+
+        .title.a {
+            background-image: url('pages-alt.gif');
+        }
+
+        .title.b {
+            background-image: url('pages.gif');
+        }
+
+        #navigator {
+            margin-top: 12px;
+            background-image: url('pages-alt.gif');
+            background-size: cover;
+            padding: 20px;
+            font-size: 3rem;
+        }
+
+        #navigator span {
+            margin-bottom: 12px;
+        }
+
+        #navigator a {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            margin-bottom: 12px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        #navigator a:hover {
+            color: black;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        .researchbreak {
+            text-align: center;
+            margin: auto;
+            max-width: 1000px;
+            background-image: url('pages-alt.gif');
+            background-size: cover;
+            padding: 10px;
+        }
+
+        .researchtitle,
+        .researchauthor {
+            display: inline-block;
+            color: white;
+            padding: 10px;
+            background-color: black;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .researchauthor {
+            font-size: 1.2rem;
+        }
+
+        .researchcontent {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .researchcontent .gallery img {
+            max-width: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><a href="/"><img src="https://bradleysansom.github.io/signature.png" alt="Bradley Sansom"></a>
+        </div>
+
+    </div>
+    <main>
+        <div class="heading" id="behind">
+            26 + 1
+        </div>
+        <div class="subtitle">
+            Found alphabet and letterspace projects<br>Evaluation
+        </div>
+
+        <div id="sections">
+
+            <div class="section" id="eval">
+
+                <div class="content">
+                    <div class="text">
+                        When I was told that I had to write an evaluation of this unit, I'll admit to being a bit
+                        worried. I'd not really been enjoying the project that much, I thought my work wasn't really up
+                        to standard and I'd not put enough effort into it. However, it's only in the process of writing
+                        everything up into these pages, collecting together all the work I've done, that I've
+                        reconsidered it.
+                    </div>
+                    <div class="text">
+                        I've actually really liked it. I was a bit worried that, given I'm not a very good photographer,
+                        or a very good illustrator, that I would struggle with the two briefs. And I did, for a while.
+                        However, I've taken the briefs in a direction that I'm really proud of.
+                    </div>
+                    <div class="text">
+                        With regard to research, the Type Player series of books has been a great help. I much prefer
+                        looking through a curated selection of works, flicking from page to page, rather than endlessly
+                        scrolling through Pinterest or Google Images. That's not to mean that I've not taken my research
+                        in other directions; I've looked at quite a wide range of sources, illustrations, photography et
+                        cetera. Quite a bit of the research was also personal; looking through an old hard drive to find
+                        all the stuff I made in Microsoft Office as a young kid, I found that I've been (subconsciosuly)
+                        designing things for years.
+                    </div>
+                    <div class="text">
+                        When the brief for the second project put such an emphasis on having a story and a personal
+                        connection, I panicked a bit. I always do with stuff like that, I just always suppose I've got
+                        nothing especially revolutionary or groundbreaking to say. But realising the journey I've been
+                        on for years with regard to my attitude to art, the 'u-turn', I've been able to explore my life,
+                        and my mind, in quite a deep way through design.
+                    </div>
+                    <div class="text">
+                        I happened upon my idea for the letterspace project quite quickly in comparison to others. I
+                        remember being astounded at the first seminar when I had a couple of sketches and a little list,
+                        and others had done a huge moodboard and had 50 ideas. But I shouldn't have worried, as the
+                        development came a bit later but got quite deep and personal.
+                    </div>
+                    <div class="text">
+                        My final pieces don't follow the briefs to the letter; I had an urge to make MORE. Therefore
+                        I've done two interactive posters rather than just the one, and I've done eight variations of
+                        the letter. Perhaps I ought to learn to sift this down a bit, be a bit more critical of my
+                        ideas.
+                    </div>
+                    <div class="text">
+                        For the found alphabet project, I'm reasonably happy with my final outcomes. If I was doing it
+                        again or had more time, I'd make the interactive digital version a bit nicer. Currently it's
+                        very stark and simple, I could use the opportunity of a digital space to play about with motion
+                        and animation a bit more.
+                    </div>
+                    <div class="text">
+                        For the letterspace project, I wanted to produce something a bit more animated too. Perhaps a
+                        video version, showing the u-turn in a more dynamic way. I also had an idea to make a triptych
+                        of the U at different stages of its completion, but decided just to concentrate on the one
+                        layout for the final piece.
+                    </div>
+                    <div class="text">
+                        If I was doing the found alphabet project again, I think I would've walked around with a list of
+                        letters that I could cross off. I spent a lot of time taking duplicate pictures whilst not
+                        getting some for others until quite late.
+                    </div>
+                    <div class="text">
+                        If I was doing the letterspace project again, I would refine the figure itself. I think I
+                        should've used more of a regular, curved U instead of the freehand right half that I just made
+                        with the pen tool.
+                    </div>
+                    <div class="text">
+                        Despite these few regrets, on the whole, I'm pleased with the work I've done in this unit. I've
+                        really enjoyed it.
+                    </div>
+                    <div class="title b">
+                        <a href="../../26+1/index.html" style="color:black;font-family:monospace;">back to 26+1 home</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

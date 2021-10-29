@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 | Bradley Sansom</title>
+    <style>
+        * {
+            border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Bahnschrift', 'DIN', 'DIN 1451', 'FF DIN', 'Roboto', sans-serif;
+        }
+
+        .header {
+            padding: 10px;
+            display: flex;
+
+            text-align: left;
+
+            background: linear-gradient(90deg, #008080 0%, #79d2b8 100%);
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .header img {
+            height: 30px;
+            max-width: 70vw;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .heading {
+            aspect-ratio: 3;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            text-align: center;
+            background-color: black;
+            background-image: url('1.gif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            font-size: 8rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .subtitle {
+            background-image: url('pages.gif');
+            background-size: cover;
+            font-size: 3rem;
+            padding: 30px;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            transition: 3s;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px 12px;
+        }
+
+        .grid div {
+            background-color: black;
+            transition: 3s;
+            aspect-ratio: 1;
+            /* height: 291px; */
+            background-size: cover;
+        }
+
+        #information {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #letter {
+            font-size: 5rem;
+        }
+
+        iframe {
+            max-width: 1300px;
+            border: 2px solid black;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .title {
+            background-size: cover;
+            padding: 30px;
+            font-size: 2rem;
+            color: black;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .text {
+            font-size: 1.3rem;
+            max-width: 800px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: auto;
+            text-align: left;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .popout {
+            background-color: black;
+            font-size: 18px;
+            padding: 12px;
+            margin: 12px;
+            display: inline-block;
+        }
+
+        .popout img {
+            padding-right: 12px;
+        }
+
+        .popout a {
+            color: white;
+        }
+
+        .comparison {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .comparison {
+            font-size: 24px;
+            border: 2px solid black;
+            padding: 12px;
+        }
+
+        .compared img {
+            max-width: 500px;
+            border-radius: 0;
+        }
+
+        .pallete {
+            margin-top: 20px;
+            height: 150px;
+            border-radius: 12px !important;
+
+        }
+
+        .compared-title {
+            display: block;
+            padding: 12px;
+            color: white;
+            margin-bottom: 12px;
+            background-color: black;
+        }
+
+        .gallery img {
+            border-radius: 0 !important;
+            max-width: 1000px;
+        }
+
+        .locator {
+            max-width: 1000px;
+            margin: auto;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .locator img {
+            max-height: 36px;
+            border-radius: 0 !important;
+        }
+
+        .title.a {
+            background-image: url('pages-alt.gif');
+        }
+
+        .title.b {
+            background-image: url('pages.gif');
+        }
+
+        #navigator {
+            margin-top: 12px;
+            background-image: url('pages-alt.gif');
+            background-size: cover;
+            padding: 20px;
+            font-size: 3rem;
+        }
+
+        #navigator span {
+            margin-bottom: 12px;
+        }
+
+        #navigator a {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            margin-bottom: 12px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        #navigator a:hover {
+            color: black;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        .researchbreak {
+            text-align: center;
+            margin: auto;
+            max-width: 1000px;
+            background-image: url('pages-alt.gif');
+            background-size: cover;
+            padding: 10px;
+        }
+
+        .researchtitle,
+        .researchauthor {
+            display: inline-block;
+            color: white;
+            padding: 10px;
+            background-color: black;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .researchauthor {
+            font-size: 1.2rem;
+        }
+
+        .researchcontent {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .researchcontent .gallery img {
+            max-width: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><a href="/"><img src="https://bradleysansom.github.io/signature.png" alt="Bradley Sansom"></a>
+        </div>
+
+    </div>
+    <main>
+        <div class="heading" id="behind">
+
+        </div>
+        <div class="subtitle">
+            Letterspace project
+        </div>
+        <div id="navigator">
+            <span>Jump to:</span><br>
+            <a href="#firstexplorations">First explorations</a><br>
+            <a href="#myidea">My idea</a><br>
+            <a href="#developing">Development</a>
+            <a href="#final">Final designs</a>
+        </div>
+        <div id="sections">
+
+            <div class="section" id="firstexplorations">
+                <div class="title b">
+                    First explorations
+                </div>
+                <div class="content">
+                    <div class="text">
+                        When I was allocated the letter <b>U</b>, I will admit to being a bit stumped. I couldn't really
+                        think of many words beginning with U - and certainly not many places.
+                    </div>
+
+
+
+                    <div class="text">
+                        The first proper idea I had came during the lecture. During my found alphabet project I'd found
+                        a new love for looking at architecture in different ways. I was especially enamoured with the
+                        stained glass I'd come across in the John Rylands Library.
+                    </div>
+
+                    <div class="gallery">
+                        <img src="stained.jpg">
+                    </div>
+                    <div class="text">
+                        I thought about the ways I could make this work on the page - perhaps a gold colour for the
+                        frames, and then transparent or grey or blue for the panes? However I think this would be
+                        difficult to square with the "two colours" requirement of the brief, as stained glass is usually
+                        known for its huge range of colours depicting various scenes. Furthermore, I don't have any
+                        particular personal connection to or link with stained glass; I'm not religious, I don't go to
+                        church, there isn't really a good story behind my choice of letter.
+                    </div>
+                    <div class="text">
+                        In the lecture, I had a quick glimpse of the U produced for the Letterspace project. I thought
+                        it looked very
+                        interesting.
+                    </div>
+                    <div class="researchbreak">
+                        RESEARCH BREAK<br>
+                        <div class="researchtitle">
+                            U from the Letterspace Project
+                        </div><br>
+                        <div class="researchauthor">
+                            by Lawrence Alcock
+                        </div>
+                        <div class="researchcontent">
+                            <div class="text">
+                                Alcock is a former MSoA student who based his design for the Letterspace project on
+                                Whitworth Park.
+                            </div>
+                            <div class="gallery">
+                                <img
+                                    src="https://s3-eu-west-2.amazonaws.com/letterspace01/products/images/000/000/021/original/U.jpg?1524082992">
+                            </div>
+
+                            <div class="text">
+                                Out of all the Letterspace submissions, this is perhaps one of the simplest but also one
+                                of my
+                                favourites. It's definitely one of the most intriguing and interesting designs.
+                            </div>
+                            <div class="text">
+                                The story behind it is the ironwork on the fences of Whitworth Park, and the archway
+                                which forms the
+                                shape of the U. Regrettably, this has had to be upside down in this letter for obvious
+                                practical
+                                reasons.
+                            </div>
+                            <div class="text">
+                                The colours are nice, with the cream background and the different thicknesses of black
+                                print over the
+                                top. It reminds me of old architectural drawings and plans, which links to the theme
+                                quite well.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        In the studio session afterwards, we went through a few other letters and I drew out some ideas
+                        I had for those. And whilst those are obviously not applicable for my <b>U</b>, they encouraged
+                        me to think a bit less literally and to broaden my horizons.
+                    </div>
+
+                    <div class="gallery">
+                        <img src="sketches.png">
+                    </div>
+                    <div class="text">
+                        I also drew out a few more <b>U</b>s. I thought about the basic constructions of the letter - a
+                        circular bottom, extended in one direction by a rectangle. I thought of this idea, which looks a
+                        bit like a venn diagram.
+                    </div>
+
+                    <div class="gallery">
+                        <img src="venn.png">
+                    </div>
+                    <div class="researchbreak">
+                        RESEARCH BREAK<br>
+                        <div class="researchtitle">
+                            Architectural Alphabet
+                        </div><br>
+                        <div class="researchauthor">
+                            by Johann David Steingruber
+                        </div>
+                        <div class="researchcontent">
+                            <div class="text">
+                                Steingruber was an architect and illustrator in 18th century Germany.
+                            </div>
+                            <div class="gallery">
+                                <img
+                                    src="https://images.adsttc.com/media/images/5a8e/b35f/f197/cc42/b800/06b1/original/allarchalph_feature.gif?1519301463">
+                            </div>
+
+                            <div class="text">
+                                In the series Architectural Alphabet, he created imaginary palaces where the floorplans
+                                made letters of
+                                the alphabet. He then accompanied these with impressions of how a palace with such a
+                                layout could look.
+                                They are delightful in how they protray some of the eccentricities of the way we write
+                                letters.
+                            </div>
+                            <div class="text">
+                                There is an element of humour to the drawings; buildings would not naturally take the
+                                shapes of the
+                                letterforms he has drawn, therefore some of the palaces he has drawn have their own
+                                little quirks.
+                            </div>
+                            <div class="text">
+                                I think the idea is very advanced for its time, it has a playfulness that I'm not sure
+                                would've been
+                                expected at that time. My favourite letterform has to be the N, which is such a
+                                beautiful and
+                                unconventional shape and yet makes an elegant palace.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        I was struggling for ideas. I thought about more ways to draw a <b>U</b>, with serifs pointing
+                        different ways. But none of these really made a good letterform, and lacked any sort of story or
+                        personal connection.
+                    </div>
+
+                    <div class="gallery">
+                        <img src="serifs.jpg">
+                    </div>
+                    <div class="researchbreak">
+                        RESEARCH BREAK<br>
+                        <div class="researchtitle">
+                            Blackdora Typographic Kit
+                        </div><br>
+                        <div class="researchauthor">
+                            by Minhua Huang
+                        </div>
+                        <div class="researchcontent">
+                            <div class="text">
+                                Huang has taken three typefaces of differing styles and distilled them down to the basic
+                                parts that make
+                                up each letter. She has then produced physical pieces that fit together to allow people
+                                to make new
+                                letterforms using bits of other fonts.
+                            </div>
+                            <div class="gallery">
+                                <img src="https://payload.cargocollective.com/1/14/451150/6782781/blackdora_1_3504.jpg">
+                            </div>
+                            <div class="text">
+                                I think it's a great idea. It looks like something I'd love to have a play about with.
+                                The playfulness
+                                is inherent in the design; encouraging the mixing of different sorts of fonts to create
+                                new letters.
+                            </div>
+                            <div class="text">
+                                It is an educational item as well: Huang produced it as part of a MA degree, and it
+                                helps to teach
+                                people about the history of typography through the three fonts it blends - Blackletter,
+                                Bodoni, and
+                                Futura.
+                            </div>
+                            <div class="text">
+                                I love the physicality, the tangibility of it. We see typefaces everywhere, on screens,
+                                in print.
+                                Huang's work helps to explore how the letters we recognise are made up of different
+                                pieces that can be
+                                combined in new ways.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        In my tutor group, we had a discussion about what other ideas I could have. Their suggestions
+                        included: <b>underwater</b>, <b>understanding</b>, <b>underground</b>, and <b>umbrella</b>. I
+                        also thought about just presenting a mirror as my final piece, and saying that it represents
+                        "yo<span style="text-decoration:underline;">u</span>". I sketched out a few of these, seeing
+                        where I could take them.
+                    </div>
+                    <div class="gallery">
+                        <img src="under.jpg">
+                    </div>
+                    <div class="text">
+                        They were all OK ideas, but none of them really had any sort of special meaning or personal
+                        connection to me.
+                    </div>
+                    <div class="researchbreak">
+                        RESEARCH BREAK<br>
+                        <div class="researchtitle">
+                            90° Typography Book
+                        </div><br>
+                        <div class="researchauthor">
+                            by Iwona Przybyla
+                        </div>
+                        <div class="researchcontent">
+                            <div class="text">
+                                Przybyla has threaded cotton through pages of a book to create a unique typographical
+                                experiment. Each
+                                letter is contained between two perpendicular pages; opening and closing them reveals
+                                the letter from
+                                different angles.
+                            </div>
+                            <div class="gallery">
+                                <img
+                                    src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ae432232151939.5605b42673a6b.jpg">
+                            </div>
+                            <div class="gallery">
+                                <img
+                                    src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/66c0f632194493.5605b4f6572e5.JPGg">
+                            </div>
+                            <div class="text">
+                                I really like it, what a brilliant idea. I'm in awe of how much planning and
+                                experimentation needed to
+                                be done, trying to get all the angles right so that it would look good at different
+                                stages. It's almost
+                                like an optical illusion, different ways of seeing the same threads as differing forms
+                                depending on the
+                                way you look at it and how far the pages are open.
+                            </div>
+                            <div class="text">
+                                The letters themselves are very nice, the technical constraints of needing certain
+                                angles and verticals
+                                means that the font looks almost Blackletter in places, which is a very nice effect.
+                            </div>
+                            <div class="text">
+                                The colour scheme is great too, using the two colours of thread makes it look like a
+                                ribbon has been
+                                twisted and two sides are showing, in light and in shade.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        I then thought more about the letter <b>U</b>, and what it can refer to. I thought about the
+                        phrase 'u-turn'; it's usually seen as a bad thing, an admission of failure. In politics, it's
+                        the phrase used when a politician realises a policy is unpopular and backtracks. On a road, a
+                        u-turn is recognising that the direction you were heading in was the wrong one.
+                    </div>
+                    <div class="text">
+                        This metaphor characterises such a movement as a negative one - I'm not sure I entirely agree.
+                        There are two parts to every u-turn: the beginning, and the ending. But the ending is where it
+                        remains afterwards, going off in the other direction. Accepting failure, yes. But turning round
+                        and making it right again - that's more important, I believe.
+                    </div>
+                    <div class="text">
+                        I considered some of the U-turns I have been on in life. Perhaps the biggest is coming to
+                        university; a School of Art no less. But I'm not the sort of person who's always liked 'art',
+                        not at school, not particularly much out of school either.
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="storytime">
+                <div class="title a">
+                    Story time
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <span style="font-size:2rem;">I used to hate 'art'.</span> That might be a bit of a shock, a
+                        student on a graphic design course admitting they're not artistic in the slightest. But it's
+                        true.
+                    </div>
+                    <div class="text" style="text-align:center;font-size:2rem;font-weight:bold;margin-bottom:0;">
+                        * * *
+                    </div>
+
+                    <div class="text">
+                        One of the first lessons I had at secondary school was Art. Me, a nervous eleven year old,
+                        uniform all crumpled from the rush to get to the next class after an utterly terrifying PE
+                        lesson (I don't have much time for sport, either, to be honest). My teacher, terror in a blue
+                        jumper, wanting to take out his rage on whomever had the misfortune to be in his next class.
+                        "Sit in silence", he said. "And copy this", pointing to one of Van Gogh's vase paintings he'd
+                        put up on the overhead projector.
+                    </div>
+                    <div class="text">
+                        For the purposes of this, I'll refer to him as Mr Brown. I'll leave you to decide whether that's
+                        a pseudonym or not.
+                    </div>
+                    <div class="text">
+                        It completely bewilders me how someone with such an apparent hatred for children could get a job
+                        as a teacher. An art teacher, no less - a subject that's all about inspiration and creativity.
+                        He managed to take all the fun out of it.
+                    </div>
+                    <div class="text">
+                        There were a few incidents where he ripped up the work of the pupils who'd made a mistake, and
+                        made them do it again. It's difficult to do a good painting when you've only got half an hour,
+                        the rest of the lesson being devoted to tidying and washing up. Twice, usually, at Mr Brown's
+                        insistence.
+                    </div>
+                    <div class="text">
+                        I was a hopeless painter. Still am. A lot of that is down to my dyspraxia; my co-ordination's
+                        terrible, and my hands are anything but steady. I tried to tell him this, see if he'd let me use
+                        the thicker paintbrushes that I could get a better grip on. Only after getting my form tutor
+                        involved did he finally relent, begrudgingly. I recently found a doctor's letter from around
+                        this time, referring to the "usual issues" that kids in my predicament had with teachers who
+                        refused to understand.
+                    </div>
+                    <div class="gallery">
+                        <img src="mason.png" style="filter:brightness(0.8);">
+                    </div>
+                    <div class="text" style="text-align:center;font-size:2rem;font-weight:bold;margin-bottom:0;">
+                        * * *
+                    </div>
+                    <div class="text">
+                        I didn't always hate art. At primary school I always liked cutting and sticking and drawing
+                        activities. I liked to draw floorplans and little sketches of buildings. The stuff I made was
+                        never neat, but I enjoyed it.
+                    </div>
+                    <div class="gallery">
+                        <img src="howard.jpg"><br>
+                        Catherine Howard, apparently. Made by me, aged 8 or so. Don't ask why she's got two noses.
+                    </div>
+                    <div class="gallery">
+                        <br> <img src="fish.jpg"><br>
+                        A page that my teacher made us all fill out in Year 6. I hadn't had all the enjoyment in art
+                        taken out of me by this point.
+                    </div>
+                    <div class="text" style="text-align:center;font-size:2rem;font-weight:bold;margin-bottom:0;">
+                        * * *
+                    </div>
+                    <div class="text">
+                        It was in the hours after school that I still "made stuff". On the computer mostly. I was lucky
+                        that, from the age of about 5, my parents accepted that I wasn't going to spend hours playing
+                        football with the other boys out on the street, and so they just left me on the computer,
+                        messing about with Microsoft Office.
+                    </div>
+                    <div class="gallery">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/en/b/b1/Microsoft_Office_XP_Standard_on_Windows_XP.png"><br>
+                        Microsoft Office 2001, where I spent most of my time.
+                    </div>
+                    <div class="text">
+                        I suppose it was me discovering PowerPoint that brought a love of graphic design, and to where I
+                        am today. Specifically,
+                        the templates included in PowerPoint:
+                    </div>
+                    <div class="gallery">
+                        <img src="https://pbs.twimg.com/media/FAOkoJEVgAAFY7z?format=jpg&name=medium"
+                            style="max-width:400px;"><br><br>
+                        <img src="https://pbs.twimg.com/media/FAEuUq5VUAAyCo6?format=jpg&name=medium"
+                            style="max-width:400px;"><br><br>
+                        <img src="https://pbs.twimg.com/media/FAE9YAHX0AcdVjI?format=jpg&name=medium"
+                            style="max-width:400px;"><br><br>
+                        <img src="cities.gif" style="max-width:400px;"><br><br>
+                        <img src="melony.png" style="max-width:400px;"><br><br>
+                        <img src="snow.png" style="max-width:400px;"><br><br>
+                        <img src="juice.png" style="max-width:400px;"><br><br>
+                        A few of the HUNDREDS of PowerPoints I made as a young child.
+                    </div>
+                    <div class="text">
+                        I never really considered there to be much of a link between all the stuff I did on the
+                        computer, and "art" lessons at school. I'd not come across "graphic design" as a thing before,
+                        even though I realise now I was intensely interested in it.
+                    </div>
+                    <div class="text" style="text-align:center;font-size:2rem;font-weight:bold;margin-bottom:0;">
+                        * * *
+                    </div>
+                    <div class="text">
+                        This brings me on to the topic for my piece. My own 'u-turn', from having such a bad experience
+                        of art in that year 7 classroom, to now doing a degree in the thing.
+                    </div>
+                    <div class="text">
+                        A u-turn isn't necessarily negative. In fact, I think this experience proves that it can be an
+                        entirely rewarding experience.
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="myidea">
+                <div class="title b">
+                    My idea
+                </div>
+                <div class="content">
+                    <div class="gallery">
+                        <img src="u.jpg">
+                    </div>
+                    <div class="text">
+                        The very first iteration of my idea was this simple thing. Very literal.
+                    </div>
+                    <div class="text">
+                        But then I tried to think about ways to express the story underlying my piece - how to show the
+                        'u-turn' in a clear graphical manner.
+                    </div>
+                    <div class="text">
+                        There are two parts to every u-turn: the direction you were travelling initially, and the
+                        direction you turn towards. For my project, it makes sense to express these as a sort of
+                        classical/digital pairing, showing the transition I've been on with my attitude to art,
+                        realising that making stuff on the computer is equally as valid an expression of creativity as
+                        painting an old master.
+                    </div>
+                    <div class="gallery">
+                        <img src="idea.jpg">
+                    </div>
+                    <div class="text">
+                        I feel like the obvious way to express this is a transition between a painted stroke and a
+                        crisp, clean line.
+                    </div>
+                    <div class="text">
+                        I made a decision that the terminus of the line should have an arrow - showing the continuation
+                        of my journey.
+                    </div>
+                    <div class="text">
+                        In the studio session a few days later, I shared my ideas with Katie, who suggested I lose the
+                        arrow - the story is strong enough to show through without needing the figure to be too literal.
+                        I have to say I agree.
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="developing">
+                <div class="title a">
+                    Developing my idea
+                </div>
+
+                <div class="content">
+                    <div class="text">
+                        To be true to the process, a true u-turn between paint and digital, I wanted to use physical
+                        paint. So I did.
+                    </div>
+                    <div class="gallery">
+                        <img src="paints1.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="paints2.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="paints3.png">
+                    </div>
+                    <div class="gallery">
+                        <img src="paints4.png">
+                    </div>
+                    <div class="text">
+                        I really enjoyed it actually. Being able to paint, for once without having Mr Brown towering
+                        over me and saying "that's not good enough".
+                    </div>
+                    <div class="researchbreak">
+                        RESEARCH BREAK<br>
+                        <div class="researchtitle">
+                            The People's Bench
+                        </div><br>
+                        <div class="researchauthor">
+                            by Anonymous (Felix Ng, Germaine Hong, Chloe Seet)
+                        </div>
+                        <div class="researchcontent">
+                            <div class="text">
+                                The People's Bench is a typographical installation based on the Chinese character 人,
+                                which means
+                                'people'. It is designed to be sat on, rather than just being for show.
+                            </div>
+                            <div class="gallery">
+                                <img
+                                    src="https://images.squarespace-cdn.com/content/v1/5f69644a8241b145b087070d/1606887614545-JPTP8NW4NZVYYCBWWJNR/ThePeoplesBench_02.jpg">
+                            </div>
+                            <div class="text">
+                                I like the thematic link between the character ('people') and the sense of community
+                                spirit exhibited by
+                                providing a bench for people to use.
+                            </div>
+                            <div class="text">
+                                It has made me appreciate that typography doesn't necessarily have to be in print or
+                                digital or even 2D.
+                                It's out there in the world, somwehere where people can "reflect on their thoughts".
+                            </div>
+                            <div class="text">
+                                The design is said to be "inspired by Confucianism", and was a challenge to create as
+                                wood is difficult
+                                to bend into such tight curves. The wooden finish contrasts well with the location; the
+                                incongruence
+                                means that it is easier to perceive as a letter as well as just being a sun lounger.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        I scanned them into the computer and had a play about with them, converting them to greyscale to
+                        allow me to properly compare and decide which is the best to go with.
+                    </div>
+                    <div class="gallery">
+                        <img src="paints2.png" style="filter:grayscale(100%);transform:scaleX(-1);">
+                    </div>
+                    <div class="gallery">
+                        <img src="paints1.png" style="filter:grayscale(100%);transform:scaleX(-1);">
+                    </div>
+                    <div class="gallery">
+                        <img src="paints4.png" style="filter:grayscale(100%);transform:scaleX(-1);">
+                    </div>
+
+                    <div class="gallery">
+                        <img src="paints3.png" style="filter:grayscale(100%);transform:scaleX(-1);">
+                    </div>
+                    <div class="text">
+                        Using Illustrator, I used the Image Trace function to vectorise one of the swooshes.
+                    </div>
+                    <div class="gallery">
+                        <img src="swooshes.png">
+                    </div>
+                    <div class="text">
+                        I made a rough drawing with the Pen tool of how I'd like to take it.
+                    </div>
+                    <div class="gallery">
+                        <img src="panels.png">
+                    </div>
+                    <div class="text">
+                        I decided to look again at all the paint strokes I'd scanned, and decided to pick a different
+                        one for my final piece.
+                    </div>
+                    <div class="gallery">
+                        <img src="progress.png"><br>
+                        The stroke I've decided to use.
+                    </div>
+                    <div class="text">
+                        I again used the Image Trace function here, but experimented with the settings a bit to try and
+                        get a different effect.
+                    </div>
+                    <div class="gallery">
+                        <img src="choices.png"><br>
+                        The chosen swoosh rendered with 3, 6, 16, and 9 colours respectively.
+                    </div>
+                    <div class="text">
+                        I went with the fourth option, which I felt looked the best and would also be the simplest to
+                        work with.
+                    </div>
+                    <div class="gallery">
+                        <img src="hackingaway.png">
+                    </div>
+                    <div class="text">
+                        I then started hacking away at the swoosh, adding a second half to the design and removing bits.
+                        I got rid of the beginning bit, to make the stroke look rougher, as if it had been done in more
+                        of a rush and with a bit less effort. I don't want it to look too perfect.
+                    </div>
+
+                </div>
+            </div>
+            <div class="section" id="final">
+                <div class="title b">
+                    Making my final piece
+                </div>
+
+                <div class="content">
+
+                    <div class="gallery">
+                        <img src="finalish.png"><br>
+                        The final figure for my project
+                    </div>
+
+                    <div class="text">
+                        I have finished the shape of the U that I'm designing.
+                    </div>
+                    <div class="text">
+                        But the difficult bit of this project has always been the right hand half of the U. I don't want
+                        to leave it blank, so I've made a few variations.
+                    </div>
+                    <div class="locator">
+                        Plain
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final solid.png"><br>
+                        Just the U, without any added decoration in the right hand side.
+                    </div>
+                    <div class="locator">
+                        Fluted
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final outlined.png"><br>
+                        An outline added to the right hand side.
+                    </div>
+                    <div class="locator">
+                        Window
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final windows.png"><br>
+                        The controls from a computer window are added in an homage to my hours spent on PowerPoint.
+                    </div>
+                    <div class="locator">
+                        Cloudy
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final cloudy.png"><br>
+                        A gradient is added.
+                    </div>
+                    <div class="locator">
+                        Dreamy
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final dreamy.png"><br>
+                        A slightly different gradient is added.
+                    </div>
+                    <div class="locator">
+                        Code
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final code.png"><br>
+                        Some computer source code is added to the right hand side, an allusion to my fondness for
+                        blending my passions of graphic design and computer programming. The code used is from the
+                        Haversine formula, which I included in <a
+                            href="https://bradleysanso.me/local/plateCommunity.js">
+                            some A-level Computer Science coursework.</a>
+                    </div>
+                    <div class="locator">
+                        Arrow
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final arrows.png"><br>
+                        Some chevrons are added to the right hand side, pointing up, an allusion to the original design
+                        I made.
+                    </div>
+                    <div class="locator">
+                        Type
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces-final us_final us.png"><br>
+                        The letter U in various typefaces is added to the top right. The fonts chosen are all those
+                        included on Office XP, a reference to where my love of digital design began.
+                    </div>
+                    <div class="locator">
+                        Composite
+                    </div>
+                    <div class="gallery">
+                        <img src="final-pieces_final composite.png"><br>
+                        Some of the different ideas combined. This isn't my favourite of the designs; personally I think
+                        it's trying to do too much at once. But this is the one I presented at the crit, as I feel it is
+                        the one best suited to print.
+                    </div>
+                    <div class="text">
+                        I'm glad to have been able to make a range of ideas and explore a lot of the different thoughts
+                        I had. I produced an animation of the different variations.
+                    </div>
+                    <div class="gallery">
+                        <img src="actually final gif.gif">
+                    </div>
+                    <div class="text">
+                        I printed the Composite variation and stuck it to the wall for the pin-up crit, alongside a
+                        little card telling the story of my design.
+                    </div>
+                    <div class="gallery">
+                        <img src="crit.jpg">
+                    </div>
+                    <div class="title a">
+                        <a href="../26+1/index.html" style="color:black;font-family:monospace;">back to 26+1 home</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
