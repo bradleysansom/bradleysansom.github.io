@@ -3,7 +3,7 @@ function plateCommunity() {
     localStorage.setItem("groupsRendered", groupsRendered);
     var servicesRendered = "false";
     localStorage.setItem("servicesRendered", servicesRendered);
-    fetch('https://bradleysansom.github.io/local/groups/groups.json')
+    fetch('https://bradleysanso.me/local/groups/groups.json')
         .then(response => response.json())
         .then(data => {
 
