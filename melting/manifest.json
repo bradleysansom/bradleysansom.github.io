@@ -1,0 +1,10 @@
+{
+    "name": "melting",
+    "short_name": "melting",
+    "theme_color": "#fff",
+    "background_color": "#000000",
+    "display": "fullScreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+}
