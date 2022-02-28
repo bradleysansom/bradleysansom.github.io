@@ -23,27 +23,9 @@
 
         @font-face {
             font-family: 'Uncomfortable-23rd';
-            src: url('Uncomfortable23rdU10.woff2') format('woff2'),
-                url('Uncomfortable23rdU10.woff') format('woff');
-            font-weight: 650;
-            font-style: normal;
-            font-display: block;
-        }
-
-        @font-face {
-            font-family: 'Uncomfortable-23rd';
             src: url('Uncomfortable23rdU20.woff2') format('woff2'),
                 url('Uncomfortable23rdU20.woff') format('woff');
             font-weight: 600;
-            font-style: normal;
-            font-display: block;
-        }
-
-        @font-face {
-            font-family: 'Uncomfortable-23rd';
-            src: url('Uncomfortable23rdU30.woff2') format('woff2'),
-                url('Uncomfortable23rdU30.woff') format('woff');
-            font-weight: 550;
             font-style: normal;
             font-display: block;
         }
@@ -59,27 +41,9 @@
 
         @font-face {
             font-family: 'Uncomfortable-23rd';
-            src: url('Uncomfortable23rdU50.woff2') format('woff2'),
-                url('Uncomfortable23rdU50.woff') format('woff');
-            font-weight: 450;
-            font-style: normal;
-            font-display: block;
-        }
-
-        @font-face {
-            font-family: 'Uncomfortable-23rd';
             src: url('Uncomfortable23rdU60.woff2') format('woff2'),
                 url('Uncomfortable23rdU60.woff') format('woff');
             font-weight: 400;
-            font-style: normal;
-            font-display: block;
-        }
-
-        @font-face {
-            font-family: 'Uncomfortable-23rd';
-            src: url('Uncomfortable23rdU70.woff2') format('woff2'),
-                url('Uncomfortable23rdU70.woff') format('woff');
-            font-weight: 350;
             font-style: normal;
             font-display: block;
         }
@@ -111,19 +75,9 @@
                 opacity: 100%;
             }
 
-            12.5% {
-                font-weight: 650;
-                opacity: 82.5%;
-            }
-
             25% {
                 font-weight: 600;
                 opacity: 75%;
-            }
-
-            37.5% {
-                font-weight: 550;
-                opacity: 62.5%;
             }
 
             50% {
@@ -131,58 +85,29 @@
                 opacity: 50%;
             }
 
-            62.5% {
-                font-weight: 450;
-                opacity: 37.5%;
-            }
-
             75% {
                 font-weight: 400;
                 opacity: 25%;
             }
 
-            82.5% {
-                font-weight: 350;
-                opacity: 12.5%;
-            }
-
             100% {
-                font-weight: 350;
+                font-weight: 400;
                 opacity: 0%;
             }
 
 
         }
 
-        @keyframes finale {
-            0% {
-                text-decoration: none;
-                text-decoration-color: unset;
-                text-decoration-style: unset;
-            }
-
-            100% {
-                text-decoration: underline;
-                text-decoration-color: white;
-                text-decoration-style: solid;
-            }
-        }
-
 
 
         .splitting .char {
-            animation: melt-new 20s cubic-bezier(.5, 0, .5, 1) both;
-            animation-delay: calc(5s + (80ms * var(--char-index)));
+            animation: melt-new 15s cubic-bezier(.5, 0, .5, 1) both;
+            animation-delay: calc(60ms * var(--char-index));
         }
 
         .credit {
             font-weight: 500;
         }
-
-        /* #neverForgive {
-            animation: finale 5s forwards;
-            animation-delay: calc(5s + (80ms * var(--char-total)));
-        } */
     </style>
 </head>
 
@@ -207,7 +132,7 @@
             evil. And that I refuse to believe.<br><br>You are failing us. But the young people are starting to
             understand your betrayal. The eyes of all future generations
             are upon you. And if you choose to fail us, I say:</p>
-        <p style="display:inline;font-weight:700" id="neverForgive"> We will
+        <p style="display:inline;font-weight:700"> We will
             never forgive you.</p>
         <br><br>
         <span class="credit">Greta Thunberg, 23rd September 2019, United Nations, NYC, USA</span>
