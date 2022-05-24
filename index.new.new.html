@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradley Sansom</title>
+    <style>
+        @import url("https://use.typekit.net/skx0vho.css");
+
+        :root {
+            --orange: #c1420d;
+            --headline: italic 800 1rem 'bodoni-egyptian-pro', serif;
+            --body: normal 400 1rem 'p22-underground', sans-serif;
+        }
+
+
+
+
+        body {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+        }
+
+        .name {
+            font: var(--headline);
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 10px 0px 10px;
+            font-size: 2.4rem;
+
+
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            width: 100%;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        nav ul li {
+            display: inline;
+
+        }
+
+        .nav-icon {
+            background-color: var(--orange);
+            height: 15vw;
+            width: 15vw;
+        }
+
+        .triple {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+            gap: 5vw;
+        }
+
+        .triple-box {
+            background-color: var(--orange);
+            aspect-ratio: 1;
+            width: calc(100% - 10vw);
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #triple-box-words {
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .intro {
+            padding: 10px;
+            font: var(--headline);
+            font-size: 2.5rem;
+
+
+        }
+
+        .rest {
+            padding-left: 10px;
+            font-family: sans-serif;
+            font-size: 1.2rem;
+        }
+
+        #triple-box-half {
+            background-color: var(--orange);
+            background-image: url('me-square.jpeg');
+
+            background-blend-mode: luminosity;
+            display: none;
+        }
+
+        #triple-box-photo {
+
+            background-image: url('me-square.jpeg');
+        }
+
+        #gallery {
+
+            margin: 10px;
+        }
+
+        .label {
+            background: var(--orange);
+            padding: 10px;
+            color: white;
+            font: var(--headline);
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+
+        .carousel {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: grey;
+            color: black;
+
+        }
+
+        .beneath {
+            display: flex;
+        }
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 10px 10px 0px;
+        }
+
+        .attribution {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid var(--orange);
+            color: var(--orange);
+            font: var(--headline);
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .blurb {
+            font: var(--body);
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arrows {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            width: 15vw;
+            height: 15vw;
+            background-color: black;
+        }
+
+        .link {
+            background-color: var(--orange);
+            height: 15vw;
+            color: white;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/css/themes/splide-default.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="name">Bradley Sansom</div>
+        <nav>
+            <ul>
+                <li>
+                    <div class="nav-icon"></div>
+                </li>
+                <li>
+                    <div class="nav-icon"></div>
+                </li>
+                <li>
+                    <div class="nav-icon"></div>
+                </li>
+                <li>
+                    <div class="nav-icon"></div>
+                </li>
+                <li>
+                    <div class="nav-icon"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section class="triple">
+        <div class="triple-box" id="triple-box-words"><span class="intro">Designer, creator, maker, tinkerer</span><span
+                class="rest">and various other nouns</span>
+        </div>
+        <div class="triple-box" id="triple-box-half"></div>
+        <div class="triple-box" id="triple-box-photo"></div>
+    </section>
+    <hr>
+    <section id="gallery">
+        <article id="terrors">
+            <div class="label">Terrors</div>
+            <div class="carousel splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="beneath">
+                <div class="comment">
+                    <div class="attribution"><span class="unit">Unit X 2022</span><span class="institution">Manchester
+                            School
+                            of
+                            Art</span></div>
+                    <div class="blurb">Collaborating with students from the Graphic Design and Fashion Art Direction
+                        courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then curated an
+                        interactive digital lookbook.</div>
+                </div>
+                <div class="controls">
+                    <div class="arrows">
+                        <div class="left-arrow"></div>
+                        <div class="right-arrow"></div>
+                    </div>
+                    <div class="link">Visit</div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+</body>
+<script>
+    import Splide from '@splidejs/splide';
+
+    new Splide('.splide').mount();
+
+
+</script>
+
+</html>
