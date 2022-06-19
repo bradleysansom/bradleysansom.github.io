@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradford Pit</title>
+    <style>
+        :root {
+            --green: #0d8e38;
+        }
+
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            background-image: url('rust-left.png'), url('rust-right.png');
+            background-position: left, right;
+            background-size: 10%, 10%;
+            background-repeat: repeat-y;
+        }
+
+        main {
+            background-image: url('amalgam.png');
+            width: 80vw;
+            margin: auto;
+        }
+
+        main article {
+            margin: 0px 5%;
+        }
+
+        header {
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+
+        }
+
+        header img {
+            max-width: 60vw;
+            max-height: 150px;
+        }
+
+        div.blurb {
+            height: 700px;
+            display: flex;
+
+            color: #222222;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10px 30% 10px 10px;
+        }
+
+        h3 {
+            font-family: monotype-grotesque-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2rem;
+        }
+
+        section.jumbo {
+            border-radius: 30px;
+            background-color: white;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section.jumbo img {
+            border-radius: 30px;
+            max-height: 90vh;
+            max-width: 100%;
+            aspect-ratio: 1;
+        }
+
+        button.green {
+            margin: 10px;
+            background-color: var(--green);
+            border: 0;
+            outline: 0;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 1.5rem;
+            font-family: monotype-grotesque-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        @font-face {
+            font-family: 'icons';
+            src: url('fonts/icons.eot?3teg6c');
+            src: url('fonts/icons.eot?3teg6c#iefix') format('embedded-opentype'),
+                url('fonts/icons.ttf?3teg6c') format('truetype'),
+                url('fonts/icons.woff?3teg6c') format('woff'),
+                url('fonts/icons.svg?3teg6c#icons') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icons' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-a:before {
+            content: "\e900";
+            padding-left: 10px;
+            font-size: 1.25rem;
+        }
+
+
+        p {
+            font-family: urw-din, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        section.jumbo p {
+            margin: 10px 10%;
+        }
+
+        div.fade {
+            position: sticky;
+            width: 100%;
+            bottom: 0;
+            height: 200px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 97%, rgba(0, 0, 0, 0) 100%);
+
+        }
+
+        section.pair {
+            margin: 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        section.pair-single {
+            background-color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            flex-grow: 1;
+            background-size: 50% cover;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            min-height: 300px;
+        }
+
+        h4.subtitle {
+            font-family: urw-din, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2rem;
+            color: var(--green);
+        }
+
+        #panel-news,
+        #panel-education {
+            background-image: url('mine.png');
+        }
+
+        #panel-archive,
+        #panel-kit {
+            background-image: url('inn.png');
+        }
+
+        button.hand {
+            border: 0;
+            background: transparent;
+            color: var(--green);
+            position: relative;
+            text-align: right;
+            padding: 0;
+        }
+
+        button.hand span:before {
+            font-size: 3rem !important;
+        }
+
+        section.feature {
+            background-color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div.sidebyside {
+            display: flex;
+            width: 100%;
+        }
+
+        div.sidebyside img {
+            width: 50%;
+            height: fit-content;
+            border-radius: 30px;
+        }
+
+        blockquote {
+            font-size: 1.5rem;
+            font-family: monotype-grotesque-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: var(--green);
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/bof4kio.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <header><img src="logo.png" alt="Bradford Pit"></header>
+            <div class="blurb">
+                <h3>The Bradford Pit Project commemorates the colliery that used to stand on the site now
+                    occupied by Sportcity and the
+                    Etihad Stadium.</h3><br>
+                <h3>It was set up to ensure that the people and places that contributed to
+                    development of Manchester will be
+                    marked and
+                    celebrated.</h3>
+            </div>
+            <section class="jumbo">
+                <h3 class="headline">The pit</h3>
+                <img src="map.gif" alt="Map of the site">
+                <p>Bradford Colliery was located on Forge Lane in the Bradford district of East Manchester, an area
+                    which these days is more commonly referred to as Beswick or Eastlands.</p>
+                <button class="green">Explore the area through time on our interactive map <span
+                        class="icon-a"></span></button>
+            </section>
+            <section class="pair">
+                <section class="pair-single" id="panel-news">
+                    <h3 class="headline">News</h3>
+                    <h4 class="subtitle">Updates about the project's activities</h4>
+                    <button class="hand"><span class="icon-a"></span></button>
+                </section>
+                <section class="pair-single" id="panel-archive">
+                    <h3 class="headline">Archive</h3>
+                    <h4 class="subtitle">Delve into the archives collected by the project</h4>
+                    <button class="hand"><span class="icon-a"></span></button>
+                </section>
+            </section>
+            <section class="feature">
+                <h3 class="headline">The miners</h3>
+                <div class="sidebyside"><img src="miner.png" alt="">
+                    <blockquote>“Even when you'd have a shower, round your eyes would be dirty - you looked like you
+                        were wearing mascara”
+                        <br><br>
+                        “If you had an accident, you were reliant on your mates to get you out on a stretcher”
+                        <button class="green">Listen to the miners' stories<span class="icon-a"></span></button>
+                    </blockquote>
+                </div>
+            </section>
+            <section class="pair">
+                <section class="pair-single" id="panel-kit">
+                    <h3 class="headline">Kit</h3>
+                    <h4 class="subtitle">Learn about what the miners wore and how they carried out their jobs
+                    </h4>
+                    <button class="hand"><span class="icon-a"></span></button>
+                </section>
+                <section class="pair-single" id="panel-education">
+                    <h3 class="headline">Education</h3>
+                    <h4 class="subtitle">Resources for schools to teach a new generation about the people who powered
+                        Manchester
+                    </h4>
+                    <button class="hand"><span class="icon-a"></span></button>
+                </section>
+            </section>
+            &nbsp;
+            <br>&nbsp;
+            <br>&nbsp;
+            <br>&nbsp;
+            <br>&nbsp;
+            <br>
+        </article>
+
+    </main>
+    <div class="fade"></div>
+</body>
+
+</html>
