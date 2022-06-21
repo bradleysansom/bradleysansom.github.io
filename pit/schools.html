@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradford Pit - Schools and Education</title>
+    <style>
+        :root {
+            --green: #0d8e38;
+        }
+
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            background-image: url('rust-left.png'), url('rust-right.png');
+            background-position: left, right;
+            background-size: 10%, 10%;
+            background-repeat: repeat-y;
+        }
+
+        main {
+            background-image: url('amalgam.png');
+            width: 80vw;
+            margin: auto;
+        }
+
+        main article {
+            margin: 0px 5%;
+        }
+
+        header {
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+
+        }
+
+        header img {
+            max-width: 60vw;
+            max-height: 150px;
+        }
+
+        div.blurb {
+            height: 700px;
+            display: flex;
+
+            color: #222222;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10px 30% 10px 10px;
+        }
+
+        h3 {
+            font-family: monotype-grotesque-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2rem;
+        }
+
+        section.jumbo {
+            border-radius: 30px;
+            background-color: white;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section.jumbo img {
+            border-radius: 30px;
+            max-height: 90vh;
+            max-width: 100%;
+            aspect-ratio: 1;
+        }
+
+        button.green {
+            margin: 10px;
+            background-color: var(--green);
+            border: 0;
+            outline: 0;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 1.5rem;
+            font-family: monotype-grotesque-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        @font-face {
+            font-family: 'icons';
+            src: url('fonts/icons.eot?3teg6c');
+            src: url('fonts/icons.eot?3teg6c#iefix') format('embedded-opentype'),
+                url('fonts/icons.ttf?3teg6c') format('truetype'),
+                url('fonts/icons.woff?3teg6c') format('woff'),
+                url('fonts/icons.svg?3teg6c#icons') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icons' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-a:before {
+            content: "\e900";
+            padding-left: 10px;
+            font-size: 1.25rem;
+        }
+
+
+        p {
+            font-family: urw-din, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        section.jumbo p {
+            margin: 10px 10%;
+        }
+
+        div.fade {
+            position: sticky;
+            width: 100%;
+            bottom: 0;
+            height: 200px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 97%, rgba(0, 0, 0, 0) 100%);
+
+        }
+
+        section.pair {
+            margin: 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        section.pair-single {
+            background-color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            flex-grow: 1;
+            background-size: 50% cover;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            min-height: 300px;
+        }
+
+        h4.subtitle {
+            font-family: urw-din, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2rem;
+            color: var(--green);
+        }
+
+        #panel-news,
+        #panel-education {
+            background-image: url('mine.png');
+        }
+
+        #panel-archive,
+        #panel-kit {
+            background-image: url('inn.png');
+        }
+
+        button.hand {
+            border: 0;
+            background: transparent;
+            color: var(--green);
+            position: relative;
+            text-align: right;
+            padding: 0;
+        }
+
+        button.hand span:before {
+            font-size: 3rem !important;
+        }
+
+        section.feature {
+            background-color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div.sidebyside {
+            display: flex;
+            width: 100%;
+        }
+
+        div.sidebyside img {
+            width: 50%;
+            height: fit-content;
+            border-radius: 30px;
+        }
+
+        blockquote {
+            font-size: 1.5rem;
+            font-family: monotype-grotesque-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: var(--green);
+        }
+
+        section.article {
+            background-color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 30px 0px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/bof4kio.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <header><img src="logo.png" alt="Bradford Pit"></header>
+            <div class="blurb">
+                <h3>The Bradford Pit Project commemorates the colliery that used to stand on the site now
+                    occupied by Sportcity and the
+                    Etihad Stadium.</h3>
+
+            </div>
+            <section class="article">
+                <h3 class="headline">Schools and educational activities</h3>
+                <h4 class="subtitle">Learn with us</h4>
+                <h4 class="subtitle">Discover educational activities that will ignite historical exploration of the
+                    Bradford Colliery</h5>
+                    <p>The Bradford Pit Project aims to revive the memory of the colliery and educate and engage a new
+                        audience about its
+                        history and its legacy, much of which is still relevant today. Why? We understand that it is
+                        important to acknowledge
+                        the heritage that the site offers and understand its significance as it has consequently
+                        impacted
+                        the development and
+                        the lives of those in the area. This Schools and Educational Activities page can therefore be
+                        used
+                        as a tool to achieve
+                        our objective whilst also sharing information about the colliery in a fun and engaging way.
+                        We have also had great success in our previous in-person activities which you can see below,
+                        involving people of all
+                        ages, cultures and backgrounds welcoming public input in order to integrate communities through
+                        heritage.
+                    </p>
+                    <h4 class="subtitle">Guidance for teachers</h4>
+                    <p>In this space you will find a range of activities you can use as a class, in small groups or as
+                        individuals to enable
+                        students to learn about the project, the colliery, and the stories we have highlighted. We
+                        suggest
+                        allowing time for
+                        your students to explore this page where they will find unique, interactive, and engaging
+                        material
+                        that will stimulate
+                        their comprehensive skills along with their creativity and imagination. Whilst some of the
+                        material
+                        is targeted towards
+                        Secondary school students, there is a range of activities for all levels so that all students
+                        will
+                        be able to learn,
+                        understand, and have fun whilst exploring history. To help, we have recommended the appropriate
+                        age
+                        range for each
+                        activity so you as the teacher can guide your students as they learn.</p>
+                    <h4 class="subtitle">Guidance for students</h4>
+                    <p>This webpage is full of creative activities that will introduce you to the history of the
+                        Bradford
+                        coal mine. The
+                        activities below will help you to learn about the proud past of the site, its people and its
+                        surroundings and will also
+                        allow you to use your imagination as you begin important discussions about the site. We have
+                        pulled
+                        together a range of
+                        activities for you to do including worksheets and creative writing, and have highlighted our
+                        Audio
+                        Library so you can
+                        listen to some of the miners' real stories - so get exploring!</p>
+            </section>
+            <section class="article">
+                <h3 class="headline">Activities</h3>
+                <h4 class="subtitle">Worksheets</h4>
+                <p>These worksheets are available to download as a pdf and are printable.
+                    We suggest verbally sharing information with your students as they fill these sheets in – sharing
+                    digestible information
+                    about what the project is, why the project was started, and what the colliery was. This information
+                    is available on our
+                    About page.
+                </p>
+                <button class="green">View and download worksheets <span class="icon-a"></span></button>
+                <h4 class="subtitle">Print work</h4>
+                <p>This activity will give students the ability to create their own material commemorating the colliery
+                    and the miners.
+                    Using materials like charcoal, paint and fabric, see our featured story from 31 March 2015 where
+                    ex-miner Brian Grayson
+                    preserved the Bradford branch's National Union of Miners banner and create your own banner design!
+                    This activity can be done whilst verbally sharing digestible information about what our project is,
+                    why the project was
+                    started, and what the colliery was - all available on our About page.
+                    This activity is recommended for lower Primary school students and above.
+                </p>
+                <button class="green">See the work the pupils created <span class="icon-a"></span></button>
+                <h4 class="subtitle">Explore our interactive map</h4>
+                <p>Able to explore our fully interactive map as a class, small group or individually, students will gain
+                    a great
+                    understanding of just how big the colliery was. There are also many stories to explore, and plenty
+                    of opportunities to
+                    begin interesting discussions.
+                    This activity is recommended for mid-high Primary school students and above.
+                </p>
+                <button class="green">View the interactive map <span class="icon-a"></span></button>
+                <h4 class="subtitle">Watch and listen to our oral history collection including our animated videos</h4>
+                <p>Our Audio Library features real-life stories told by those who worked at the pit along with
+                    recordings from other people
+                    such as the miners' wives. We have also animated a few of these stories!
+                    This activity is recommended for mid-high Primary school students and above.
+                </p>
+                <button class="green">Explore our audio library <span class="icon-a"></span></button>
+                <h4 class="subtitle">Try your hand at creative writing</h4>
+                <p>Use the activities on this webpage as a tool to help you understand the lives of people affected by
+                    the colliery. Use
+                    this to help create a short story pretending you are a minor, a miner's family member, or whoever
+                    else you can think of.
+                    Perhaps you could even create a storyboard to tell your story where you can draw images to bring
+                    your imagination to
+                    life!</p>
+                <h4 class="subtitle">Use our audio library to discuss important topics</h4>
+                <p>Our collection of oral histories gives great information shared by people with first-hand experience
+                    of the pit and told
+                    in their voices. Use this collection to discuss what the impact the colliery's closure in 1968 had
+                    on a) the community
+                    b) families c) minors themselves, and d) occupational choice. Think about the camaraderie and
+                    relationships developed
+                    inside and outside the mine!
+                    This activity is recommended for Secondary school students and above.
+                </p>
+                <button class="green">Explore our audio library <span class="icon-a"></span></button>
+                <h4 class="subtitle">Explore the stories available on our website to discuss the pit's attraction</h4>
+                <p>Using our interactive map, focus on the Cemetery and acknowledge the amount of people associated with
+                    the pit and read
+                    the stories we have highlighted. Also explore our Accidents and Incidents page. Use these stories to
+                    help you discuss as
+                    a class, in small groups or individually why you think that despite the Pitt being a dangerous and
+                    unpredictable
+                    environment, why so many people chose to work there?
+                    This activity is recommended for Secondary school students and above.
+                </p>
+                <button class="green">View the interactive map <span class="icon-a"></span></button>
+            </section>
+            <section class="article">
+                <h3 class="headline">Our activities in the community</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis ipsum, mollis a varius in,
+                    venenatis vestibulum
+                    enim. Integer imperdiet finibus arcu at ultrices. Donec pulvinar vel urna et tincidunt. Vestibulum
+                    arcu augue, mattis
+                    eget semper vel, commodo ac mauris. Nulla facilisi. Praesent vel pulvinar risus. Vestibulum quis
+                    nibh ex. Class aptent
+                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean volutpat ex
+                    quis ante malesuada,
+                    sit amet congue nisl consequat. Quisque rutrum, urna et scelerisque porttitor, diam est consectetur
+                    diam, eget lacinia
+                    libero lorem ut nisl. Sed congue pulvinar tellus eu faucibus. Phasellus luctus arcu eget metus
+                    scelerisque, quis commodo
+                    augue tempus. Ut enim dolor, ornare vitae viverra in, vulputate et elit. Curabitur eget lectus non
+                    lacus malesuada
+                    porta.</p>
+            </section>
+        </article>
+
+    </main>
+    <div class="fade"></div>
+</body>
+
+</html>
