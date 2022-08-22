@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bradley Sansom</title>
+  <style>
+@font-face {
+    font-family: 'dinishbold';
+    src: url('dinish-bold-webfont.woff2') format('woff2'),
+    url('dinish-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+
+
+@font-face {
+    font-family: 'dinishitalic';
+    src: url('dinish-italic-webfont.woff2') format('woff2'),
+    url('dinish-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+
+
+@font-face {
+    font-family: 'dinishregular';
+    src: url('dinish-regular-webfont.woff2') format('woff2'),
+    url('dinish-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('IBMPlexSans-SemiBold.woff2') format('woff2'),
+    url('IBMPlexSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('PTSans-Bold.woff2') format('woff2'),
+    url('PTSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+    body {
+      font-family: 'Bahnschrift', 'dinishbold', 'DIN', 'DIN 1451', 'FF DIN', 'Roboto', sans-serif;
+      transition: .5s;
+      margin: 10px;
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .header,
+    footer {
+      padding: 20px;
+      display: flex;
+      height: auto;
+
+      text-align: left;
+
+      background: linear-gradient(90deg, #008080 0%, #79d2b8 100%);
+      flex-direction: row;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    .header img {
+      height: 80px;
+      max-width: 70vw;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav ul li {
+      transition: .5s;
+      display: inline;
+      color: #ffffff;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+    }
+
+    .nav ul li a {
+      transition: .5s;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav ul li:hover {
+      background-color: #ffffff;
+      transition: .5s;
+    }
+
+    .nav ul li:hover a {
+      transition: .5s;
+      color: #008080;
+    }
+
+
+
+    .links ul li {
+
+      transition: .5s;
+      display: inline;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+
+    .links ul li a {
+      transition: .5s;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .links ul li:hover {
+      transition: .5s;
+      background-color: #ffffff;
+    }
+
+    .links ul li:hover a {
+      transition: .5s;
+      color: #008080;
+    }
+
+    .links ul li svg {
+
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+    }
+
+    .links ul li svg use {
+      transition: .5s;
+    }
+
+    .links ul li:hover svg use {
+      transition: .5s;
+      fill: #008080;
+    }
+
+    .links ul {
+      padding-left: 0;
+
+    }
+
+    main {
+      padding: 10px;
+      color: #ffffff;
+    }
+
+    main a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+
+    img.greeting {
+      height: 8vw;
+      max-width: 50vw;
+      padding-bottom: 10px;
+    }
+
+    .welcome {
+      border: 2px solid rgba(121, 210, 184, 1);
+      background-image: url('concrete.jpg');
+      padding: 20px;
+      font-size: 1.5rem;
+    }
+
+    .projects {
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: grid;
+      row-gap: 20px;
+    }
+
+    .project {
+      background-color: rgb(194, 194, 194);
+      border-radius: 10px;
+      padding: 20px;
+      color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .project-title {
+      font-size: 4rem;
+      font-weight: bold;
+      color: rgb(122, 122, 122);
+    }
+
+    .project-blurb {
+      max-width: 500px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .project-gallery {
+      background-color: white;
+      padding: 10px;
+    }
+
+    .project-tag {
+      padding: 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .project-gallery img {
+      max-width: 300px;
+    }
+
+    .project-link {
+      outline: none;
+      border: none;
+      background-color: rgb(122, 122, 122);
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="/"><img src="/signature.png" alt="Bradley Sansom"></a>
+    </div>
+    <div class="nav" style="display:none;">
+      <ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <main>
+    <div class="welcome">
+      <h1>I'm Bradley Sansom.</h1>
+      <h2>Here's some stuff I've made...</h2>
+    </div>
+    <div class="projects">
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            A font that melts
+          </div>
+          <div class="project-blurb">
+            Set a brief to bring the words of a Greta Thunberg speech to life, I created a typeface inspired by the melting of glaciers. In order to draw attention to the urgency needed to mitigate climate change, I animated the fonts into a disappearing installation.
+          </div>
+          <button class="project-link" onclick="window.location.href='vt3/index.html';">
+            View project portfolio
+          </button>
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'IBM Plex Sans';background-color:#163bb7;color:white;">
+            Visual Thinking 3<br>
+            Manchester School of Art
+          </div>
+          <div class="project-gallery">
+
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Magazines project
+          </div>
+          <div class="project-blurb">
+            Designing spreads for two magazine articles; one provided for us, about the films of Wes Anderson, and one that I wrote myself, about Victoria Wood's use of food as a comedic device in her sitcom dinnerladies.
+          </div>
+          <button class="project-link" onclick="window.location.href='magazines/index.html';">
+            View project portfolio
+          </button>
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'IBM Plex Sans';background-color:#E74011;color:white;">
+            Visual Thinking 2<br>
+            Manchester School of Art
+          </div>
+          <div class="project-gallery">
+            <img src="magazines/title.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            26 + 1
+          </div>
+          <div class="project-blurb">
+            My work for the Found Alphabet and Letterspace projects of my degree course, all about exploring
+            typography as an introduction to the first year. I made my own digital sketchbooks rather than
+            doing it on Padlet or a PDF or whatever.
+          </div>
+          <button class="project-link" onclick="window.location.href='26+1/index.html';">
+            View project portfolio
+          </button>
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'IBM Plex Sans';background-color:#249600;color:white;">
+            Visual Thinking 1<br>
+            Manchester School of Art
+          </div>
+          <div class="project-gallery">
+            <img src="twent.png">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Channel 8
+          </div>
+          <div class="project-blurb">
+            The work I did in my second year of A-level Graphic Design - producing the branding for a
+            fictional local TV channel. I extended the brief to include coded elements incorporating
+            randomisation and graphic generation to blend the worlds of graphics and computing. I got an A*
+            for this subject.
+          </div>
+          <button class="project-link" onclick="window.location.href='portfolio#broadcasting';">
+            View project portfolio
+          </button><br>
+          <button class="project-link" onclick="window.location.href='o/c/h/o/index.html';">
+            Play with the graphics generators (desktop only)
+          </button>
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'PT Sans';background-color:#662483;color:white;">
+            A-level Graphic Design<br>
+            New College Bradford
+          </div>
+          <div class="project-gallery">
+            <img src="bars.png" height="200px" width="300px">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            My Local Area
+          </div>
+          <div class="project-blurb">
+            My A-level Computer Science NEA. A web app which takes a user's postcode and retrieves data from
+            a range of APIs about their neighbourhood, such as weather, local politicians, council areas,
+            nearby GPs and dentists, and local community groups. The project received a grade of A*.
+          </div>
+          <button class="project-link" onclick="window.location.href='local/index.html';">
+            Try out the web app
+          </button>
+          <div class="project-blurb" style="font-size:1rem;color:rgb(122, 122, 122);">
+            Please note that some features might not work I didn't use any paid API tiers. And I had to
+            comment out some of the NHS functions as they have really low usage caps.
+          </div>
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'PT Sans';background-color:#662483;color:white;">
+            A-level Computer Science<br>
+            New College Bradford
+          </div>
+          <div class="project-gallery">
+            <img src="mla-ss.png">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Just a Minute
+          </div>
+          <div class="project-blurb">
+            A quick game I made in a couple of hours. Based on the <a
+              href="https://en.wikipedia.org/wiki/Just_a_Minute"
+              style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel
+              show of the same
+              name</a>,
+            where players have to speak for sixty seconds on a subject without hesitation, repetition, or
+            deviation, this
+            web app allows you to play along at home, with between two and four players.
+          </div>
+          <button class="project-link" onclick="window.location.href='justaminute/index.html';">
+            Try out the game
+          </button>
+
+        </div>
+        <div class="right">
+          <div class="project-tag" style="background-color:rgb(122, 122, 122);color:white;">
+            Personal project
+          </div>
+          <div class="project-gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Just_a_Minute_ident_card_NP.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Wayfinding
+          </div>
+          <div class="project-blurb">
+            One of the projects I did for graphic design A-level; it involved producing a set of wayfinding
+            signs for various locations in Bradford city centre with the aim of making it a nicer place for
+            pedestrians.
+          </div>
+          <button class="project-link" onclick="window.location.href='portfolio#wayfinding';">
+            View project portfolio
+          </button><br>
+          <button class="project-link" onclick="window.location.href='sphere/index.html';">
+            View the three 360° panoramas I made
+          </button><br>
+          <button class="project-link" onclick="window.location.href='signage/index.html';">
+            View some of the animated buildings I made (flashing images)
+          </button>
+
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'PT Sans';background-color:#662483;color:white;">
+            A-level Graphic Design<br>
+            New College Bradford
+          </div>
+          <div class="project-gallery">
+            <img src="borni.png">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Branding
+          </div>
+          <div class="project-blurb">
+            As part of A-level graphic design, I responded to a live brief to design the branding for a
+            local skincare company. The owner really liked my designs :)
+          </div>
+          <button class="project-link" onclick="window.location.href='portfolio#branding';">
+            View project portfolio
+          </button><br>
+          <button class="project-link"
+            onclick="window.location.href='https://drive.google.com/file/d/16pbn3bSRLUQgmqM4eh0tffkdLBx3n7ZS/view';">
+            View branding style board
+          </button>
+
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'PT Sans';background-color:#662483;color:white;">
+            A-level Graphic Design<br>
+            New College Bradford
+          </div>
+          <div class="project-gallery">
+            <img src="skcon.png">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Infographics
+          </div>
+          <div class="project-blurb">
+            One of the first projects I did in A-level graphic design, I made an infographic explaining how
+            a UK general election works to first-time voters.
+          </div>
+          <button class="project-link" onclick="window.location.href='portfolio#infographics';">
+            View project portfolio
+          </button><br>
+          <button class="project-link"
+            onclick="window.location.href='https://drive.google.com/file/d/12h0AHF3GpHjj_Bh9ZzMPn8WEupSc8SS1/view';">
+            View infographic
+          </button>
+
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'PT Sans';background-color:#662483;color:white;">
+            A-level Graphic Design<br>
+            New College Bradford
+          </div>
+          <div class="project-gallery">
+            <img src="elect.png">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            Election AR
+          </div>
+          <div class="project-blurb">
+            Having been asked to "make a poster" in A-level politics, I (as usual) took it too far, making a
+            set of augmented reality fact files using AR.js that revealed more content when scanned.
+          </div>
+
+          <button class="project-link" style="background-color:rgb(158, 158, 158)">
+            Unfortunately not online any more
+          </button>
+
+        </div>
+        <div class="right">
+          <div class="project-tag" style="font-family:'PT Sans';background-color:#662483;color:white;">
+            A-level Government & Politics<br>
+            New College Bradford
+          </div>
+          <div class="project-gallery">
+            <img src="thatch.png">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            @psblyric
+          </div>
+          <div class="project-blurb">
+            A (moderately successful) Twitter bot that I run, which posts hourly snippets of lyrics from the
+            back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through
+            the Tasker app and IFTTT.
+          </div>
+          <button class="project-link" onclick="window.location.href='https://twitter.com/psblyric';">
+            View on Twitter
+          </button>
+
+        </div>
+        <div class="right">
+          <div class="project-tag" style="background-color:rgb(122, 122, 122);color:white;">
+            Personal project
+          </div>
+          <div class="project-gallery">
+            <img src="psb.jpg" style="border-radius:100%;">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="left">
+          <div class="project-title">
+            ... and before all that
+          </div>
+          <div class="project-blurb">
+            I've been making stuff and tinkering about since I was a young child.<br><br>I used to use
+            PowerPoint quite a bit, around the age of five or six. I suppose it's where my interest in
+            graphic design began.<br><br>I've raided my old hard drives for stuff I made back then, some of
+            it unintentionally humourous, and collected it on a Twitter account.
+          </div>
+          <button class="project-link" onclick="window.location.href='https://twitter.com/dotppt';">
+            View on Twitter
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script>
+    var today = new Date();
+    var hour = today.getHours();
+    console.log(hour);
+    if (hour <= 5) {
+      var greeting = "goodnight.png";
+    } else if (hour <= 11) {
+      var greeting = "goodmorning.png";
+    } else if (hour <= 17) {
+      var greeting = "goodafternoon.png";
+    } else if (hour <= 22) {
+      var greeting = "goodevening.png";
+    } else {
+      var greeting = "goodnight.png";
+    }
+    document.getElementById('greetingText').src = greeting;
+  </script>
+</main>
+<footer>
+  <div class="links">
+    <ul>
+      <li id="github">
+
+        <a href="https://github.com/bradleysansom"><svg class="svg-icon" width="20px" height="20px">
+          <use xlink:href="/assets/minima-social-icons.svg#github" fill="#ffffff"></use>
+        </svg>bradleysansom</a>
+      </li>
+      <li id="email">
+        <a href="mailto:bradley-sansom@outlook.com"><b>@</b> bradley-sansom@outlook.com</a>
+      </li>
+      <li id="flickr"><a href="https://flickr.com/people/bradleysans/"><svg class="svg-icon" width="20px"
+        height="20px">
+        <use xlink:href="/assets/minima-social-icons.svg#flickr" fill="#ffffff"></use>
+      </svg>bradleysans</a>
+      </li>
+
+
+    </ul>
+  </div>
+</footer>
+
+
+
+</body>
+
+</html>

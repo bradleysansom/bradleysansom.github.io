@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradley Sansom</title>
+    <style>
+        @font-face {
+            font-family: 'Nougat-ExtraBlack';
+            src: url('Nougat-ExtraBlack.woff2') format('woff2'),
+                url('Nougat-ExtraBlack.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        main {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        header,
+        div.section {
+            font-family: 'Nougat-ExtraBlack';
+            height: 300px;
+            width: 100%;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+        }
+
+        div.content {
+            width: max-content;
+            flex-grow: 1;
+            display: flex;
+            margin: 30px;
+        }
+
+        .timeline {
+            width: 50px;
+            background-size: 50px;
+            background-position: top;
+            height: 300px;
+        }
+
+        .timeline.feathers {
+            background-image: url('line-feathered.png');
+
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        .timeline.plain {
+            background-image: url('line-plain.png');
+        }
+
+        header .content {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            align-items: flex-start;
+            justify-content: flex-start;
+            line-height: 10px;
+            font-size: 1.5rem;
+        }
+
+        .project {
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .project-title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: rgb(122, 122, 122);
+        }
+
+        .project-blurb {
+            max-width: 500px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .project-gallery {
+            background-color: white;
+            padding: 10px;
+        }
+
+        .project-tag {
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .project-gallery img {
+            max-width: 300px;
+        }
+
+        .project-link {
+            outline: none;
+            border: none;
+
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: inherit;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="timeline feathers"></div>
+            <div class="content">
+                <h1>Bradley Sansom</h1>
+                <h2>Designer, etc</h2>
+            </div>
+        </header>
+        <div class="section">
+            <div class="timeline plain"></div>
+            <div class="project">
+                <div class="left">
+                    <div class="project-title">
+                        A font that melts
+                    </div>
+                    <div class="project-blurb">
+                        Set a brief to bring the words of a Greta Thunberg speech to life, I created a typeface inspired
+                        by the
+                        melting of glaciers. In order to draw attention to the urgency needed to mitigate climate
+                        change, I animated
+                        the fonts into a disappearing installation.
+                    </div>
+                    <button class="project-link" onclick="window.location.href='vt3/index.html';">
+                        View project portfolio
+                    </button>
+                </div>
+                <div class="right">
+                    <div class="project-tag" style="font-family:'IBM Plex Sans';background-color:#163bb7;color:white;">
+                        Visual Thinking 3<br>
+                        Manchester School of Art
+                    </div>
+                    <div class="project-gallery">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="timeline plain"></div>
+            <div class="content project">
+                <div class="left">
+                    <div class="project-title">
+                        Magazines project
+                    </div>
+                    <div class="project-blurb">
+                        What I'm working on at the moment in graphic design; two briefs, creating magazine spreads on a
+                        range of topics.
+                    </div>
+                    <button class="project-link" style="background-color:rgb(158, 158, 158)">
+                        Not finished yet...
+                    </button>
+                </div>
+                <div class="right">
+                    <div class="project-tag" style="font-family:'IBM Plex Sans';background-color:#E74011;color:white;">
+                        Visual Thinking 2<br>
+                        Manchester School of Art
+                    </div>
+                    <div class="project-gallery">
+                        <img src="mags-placeholder.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
