@@ -158,10 +158,17 @@
             display: flex;
             flex-direction: column;
             border: 3px solid var(--orange);
-            color: var(--orange);
             font: var(--headline);
             padding: 5px;
             margin-bottom: 10px;
+        }
+
+        .unit {
+            color: var(--orange);
+        }
+
+        .institution {
+            color: grey;
         }
 
         .blurb {
@@ -238,6 +245,11 @@
             color: white;
             outline: unset;
             outline-offset: unset;
+        }
+
+        hr {
+            border: none;
+            border-bottom: 4px dotted grey;
         }
     </style>
     <!--Arrow forward-->
@@ -608,6 +620,72 @@
             </div>
         </article>
     </section>
+    <hr>
+    <section class="gallery">
+        <div class="section-header">Personal projects</div>
+        <article id="psb">
+            <div class="label">@psblyric</div>
+            <div class="carousel" id="psb_carousel">
+
+            </div>
+            <div class="beneath">
+                <div class="comment">
+                    <div class="attribution"><span class="unit">Twitter bot</span></div>
+                    <div class="blurb">A (moderately successful) Twitter bot that I run, which posts hourly snippets of
+                        lyrics from the
+                        back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through
+                        the Tasker app and IFTTT.</div>
+                </div>
+                <div class="controls">
+                    <div class="arrows">
+                        <div class="left-arrow" id="psb_left-arrow"><span class="material-symbols-outlined">
+                                arrow_back
+                            </span></div>
+                        <div class="right-arrow" id="psb_right-arrow"><span class="material-symbols-outlined">
+                                arrow_forward
+                            </span></div>
+                    </div>
+                    <div class="link" id="psb_link">Visit <span class="material-symbols-outlined">
+                            arrow_forward_ios
+                        </span></div>
+
+                </div>
+            </div>
+        </article>
+        <article id="jam">
+            <div class="label">Just a Minute</div>
+            <div class="carousel" id="jam_carousel">
+
+            </div>
+            <div class="beneath">
+                <div class="comment">
+                    <div class="attribution"><span class="unit">Web game</span></div>
+                    <div class="blurb">A quick game I made in a couple of hours. Based on the <a
+                            href="https://en.wikipedia.org/wiki/Just_a_Minute"
+                            style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel
+                            show of the same
+                            name</a>,
+                        where players have to speak for sixty seconds on a subject without hesitation, repetition, or
+                        deviation, this
+                        web app allows you to play along at home, with between two and four players.</div>
+                </div>
+                <div class="controls">
+                    <div class="arrows">
+                        <div class="left-arrow" id="jam_left-arrow"><span class="material-symbols-outlined">
+                                arrow_back
+                            </span></div>
+                        <div class="right-arrow" id="jam_right-arrow"><span class="material-symbols-outlined">
+                                arrow_forward
+                            </span></div>
+                    </div>
+                    <div class="link" id="jam_link">Visit <span class="material-symbols-outlined">
+                            arrow_forward_ios
+                        </span></div>
+
+                </div>
+            </div>
+        </article>
+    </section>
 </body>
 <script>
     // TERRORS
@@ -677,7 +755,7 @@
     melting_rightBtn.addEventListener("click", melting_moveRight);
     melting_leftBtn.addEventListener("click", melting_moveLeft);
     const melting_visit = () => {
-        window.location.href = "https://melting.live";
+        window.location.href = "melting";
     }
     melting_link.addEventListener("click", melting_visit);
 </script>
@@ -713,7 +791,7 @@
     magazines_rightBtn.addEventListener("click", magazines_moveRight);
     magazines_leftBtn.addEventListener("click", magazines_moveLeft);
     const magazines_visit = () => {
-        window.location.href = "https://magazines.live";
+        window.location.href = "magazines";
     }
     magazines_link.addEventListener("click", magazines_visit);
 </script>
@@ -749,7 +827,7 @@
     twentysixplusone_rightBtn.addEventListener("click", twentysixplusone_moveRight);
     twentysixplusone_leftBtn.addEventListener("click", twentysixplusone_moveLeft);
     const twentysixplusone_visit = () => {
-        window.location.href = "https://twentysixplusone.live";
+        window.location.href = "26+1";
     }
     twentysixplusone_link.addEventListener("click", twentysixplusone_visit);
 </script>
@@ -785,7 +863,7 @@
     channel8_rightBtn.addEventListener("click", channel8_moveRight);
     channel8_leftBtn.addEventListener("click", channel8_moveLeft);
     const channel8_visit = () => {
-        window.location.href = "https://channel8.live";
+        window.location.href = "portfolio#broadcasting";
     }
     channel8_link.addEventListener("click", channel8_visit);
 </script>
@@ -821,7 +899,7 @@
     local_rightBtn.addEventListener("click", local_moveRight);
     local_leftBtn.addEventListener("click", local_moveLeft);
     const local_visit = () => {
-        window.location.href = "https://local.live";
+        window.location.href = "local";
     }
     local_link.addEventListener("click", local_visit);
 </script>
@@ -857,7 +935,7 @@
     wayfinding_rightBtn.addEventListener("click", wayfinding_moveRight);
     wayfinding_leftBtn.addEventListener("click", wayfinding_moveLeft);
     const wayfinding_visit = () => {
-        window.location.href = "https://wayfinding.live";
+        window.location.href = "portfolio#wayfinding";
     }
     wayfinding_link.addEventListener("click", wayfinding_visit);
 </script>
@@ -893,7 +971,7 @@
     branding_rightBtn.addEventListener("click", branding_moveRight);
     branding_leftBtn.addEventListener("click", branding_moveLeft);
     const branding_visit = () => {
-        window.location.href = "https://branding.live";
+        window.location.href = "portfolio#branding";
     }
     branding_link.addEventListener("click", branding_visit);
 </script>
@@ -929,9 +1007,81 @@
     infographics_rightBtn.addEventListener("click", infographics_moveRight);
     infographics_leftBtn.addEventListener("click", infographics_moveLeft);
     const infographics_visit = () => {
-        window.location.href = "https://infographics.live";
+        window.location.href = "portfolio#infographics";
     }
     infographics_link.addEventListener("click", infographics_visit);
+</script>
+<script>
+    // psb
+    const psb_img = document.getElementById('psb_carousel');
+    const psb_rightBtn = document.getElementById('psb_right-arrow');
+    const psb_leftBtn = document.getElementById('psb_left-arrow');
+    const psb_link = document.getElementById('psb_link');
+    let psb_pictures = ['tablet-pan.gif', 'greta.png'];
+    psb_img.style.backgroundImage = "url('" + psb_pictures[0] + "')";
+    let psb_position = 0;
+    const psb_moveRight = () => {
+        console.log('psb_moveRight');
+        if (psb_position >= psb_pictures.length - 1) {
+            psb_position = 0
+            psb_img.style.backgroundImage = "url('" + psb_pictures[psb_position] + "')";
+            return;
+        }
+        psb_img.style.backgroundImage = "url('" + psb_pictures[psb_position + 1] + "')";
+        psb_position++;
+    }
+    const psb_moveLeft = () => {
+        console.log('psb_moveLeft');
+        if (psb_position < 1) {
+            psb_position = psb_pictures.length - 1;
+            psb_img.style.backgroundImage = "url('" + psb_pictures[psb_position] + "')";
+            return;
+        }
+        psb_img.style.backgroundImage = "url('" + psb_pictures[psb_position - 1] + "')";
+        psb_position--;
+    }
+    psb_rightBtn.addEventListener("click", psb_moveRight);
+    psb_leftBtn.addEventListener("click", psb_moveLeft);
+    const psb_visit = () => {
+        window.location.href = "twitter.com/psblyric";
+    }
+    psb_link.addEventListener("click", psb_visit);
+</script>
+<script>
+    // jam
+    const jam_img = document.getElementById('jam_carousel');
+    const jam_rightBtn = document.getElementById('jam_right-arrow');
+    const jam_leftBtn = document.getElementById('jam_left-arrow');
+    const jam_link = document.getElementById('jam_link');
+    let jam_pictures = ['tablet-pan.gif', 'greta.png'];
+    jam_img.style.backgroundImage = "url('" + jam_pictures[0] + "')";
+    let jam_position = 0;
+    const jam_moveRight = () => {
+        console.log('jam_moveRight');
+        if (jam_position >= jam_pictures.length - 1) {
+            jam_position = 0
+            jam_img.style.backgroundImage = "url('" + jam_pictures[jam_position] + "')";
+            return;
+        }
+        jam_img.style.backgroundImage = "url('" + jam_pictures[jam_position + 1] + "')";
+        jam_position++;
+    }
+    const jam_moveLeft = () => {
+        console.log('jam_moveLeft');
+        if (jam_position < 1) {
+            jam_position = jam_pictures.length - 1;
+            jam_img.style.backgroundImage = "url('" + jam_pictures[jam_position] + "')";
+            return;
+        }
+        jam_img.style.backgroundImage = "url('" + jam_pictures[jam_position - 1] + "')";
+        jam_position--;
+    }
+    jam_rightBtn.addEventListener("click", jam_moveRight);
+    jam_leftBtn.addEventListener("click", jam_moveLeft);
+    const jam_visit = () => {
+        window.location.href = "justaminute";
+    }
+    jam_link.addEventListener("click", jam_visit);
 </script>
 
 </html>
