@@ -22,6 +22,8 @@
             padding: 0;
             margin: 0;
             border: 0;
+            transition: .5s;
+            cursor: default;
         }
 
         header {
@@ -38,7 +40,11 @@
             text-align: center;
             padding: 10px 10px 0px 10px;
             font-size: 2.4rem;
+            transition: .5s;
+        }
 
+        .name:hover {
+            color: var(--orange);
 
         }
 
@@ -71,6 +77,15 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            transition: .5s;
+        }
+
+        .nav-icon:hover {
+            background-color: white;
+            color: var(--orange);
+            outline: 3px solid var(--orange);
+            outline-offset: -3px;
+
         }
 
         .triple {
@@ -205,6 +220,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            transition: .5s;
+        }
+
+        .left-arrow:hover,
+        .right-arrow:hover {
+            color: var(--orange);
         }
 
         .link {
@@ -253,6 +275,7 @@
             color: white;
             outline: unset;
             outline-offset: unset;
+            cursor: not-allowed;
         }
 
         hr {
@@ -270,9 +293,24 @@
             background-image: url('emley.jpg');
             margin: 0 10px;
             background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 10px;
+            text-align: center;
         }
 
 
+
+
+        .outro {
+            font: var(--headline);
+            color: white;
+        }
+
+        #nonsequitur {
+            font: var(--body);
+        }
 
         @media screen and (min-width: 450px) {
             .triple {
@@ -320,7 +358,6 @@
                 width: unset;
                 justify-content: flex-end;
                 gap: 10px;
-                margin-right: 10px;
             }
 
             .nav-icon {
@@ -336,6 +373,14 @@
                 display: flex;
                 align-items: center;
                 text-align: left;
+                line-height: 1;
+            }
+        }
+
+        @media screen and (min-width:1000px) {
+            .name:hover {
+                letter-spacing: 10px;
+
             }
         }
 
@@ -373,6 +418,40 @@
             body {
                 max-width: 1600px;
                 margin: auto;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222222;
+            }
+
+            .name {
+                color: white;
+            }
+
+            .section-header {
+                color: white;
+            }
+
+            .blurb {
+                color: white;
+            }
+
+            .institution {
+                color: white;
+            }
+
+            a {
+                color: white !important;
+            }
+
+            .link:hover {
+                background-color: #222222;
+            }
+
+            .nav-icon:hover {
+                background-color: #222222;
             }
         }
     </style>
@@ -461,6 +540,7 @@
                 <li>
                     <div class="nav-icon" id="instagram"><span class="icon-instagram"></span></div>
                 </li>
+
             </ul>
         </nav>
     </header>
@@ -893,7 +973,10 @@
         </div>
     </section>
     <hr>
-    <section id="emley"></section>
+    <section id="emley">
+        <div class="outro"><span id="copyright">© Bradley Sansom </span><span id="year"></span><br><span
+                id="nonsequitur"></span></div>
+    </section>
 </body>
 <script>
     // TERRORS
@@ -1318,6 +1401,24 @@
         window.location.href = "https://instagram.com/bradleysans";
     }
     instagram_link.addEventListener("click", instagram_visit);
+</script>
+<script>
+    // Outro
+    var year_placeholder = document.getElementById('year');
+    var nonsequitur_placeholder = document.getElementById('nonsequitur');
+    let year = new Date().getFullYear();
+    year_placeholder.innerHTML = year;
+    var nonsequiturs = [
+        'Your home may be reposessed if you do not keep up repayments on your mortgage',
+        'Your call is important to us, please stay on the line',
+        'Now with 20% extra free',
+        'Made in Yorkshire',
+        'GOLF CLUBS FOR SALE - used twice, £20 o.n.o.',
+        'Now in widescreen',
+        'Best wishes, kindest regards'
+    ];
+    var nonsequitur = nonsequiturs[Math.floor(Math.random() * nonsequiturs.length)];
+    nonsequitur_placeholder.innerHTML = nonsequitur;
 </script>
 
 </html>
