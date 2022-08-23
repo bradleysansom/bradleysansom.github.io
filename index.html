@@ -312,6 +312,51 @@
             font: var(--body);
         }
 
+        .quiet {
+            color: grey;
+        }
+
+        @keyframes slide-up {
+            0% {
+                background-position: top;
+            }
+
+            90% {
+                background-position: bottom;
+            }
+
+            100% {
+                background-position: top;
+            }
+        }
+
+        @keyframes panorama {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+
+        @keyframes hue {
+            0% {
+                filter: hue-rotate(0deg);
+                background-position: left;
+            }
+
+
+            50% {
+                background-position: right;
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+                background-position: left;
+            }
+        }
+
         @media screen and (min-width: 450px) {
             .triple {
                 flex-direction: row;
@@ -335,6 +380,7 @@
         @media screen and (min-width:650px) {
             span.intro {
                 font-size: 2.5rem;
+                max-width: 450px;
             }
         }
 
@@ -569,10 +615,10 @@
                                 School
                                 of
                                 Art</span></div>
-                        <div class="blurb">Collaborating with students from the Graphic Design and Fashion Art Direction
+                        <div class="blurb">Collaborating with students from across the Graphic Design and Fashion Art
+                            Direction
                             courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then curated
-                            an
-                            interactive digital lookbook.</div>
+                            an interactive digital lookbook.</div>
                     </div>
                     <div class="controls">
                         <div class="arrows">
@@ -592,7 +638,7 @@
 
             </article>
             <article id="melting">
-                <div class="label">A font that melts</div>
+                <div class="label">Melting font</div>
                 <div class="carousel" id="melting_carousel">
 
                 </div>
@@ -605,7 +651,8 @@
                                 Art</span></div>
                         <div class="blurb">Faced with a brief to bring new life to the words of a speech by Greta
                             Thunberg,
-                            I created a set of fonts which 'melt away', and explored how it could be used.</div>
+                            I created a set of fonts which 'melt away', and explored how they could be used across a
+                            range of applications.</div>
                     </div>
                     <div class="controls">
                         <div class="arrows">
@@ -623,7 +670,7 @@
                 </div>
             </article>
             <article id="magazines">
-                <div class="label">Magazines</div>
+                <div class="label">Editorial design</div>
                 <div class="carousel" id="magazines_carousel">
 
                 </div>
@@ -637,7 +684,8 @@
                         <div class="blurb">Designing spreads for two magazine articles; one provided for us, about the
                             films
                             of Wes Anderson, and one that I wrote
-                            myself, about Victoria Wood's use of food as a comedic device in her sitcom dinnerladies.
+                            myself, about Victoria Wood's use of food as a comedic device in her sitcom
+                            <em>dinnerladies</em>.
                         </div>
                     </div>
                     <div class="controls">
@@ -670,9 +718,8 @@
                         <div class="blurb">My work for the Found Alphabet and Letterspace projects of my degree course,
                             all
                             about exploring
-                            typography as an introduction to the first year. I made my own digital sketchbooks rather
-                            than
-                            doing it on Padlet or a PDF or whatever.</div>
+                            typography as an introduction to the first year through photography and letterform design.
+                        </div>
                     </div>
                     <div class="controls">
                         <div class="arrows">
@@ -707,10 +754,12 @@
                     <div class="comment">
                         <div class="attribution"><span class="unit">A-level Graphic Design</span><span
                                 class="institution">New College Bradford</span></div>
-                        <div class="blurb">The work I did in my second year of A-level Graphic Design - producing the
-                            branding for a
-                            fictional local TV channel. I extended the brief to include coded elements incorporating
-                            randomisation and graphic generation to blend the worlds of graphics and computing. I got an
+                        <div class="blurb">Producing a comprehensive branding system for a
+                            fictional local TV channel, inspired by technical test cards and patterns. I extended the
+                            brief to include coded elements incorporating
+                            randomisation and graphic generation to blend the worlds of graphics and computing. Later
+                            parts of the project focussed on designing branding for local elections news coverage,
+                            including set design and 3D rendering. I got an
                             A*
                             for this subject.</div>
                     </div>
@@ -740,11 +789,13 @@
                         <div class="attribution"><span class="unit">A-level Computer Science</span><span
                                 class="institution">New
                                 College Bradford</span></div>
-                        <div class="blurb">My A-level Computer Science NEA. A web app which takes a user's postcode and
+                        <div class="blurb">A web app which takes a user's postcode and
                             retrieves data from
                             a range of APIs about their neighbourhood, such as weather, local politicians, council
                             areas,
-                            nearby GPs and dentists, and local community groups. The project received a grade of A*.
+                            nearby GPs and dentists, and local community groups. The project received a grade of
+                            A*.<br><span class="quiet">Certain features may be unavailable depending on data
+                                providers.</span>
                         </div>
                     </div>
                     <div class="controls">
@@ -769,7 +820,7 @@
         <div class="section-header-subtitle">First year</div>
         <div class="articles">
             <article id="wayfinding">
-                <div class="label">Wayfinding project</div>
+                <div class="label">Wayfinding system</div>
                 <div class="carousel" id="wayfinding_carousel">
 
                 </div>
@@ -778,12 +829,15 @@
                         <div class="attribution"><span class="unit">A-level Graphic Design</span><span
                                 class="institution">New
                                 College Bradford</span></div>
-                        <div class="blurb">One of the projects I did for graphic design A-level; it involved producing a
+                        <div class="blurb">Producing a
                             set
                             of wayfinding
                             signs for various locations in Bradford city centre with the aim of making it a nicer place
                             for
-                            pedestrians.
+                            pedestrians. The arrival of the lockdown meant that the project had to be completed using
+                            found imagery without being able to visit the sites in person, allowing me to explore 360°
+                            panoramic images. I also designed a family of icons representing major public buildings in
+                            Bradford which I incorporated on to the signage.
                         </div>
                     </div>
                     <div class="controls">
@@ -804,7 +858,7 @@
                 </div>
             </article>
             <article id="branding">
-                <div class="label">Branding project</div>
+                <div class="label">Skin Kitchen Co branding</div>
                 <div class="carousel" id="branding_carousel">
 
                 </div>
@@ -813,9 +867,11 @@
                         <div class="attribution"><span class="unit">A-level Graphic Design</span><span
                                 class="institution">New
                                 College Bradford</span></div>
-                        <div class="blurb">As part of A-level graphic design, I responded to a live brief to design the
-                            branding for a
-                            local skincare company. The owner really liked my designs :)
+                        <div class="blurb">Responding to a live brief to design the
+                            brand for a
+                            local skincare company, I produced a branding system, set of guidelines, and range of
+                            application mock-ups. The owner really liked my designs, saying I "followed the brief really
+                            well, it would be a pleasure to work with Bradley in future".
                         </div>
                     </div>
                     <div class="controls">
@@ -835,7 +891,7 @@
                 </div>
             </article>
             <article id="infographics">
-                <div class="label">Infographics project</div>
+                <div class="label">Election infographic</div>
                 <div class="carousel" id="infographics_carousel">
 
                 </div>
@@ -844,10 +900,9 @@
                         <div class="attribution"><span class="unit">A-level Graphic Design</span><span
                                 class="institution">New
                                 College Bradford</span></div>
-                        <div class="blurb">One of the first projects I did in A-level graphic design, I made an
-                            infographic
-                            explaining how
-                            a UK general election works to first-time voters.
+                        <div class="blurb">In the lead-up to the 2019 general election, I produced an infographic aimed
+                            at young first-time voters aiming to explain how Britain's democratic systems work in an
+                            informal and engaging manner.
                         </div>
                     </div>
                     <div class="controls">
@@ -881,7 +936,9 @@
                         <div class="blurb">Having been asked to "make a poster" in A-level politics, I (as usual) took
                             it
                             too far, making a
-                            set of augmented reality fact files using AR.js that revealed more content when scanned.
+                            set of augmented reality fact files using AR.js that revealed more content when
+                            scanned.<br><span class="quiet">Now taken offline - it only works with the printed
+                                sheets.</span>
                         </div>
                     </div>
                     <div class="controls">
@@ -918,7 +975,8 @@
                             lyrics from the
                             back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running
                             through
-                            the Tasker app and IFTTT.</div>
+                            the Tasker app and IFTTT.<br><span class="quiet">Not affiliated with Pet Shop
+                                Boys</span></div>
                     </div>
                     <div class="controls">
                         <div class="arrows">
@@ -952,7 +1010,8 @@
                             where players have to speak for sixty seconds on a subject without hesitation, repetition,
                             or
                             deviation, this
-                            web app allows you to play along at home, with between two and four players.</div>
+                            web app allows you to play along at home, with between two and four players. <br><span
+                                class="quiet">Not affiliated with the BBC</span></div>
                     </div>
                     <div class="controls">
                         <div class="arrows">
@@ -1007,6 +1066,7 @@
         terrors_img.style.backgroundImage = "url('" + terrors_pictures[terrors_position - 1] + "')";
         terrors_position--;
     }
+
     terrors_rightBtn.addEventListener("click", terrors_moveRight);
     terrors_leftBtn.addEventListener("click", terrors_moveLeft);
     const terrors_visit = () => {
@@ -1020,7 +1080,7 @@
     const melting_rightBtn = document.getElementById('melting_right-arrow');
     const melting_leftBtn = document.getElementById('melting_left-arrow');
     const melting_link = document.getElementById('melting_link');
-    let melting_pictures = ['tablet-pan.gif', 'greta.png'];
+    let melting_pictures = ['tablet.png', 'greta.png'];
     melting_img.style.backgroundImage = "url('" + melting_pictures[0] + "')";
     let melting_position = 0;
     const melting_moveRight = () => {
@@ -1045,6 +1105,10 @@
     }
     melting_rightBtn.addEventListener("click", melting_moveRight);
     melting_leftBtn.addEventListener("click", melting_moveLeft);
+
+    if (melting_img.style.backgroundImage = 'tablet.png') {
+        melting_img.style.animation = 'slide-up 10s infinite ease-out';
+    }
     const melting_visit = () => {
         window.location.href = "melting";
     }
@@ -1056,7 +1120,7 @@
     const magazines_rightBtn = document.getElementById('magazines_right-arrow');
     const magazines_leftBtn = document.getElementById('magazines_left-arrow');
     const magazines_link = document.getElementById('magazines_link');
-    let magazines_pictures = ['magscrit.gif', 'auteur.png', 'mockups-1.png'];
+    let magazines_pictures = ['crit.jpg', 'auteur.png', 'mockups-1.png'];
     magazines_img.style.backgroundImage = "url('" + magazines_pictures[0] + "')";
     let magazines_position = 0;
     const magazines_moveRight = () => {
@@ -1079,6 +1143,9 @@
         magazines_img.style.backgroundImage = "url('" + magazines_pictures[magazines_position - 1] + "')";
         magazines_position--;
     }
+    if (magazines_img.style.backgroundImage = 'crit.jpg') {
+        magazines_img.style.animation = 'slide-up 10s infinite ease-out';
+    }
     magazines_rightBtn.addEventListener("click", magazines_moveRight);
     magazines_leftBtn.addEventListener("click", magazines_moveLeft);
     const magazines_visit = () => {
@@ -1092,7 +1159,7 @@
     const twentysixplusone_rightBtn = document.getElementById('twentysixplusone_right-arrow');
     const twentysixplusone_leftBtn = document.getElementById('twentysixplusone_left-arrow');
     const twentysixplusone_link = document.getElementById('twentysixplusone_link');
-    let twentysixplusone_pictures = ['twentysix.png', 'u.gif'];
+    let twentysixplusone_pictures = ['twentysixboth.png', 'u.gif'];
     twentysixplusone_img.style.backgroundImage = "url('" + twentysixplusone_pictures[0] + "')";
     let twentysixplusone_position = 0;
     const twentysixplusone_moveRight = () => {
@@ -1114,6 +1181,9 @@
         }
         twentysixplusone_img.style.backgroundImage = "url('" + twentysixplusone_pictures[twentysixplusone_position - 1] + "')";
         twentysixplusone_position--;
+    }
+    if (twentysixplusone_img.style.backgroundImage = 'twentysixboth.png') {
+        twentysixplusone_img.style.animation = 'slide-up 20s infinite ease-out';
     }
     twentysixplusone_rightBtn.addEventListener("click", twentysixplusone_moveRight);
     twentysixplusone_leftBtn.addEventListener("click", twentysixplusone_moveLeft);
@@ -1200,7 +1270,7 @@
     const wayfinding_rightBtn = document.getElementById('wayfinding_right-arrow');
     const wayfinding_leftBtn = document.getElementById('wayfinding_left-arrow');
     const wayfinding_link = document.getElementById('wayfinding_link');
-    let wayfinding_pictures = ['jacobs.png', 'nelson.png', 'kirkgate.png'];
+    let wayfinding_pictures = ['roundabout.png', 'nelson.png', 'kirkgate.png'];
     wayfinding_img.style.backgroundImage = "url('" + wayfinding_pictures[0] + "')";
     let wayfinding_position = 0;
     const wayfinding_moveRight = () => {
@@ -1223,6 +1293,9 @@
         wayfinding_img.style.backgroundImage = "url('" + wayfinding_pictures[wayfinding_position - 1] + "')";
         wayfinding_position--;
     }
+    if (wayfinding_img.style.backgroundImage = 'roundabout.png') {
+        wayfinding_img.style.animation = 'panorama 10s infinite linear alternate';
+    }
     wayfinding_rightBtn.addEventListener("click", wayfinding_moveRight);
     wayfinding_leftBtn.addEventListener("click", wayfinding_moveLeft);
     const wayfinding_visit = () => {
@@ -1236,7 +1309,7 @@
     const branding_rightBtn = document.getElementById('branding_right-arrow');
     const branding_leftBtn = document.getElementById('branding_left-arrow');
     const branding_link = document.getElementById('branding_link');
-    let branding_pictures = ['skin.gif', 'vanphone.png'];
+    let branding_pictures = ['style.png', 'vanphone.png'];
     branding_img.style.backgroundImage = "url('" + branding_pictures[0] + "')";
     let branding_position = 0;
     const branding_moveRight = () => {
@@ -1259,6 +1332,9 @@
         branding_img.style.backgroundImage = "url('" + branding_pictures[branding_position - 1] + "')";
         branding_position--;
     }
+    if (branding_img.style.backgroundImage = 'style.png') {
+        branding_img.style.animation = 'slide-up 15s infinite ease-out';
+    }
     branding_rightBtn.addEventListener("click", branding_moveRight);
     branding_leftBtn.addEventListener("click", branding_moveLeft);
     const branding_visit = () => {
@@ -1272,7 +1348,7 @@
     const infographics_rightBtn = document.getElementById('infographics_right-arrow');
     const infographics_leftBtn = document.getElementById('infographics_left-arrow');
     const infographics_link = document.getElementById('infographics_link');
-    let infographics_pictures = ['poster.gif', 'gens.png'];
+    let infographics_pictures = ['poster.png', 'gens.png'];
     infographics_img.style.backgroundImage = "url('" + infographics_pictures[0] + "')";
     let infographics_position = 0;
     const infographics_moveRight = () => {
@@ -1294,6 +1370,9 @@
         }
         infographics_img.style.backgroundImage = "url('" + infographics_pictures[infographics_position - 1] + "')";
         infographics_position--;
+    }
+    if (infographics_img.style.backgroundImage = 'poster.png') {
+        infographics_img.style.animation = 'slide-up 10s infinite ease-out';
     }
     infographics_rightBtn.addEventListener("click", infographics_moveRight);
     infographics_leftBtn.addEventListener("click", infographics_moveLeft);
