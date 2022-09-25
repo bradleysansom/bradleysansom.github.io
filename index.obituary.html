@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Memory of HM The Queen</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: serif;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.things {
+            display: block;
+            text-align: left;
+        }
+
+        div.image {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Queen_Elizabeth_II_in_March_2015.jpg/800px-Queen_Elizabeth_II_in_March_2015.jpg");
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            filter: grayscale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="things">
+        <div class="image"></div>
+        <h1>Her late Majesty Queen Elizabeth II</h1>
+        <h5>1926 - 2022</h5>
+        <h6>In recognition of the tragic death of her majesty, this website is temporarily replaced by this message.
+        </h6>
+        <button id="proceed" onclick="proceed()">View site anyway</button>
+    </div>
+</body>
+<script>
+    function proceed() {
+        alert("By pressing 'OK', I confirm that I do not respect the memory of Her late Majesty.");
+        window.location.href = "https://bradleysans.uk/traitors.html";
+
+    }
+</script>
+
+</html>
