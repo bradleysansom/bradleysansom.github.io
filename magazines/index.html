@@ -327,6 +327,27 @@
             outline: 0;
             border-radius: 0;
         }
+
+        .jumplist {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: space-around;
+            padding-left: 0;
+            gap: 12px;
+        }
+
+        .jumplist li {
+            flex-grow: 0;
+            background-color: black;
+            padding: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .jumplist li a {
+            color: white;
+        }
     </style>
 </head>
 
@@ -338,8 +359,17 @@
 
     </div>
     <main>
+
         <div class="heading" id="behind">
             &nbsp;
+        </div>
+        <div class="title b">
+            <h5>Jump to...</h5>
+            <ul class="jumplist">
+                <li><a href="#wes">Wes Anderson project</a></li>
+                <li><a href="#vic">Food project</a></li>
+
+            </ul>
         </div>
         <div class="subtitle">
             research task - finding spreads
