@@ -62,11 +62,29 @@
             padding: 10px 10px 0px 10px;
             font-size: 2.4rem;
             transition: .5s;
+            animation: 2s narrow-in 1;
         }
 
         .name:hover {
             color: var(--orange);
 
+        }
+
+        @keyframes narrow-in {
+            0% {
+                letter-spacing: 15px;
+                color: var(--orange);
+            }
+
+            20% {
+                letter-spacing: 15px;
+                color: var(--orange);
+            }
+
+            100% {
+                letter-spacing: unset;
+
+            }
         }
 
         nav {
@@ -82,11 +100,27 @@
             flex-direction: row;
             flex-wrap: nowrap;
             margin-inline-end: 10px;
+
         }
 
         nav ul li {
             display: inline;
+            animation: 2.5s fade-in-nav forwards;
 
+        }
+
+        @keyframes fade-in-nav {
+            0% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         .nav-icon {
@@ -111,6 +145,7 @@
         }
 
         .triple {
+
             display: flex;
             width: 100%;
             flex-direction: column;
@@ -120,14 +155,18 @@
             gap: 5vw;
         }
 
+
+
         .triple-box {
             background-color: var(--orange);
             aspect-ratio: 1;
             width: calc(100% - 10vw);
-
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+
+
         }
 
         #triple-box-words {
@@ -136,13 +175,65 @@
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
+
+            animation: 1s fade-in-words forwards;
         }
+
+
+
+        #triple-box-half {
+            animation: 1.5s fade-in-half forwards;
+        }
+
+        #triple-box-photo {
+            animation: 2s fade-in-photo forwards;
+        }
+
+        @keyframes fade-in-words {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in-half {
+            0% {
+                opacity: 0;
+            }
+
+            33.3% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in-photo {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
 
         .intro {
             padding: 10px;
             font: var(--headline);
             font-size: 2.5rem;
-
+            margin: 0;
 
         }
 
@@ -150,6 +241,7 @@
             padding: 0px 10px;
             font: var(--body);
             font-size: 1.2rem;
+            margin: 0;
         }
 
         #triple-box-half {
@@ -168,6 +260,28 @@
         .gallery {
 
             margin: 10px;
+        }
+
+        .gallery,
+        #before-emley,
+        #emley {
+            animation: 3s fade-in-rest forwards;
+
+        }
+
+        @keyframes fade-in-rest {
+            0% {
+                opacity: 0;
+            }
+
+            66.7% {
+                opacity: 0;
+
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         .label {
@@ -388,19 +502,19 @@
                 gap: 10px;
             }
 
-            span.intro {
+            .intro {
                 font-size: 1.5rem;
             }
         }
 
         @media screen and (min-width:500px) {
-            span.intro {
+            .intro {
                 font-size: 2rem;
             }
         }
 
         @media screen and (min-width:650px) {
-            span.intro {
+            .intro {
                 font-size: 2.5rem;
                 max-width: 450px;
             }
@@ -411,7 +525,7 @@
                 display: initial;
             }
 
-            span.intro {
+            .intro {
                 font-size: 2.5rem;
             }
         }
@@ -590,7 +704,7 @@
 
 <body>
     <header>
-        <div class="name">Bradley Sansom</div>
+        <h1 class="name">Bradley Sansom</h1>
         <nav>
             <ul>
                 <li>
@@ -614,8 +728,9 @@
     </header>
     <hr>
     <section class="triple">
-        <div class="triple-box" id="triple-box-words"><span class="intro">Designer, creator, maker, tinkerer</span><span
-                class="rest">and various other nouns</span>
+        <div class="triple-box" id="triple-box-words">
+            <h2 class="intro">Designer, creator, maker, tinkerer</h2>
+            <h3 class="rest">and various other nouns</h3>
         </div>
         <div class="triple-box" id="triple-box-half"
             title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022"></div>
@@ -624,8 +739,8 @@
     </section>
     <hr>
     <section class="gallery">
-        <div class="section-header">BA Graphic Design</div>
-        <div class="section-header-subtitle">First year</div>
+        <h2 class="section-header">BA Graphic Design</h2>
+        <h3 class="section-header-subtitle">First year</h3>
         <div class="articles">
             <article id="terrors">
                 <div class="label">Terrors</div>
@@ -1085,7 +1200,7 @@
             </article>
         </div>
     </section>
-    <hr>
+    <hr id="before-emley">
     <section id="emley"
         title="The view from my local park in Bradford towards the Emley Moor TV transmitter, the tallest freestanding structure in the UK">
         <div class="outro"><span id="copyright">© Bradley Sansom </span><span id="year"></span><br><span
