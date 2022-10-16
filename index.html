@@ -62,7 +62,7 @@
             padding: 10px 10px 0px 10px;
             font-size: 2.4rem;
             transition: .5s;
-            animation: 2s narrow-in 1;
+            animation: 2s orange-in 1;
         }
 
         .name:hover {
@@ -85,6 +85,18 @@
                 letter-spacing: unset;
 
             }
+        }
+
+        @keyframes orange-in {
+            0% {
+                color: var(--orange);
+            }
+
+            20% {
+                color: var(--orange);
+            }
+
+
         }
 
         nav {
@@ -564,6 +576,10 @@
                 letter-spacing: 10px;
 
             }
+
+            .name {
+                animation: 2s narrow-in 1;
+            }
         }
 
         @media screen and (min-width: 750px) {
@@ -786,11 +802,9 @@
                 </div>
                 <div class="beneath">
                     <div class="comment">
-                        <div class="attribution"><span class="unit">Visual Thinking 3</span><span
-                                class="institution">Manchester
-                                School
-                                of
-                                Art</span></div>
+                        <div class="attribution"><span class="unit">Visual Thinking 3</span>
+                            <span class="institution">Manchester School of Art</span>
+                        </div>
                         <div class="blurb">Faced with a brief to bring new life to the words of a speech by Greta
                             Thunberg,
                             I created a set of fonts which 'melt away', and explored how they could be used across a

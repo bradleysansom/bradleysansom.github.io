@@ -1,175 +1,430 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} Bradley Sansom</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Bradley Sansom</title>
+
+    <meta name="description"
+        content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://bradleysans.uk">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }} | Bradley Sansom">
+    <meta property="og:description"
+        content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
+    <meta property="og:image" content="https://bradleysans.uk/thumbnail.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bradleysans.uk">
+    <meta property="twitter:url" content="https://bradleysans.uk">
+    <meta name="twitter:title" content="{{ page.title }} | Bradley Sansom">
+    <meta name="twitter:description"
+        content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
+    <meta name="twitter:image" content="https://bradleysans.uk/thumbnail.png">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+        @import url("https://use.typekit.net/skx0vho.css");
+
+        :root {
+            --orange: #c1420d;
+            --headline: italic 800 1rem 'bodoni-egyptian-pro', serif;
+            --body: normal 400 1rem 'p22-underground', sans-serif;
+        }
+
+
+
 
         body {
-            transition: .5s;
-            margin: 10px;
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Overpass';
-        }
-
-        .header,
-        footer {
-            padding: 20px;
-            display: flex;
-            height: auto;
-
-            text-align: left;
-
-            background: linear-gradient(90deg, #008080 0%, #79d2b8 100%);
-            flex-direction: row;
-
-            justify-content: space-between;
-            align-items: center;
-        }
-
-
-        .header img {
-            height: 80px;
-            max-width: 70vw;
-        }
-
-        .nav ul {
-            list-style-type: none;
-            margin: 0;
             padding: 0;
+            margin: 0;
+            border: 0;
+            transition: .5s;
+            cursor: default;
         }
 
-        .nav ul li {
+        header {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+        }
+
+        .name {
+            font: var(--headline);
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 10px 0px 10px;
+            font-size: 2.4rem;
             transition: .5s;
+            cursor: pointer;
+        }
+
+        .name:hover {
+            color: var(--orange);
+        }
+
+
+
+
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            width: 100%;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-inline-end: 10px;
+
+        }
+
+        nav ul li {
             display: inline;
-            color: #ffffff;
-            font-size: 1.5rem;
-            padding: 10px 20px;
+            animation: 2.5s fade-in-nav forwards;
+
         }
 
-        .nav ul li a {
-            transition: .5s;
-            color: #ffffff;
-            text-decoration: none;
+        @keyframes fade-in-nav {
+            0% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
-        .nav ul li:hover {
-            background-color: #ffffff;
-            transition: .5s;
-        }
-
-        .nav ul li:hover a {
-            transition: .5s;
-            color: #008080;
-        }
-
-
-
-        .links ul li {
-
-            transition: .5s;
-            display: inline;
-            color: #ffffff;
-            font-size: 1rem;
-            padding: 10px 20px;
-        }
-
-        .links ul li a {
-            transition: .5s;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .links ul li:hover {
-            transition: .5s;
-            background-color: #ffffff;
-        }
-
-        .links ul li:hover a {
-            transition: .5s;
-            color: #008080;
-        }
-
-        .links ul li svg {
-
-            vertical-align: middle;
-            width: 20px;
-            height: 20px;
-        }
-
-        .links ul li svg use {
+        .nav-icon {
+            color: white;
+            font-size: 2rem;
+            display: flex;
+            background-color: var(--orange);
+            height: 15vw;
+            width: 15vw;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
             transition: .5s;
         }
 
-        .links ul li:hover svg use {
-            transition: .5s;
-            fill: #008080;
-        }
-
-        .links ul {
-            padding-left: 0;
+        .nav-icon:hover {
+            background-color: white;
+            color: var(--orange);
+            outline: 3px solid var(--orange);
+            outline-offset: -3px;
 
         }
 
-        main {
-            padding: 10px;
-            color: #ffffff;
+
+
+        .section-header {
+            font: var(--headline);
+            font-size: 2rem;
+            text-decoration: 4px underline dotted var(--orange);
+            margin-bottom: 5px;
         }
 
-        main a {
-            color: #ffffff;
-            font-weight: bold;
-            text-decoration: none;
+        .section-header-subtitle {
+            font: var(--headline);
+            font-size: 1.4rem;
+            color: var(--orange);
+
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
 
+        .link.offline {
+            padding: 0;
+            opacity: .5;
+        }
+
+        .link.offline:hover {
+            background-color: var(--orange);
+            color: white;
+            outline: unset;
+            outline-offset: unset;
+            cursor: not-allowed;
+        }
+
+        hr {
+            border: none;
+            border-bottom: 4px dotted grey;
+        }
+
+
+
+        #emley {
+            width: calc(100% - 20px);
+            aspect-ratio: 3/1;
+            background-image: url('https://bradleysans.uk/emley.jpg');
+            margin: 0 10px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+
+
+
+        .outro {
+            font: var(--headline);
+            color: white;
+        }
+
+        #nonsequitur {
+            font: var(--body);
+        }
+
+        .quiet {
+            color: grey;
+        }
+
+
+
+
+
+        @media screen and (min-width: 750px) {
+            header {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+
+            nav ul {
+                width: unset;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+
+            .nav-icon {
+                width: 10vw;
+                height: 10vw;
+                aspect-ratio: 1;
+                max-height: 120px;
+                max-width: 120px;
+                font-size: 3rem;
+            }
+
+            .name {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                line-height: 1;
+            }
+        }
+
+
+
+
+
+
+
+
+        @media screen and (min-width: 1600px) {
+            body {
+                max-width: 1600px;
+                margin: auto;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222222;
+            }
+
+            .name {
+                color: white;
+            }
+
+            .section-header {
+                color: white;
+            }
+
+
+
+            a {
+                color: white !important;
+            }
+
+            .link:hover {
+                background-color: #222222;
+            }
+
+            .nav-icon:hover {
+                background-color: #222222;
+            }
+        }
     </style>
 
+    <style>
+        @font-face {
+            font-family: 'icons';
+            src: url('https://bradleysans.uk/fonts/icons.eot?ikjlwh');
+            src: url('https://bradleysans.uk/fonts/icons.eot?ikjlwh#iefix') format('embedded-opentype'),
+                url('https://bradleysans.uk/fonts/icons.ttf?ikjlwh') format('truetype'),
+                url('https://bradleysans.uk/fonts/icons.woff?ikjlwh') format('woff'),
+                url('https://bradleysans.uk/fonts/icons.svg?ikjlwh#icons') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icons' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-arrow-left:before {
+            content: "\6c";
+        }
+
+        .icon-arrow-right:before {
+            content: "\72";
+        }
+
+        .icon-chevron-right:before {
+            content: "\61";
+            font-size: 2rem;
+        }
+
+        .icon-github:before {
+            content: "\47";
+        }
+
+        .icon-instagram:before {
+            content: "\49";
+        }
+
+        .icon-linkedin:before {
+            content: "\4c";
+        }
+
+        .icon-mail:before {
+            content: "\45";
+        }
+
+        .icon-twitter:before {
+            content: "\54";
+        }
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo"><a href="/"><img src="/signature.png" alt="Bradley Sansom"></a>
-        </div>
-        <div class="nav">
+    <header>
+        <h1 class="name">Bradley Sansom</h1>
+        <nav>
             <ul>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </div>
-    </div>
-    <main>
-        {{ content }}
-    </main>
-    <footer>
-        <div class="links">
-            <ul>
-                <li id="github">
-
-                    <a href="https://github.com/bradleysansom"><svg class="svg-icon" width="20px" height="20px">
-                            <use xlink:href="/assets/minima-social-icons.svg#github" fill="#ffffff"></use>
-                        </svg>{{ site.github_username }}</a>
+                <li>
+                    <div class="nav-icon" id="email" title="Send me an email"><span class="icon-mail"></span></div>
                 </li>
-                <li id="email">
-                    <a href="mailto:bradley-sansom@outlook.com"><b>@</b> {{ site.email }}</a>
+                <li>
+                    <div class="nav-icon" id="github" title="GitHub"><span class="icon-github"></span></div>
                 </li>
-                <li id="flickr"><a href="https://flickr.com/people/bradleysans/"><svg class="svg-icon" width="20px"
-                            height="20px">
-                            <use xlink:href="/assets/minima-social-icons.svg#flickr" fill="#ffffff"></use>
-                        </svg>{{ site.flickr }}</a>
+                <li>
+                    <div class="nav-icon" id="linkedin" title="LinkedIn"><span class="icon-linkedin"></span></div>
                 </li>
-
+                <li>
+                    <div class="nav-icon" id="twitter" title="Twitter"><span class="icon-twitter"></span></div>
+                </li>
+                <li>
+                    <div class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span></div>
+                </li>
 
             </ul>
-        </div>
-    </footer>
+        </nav>
+    </header>
+    <hr>
 
 
+    {{ content }}
 
+    <hr id="before-emley">
+    <section id="emley"
+        title="The view from my local park in Bradford towards the Emley Moor TV transmitter, the tallest freestanding structure in the UK">
+        <div class="outro"><span id="copyright">© Bradley Sansom </span><span id="year"></span><br><span
+                id="nonsequitur"></span></div>
+    </section>
 </body>
+
+
+
+<script>
+    const homepage_link = document.getElementByClassName('name')[0];
+    const email_link = document.getElementById('email');
+    const github_link = document.getElementById('github');
+    const linkedin_link = document.getElementById('linkedin');
+    const twitter_link = document.getElementById('twitter');
+    const instagram_link = document.getElementById('instagram');
+    const homepage_visit = () => {
+        window.location.href = "https://bradleysans.uk/";
+    }
+    homepage_link.addEventListener("click", homepage_visit);
+    const email_visit = () => {
+        window.location.href = "mailto:bradley-sansom@outlook.com";
+    }
+    email_link.addEventListener("click", email_visit);
+    const github_visit = () => {
+        window.location.href = "https://github.com/bradleysansom";
+    }
+    github_link.addEventListener("click", github_visit);
+    const linkedin_visit = () => {
+        window.location.href = "https://linkedin.com/in/bradleysans";
+    }
+    linkedin_link.addEventListener("click", linkedin_visit);
+    const twitter_visit = () => {
+        window.location.href = "https://twitter.com/bradleysans";
+    }
+    twitter_link.addEventListener("click", twitter_visit);
+    const instagram_visit = () => {
+        window.location.href = "https://instagram.com/bradleysans";
+    }
+    instagram_link.addEventListener("click", instagram_visit);
+</script>
+
+<script>
+    // Outro
+    var year_placeholder = document.getElementById('year');
+    var nonsequitur_placeholder = document.getElementById('nonsequitur');
+    let year = new Date().getFullYear();
+    year_placeholder.innerHTML = year;
+    var nonsequiturs = [
+        'Your home may be reposessed if you do not keep up repayments on your mortgage',
+        'Your call is important to us, please stay on the line',
+        'Now with 20% extra free',
+        'Made in Yorkshire',
+        'GOLF CLUBS FOR SALE - used twice, £20 o.n.o.',
+        'Now in widescreen',
+        'Best wishes, kindest regards'
+    ];
+    var nonsequitur = nonsequiturs[Math.floor(Math.random() * nonsequiturs.length)];
+    nonsequitur_placeholder.innerHTML = nonsequitur;
+</script>
 
 </html>
