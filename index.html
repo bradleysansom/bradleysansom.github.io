@@ -756,6 +756,49 @@
     <hr>
     <section class="gallery">
         <h2 class="section-header">BA Graphic Design</h2>
+        <h3 class="section-header-subtitle">Second year</h3>
+        <div class="articles">
+            <article id="interlude">
+                <div class="label">Interlude series</div>
+                <div class="carousel" id="interlude_carousel">
+
+                </div>
+                <div class="beneath">
+                    <div class="comment">
+                        <div class="attribution"><span class="unit">Visual Communication 2</span><span
+                                class="institution">Manchester
+                                School
+                                of
+                                Art</span></div>
+                        <div class="blurb">Designing a series of three book covers, unified through an interactive
+                            chalkboard print finish and a set of geometric patterns. I relished the opportunity to use
+                            manual processes including hot foil and debossing to craft my three books.</div>
+                    </div>
+                    <div class="controls">
+                        <div class="arrows">
+                            <div class="left-arrow" id="interlude_left-arrow" title="Previous image"><span
+                                    class="material-symbols-outlined">
+                                    <span class="icon-arrow-left"></span>
+                                </span></div>
+                            <div class="right-arrow" id="interlude_right-arrow" title="Next image"><span
+                                    class="material-symbols-outlined">
+                                    <span class="icon-arrow-right"></span>
+                                </span></div>
+                        </div>
+                        <div class="link" id="interlude_link" title="Interlude series">Visit <span
+                                class="material-symbols-outlined">
+                                <span class="icon-chevron-right"></span>
+                            </span></div>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+    <section class="gallery">
+
         <h3 class="section-header-subtitle">First year</h3>
         <div class="articles">
             <article id="terrors">
@@ -1221,7 +1264,43 @@
                 id="nonsequitur"></span></div>
     </section>
 </body>
+<script>
+    // Interlude
+    const interlude_img = document.getElementById('interlude_carousel');
+    const interlude_rightBtn = document.getElementById('interlude_right-arrow');
+    const interlude_leftBtn = document.getElementById('interlude_left-arrow');
+    const interlude_link = document.getElementById('interlude_link');
+    let interlude_pictures = ['books.jpg', 'foil.jpg'];
+    interlude_img.style.backgroundImage = "url('" + interlude_pictures[0] + "')";
+    let interlude_position = 0;
+    const interlude_moveRight = () => {
+        console.log('interlude_moveRight');
+        if (interlude_position >= interlude_pictures.length - 1) {
+            interlude_position = 0
+            interlude_img.style.backgroundImage = "url('" + interlude_pictures[interlude_position] + "')";
+            return;
+        }
+        interlude_img.style.backgroundImage = "url('" + interlude_pictures[interlude_position + 1] + "')";
+        interlude_position++;
+    }
+    const interlude_moveLeft = () => {
+        console.log('interlude_moveLeft');
+        if (interlude_position < 1) {
+            interlude_position = interlude_pictures.length - 1;
+            interlude_img.style.backgroundImage = "url('" + interlude_pictures[interlude_position] + "')";
+            return;
+        }
+        interlude_img.style.backgroundImage = "url('" + interlude_pictures[interlude_position - 1] + "')";
+        interlude_position--;
+    }
 
+    interlude_rightBtn.addEventListener("click", interlude_moveRight);
+    interlude_leftBtn.addEventListener("click", interlude_moveLeft);
+    const interlude_visit = () => {
+        window.location.href = "https://www.instagram.com/stories/highlights/17906907719654677/";
+    }
+    interlude_link.addEventListener("click", interlude_visit);
+</script>
 <script>
     // TERRORS
     const terrors_img = document.getElementById('terrors_carousel');
