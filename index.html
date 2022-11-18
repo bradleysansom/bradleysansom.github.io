@@ -390,6 +390,11 @@
             cursor: pointer;
         }
 
+        .link.halfheight {
+            height: 7.5vw;
+            padding: 5px 0px;
+        }
+
         .link:hover {
             background-color: white;
             color: var(--orange);
@@ -593,6 +598,11 @@
 
             .link {
                 max-height: 100px;
+            }
+
+            .link.halfheight {
+                max-height: 50px;
+                padding: unset;
             }
         }
 
@@ -1189,14 +1199,16 @@
                 </div>
                 <div class="beneath">
                     <div class="comment">
-                        <div class="attribution"><span class="unit">Twitter bot</span></div>
-                        <div class="blurb">A (moderately successful) Twitter bot that I run, which posts hourly snippets
+                        <div class="attribution"><span class="unit">Twitter and Mastodon bot</span></div>
+                        <div class="blurb">A (moderately successful) Twitter and Mastodon bot that I run, which posts
+                            hourly snippets
                             of
                             lyrics from the
                             back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running
                             through
                             the Tasker app and IFTTT.<br><span class="quiet">Not affiliated with Pet Shop
-                                Boys</span></div>
+                                Boys</span><a rel="me" href="https://mas.to/@psb">&nbsp;</a></div>
+
                     </div>
                     <div class="controls">
                         <div class="arrows">
@@ -1209,8 +1221,12 @@
                                     <span class="icon-arrow-right"></span>
                                 </span></div>
                         </div>
-                        <div class="link" id="psb_link" title="Pet Shop Boys lyrics bot">Visit <span
-                                class="material-symbols-outlined">
+                        <div class="link halfheight" id="psb_link_twit" title="Pet Shop Boys lyrics bot on Twitter">
+                            Twitter <span class="material-symbols-outlined">
+                                <span class="icon-chevron-right"></span>
+                            </span></div>
+                        <div class="link halfheight" id="psb_link_mast" title="Pet Shop Boys lyrics bot on Mastodon">
+                            Mastodon <span class="material-symbols-outlined">
                                 <span class="icon-chevron-right"></span>
                             </span></div>
 
@@ -1651,7 +1667,8 @@
     const psb_img = document.getElementById('psb_carousel');
     const psb_rightBtn = document.getElementById('psb_right-arrow');
     const psb_leftBtn = document.getElementById('psb_left-arrow');
-    const psb_link = document.getElementById('psb_link');
+    const psb_link_twit = document.getElementById('psb_link_twit');
+    const psb_link_mast = document.getElementById('psb_link_mast');
     let psb_pictures = ['psblyric.png'];
     psb_img.style.backgroundImage = "url('" + psb_pictures[0] + "')";
     let psb_position = 0;
@@ -1677,10 +1694,14 @@
     }
     psb_rightBtn.addEventListener("click", psb_moveRight);
     psb_leftBtn.addEventListener("click", psb_moveLeft);
-    const psb_visit = () => {
+    const psb_visit_twit = () => {
         window.location.href = "https://twitter.com/psblyric";
     }
-    psb_link.addEventListener("click", psb_visit);
+    psb_link_twit.addEventListener("click", psb_visit_twit);
+    const psb_visit_mast = () => {
+        window.location.href = "https://mas.to/@psb";
+    }
+    psb_link_mast.addEventListener("click", psb_visit_mast);
 </script>
 <script>
     // jam
