@@ -310,6 +310,7 @@
             aspect-ratio: 16 / 9;
             color: black;
             background-size: cover;
+            transition: .25s;
 
         }
 
@@ -768,6 +769,43 @@
         <h2 class="section-header">BA Graphic Design</h2>
         <h3 class="section-header-subtitle">Second year</h3>
         <div class="articles">
+
+            <article id="crystaliser">
+                <div class="label">Graphical scores</div>
+                <div class="carousel" id="crystaliser_carousel">
+
+                </div>
+                <div class="beneath">
+                    <div class="comment">
+                        <div class="attribution"><span class="unit">Visual Communication 1</span><span
+                                class="institution">Manchester
+                                School
+                                of
+                                Art</span></div>
+                        <div class="blurb">Having extracted data from the track Voodoo Ray by A Guy Called Gerald, I
+                            produced a program that algorithmically generated animated graphical scores by analysing
+                            instrumentation data.</div>
+                    </div>
+                    <div class="controls">
+                        <div class="arrows">
+                            <div class="left-arrow" id="crystaliser_left-arrow" title="Previous image"><span
+                                    class="material-symbols-outlined">
+                                    <span class="icon-arrow-left"></span>
+                                </span></div>
+                            <div class="right-arrow" id="crystaliser_right-arrow" title="Next image"><span
+                                    class="material-symbols-outlined">
+                                    <span class="icon-arrow-right"></span>
+                                </span></div>
+                        </div>
+                        <div class="link" id="crystaliser_link" title="Graphical scores">Visit <span
+                                class="material-symbols-outlined">
+                                <span class="icon-chevron-right"></span>
+                            </span></div>
+                    </div>
+
+                </div>
+
+            </article>
             <article id="interlude">
                 <div class="label">Interlude series</div>
                 <div class="carousel" id="interlude_carousel">
@@ -804,7 +842,6 @@
                 </div>
 
             </article>
-
         </div>
     </section>
     <section class="gallery">
@@ -1280,6 +1317,43 @@
                 id="nonsequitur"></span></div>
     </section>
 </body>
+<script>
+    // crystaliser
+    const crystaliser_img = document.getElementById('crystaliser_carousel');
+    const crystaliser_rightBtn = document.getElementById('crystaliser_right-arrow');
+    const crystaliser_leftBtn = document.getElementById('crystaliser_left-arrow');
+    const crystaliser_link = document.getElementById('crystaliser_link');
+    let crystaliser_pictures = ['record.png', 'voodoo.png'];
+    crystaliser_img.style.backgroundImage = "url('" + crystaliser_pictures[0] + "')";
+    let crystaliser_position = 0;
+    const crystaliser_moveRight = () => {
+        console.log('crystaliser_moveRight');
+        if (crystaliser_position >= crystaliser_pictures.length - 1) {
+            crystaliser_position = 0
+            crystaliser_img.style.backgroundImage = "url('" + crystaliser_pictures[crystaliser_position] + "')";
+            return;
+        }
+        crystaliser_img.style.backgroundImage = "url('" + crystaliser_pictures[crystaliser_position + 1] + "')";
+        crystaliser_position++;
+    }
+    const crystaliser_moveLeft = () => {
+        console.log('crystaliser_moveLeft');
+        if (crystaliser_position < 1) {
+            crystaliser_position = crystaliser_pictures.length - 1;
+            crystaliser_img.style.backgroundImage = "url('" + crystaliser_pictures[crystaliser_position] + "')";
+            return;
+        }
+        crystaliser_img.style.backgroundImage = "url('" + crystaliser_pictures[crystaliser_position - 1] + "')";
+        crystaliser_position--;
+    }
+
+    crystaliser_rightBtn.addEventListener("click", crystaliser_moveRight);
+    crystaliser_leftBtn.addEventListener("click", crystaliser_moveLeft);
+    const crystaliser_visit = () => {
+        window.location.href = "https://crystaliser.github.io/";
+    }
+    crystaliser_link.addEventListener("click", crystaliser_visit);
+</script>
 <script>
     // Interlude
     const interlude_img = document.getElementById('interlude_carousel');
