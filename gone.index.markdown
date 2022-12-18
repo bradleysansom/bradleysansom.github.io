@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 
 ---
+
 <style>
 h1 {
     color:red;
