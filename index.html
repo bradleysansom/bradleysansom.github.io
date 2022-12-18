@@ -1318,6 +1318,21 @@
     </section>
 </body>
 <script>
+    async function fetchPosts() {
+        let response = await fetch("posts.json");
+
+        if (response.ok) { // if HTTP-status is 200-299
+            // get the response body (the method explained below)
+            let json = await response.json();
+            console.log(json);
+        } else {
+            alert("HTTP-Error: " + response.status);
+        }
+    }
+    fetchPosts();
+
+</script>
+<script>
     // crystaliser
     const crystaliser_img = document.getElementById('crystaliser_carousel');
     const crystaliser_rightBtn = document.getElementById('crystaliser_right-arrow');

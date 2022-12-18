@@ -1,0 +1,30 @@
+{
+    "posts": [
+        {
+            "id": "crystaliser",
+            "name": "Graphical scores",
+            "category": "BA Graphic Design",
+            "subcategory": "Second year",
+            "unit": "Visual Communication 1",
+            "institution": "Manchester School of Art",
+            "blurb": "Having extracted data from the track Voodoo Ray by A Guy Called Gerald, I produced a program that algorithmically generated animated graphical scores by analysing instrumentation data.",
+            "links": [
+                "https: //crystaliser.github.io/"
+            ],
+            "linkLabels": [
+                "Visit"
+            ],
+            "images": [
+                "record.png",
+                "voodoo.png"
+            ],
+            "tags": [
+                "music",
+                "vectors",
+                "graphic design",
+                "web development",
+                "data visualisation"
+            ]
+        }
+    ]
+}
