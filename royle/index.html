@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royle Tour of Manchester</title>
+    <style>
+        @import url("https://use.typekit.net/cmh3niz.css");
+
+        :root {
+            --windsor-500: normal 500 1rem 'new-spirit', serif;
+            --windsor-600: normal 600 1rem 'new-spirit', serif;
+            --windsor-700: normal 700 1rem 'new-spirit', serif;
+            --windsor-cond-500: normal 500 1rem 'new-spirit-condensed', serif;
+            --windsor-cond-600: normal 600 1rem 'new-spirit-condensed', serif;
+            --windsor-cond-700: normal 700 1rem 'new-spirit-condensed', serif;
+            --antique-400: normal 400 1rem 'antique-olive', sans-serif;
+            --antique-400-italic: italic 400 1rem 'antique-olive', sans-serif;
+            --antique-500: normal 500 1rem 'antique-olive', sans-serif;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 10px;
+            display: flex;
+            height: calc(100% - 20px);
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+
+
+        h1 {
+            font: var(--windsor-cond-600);
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        footer {
+            font: var(--antique-400);
+        }
+
+        footer a {
+            font: var(--antique-500);
+            color: black;
+        }
+
+        main {
+            height: 100%;
+            width: 100%;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        div.leaflet-popup-content {
+            font: var(--antique-400);
+        }
+
+        div.leaflet-popup-content b {
+            font: var(--windsor-700);
+        }
+
+        div.leaflet-popup-content img {
+            max-width: 100%;
+        }
+
+        a#wiki-link {
+            display: list-item;
+            list-style-position: inside;
+
+            list-style-image: url('wiki.png');
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>The Royle Tour of Manchester</h1>
+    </header>
+    <main>
+        <div id="map"></div>
+    </main>
+    <footer>Written and designed by <a href="../">Bradley Sansom</a>. Images © Granada, BBC. With thanks to <a
+            href="https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=the-royle-family-1998">Springfield!
+            Springfield!</a>, <a href="https://roylefamily.fandom.com/wiki/Royle_Family_Wiki">Royle Family Wiki</a>, and
+        <a href="https://theroyleramble.podbean.com">The Royle Ramble</a>.</footer>
+</body>
+<script>
+    // Initialise map
+    var map = L.map('map').setView([53.4860, -2.2316], 11);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Set up locations
+    var locations = [
+        ['Wythenshawe', [53.3804, -2.2726], 'The Royle`s house is assumed to be located in Wythenshawe.', 'https://bradleysans.uk/auteur.png', 'https://en.wikipedia.org/wiki/Wythenshawe']
+    ];
+
+    // add locations to map
+    for (let i = 0; i < locations.length; i++) {
+        var loc = locations[i][0];
+        var coords = locations[i][1];
+        var description = locations[i][2];
+        var image = locations[i][3];
+        var wiki = locations[i][4];
+        console.log(image);
+        L.marker(coords).addTo(map).bindPopup("<b>" + loc + "</b><br>" + description + "<img src='" + image + "'><br><a id='wiki-link' href='" + wiki + "'>" + loc + "</a>");
+
+    }
+</script>
+
+</html>
