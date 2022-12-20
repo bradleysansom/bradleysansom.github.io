@@ -26,661 +26,617 @@
     <meta name="twitter:description"
         content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
     <meta name="twitter:image" content="https://bradleysans.uk/thumbnail.png">
+    <base href="https://bradleysans.uk" target="_blank">
+    <link rel="stylesheet" href="/styles/style.css">
 
-    <link rel="stylesheet" href="styles/style.css">
-
-    <style>
-        @font-face {
-            font-family: 'icons';
-            src: url('fonts/icons.eot?ikjlwh');
-            src: url('fonts/icons.eot?ikjlwh#iefix') format('embedded-opentype'),
-                url('fonts/icons.ttf?ikjlwh') format('truetype'),
-                url('fonts/icons.woff?ikjlwh') format('woff'),
-                url('fonts/icons.svg?ikjlwh#icons') format('svg');
-            font-weight: normal;
-            font-style: normal;
-            font-display: block;
-        }
-
-        [class^="icon-"],
-        [class*=" icon-"] {
-            /* use !important to prevent issues with browser extensions that change fonts */
-            font-family: 'icons' !important;
-            speak: never;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-
-            /* Better Font Rendering =========== */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .icon-arrow-left:before {
-            content: "\6c";
-        }
-
-        .icon-arrow-right:before {
-            content: "\72";
-        }
-
-        .icon-chevron-right:before {
-            content: "\61";
-            font-size: 2rem;
-        }
-
-        .icon-github:before {
-            content: "\47";
-        }
-
-        .icon-instagram:before {
-            content: "\49";
-        }
-
-        .icon-linkedin:before {
-            content: "\4c";
-        }
-
-        .icon-mail:before {
-            content: "\45";
-        }
-
-        .icon-twitter:before {
-            content: "\54";
-        }
-
-        .icon-mastodon:before {
-            content: "\4d";
-        }
-    </style>
+    <link rel="stylesheet" href="/styles/fonts.css">
 </head>
 
 <body>
-    <header>
+    <header role="header" name="header">
         <h1 class="name">Bradley Sansom</h1>
         <nav>
             <ul>
                 <li>
-                    <div class="nav-icon" id="email" title="Send me an email"><span class="icon-mail"></span></div>
+                    <figure class="nav-icon" id="email" title="Send me an email"><span class="icon-mail"></span>
+                    </figure>
                 </li>
                 <li>
-                    <div class="nav-icon" id="github" title="GitHub"><span class="icon-github"></span></div>
+                    <figure class="nav-icon" id="github" title="GitHub"><span class="icon-github"></span></figure>
                 </li>
                 <li>
-                    <div class="nav-icon" id="linkedin" title="LinkedIn"><span class="icon-linkedin"></span></div>
+                    <figure class="nav-icon" id="linkedin" title="LinkedIn"><span class="icon-linkedin"></span></figure>
                 </li>
                 <li>
-                    <div class="nav-icon" id="twitter" title="Twitter"><span class="icon-twitter"></span></div>
+                    <figure class="nav-icon" id="twitter" title="Twitter"><span class="icon-twitter"></span></figure>
                 </li>
                 <li>
-                    <div class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span></div>
+                    <figure class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span>
+                    </figure>
                 </li>
                 <li>
-                    <div class="nav-icon" id="mastodon" title="Mastodon"><span class="icon-mastodon"></span></div>
+                    <figure class="nav-icon" id="mastodon" title="Mastodon"><span class="icon-mastodon"></span></figure>
                 </li>
 
             </ul>
         </nav>
     </header>
     <hr>
-    <section class="triple">
-        <div class="triple-box" id="triple-box-words">
+    <aside class="triple">
+        <section class="triple-box" id="triple-box-words">
             <h2 class="intro">Designer, creator, maker, tinkerer</h2>
             <h3 class="rest">and various other nouns</h3>
-        </div>
-        <div class="triple-box" id="triple-box-half"
-            title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022"></div>
-        <div class="triple-box" id="triple-box-photo"
-            title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022"></div>
-    </section>
+        </section>
+        <section class="triple-box" id="triple-box-half"
+            title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022">
+        </section>
+        <section class="triple-box" id="triple-box-photo"
+            title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022">
+        </section>
+    </aside>
     <hr>
-    <section class="gallery">
-        <h2 class="section-header">BA Graphic Design</h2>
-        <h3 class="section-header-subtitle">Second year</h3>
-        <div class="articles">
+    <main class="gallery">
+        <section id="BAGraphicDesign">
+            <h2 class="section-header">BA Graphic Design</h2>
+            <section id="BASecondYear">
+                <h3 class="section-header-subtitle">Second year</h3>
+                <div class="articles">
+                    <article id="crystaliser">
+                        <h4 class="label">Graphical scores</h4>
+                        <img class="carousel" id="crystaliser_carousel" width="100%" height="250px"></img>
+                        <section class="beneath">
+                            <section class="comment">
+                                <aside class="attribution">
+                                    <p class="unit">Visual Communication 1</p>
+                                    <p class="institution">Manchester
+                                        School
+                                        of
+                                        Art</p>
+                                </aside>
+                                <p class="blurb">Having extracted data from the track Voodoo Ray by A Guy Called
+                                    Gerald, I
+                                    produced a program that algorithmically generated animated graphical scores by
+                                    analysing
+                                    instrumentation data.</p>
+                            </section>
+                            <section class="controls">
+                                <section class="arrows">
+                                    <button class="left-arrow" id="crystaliser_left-arrow" title="Previous image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-left"></span>
+                                        </span></button>
+                                    <button class="right-arrow" id="crystaliser_right-arrow" title="Next image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-right"></span>
+                                        </span></button>
+                                </section>
+                                <button class="link" id="crystaliser_link" title="Graphical scores">Visit <span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-chevron-right"></span>
+                                    </span></button>
+                            </section>
 
-            <article id="crystaliser">
-                <div class="label">Graphical scores</div>
-                <div class="carousel" id="crystaliser_carousel">
+                        </section>
 
+                    </article>
+                    <article id="interlude">
+                        <h4 class="label">Interlude series</h4>
+                        <img class="carousel" id="interlude_carousel" width="100%" height="250px"></img>
+                        <section class="beneath">
+                            <section class="comment">
+                                <aside class="attribution">
+                                    <p class="unit">Visual Communication 2</p>
+                                    <p class="institution">Manchester
+                                        School
+                                        of
+                                        Art</p>
+                                </aside>
+                                <p class="blurb">Designing a series of three book covers, unified through an
+                                    interactive
+                                    chalkboard print finish and a set of geometric patterns. I relished the opportunity
+                                    to use
+                                    manual processes including hot foil and debossing to craft my three books.</p>
+                            </section>
+                            <section class="controls">
+                                <section class="arrows">
+                                    <button class="left-arrow" id="interlude_left-arrow" title="Previous image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-left"></span>
+                                        </span></button>
+                                    <button class="right-arrow" id="interlude_right-arrow" title="Next image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-right"></span>
+                                        </span></button>
+                                </section>
+                                <button class="link" id="interlude_link" title="Interlude series">Visit <span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-chevron-right"></span>
+                                    </span></button>
+                            </section>
+
+                        </section>
+
+                    </article>
                 </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Visual Communication 1</span><span
-                                class="institution">Manchester
-                                School
+            </section>
+            <section id="BAFirstYear">
+                <h3 class="section-header-subtitle">First year</h3>
+                <div class="articles">
+                    <article id="terrors">
+                        <h4 class="label">Terrors</h4>
+                        <img class="carousel" id="terrors_carousel" width="100%" height="250px"></img>
+                        <div class="beneath">
+                            <div class="comment">
+                                <div class="attribution"><span class="unit">Unit X 2022</span><span
+                                        class="institution">Manchester
+                                        School
+                                        of
+                                        Art</span></div>
+                                <div class="blurb">Collaborating with students from across the Graphic Design and
+                                    Fashion Art
+                                    Direction
+                                    courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then
+                                    curated
+                                    an interactive digital lookbook.</div>
+                            </div>
+                            <div class="controls">
+                                <div class="arrows">
+                                    <div class="left-arrow" id="terrors_left-arrow" title="Previous image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-left"></span>
+                                        </span></div>
+                                    <div class="right-arrow" id="terrors_right-arrow" title="Next image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-right"></span>
+                                        </span></div>
+                                </div>
+                                <button class="link" id="terrors_link" title="Terrors">Visit <span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-chevron-right"></span>
+                                    </span></button>
+                            </div>
+
+                        </div>
+
+                    </article>
+                    <article id="melting">
+                        <h4 class="label">Melting font</h4>
+                        <img class="carousel" id="melting_carousel" width="100%" height="250px"></img>
+                        <div class="beneath">
+                            <div class="comment">
+                                <div class="attribution"><span class="unit">Visual Thinking 3</span>
+                                    <span class="institution">Manchester School of Art</span>
+                                </div>
+                                <div class="blurb">Faced with a brief to bring new life to the words of a speech by
+                                    Greta
+                                    Thunberg,
+                                    I created a set of fonts which 'melt away', and explored how they could be used
+                                    across a
+                                    range of applications.</div>
+                            </div>
+                            <div class="controls">
+                                <div class="arrows">
+                                    <div class="left-arrow" id="melting_left-arrow" title="Previous image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-left"></span>
+                                        </span></div>
+                                    <div class="right-arrow" id="melting_right-arrow" title="Next image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-right"></span>
+                                        </span></div>
+                                </div>
+                                <button class="link" id="melting_link" title="Melting font">Visit <span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-chevron-right"></span>
+                                    </span></button>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="magazines">
+                        <h4 class="label">Editorial design</h4>
+                        <img class="carousel" id="magazines_carousel" width="100%" height="250px"></img>
+                        <div class="beneath">
+                            <div class="comment">
+                                <div class="attribution"><span class="unit">Visual Thinking 2</span><span
+                                        class="institution">Manchester
+                                        School
+                                        of
+                                        Art</span></div>
+                                <div class="blurb">Designing spreads for two magazine articles; one provided for us,
+                                    about the
+                                    films
+                                    of Wes Anderson, and one that I wrote
+                                    myself, about Victoria Wood's use of food as a comedic device in her sitcom
+                                    <em>dinnerladies</em>.
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <div class="arrows">
+                                    <div class="left-arrow" id="magazines_left-arrow" title="Previous image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-left"></span>
+                                        </span></div>
+                                    <div class="right-arrow" id="magazines_right-arrow" title="Next image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-right"></span>
+                                        </span></div>
+                                </div>
+                                <button class="link" id="magazines_link" title="Editorial design">Visit <span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-chevron-right"></span>
+                                    </span></button>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="twentysixplusone">
+                        <h4 class="label">26 + 1</h4>
+                        <img class="carousel" id="twentysixplusone_carousel" width="100%" height="250px"></img>
+                        <div class="beneath">
+                            <div class="comment">
+                                <div class="attribution"><span class="unit">Visual Thinking 1</span><span
+                                        class="institution">Manchester
+                                        School
+                                        of
+                                        Art</span></div>
+                                <div class="blurb">My work for the Found Alphabet and Letterspace projects of my degree
+                                    course,
+                                    all
+                                    about exploring
+                                    typography as an introduction to the first year through photography and letterform
+                                    design.
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <div class="arrows">
+                                    <div class="left-arrow" id="twentysixplusone_left-arrow" title="Previous image">
+                                        <span class="material-symbols-outlined">
+                                            <span class="icon-arrow-left"></span>
+                                        </span>
+                                    </div>
+                                    <div class="right-arrow" id="twentysixplusone_right-arrow" title="Next image"><span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-arrow-right"></span>
+                                        </span></div>
+                                </div>
+                                <button class="link" id="twentysixplusone_link" title="26 + 1">Visit <span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-chevron-right"></span>
+                                    </span></button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+        <hr>
+        <section id="ALevels">
+            <h2 class="section-header">A-levels</h2>
+
+            <section id="ASecondYear">
+                <h3 class="section-header-subtitle">Second year</h3>
+                <section class="gallery">
+                    <div class="articles">
+                        <article id="channel8">
+                            <h4 class="label">Channel 8</h4>
+                            <img class="carousel" id="channel8_carousel" width="100%" height="250px"></img>
+                            <div class="beneath">
+                                <div class="comment">
+                                    <div class="attribution"><span class="unit">A-level Graphic Design</span><span
+                                            class="institution">New College Bradford</span></div>
+                                    <div class="blurb">Producing a comprehensive branding system for a
+                                        fictional local TV channel, inspired by technical test cards and patterns. I
+                                        extended the
+                                        brief to include coded elements incorporating
+                                        randomisation and graphic generation to blend the worlds of graphics and
+                                        computing. Later
+                                        parts of the project focussed on designing branding for local elections news
+                                        coverage,
+                                        including set design and 3D rendering. I got an
+                                        A*
+                                        for this subject.</div>
+                                </div>
+                                <div class="controls">
+                                    <div class="arrows">
+                                        <div class="left-arrow" id="channel8_left-arrow" title="Previous image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-left"></span>
+                                            </span></div>
+                                        <div class="right-arrow" id="channel8_right-arrow" title="Next image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-right"></span>
+                                            </span></div>
+                                    </div>
+                                    <button class="link" id="channel8_link" title="Channel 8">Visit <span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-chevron-right"></span>
+                                        </span></button>
+
+                                </div>
+                            </div>
+                        </article>
+                        <article id="local">
+                            <h4 class="label">My Local Area</h4>
+                            <img class="carousel" id="local_carousel" width="100%" height="250px"></img>
+                            <div class="beneath">
+                                <div class="comment">
+                                    <div class="attribution"><span class="unit">A-level Computer Science</span><span
+                                            class="institution">New
+                                            College Bradford</span></div>
+                                    <div class="blurb">A web app which takes a user's postcode and
+                                        retrieves data from
+                                        a range of APIs about their neighbourhood, such as weather, local politicians,
+                                        council
+                                        areas,
+                                        nearby GPs and dentists, and local community groups. The project received a
+                                        grade of
+                                        A*.<br><span class="quiet">Certain features may be unavailable depending on data
+                                            providers.</span>
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="arrows">
+                                        <div class="left-arrow" id="local_left-arrow" title="Previous image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-left"></span>
+                                            </span></div>
+                                        <div class="right-arrow" id="local_right-arrow" title="Next image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-right"></span>
+                                            </span></div>
+                                    </div>
+                                    <button class="link" id="local_link" title="My Local Area">Visit <span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-chevron-right"></span>
+                                        </span></button>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <section id="AFirstYear">
+                <section class="gallery">
+                    <div class="section-header-subtitle">First year</div>
+                    <div class="articles">
+                        <article id="wayfinding">
+                            <h4 class="label">Wayfinding system</h4>
+                            <img class="carousel" id="wayfinding_carousel" width="100%" height="250px"></img>
+                            <div class="beneath">
+                                <div class="comment">
+                                    <div class="attribution"><span class="unit">A-level Graphic Design</span><span
+                                            class="institution">New
+                                            College Bradford</span></div>
+                                    <div class="blurb">Producing a
+                                        set
+                                        of wayfinding
+                                        signs for various locations in Bradford city centre with the aim of making it a
+                                        nicer place
+                                        for
+                                        pedestrians. The arrival of the lockdown meant that the project had to be
+                                        completed using
+                                        found imagery without being able to visit the sites in person, allowing me to
+                                        explore 360°
+                                        panoramic images. I also designed a family of icons representing major public
+                                        buildings in
+                                        Bradford which I incorporated on to the signage.
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="arrows">
+                                        <div class="left-arrow" id="wayfinding_left-arrow" title="Previous image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-left"></span>
+                                            </span></div>
+                                        <div class="right-arrow" id="wayfinding_right-arrow" title="Next image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-right"></span>
+                                            </span></div>
+                                    </div>
+                                    <button class="link" id="wayfinding_link" title="Wayfinding system">Visit <span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-chevron-right"></span>
+                                        </span></button>
+
+                                </div>
+                            </div>
+                        </article>
+                        <article id="branding">
+                            <h4 class="label">Skin Kitchen Co branding</h4>
+                            <img class="carousel" id="branding_carousel" width="100%" height="250px"></img>
+                            <div class="beneath">
+                                <div class="comment">
+                                    <div class="attribution"><span class="unit">A-level Graphic Design</span><span
+                                            class="institution">New
+                                            College Bradford</span></div>
+                                    <div class="blurb">Responding to a live brief to design the
+                                        brand for a
+                                        local skincare company, I produced a branding system, set of guidelines, and
+                                        range of
+                                        application mock-ups. The owner really liked my designs, saying I "followed the
+                                        brief really
+                                        well, it would be a pleasure to work with Bradley in future".
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="arrows">
+                                        <div class="left-arrow" id="branding_left-arrow" title="Previous image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-left"></span>
+                                            </span></div>
+                                        <div class="right-arrow" id="branding_right-arrow" title="Next image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-right"></span>
+                                            </span></div>
+                                    </div>
+                                    <button class="link" id="branding_link" title="Skin Kitchen Co branding">Visit <span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-chevron-right"></span>
+                                        </span></button>
+
+                                </div>
+                            </div>
+                        </article>
+                        <article id="infographics">
+                            <h4 class="label">Election infographic</h4>
+                            <img class="carousel" id="infographics_carousel" width="100%" height="250px"></img>
+                            <div class="beneath">
+                                <div class="comment">
+                                    <div class="attribution"><span class="unit">A-level Graphic Design</span><span
+                                            class="institution">New
+                                            College Bradford</span></div>
+                                    <div class="blurb">In the lead-up to the 2019 general election, I produced an
+                                        infographic aimed
+                                        at young first-time voters aiming to explain how Britain's democratic systems
+                                        work in an
+                                        informal and engaging manner.
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="arrows">
+                                        <div class="left-arrow" id="infographics_left-arrow" title="Previous image">
+                                            <span class="material-symbols-outlined">
+                                                <span class="icon-arrow-left"></span>
+                                            </span>
+                                        </div>
+                                        <div class="right-arrow" id="infographics_right-arrow" title="Next image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-right"></span>
+                                            </span></div>
+                                    </div>
+                                    <button class="link" id="infographics_link" title="Election infographic">Visit <span
+                                            class="material-symbols-outlined">
+                                            <span class="icon-chevron-right"></span>
+                                        </span></button>
+
+                                </div>
+                            </div>
+                        </article>
+                        <article id="election">
+                            <h4 class="label">Election AR</h4>
+                            <img class="carousel" id="election_carousel" width="100%" height="250px"></img>
+                            <div class="beneath">
+                                <div class="comment">
+                                    <div class="attribution"><span class="unit">A-level Government &
+                                            Politics</span><span class="institution">New
+                                            College Bradford</span></div>
+                                    <div class="blurb">Having been asked to "make a poster" in A-level politics, I (as
+                                        usual) took
+                                        it
+                                        too far, making a
+                                        set of augmented reality fact files using AR.js that revealed more content when
+                                        scanned.<br><span class="quiet">Now taken offline - it only works with the
+                                            printed
+                                            sheets.</span>
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="arrows">
+                                        <div class="left-arrow" id="election_left-arrow" title="Previous image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-left"></span>
+                                            </span></div>
+                                        <div class="right-arrow" id="election_right-arrow" title="Next image"><span
+                                                class="material-symbols-outlined">
+                                                <span class="icon-arrow-right"></span>
+                                            </span></div>
+                                    </div>
+                                    <button class="link offline" id="election_link" disabled>Now offline
+                                    </button>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <hr>
+        <section id="personalProjects">
+            <h2 class="section-header">Personal projects</h2>
+            <div class="articles">
+                <article id="psb">
+                    <h4 class="label">@psblyric</h4>
+                    <img class="carousel" id="psb_carousel" width="100%" height="250px"></img>
+                    <div class="beneath">
+                        <div class="comment">
+                            <div class="attribution"><span class="unit">Twitter and Mastodon bot</span></div>
+                            <div class="blurb">A (moderately successful) Twitter and Mastodon bot that I run, which
+                                posts
+                                hourly snippets
                                 of
-                                Art</span></div>
-                        <div class="blurb">Having extracted data from the track Voodoo Ray by A Guy Called Gerald, I
-                            produced a program that algorithmically generated animated graphical scores by analysing
-                            instrumentation data.</div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="crystaliser_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="crystaliser_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
+                                lyrics from the
+                                back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running
+                                through
+                                the Tasker app and IFTTT.<br><span class="quiet">Not affiliated with Pet Shop
+                                    Boys</span><a rel="me" href="https://mas.to/@psb">&nbsp;</a></div>
+
                         </div>
-                        <div class="link" id="crystaliser_link" title="Graphical scores">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                    </div>
+                        <div class="controls">
+                            <div class="arrows">
+                                <div class="left-arrow" id="psb_left-arrow" title="Previous image"><span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-arrow-left"></span>
+                                    </span></div>
+                                <div class="right-arrow" id="psb_right-arrow" title="Next image"><span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-arrow-right"></span>
+                                    </span></div>
+                            </div>
+                            <button class="link halfheight" id="psb_link_twit"
+                                title="Pet Shop Boys lyrics bot on Twitter">
+                                Twitter <span class="material-symbols-outlined">
+                                    <span class="icon-chevron-right"></span>
+                                </span></button>
+                            <button class="link halfheight" id="psb_link_mast"
+                                title="Pet Shop Boys lyrics bot on Mastodon">
+                                Mastodon <span class="material-symbols-outlined">
+                                    <span class="icon-chevron-right"></span>
+                                </span></button>
 
-                </div>
-
-            </article>
-            <article id="interlude">
-                <div class="label">Interlude series</div>
-                <div class="carousel" id="interlude_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Visual Communication 2</span><span
-                                class="institution">Manchester
-                                School
-                                of
-                                Art</span></div>
-                        <div class="blurb">Designing a series of three book covers, unified through an interactive
-                            chalkboard print finish and a set of geometric patterns. I relished the opportunity to use
-                            manual processes including hot foil and debossing to craft my three books.</div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="interlude_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="interlude_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="interlude_link" title="Interlude series">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                    </div>
-
-                </div>
-
-            </article>
-        </div>
-    </section>
-    <section class="gallery">
-
-        <h3 class="section-header-subtitle">First year</h3>
-        <div class="articles">
-            <article id="terrors">
-                <div class="label">Terrors</div>
-                <div class="carousel" id="terrors_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Unit X 2022</span><span
-                                class="institution">Manchester
-                                School
-                                of
-                                Art</span></div>
-                        <div class="blurb">Collaborating with students from across the Graphic Design and Fashion Art
-                            Direction
-                            courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then curated
-                            an interactive digital lookbook.</div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="terrors_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="terrors_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="terrors_link" title="Terrors">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                    </div>
-
-                </div>
-
-            </article>
-            <article id="melting">
-                <div class="label">Melting font</div>
-                <div class="carousel" id="melting_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Visual Thinking 3</span>
-                            <span class="institution">Manchester School of Art</span>
-                        </div>
-                        <div class="blurb">Faced with a brief to bring new life to the words of a speech by Greta
-                            Thunberg,
-                            I created a set of fonts which 'melt away', and explored how they could be used across a
-                            range of applications.</div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="melting_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="melting_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="melting_link" title="Melting font">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                    </div>
-                </div>
-            </article>
-            <article id="magazines">
-                <div class="label">Editorial design</div>
-                <div class="carousel" id="magazines_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Visual Thinking 2</span><span
-                                class="institution">Manchester
-                                School
-                                of
-                                Art</span></div>
-                        <div class="blurb">Designing spreads for two magazine articles; one provided for us, about the
-                            films
-                            of Wes Anderson, and one that I wrote
-                            myself, about Victoria Wood's use of food as a comedic device in her sitcom
-                            <em>dinnerladies</em>.
                         </div>
                     </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="magazines_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="magazines_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
+                </article>
+                <article id="jam">
+                    <h4 class="label">Just a Minute</h4>
+                    <img class="carousel" id="jam_carousel" width="100%" height="250px"></img>
+                    <div class="beneath">
+                        <div class="comment">
+                            <div class="attribution"><span class="unit">Web game</span></div>
+                            <div class="blurb">A quick game I made in a couple of hours. Based on the <a
+                                    href="https://en.wikipedia.org/wiki/Just_a_Minute"
+                                    style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel
+                                    show of the same
+                                    name</a>,
+                                where players have to speak for sixty seconds on a subject without hesitation,
+                                repetition,
+                                or
+                                deviation, this
+                                web app allows you to play along at home, with between two and four players. <br><span
+                                    class="quiet">Not affiliated with the BBC</span></div>
                         </div>
-                        <div class="link" id="magazines_link" title="Editorial design">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                    </div>
-                </div>
-            </article>
-            <article id="twentysixplusone">
-                <div class="label">26 + 1</div>
-                <div class="carousel" id="twentysixplusone_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Visual Thinking 1</span><span
-                                class="institution">Manchester
-                                School
-                                of
-                                Art</span></div>
-                        <div class="blurb">My work for the Found Alphabet and Letterspace projects of my degree course,
-                            all
-                            about exploring
-                            typography as an introduction to the first year through photography and letterform design.
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="twentysixplusone_left-arrow" title="Previous image"><span
+                        <div class="controls">
+                            <div class="arrows">
+                                <div class="left-arrow" id="jam_left-arrow" title="Previous image"><span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-arrow-left"></span>
+                                    </span></div>
+                                <div class="right-arrow" id="jam_right-arrow" title="Next image"><span
+                                        class="material-symbols-outlined">
+                                        <span class="icon-arrow-right"></span>
+                                    </span></div>
+                            </div>
+                            <button class="link" id="jam_link" title="Just a Minute">Visit <span
                                     class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="twentysixplusone_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="twentysixplusone_link" title="26 + 1">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-    <hr>
-    <section class="gallery">
-        <div class="section-header">A-levels</div>
-        <div class="section-header-subtitle">Second year</div>
-        <div class="articles">
-            <article id="channel8">
-                <div class="label">Channel 8</div>
-                <div class="carousel" id="channel8_carousel">
+                                    <span class="icon-chevron-right"></span>
+                                </span></button>
 
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">A-level Graphic Design</span><span
-                                class="institution">New College Bradford</span></div>
-                        <div class="blurb">Producing a comprehensive branding system for a
-                            fictional local TV channel, inspired by technical test cards and patterns. I extended the
-                            brief to include coded elements incorporating
-                            randomisation and graphic generation to blend the worlds of graphics and computing. Later
-                            parts of the project focussed on designing branding for local elections news coverage,
-                            including set design and 3D rendering. I got an
-                            A*
-                            for this subject.</div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="channel8_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="channel8_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="channel8_link" title="Channel 8">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-            <article id="local">
-                <div class="label">My Local Area</div>
-                <div class="carousel" id="local_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">A-level Computer Science</span><span
-                                class="institution">New
-                                College Bradford</span></div>
-                        <div class="blurb">A web app which takes a user's postcode and
-                            retrieves data from
-                            a range of APIs about their neighbourhood, such as weather, local politicians, council
-                            areas,
-                            nearby GPs and dentists, and local community groups. The project received a grade of
-                            A*.<br><span class="quiet">Certain features may be unavailable depending on data
-                                providers.</span>
                         </div>
                     </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="local_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="local_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="local_link" title="My Local Area">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-    <section class="gallery">
-        <div class="section-header-subtitle">First year</div>
-        <div class="articles">
-            <article id="wayfinding">
-                <div class="label">Wayfinding system</div>
-                <div class="carousel" id="wayfinding_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">A-level Graphic Design</span><span
-                                class="institution">New
-                                College Bradford</span></div>
-                        <div class="blurb">Producing a
-                            set
-                            of wayfinding
-                            signs for various locations in Bradford city centre with the aim of making it a nicer place
-                            for
-                            pedestrians. The arrival of the lockdown meant that the project had to be completed using
-                            found imagery without being able to visit the sites in person, allowing me to explore 360°
-                            panoramic images. I also designed a family of icons representing major public buildings in
-                            Bradford which I incorporated on to the signage.
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="wayfinding_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="wayfinding_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="wayfinding_link" title="Wayfinding system">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-            <article id="branding">
-                <div class="label">Skin Kitchen Co branding</div>
-                <div class="carousel" id="branding_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">A-level Graphic Design</span><span
-                                class="institution">New
-                                College Bradford</span></div>
-                        <div class="blurb">Responding to a live brief to design the
-                            brand for a
-                            local skincare company, I produced a branding system, set of guidelines, and range of
-                            application mock-ups. The owner really liked my designs, saying I "followed the brief really
-                            well, it would be a pleasure to work with Bradley in future".
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="branding_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="branding_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="branding_link" title="Skin Kitchen Co branding">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-            <article id="infographics">
-                <div class="label">Election infographic</div>
-                <div class="carousel" id="infographics_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">A-level Graphic Design</span><span
-                                class="institution">New
-                                College Bradford</span></div>
-                        <div class="blurb">In the lead-up to the 2019 general election, I produced an infographic aimed
-                            at young first-time voters aiming to explain how Britain's democratic systems work in an
-                            informal and engaging manner.
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="infographics_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="infographics_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="infographics_link" title="Election infographic">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-            <article id="election">
-                <div class="label">Election AR</div>
-                <div class="carousel" id="election_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">A-level Government & Politics</span><span
-                                class="institution">New
-                                College Bradford</span></div>
-                        <div class="blurb">Having been asked to "make a poster" in A-level politics, I (as usual) took
-                            it
-                            too far, making a
-                            set of augmented reality fact files using AR.js that revealed more content when
-                            scanned.<br><span class="quiet">Now taken offline - it only works with the printed
-                                sheets.</span>
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="election_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="election_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link offline" id="election_link">Now offline
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-    <hr>
-    <section class="gallery">
-        <div class="section-header">Personal projects</div>
-        <div class="articles">
-            <article id="psb">
-                <div class="label">@psblyric</div>
-                <div class="carousel" id="psb_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Twitter and Mastodon bot</span></div>
-                        <div class="blurb">A (moderately successful) Twitter and Mastodon bot that I run, which posts
-                            hourly snippets
-                            of
-                            lyrics from the
-                            back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running
-                            through
-                            the Tasker app and IFTTT.<br><span class="quiet">Not affiliated with Pet Shop
-                                Boys</span><a rel="me" href="https://mas.to/@psb">&nbsp;</a></div>
-
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="psb_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="psb_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link halfheight" id="psb_link_twit" title="Pet Shop Boys lyrics bot on Twitter">
-                            Twitter <span class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-                        <div class="link halfheight" id="psb_link_mast" title="Pet Shop Boys lyrics bot on Mastodon">
-                            Mastodon <span class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-            <article id="jam">
-                <div class="label">Just a Minute</div>
-                <div class="carousel" id="jam_carousel">
-
-                </div>
-                <div class="beneath">
-                    <div class="comment">
-                        <div class="attribution"><span class="unit">Web game</span></div>
-                        <div class="blurb">A quick game I made in a couple of hours. Based on the <a
-                                href="https://en.wikipedia.org/wiki/Just_a_Minute"
-                                style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel
-                                show of the same
-                                name</a>,
-                            where players have to speak for sixty seconds on a subject without hesitation, repetition,
-                            or
-                            deviation, this
-                            web app allows you to play along at home, with between two and four players. <br><span
-                                class="quiet">Not affiliated with the BBC</span></div>
-                    </div>
-                    <div class="controls">
-                        <div class="arrows">
-                            <div class="left-arrow" id="jam_left-arrow" title="Previous image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-left"></span>
-                                </span></div>
-                            <div class="right-arrow" id="jam_right-arrow" title="Next image"><span
-                                    class="material-symbols-outlined">
-                                    <span class="icon-arrow-right"></span>
-                                </span></div>
-                        </div>
-                        <div class="link" id="jam_link" title="Just a Minute">Visit <span
-                                class="material-symbols-outlined">
-                                <span class="icon-chevron-right"></span>
-                            </span></div>
-
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
+                </article>
+            </div>
+        </section>
+    </main>
     <hr id="before-emley">
     <section id="emley"
         title="The view from my local park in Bradford towards the Emley Moor TV transmitter, the tallest freestanding structure in the UK">
@@ -1202,9 +1158,9 @@
     jam_link.addEventListener("click", jam_visit);
 </script>
 
-<script src="scripts/links.js"></script>
+<script src="/scripts/links.js"></script>
 
-<script src="scripts/outro.js"></script>
+<script src="/scripts/outro.js"></script>
 <a rel="me" href="https://mastodon.me.uk/@bradleysans"> </a>
 
 </html>

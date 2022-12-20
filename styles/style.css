@@ -110,12 +110,13 @@ nav ul li {
     font-size: 2rem;
     display: flex;
     background-color: var(--orange);
-    height: 15vw;
-    width: 15vw;
+    height: 12vw;
+    width: 12vw;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: .5s;
+    margin: 0;
 }
 
 .nav-icon:hover {
@@ -273,11 +274,13 @@ nav ul li {
     font: var(--headline);
     display: inline-block;
     font-size: 1.5rem;
+    margin: 0;
 }
 
 .carousel {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: unset !important;
+    aspect-ratio: 16 / 9 !important;
     color: black;
     background-size: cover;
     transition: .25s;
@@ -305,15 +308,24 @@ nav ul li {
 
 .unit {
     color: var(--orange);
+    margin: 0;
 }
 
 .institution {
     color: grey;
+    margin: 0;
 }
 
 .blurb {
     font: var(--body);
-    padding-left: 8px;
+    padding: 0px 0px 0px 8px;
+    margin: 0;
+}
+
+button {
+    border: 0;
+    font-size: unset;
+    color: unset;
 }
 
 .controls {
@@ -339,7 +351,7 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    color: white;
     transition: .5s;
 }
 
