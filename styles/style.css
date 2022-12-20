@@ -32,6 +32,9 @@ header {
     padding: 10px 10px 0px 10px;
     font-size: 2.4rem;
     transition: .5s;
+}
+
+.name.animated {
     animation: 2s orange-in 1;
 }
 
@@ -87,8 +90,10 @@ nav ul {
 
 nav ul li {
     display: inline;
-    animation: 2.5s fade-in-nav forwards;
+}
 
+nav.animated ul li {
+    animation: 2.5s fade-in-nav forwards;
 }
 
 @keyframes fade-in-nav {
@@ -159,16 +164,20 @@ nav ul li {
     justify-content: center;
     flex-direction: column;
 
+}
+
+#triple-box-words.animated {
     animation: 1s fade-in-words forwards;
 }
 
 
 
-#triple-box-half {
+
+#triple-box-half.animated {
     animation: 1.5s fade-in-half forwards;
 }
 
-#triple-box-photo {
+#triple-box-photo.animated {
     animation: 2s fade-in-photo forwards;
 }
 
@@ -245,9 +254,9 @@ nav ul li {
     margin: 10px;
 }
 
-.gallery,
-#before-emley,
-#emley {
+.gallery.animated,
+#before-emley.animated,
+#emley.animated {
     animation: 3s fade-in-rest forwards;
 
 }
@@ -565,7 +574,7 @@ hr {
 
     }
 
-    .name {
+    .name.animated {
         animation: 2s narrow-in 1;
     }
 }

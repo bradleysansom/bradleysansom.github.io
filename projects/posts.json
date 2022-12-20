@@ -1,0 +1,54 @@
+{
+    "posts": [
+        {
+            "id": "crystaliser",
+            "name": "Graphical scores",
+            "category": "BA Graphic Design",
+            "subcategory": "Second year",
+            "unit": "Visual Communication 1",
+            "institution": "Manchester School of Art",
+            "blurb": "Having extracted data from the track Voodoo Ray by A Guy Called Gerald, I produced a program that algorithmically generated animated graphical scores by analysing instrumentation data.",
+            "links": [
+                "https: //crystaliser.github.io/"
+            ],
+            "linkLabels": [
+                "Visit"
+            ],
+            "images": [
+                "/projects/crystaliser/record.png",
+                "/projects/crystaliser/voodoo.png"
+            ],
+            "tags": [
+                "music",
+                "vectors",
+                "graphic design",
+                "web development",
+                "data visualisation"
+            ]
+        },
+        {
+            "id": "interlude",
+            "name": "Interlude series",
+            "category": "BA Graphic Design",
+            "subcategory": "Second year",
+            "unit": "Visual Communication 2",
+            "institution": "Manchester School of Art",
+            "blurb": "Designing a series of three book covers, unified through an interactive chalkboard print finish and a set of geometric patterns. I relished the opportunity to use manual processes including hot foil and debossing to craft my three books.",
+            "links": [
+                "https://www.instagram.com/stories/highlights/17906907719654677/"
+            ],
+            "images": [
+                "/projects/interlude/books.jpg",
+                "/projects/interlude/foil.jpg"
+            ],
+            "tags": [
+                "book covers",
+                "physical",
+                "graphic design",
+                "print",
+                "hot foil embossing",
+                "vectors"
+            ]
+        }
+    ]
+}
