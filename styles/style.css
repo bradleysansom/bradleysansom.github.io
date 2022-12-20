@@ -228,7 +228,7 @@ nav ul li {
 
 #triple-box-half {
     background-color: var(--orange);
-    background-image: url('me-square.jpeg');
+    background-image: url('../images/me/me-square.jpeg');
 
     background-blend-mode: luminosity;
     display: none;
@@ -236,7 +236,7 @@ nav ul li {
 
 #triple-box-photo {
 
-    background-image: url('me-square.jpeg');
+    background-image: url('../images/me/me-square.jpeg');
 }
 
 .gallery {
@@ -408,13 +408,13 @@ hr {
 }
 
 #election_carousel {
-    background-image: url('thatch.png');
+    background-image: url('../projects/ar/thatch.png');
 }
 
 #emley {
     width: calc(100% - 20px);
     aspect-ratio: 3/1;
-    background-image: url('emley.jpg');
+    background-image: url('../images/features/emley.jpg');
     margin: 0 10px;
     background-size: cover;
     display: flex;
