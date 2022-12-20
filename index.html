@@ -1319,12 +1319,14 @@
 </body>
 <script>
     async function fetchPosts() {
-        let response = await fetch("posts.json");
+        let response = await fetch("https://bradleysans.uk/posts.json");
 
         if (response.ok) { // if HTTP-status is 200-299
             // get the response body (the method explained below)
             let json = await response.json();
             console.log(json);
+            i = 0;
+            console.log(json.posts[i].blurb)
         } else {
             alert("HTTP-Error: " + response.status);
         }
@@ -1603,7 +1605,7 @@
     const local_rightBtn = document.getElementById('local_right-arrow');
     const local_leftBtn = document.getElementById('local_left-arrow');
     const local_link = document.getElementById('local_link');
-    let local_pictures = ['sk93ab.png', 'postcode.png'];
+    let local_pictures = ['projects/local/sk93ab.png', 'projects/local/postcode.png'];
     local_img.style.backgroundImage = "url('" + local_pictures[0] + "')";
     let local_position = 0;
     const local_moveRight = () => {
@@ -1678,7 +1680,7 @@
     const branding_rightBtn = document.getElementById('branding_right-arrow');
     const branding_leftBtn = document.getElementById('branding_left-arrow');
     const branding_link = document.getElementById('branding_link');
-    let branding_pictures = ['style.png', 'vanphone.png'];
+    let branding_pictures = ['projects/branding/style.png', 'projects/branding/vanphone.png'];
     branding_img.style.backgroundImage = "url('" + branding_pictures[0] + "')";
     let branding_position = 0;
     const branding_moveRight = () => {
@@ -1798,7 +1800,7 @@
     const jam_rightBtn = document.getElementById('jam_right-arrow');
     const jam_leftBtn = document.getElementById('jam_left-arrow');
     const jam_link = document.getElementById('jam_link');
-    let jam_pictures = ['jam.png', 'nicholas.jpg'];
+    let jam_pictures = ['projects/justaminute/jam.png', 'projects/justaminute/nicholas.jpg'];
     jam_img.style.backgroundImage = "url('" + jam_pictures[0] + "')";
     let jam_position = 0;
     const jam_moveRight = () => {
