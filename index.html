@@ -90,6 +90,10 @@
         .icon-twitter:before {
             content: "\54";
         }
+
+        .icon-mastodon:before {
+            content: "\4d";
+        }
     </style>
 </head>
 
@@ -112,6 +116,9 @@
                 </li>
                 <li>
                     <div class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span></div>
+                </li>
+                <li>
+                    <div class="nav-icon" id="mastodon" title="Mastodon"><span class="icon-mastodon"></span></div>
                 </li>
 
             </ul>
@@ -1195,34 +1202,9 @@
     jam_link.addEventListener("click", jam_visit);
 </script>
 
-<script>
-    const email_link = document.getElementById('email');
-    const github_link = document.getElementById('github');
-    const linkedin_link = document.getElementById('linkedin');
-    const twitter_link = document.getElementById('twitter');
-    const instagram_link = document.getElementById('instagram');
-    const email_visit = () => {
-        window.location.href = "mailto:bradley-sansom@outlook.com";
-    }
-    email_link.addEventListener("click", email_visit);
-    const github_visit = () => {
-        window.location.href = "https://github.com/bradleysansom";
-    }
-    github_link.addEventListener("click", github_visit);
-    const linkedin_visit = () => {
-        window.location.href = "https://linkedin.com/in/bradleysans";
-    }
-    linkedin_link.addEventListener("click", linkedin_visit);
-    const twitter_visit = () => {
-        window.location.href = "https://twitter.com/bradleysans";
-    }
-    twitter_link.addEventListener("click", twitter_visit);
-    const instagram_visit = () => {
-        window.location.href = "https://instagram.com/bradleysans";
-    }
-    instagram_link.addEventListener("click", instagram_visit);
-</script>
+<script src="scripts/links.js"></script>
 
 <script src="scripts/outro.js"></script>
+<a rel="me" href="https://mastodon.me.uk/@bradleysans"> </a>
 
 </html>
