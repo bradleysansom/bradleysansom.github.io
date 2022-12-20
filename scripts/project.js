@@ -1,3 +1,8 @@
+var url = window.location.href;
+var currentProject = url.split('?')[1]
+console.log("currentProject");
+
+
 async function fetchPosts() {
     let response = await fetch("https://bradleysans.uk/projects/posts.json");
 

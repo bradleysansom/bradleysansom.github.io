@@ -64,11 +64,131 @@
     <hr>
     <main>
 
+        <article id="crystaliser">
+            <h4 class="headline"></h4>
+            <img id="carousel" width="100%" height="250px"></img>
+            <section class="beneath">
+                <section class="comment">
+                    <aside class="attribution">
+                        <p class="unit"></p>
+                        <p class="institution"></p>
+                    </aside>
+                    <p class="blurb"></p>
+                </section>
+                <section class="controls">
+                    <section class="arrows">
+                        <button class="left-arrow" title="Previous image"><span class="material-symbols-outlined">
+                                <span class="icon-arrow-left"></span>
+                            </span></button>
+                        <button class="right-arrow" title="Next image"><span class="material-symbols-outlined">
+                                <span class="icon-arrow-right"></span>
+                            </span></button>
+                    </section>
+                    <button class="link" id="visitButton"><span id="linkText"></span><span
+                            class="material-symbols-outlined">
+                            <span class="icon-chevron-right"></span>
+                        </span></button>
+                </section>
+
+            </section>
+
+        </article>
     </main>
 
 </body>
 
-<script src="/scripts/project.js"></script>
+<!-- <script src="/scripts/project.js"></script> -->
+<script>
+
+    var url = window.location.href;
+    var currentProject = url.split('?')[1]
+    console.log(currentProject);
+
+    var headline = document.getElementsByClassName("headline")[0];
+    var image = document.getElementById("carousel");
+    var unit = document.getElementsByClassName("unit")[0];
+    var institution = document.getElementsByClassName("institution")[0];
+    var blurb = document.getElementsByClassName("blurb")[0];
+    var linkText = document.getElementById("linkText");
+    var rightBtn = document.getElementsByClassName("right-arrow")[0];
+    var leftBtn = document.getElementsByClassName("left-arrow")[0];
+    var button = document.getElementById("visitButton");
+
+    async function fetchPosts() {
+        let response = await fetch("https://bradleysans.uk/projects/posts.json");
+
+        if (response.ok) { // if HTTP-status is 200-299
+            // get the response body (the method explained below)
+            let projects = await response.json();
+            var projectsArray = projects.posts;
+            console.log(projectsArray);
+            let filtered = projectsArray.filter(project => project.id == currentProject)
+            console.log(filtered);
+            if (filtered.length === 0) {
+                projectNotFound();
+            } else {
+                headline.innerHTML = filtered[0].name;
+                image.backgroundImage = "url(" + filtered[0].images[0] + ");";
+                unit.innerHTML = filtered[0].unit;
+                institution.innerHTML = filtered[0].institution;
+                blurb.innerHTML = filtered[0].blurb;
+                linkText.innerHTML = filtered[0].linkLabels[0];
+
+                var pictures = filtered[0].images;
+                var link = filtered[0].links[0];
+
+                let position = 0;
+                const moveRight = () => {
+                    console.log('moveRight');
+                    if (position >= pictures.length - 1) {
+                        position = 0
+                        image.style.backgroundImage = "url('" + pictures[position] + "')";
+                        return;
+                    }
+                    image.style.backgroundImage = "url('" + pictures[position + 1] + "')";
+                    position++;
+                }
+                const moveLeft = () => {
+                    console.log('moveLeft');
+                    if (position < 1) {
+                        position = pictures.length - 1;
+                        image.style.backgroundImage = "url('" + pictures[position] + "')";
+                        return;
+                    }
+                    image.style.backgroundImage = "url('" + pictures[position - 1] + "')";
+                    position--;
+                }
+
+                rightBtn.addEventListener("click", moveRight);
+                leftBtn.addEventListener("click", moveLeft);
+                const visit = () => {
+                    window.location.href = link;
+                }
+                visitButton.addEventListener("click", visit);
+
+
+            }
+
+
+
+
+
+        } else {
+            alert("HTTP-Error: " + response.status);
+        }
+    }
+    function projectNotFound() {
+        console.log("project not found");
+        document.getElementById("headline").innerHTML = "Project not found";
+    }
+
+
+    fetchPosts();
+
+
+
+
+</script>
 <script src="/scripts/links.js"></script>
 
 </html>
