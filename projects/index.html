@@ -99,74 +99,130 @@
 
 <!-- <script src="/scripts/project.js"></script> -->
 <script>
+    var headline;
+    var image;
+    var unit;
+    var institution;
+    var blurb;
+    var linkText;
+    var rightBtn;
+    var leftBtn;
+    var button;
 
-    var url = window.location.href;
-    var currentProject = url.split('?')[1]
-    console.log(currentProject);
+    var currentCategory;
+    var currentSubCategory;
 
-    var headline = document.getElementsByClassName("headline")[0];
-    var image = document.getElementById("carousel");
-    var unit = document.getElementsByClassName("unit")[0];
-    var institution = document.getElementsByClassName("institution")[0];
-    var blurb = document.getElementsByClassName("blurb")[0];
-    var linkText = document.getElementById("linkText");
-    var rightBtn = document.getElementsByClassName("right-arrow")[0];
-    var leftBtn = document.getElementsByClassName("left-arrow")[0];
-    var button = document.getElementById("visitButton");
+    var filtered;
+    var projects;
+    var projectsArray;
 
-    async function fetchPosts() {
+    var url;
+    var currentProject;
+
+    var categoryArray;
+    var subCategoryArray;
+
+    function getCurrentProject() {
+        url = window.location.href;
+        currentProject = url.split('?')[1]
+        console.log(currentProject);
+        projectPageInitialise();
+
+    }
+
+    function projectPageInitialise() {
+        headline = document.getElementsByClassName("headline")[0];
+        image = document.getElementById("carousel");
+        unit = document.getElementsByClassName("unit")[0];
+        institution = document.getElementsByClassName("institution")[0];
+        blurb = document.getElementsByClassName("blurb")[0];
+        linkText = document.getElementById("linkText");
+        rightBtn = document.getElementsByClassName("right-arrow")[0];
+        leftBtn = document.getElementsByClassName("left-arrow")[0];
+        button = document.getElementById("visitButton");
+        fetchPosts("project");
+    }
+
+    function projectPageRender() {
+        headline.innerHTML = filtered[0].name;
+        image.backgroundImage = "url(" + filtered[0].images[0] + ");";
+        unit.innerHTML = filtered[0].unit;
+        institution.innerHTML = filtered[0].institution;
+        blurb.innerHTML = filtered[0].blurb;
+        linkText.innerHTML = filtered[0].linkLabels[0];
+
+        var pictures = filtered[0].images;
+        var link = filtered[0].links[0];
+
+        let position = 0;
+        const moveRight = () => {
+            console.log('moveRight');
+            if (position >= pictures.length - 1) {
+                position = 0
+                image.style.backgroundImage = "url('" + pictures[position] + "')";
+                return;
+            }
+            image.style.backgroundImage = "url('" + pictures[position + 1] + "')";
+            position++;
+        }
+        const moveLeft = () => {
+            console.log('moveLeft');
+            if (position < 1) {
+                position = pictures.length - 1;
+                image.style.backgroundImage = "url('" + pictures[position] + "')";
+                return;
+            }
+            image.style.backgroundImage = "url('" + pictures[position - 1] + "')";
+            position--;
+        }
+
+        rightBtn.addEventListener("click", moveRight);
+        leftBtn.addEventListener("click", moveLeft);
+        const visit = () => {
+            window.location.href = link;
+        }
+        visitButton.addEventListener("click", visit);
+    }
+
+
+
+
+    function homePageInitialise(category, subCategory) {
+        fetchPosts("homePage", category, subCategory);
+    }
+
+    function homePageRender(category, subCategory) {
+        console.log(category, subCategory);
+        categoryArray = projectsArray.filter(projects => projects.category == category);
+        console.log(categoryArray);
+        subCategoryArray = categoryArray.filter(projects => projects.subcategory == subCategory);
+        console.log(subCategoryArray);
+        for (let i = 0; i < subCategoryArray.length; i++) {
+            console.log(subCategoryArray[i].id);
+        }
+    }
+
+
+    async function fetchPosts(pageType, category, subCategory) {
         let response = await fetch("https://bradleysans.uk/projects/posts.json");
 
         if (response.ok) { // if HTTP-status is 200-299
             // get the response body (the method explained below)
-            let projects = await response.json();
-            var projectsArray = projects.posts;
+            projects = await response.json();
+            projectsArray = projects.posts;
             console.log(projectsArray);
-            let filtered = projectsArray.filter(project => project.id == currentProject)
+            filtered = projectsArray.filter(project => project.id == currentProject)
             console.log(filtered);
             if (filtered.length === 0) {
                 projectNotFound();
             } else {
-                headline.innerHTML = filtered[0].name;
-                image.backgroundImage = "url(" + filtered[0].images[0] + ");";
-                unit.innerHTML = filtered[0].unit;
-                institution.innerHTML = filtered[0].institution;
-                blurb.innerHTML = filtered[0].blurb;
-                linkText.innerHTML = filtered[0].linkLabels[0];
-
-                var pictures = filtered[0].images;
-                var link = filtered[0].links[0];
-
-                let position = 0;
-                const moveRight = () => {
-                    console.log('moveRight');
-                    if (position >= pictures.length - 1) {
-                        position = 0
-                        image.style.backgroundImage = "url('" + pictures[position] + "')";
-                        return;
-                    }
-                    image.style.backgroundImage = "url('" + pictures[position + 1] + "')";
-                    position++;
+                if (pageType === "project") {
+                    console.log("page type: project");
+                    projectPageRender();
+                } else if (pageType === "homePage") {
+                    console.log("page type: homepage");
+                    homePageRender(category, subCategory);
                 }
-                const moveLeft = () => {
-                    console.log('moveLeft');
-                    if (position < 1) {
-                        position = pictures.length - 1;
-                        image.style.backgroundImage = "url('" + pictures[position] + "')";
-                        return;
-                    }
-                    image.style.backgroundImage = "url('" + pictures[position - 1] + "')";
-                    position--;
-                }
-
-                rightBtn.addEventListener("click", moveRight);
-                leftBtn.addEventListener("click", moveLeft);
-                const visit = () => {
-                    window.location.href = link;
-                }
-                visitButton.addEventListener("click", visit);
-
-
             }
 
 
@@ -182,8 +238,7 @@
         document.getElementById("headline").innerHTML = "Project not found";
     }
 
-
-    fetchPosts();
+    getCurrentProject();
 
 
 
