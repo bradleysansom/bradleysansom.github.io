@@ -25,6 +25,20 @@ header {
     justify-content: flex-start;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: var(--headline);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+
 .name {
     font: var(--headline);
     text-transform: uppercase;
@@ -448,6 +462,11 @@ hr {
 
 
 
+
+
+
+
+
 .outro {
     font: var(--headline);
     color: white;
@@ -460,6 +479,29 @@ hr {
 .quiet {
     color: grey;
 }
+
+
+.wideOrange {
+    background-color: var(--orange);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes slide-up {
     0% {
