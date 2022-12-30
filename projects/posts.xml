@@ -1,73 +1,95 @@
-<rss version="2.0">
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:bs="https://bradleysans.uk/"
+>
     <channel>
         <title>Bradley Sansom</title>
         <link>https://bradleysans.uk/</link>
-        <description>Hi! I like to make things. I'm a designer, a creator, a developer, and many
+        <description>Hi!
+            I like to make things. I'm a designer, a creator, a developer, and many
             things besides, from Manchester, UK.</description>
         <language>en-gb</language>
-        <copyright>Copyright 2022, Bradley Sansom</copyright>
+        <copyright>Copyright 2022,
+            Bradley Sansom</copyright>
         <managingEditor>bradley-sansom@outlook.com (Bradley Sansom)</managingEditor>
-        <webMaster>bradley-sansom@outlook.com (Bradley Sansom)</webMaster>
+        <webMaster>bradley-sansom@outlook.com
+            (Bradley Sansom)</webMaster>
         <pubDate>Fri, 30 Dec 2022 23:10:00 GMT</pubDate>
-        <lastBuildDate>Fri, 30 Dec 2022 23:10:00 GMT</lastBuildDate>
-        <course>Design</course>
+        <lastBuildDate>Fri, 30 Dec 2022
+            23:10:00 GMT</lastBuildDate>
+        <category>Design</category>
         <docs>https://www.rssboard.org/rss-specification</docs>
-        <ttl>1440</ttl>
+        <ttl>
+            1440</ttl>
         <image>
             <url>https://bradleysans.uk/thumbnail.png</url>
             <title>Bradley Sansom</title>
-            <link>https://bradleysans.uk/</link>
+            <link>
+                https://bradleysans.uk/</link>
         </image>
 
 
         <item>
             <guid>crystaliser</guid>
             <title>Graphical scores</title>
-            <pubDate>Fri, 16 Dec 2022 21:00:00 GMT</pubDate>
-            <course>BA Graphic Design</course>
-            <year>Second year</year>
-            <unit>Visual Communication 1</unit>
-            <institution>Manchester School of Art</institution>
-            <description>Having extracted data from the track Voodoo Ray by A Guy Called Gerald, I
+            <pubDate>Fri,
+                16 Dec 2022 21:00:00 GMT</pubDate>
+            <bs:course>BA Graphic Design</bs:course>
+            <bs:year>Second year</bs:year>
+            <bs:unit>Visual
+                Communication 1</bs:unit>
+            <bs:institution>Manchester
+                School of Art</bs:institution>
+            <description>Having extracted data from the track Voodoo Ray by A
+                Guy
+                Called Gerald, I
                 produced a program that algorithmically generated animated graphical scores by
                 analysing instrumentation data.</description>
-            <link>https: //crystaliser.github.io/</link>
-            <linkLabel>Visit</linkLabel>
-            <images>
-                /projects/crystaliser/record.png</images>
-            <images>/projects/crystaliser/voodoo.png</images>
-            <tags>
-                music</tags>
-            <tags>vectors</tags>
-            <tags>graphic design</tags>
-            <tags>web development</tags>
-            <tags>data
-                visualisation</tags>
+            <link>https://crystaliser.github.io/</link>
+            <bs:linkLabel>
+                Visit</bs:linkLabel>
+            <bs:images>
+                /projects/crystaliser/record.png</bs:images>
+            <bs:images>/projects/crystaliser/voodoo.png</bs:images>
+            <bs:tags>
+                music</bs:tags>
+            <bs:tags>vectors</bs:tags>
+            <bs:tags>graphic design</bs:tags>
+            <bs:tags>web development</bs:tags>
+            <bs:tags>data
+                visualisation</bs:tags>
         </item>
         <item>
             <guid>interlude</guid>
             <title>Interlude series</title>
-            <pubDate>Thu, 27 Oct 2022 16:00:00 BST</pubDate>
-            <course>BA Graphic Design</course>
-            <year>Second year</year>
-            <unit>Visual Communication 2</unit>
-            <institution>Manchester School of Art</institution>
-            <description>Designing a series of three book covers, unified through an interactive
+            <pubDate>Thu,
+                27 Oct 2022 16:00:00 BST</pubDate>
+            <bs:course>BA Graphic Design</bs:course>
+            <bs:year>Second year</bs:year>
+            <bs:unit>Visual
+                Communication 2</bs:unit>
+            <bs:institution>Manchester
+                School of Art</bs:institution>
+            <description>Designing a series of three book covers, unified
+                through
+                an interactive
                 chalkboard print finish and a set of geometric patterns. I relished the opportunity
                 to use manual processes including hot foil and debossing to craft my three books.</description>
-            <link>https://www.instagram.com/stories/highlights/17906907719654677/</link>
-            <linkLabel>Visit</linkLabel>
-            <images>
-                /projects/interlude/books.jpg</images>
-            <images>/projects/interlude/foil.jpg</images>
-            <tags>book
-                covers</tags>
-            <tags>physical</tags>
-            <tags>graphic design</tags>
-            <tags>print</tags>
-            <tags>hot foil embossing</tags>
-            <tags>
-                vectors</tags>
+            <link>
+                https://www.instagram.com/stories/highlights/17906907719654677/</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>
+                /projects/interlude/books.jpg</bs:images>
+            <bs:images>/projects/interlude/foil.jpg</bs:images>
+            <bs:tags>book
+                covers</bs:tags>
+            <bs:tags>physical</bs:tags>
+            <bs:tags>graphic design</bs:tags>
+            <bs:tags>print</bs:tags>
+            <bs:tags>hot foil
+                embossing</bs:tags>
+            <bs:tags>
+                vectors</bs:tags>
         </item>
     </channel>
 </rss>
