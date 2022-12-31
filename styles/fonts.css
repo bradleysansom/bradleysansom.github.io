@@ -1,64 +1,71 @@
-    @font-face {
-        font-family: 'icons';
-        src: url('/styles/fonts/icons.eot?ikjlwh');
-        src: url('/styles/fonts/icons.eot?ikjlwh#iefix') format('embedded-opentype'),
-            url('/styles/fonts/icons.ttf?ikjlwh') format('truetype'),
-            url('/styles/fonts/icons.woff?ikjlwh') format('woff'),
-            url('/styles/fonts/icons.svg?ikjlwh#icons') format('svg');
-        font-weight: normal;
-        font-style: normal;
-        font-display: block;
-    }
+@font-face {
+    font-family: 'icons';
+    src: url('fonts/icons.eot?dtj19r');
+    src: url('fonts/icons.eot?dtj19r#iefix') format('embedded-opentype'),
+        url('fonts/icons.ttf?dtj19r') format('truetype'),
+        url('fonts/icons.woff?dtj19r') format('woff'),
+        url('fonts/icons.svg?dtj19r#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
-    [class^="icon-"],
-    [class*=" icon-"] {
-        /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: 'icons' !important;
-        speak: never;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-        /* Better Font Rendering =========== */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-    .icon-arrow-left:before {
-        content: "\6c";
-    }
+.icon-mastodon:before {
+    content: "\4d";
+}
 
-    .icon-arrow-right:before {
-        content: "\72";
-    }
+.icon-arrow-left:before {
+    content: "\6c";
+}
 
-    .icon-chevron-right:before {
-        content: "\61";
-        font-size: 2rem;
-    }
+.icon-arrow-right:before {
+    content: "\72";
+}
 
-    .icon-github:before {
-        content: "\47";
-    }
+.icon-book-open:before {
+    content: "\e900";
+}
 
-    .icon-instagram:before {
-        content: "\49";
-    }
+.icon-chevron-right:before {
+    content: "\61";
+}
 
-    .icon-linkedin:before {
-        content: "\4c";
-    }
+.icon-github:before {
+    content: "\47";
+}
 
-    .icon-mail:before {
-        content: "\45";
-    }
+.icon-instagram:before {
+    content: "\49";
+}
 
-    .icon-twitter:before {
-        content: "\54";
-    }
+.icon-linkedin:before {
+    content: "\4c";
+}
 
-    .icon-mastodon:before {
-        content: "\4d";
-    }
+.icon-mail:before {
+    content: "\45";
+}
+
+.icon-map-pin:before {
+    content: "\e901";
+}
+
+.icon-twitter:before {
+    content: "\54";
+}

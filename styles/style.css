@@ -17,7 +17,7 @@ body {
     cursor: default;
 }
 
-header {
+body>header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -450,6 +450,52 @@ hr {
     background-image: url('../projects/ar/thatch.png');
 }
 
+.vcard {
+    background-color: var(--orange);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.vcard section {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    font: var(--body);
+}
+
+.vcard section p {
+    margin: 0;
+}
+
+.vcard header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+.vcard header h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    max-width: 7ch;
+}
+
+.vcard header img {
+    border-radius: 50%;
+    max-width: 30vw;
+    max-height: 30vw;
+    aspect-ratio: 1;
+}
+
+
+
+
+
+
+
+
 #emley {
     width: calc(100% - 20px);
     aspect-ratio: 3/1;
@@ -586,7 +632,7 @@ hr {
 }
 
 @media screen and (min-width: 750px) {
-    header {
+    body>header {
         flex-direction: row;
         flex-wrap: nowrap;
     }
