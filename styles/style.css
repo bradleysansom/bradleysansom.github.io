@@ -146,6 +146,10 @@ nav.animated ul li {
 
 }
 
+nav a {
+    text-decoration: none;
+}
+
 .triple {
 
     display: flex;
