@@ -17,3 +17,5 @@ flickr: bradleysans
 theme: minima
 plugins:
 - jekyll-feed
+- name: Cache
+  uses: actions/cache@v3.2.2
