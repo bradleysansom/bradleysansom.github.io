@@ -467,6 +467,34 @@ hr {
     margin: 0;
 }
 
+.vcard section.contactLinks {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+}
+
+.vcard section.contactLinks section {
+    padding: 0;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.vcard section.contactLinks section span {
+    padding: 10px;
+    background-color: white;
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.vcard section.contactLinks section p,
+.vcard section.contactLinks section div {
+    padding-left: 10px;
+
+}
+
 .vcard header {
     display: flex;
     flex-direction: row;
@@ -492,6 +520,7 @@ hr {
     -webkit-text-stroke: 2px white;
 
 }
+
 
 .vcard header img {
     border-radius: 50%;
@@ -631,6 +660,10 @@ hr {
         font-size: 2.5rem;
         max-width: 450px;
     }
+
+    .vcard section.contactLinks {
+        grid-template-columns: 50% 50%;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -640,6 +673,11 @@ hr {
 
     .intro {
         font-size: 2.5rem;
+    }
+
+    .vcard section.contactLinks {
+        grid-template-columns: calc(33.3% - 10px) calc(33.3% - 10px) calc(33.3% - 10px);
+        gap: 10px;
     }
 }
 
@@ -707,6 +745,11 @@ hr {
         grid-template-columns: 33% 33% 33%;
         gap: 10px;
         margin-right: 10px;
+    }
+
+    .vcard section.contactLinks {
+        grid-template-columns: calc(25% - 10px) calc(25% - 10px) calc(25% - 10px) calc(25% - 10px);
+        gap: 10px;
     }
 }
 
