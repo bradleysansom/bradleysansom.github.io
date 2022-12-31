@@ -472,7 +472,10 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     margin: 10px;
-    padding: 10px;
+}
+
+.vcard header a {
+    text-decoration: none;
 }
 
 .vcard header h2 {
@@ -480,6 +483,14 @@ hr {
     font-size: 2rem;
     max-width: 7ch;
     line-height: 1;
+    transition: 1s;
+    -webkit-text-stroke: 0px white;
+}
+
+.vcard header h2:hover {
+    color: var(--orange);
+    -webkit-text-stroke: 2px white;
+
 }
 
 .vcard header img {
@@ -487,6 +498,7 @@ hr {
     max-width: 30vw;
     max-height: 30vw;
     aspect-ratio: 1;
+    outline: 5px white solid;
 }
 
 
