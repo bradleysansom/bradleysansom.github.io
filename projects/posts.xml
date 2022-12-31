@@ -35,6 +35,7 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/crystaliser/record.png</bs:images>
             <bs:images>/projects/crystaliser/voodoo.png</bs:images>
+            <enclosure url="https://bradleysans.uk/projects/crystaliser/voodoo.png" length="52303" type="image/png" />
             <bs:tags>music</bs:tags>
             <bs:tags>vectors</bs:tags>
             <bs:tags>graphic design</bs:tags>
@@ -54,6 +55,7 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/interlude/books.jpg</bs:images>
             <bs:images>/projects/interlude/foil.jpg</bs:images>
+            <enclosure url="https://bradleysans.uk/projects/interlude/books.jpg" length="387678" type="image/jpeg" />
             <bs:tags>book covers</bs:tags>
             <bs:tags>physical</bs:tags>
             <bs:tags>graphic design</bs:tags>
