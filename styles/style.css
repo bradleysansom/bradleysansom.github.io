@@ -15,6 +15,8 @@ body {
     border: 0;
     transition: .5s;
     cursor: default;
+    writing-mode: horizontal-tb;
+    direction: ltr;
 }
 
 body>header {
@@ -330,7 +332,7 @@ nav a {
     border: 3px solid var(--orange);
     font: var(--headline);
     padding: 5px;
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }
 
 .unit {
@@ -394,7 +396,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding-left: 10px;
+    padding-inline-start: 10px;
     font: var(--headline);
     transition: .5s;
     cursor: pointer;
@@ -416,7 +418,7 @@ button {
     font: var(--headline);
     font-size: 2rem;
     text-decoration: 4px underline dotted var(--orange);
-    margin-bottom: 5px;
+    margin-block-end: 5px;
 }
 
 .section-header-subtitle {
@@ -424,8 +426,8 @@ button {
     font-size: 1.4rem;
     color: var(--orange);
 
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-block-start: 5px;
+    margin-block-end: 10px;
 }
 
 .link.offline {
@@ -443,7 +445,7 @@ button {
 
 hr {
     border: none;
-    border-bottom: 4px dotted grey;
+    border-block-end: 4px dotted grey;
 }
 
 #election_carousel {
@@ -491,7 +493,7 @@ hr {
 
 .vcard section.contactLinks section p,
 .vcard section.contactLinks section div {
-    padding-left: 10px;
+    padding-inline-start: 10px;
 
 }
 
@@ -546,7 +548,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 10px;
+    padding-block-end: 10px;
     text-align: center;
 }
 
@@ -638,8 +640,7 @@ hr {
 @media screen and (min-width: 450px) {
     .triple {
         flex-direction: row;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-inline: 10px;
         width: calc(100% - 20px);
         gap: 10px;
     }
@@ -705,7 +706,7 @@ hr {
     .name {
         display: flex;
         align-items: center;
-        text-align: left;
+        text-align: start;
         line-height: 1;
     }
 }
@@ -726,7 +727,7 @@ hr {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 10px;
-        margin-right: 10px;
+        margin-inline-end: 10px;
         justify-content: space-evenly;
     }
 
@@ -744,7 +745,7 @@ hr {
     .articles {
         grid-template-columns: 33% 33% 33%;
         gap: 10px;
-        margin-right: 10px;
+        margin-inline-end: 10px;
     }
 
     .vcard section.contactLinks {
@@ -757,7 +758,7 @@ hr {
     .articles {
         grid-template-columns: 24% 24% 24% 24%;
         gap: 10px;
-        margin-right: 10px;
+        margin-inline-end: 10px;
     }
 }
 
