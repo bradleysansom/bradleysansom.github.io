@@ -318,6 +318,8 @@ nav a {
 
 .beneath {
     display: flex;
+    margin-block-start: -7px;
+    /* this fixes the odd issue with the gap under the image, but its hacky */
 }
 
 .comment {
