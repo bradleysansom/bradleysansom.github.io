@@ -4,7 +4,7 @@ console.log("currentProject");
 
 
 async function fetchPosts() {
-    let response = await fetch("https://bradleysans.uk/projects/posts.json");
+    let response = await fetch("https://bradleysans.uk/projects/posts.xml");
 
     if (response.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)

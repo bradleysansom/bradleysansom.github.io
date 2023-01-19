@@ -79,7 +79,7 @@
     <main>
 
         <article id="crystaliser">
-            <h4 class="headline"></h4>
+            <h4 class="headline" id="headline"></h4>
             <img id="carousel" width="100%" height="250px"></img>
             <section class="beneath">
                 <section class="comment">
@@ -112,6 +112,7 @@
 </body>
 
 <!-- <script src="/scripts/project.js"></script> -->
+<script src="/scripts/xml2json.js"></script>
 <script>
     var headline;
     var image;
@@ -129,12 +130,22 @@
     var filtered;
     var projects;
     var projectsArray;
+    var projectsArrayTwo
 
     var url;
     var currentProject;
 
     var categoryArray;
     var subCategoryArray;
+
+    var myOptions = {
+        mergeCDATA: true,
+        xmlns: false,
+        attrsAsObject: false,
+        stripAttrPrefix: true,
+        childrenAsArray: false,
+        textKey: 'text'
+    }
 
     function getCurrentProject() {
         url = window.location.href;
@@ -158,35 +169,35 @@
     }
 
     function projectPageRender() {
-        headline.innerHTML = filtered[0].name;
-        image.backgroundImage = "url(" + filtered[0].images[0] + ");";
-        unit.innerHTML = filtered[0].unit;
-        institution.innerHTML = filtered[0].institution;
-        blurb.innerHTML = filtered[0].blurb;
-        linkText.innerHTML = filtered[0].linkLabels[0];
+        headline.innerHTML = filtered[0].title.text;
+        image.backgroundImage = "url(" + filtered[0].images[0].text + ");";
+        unit.innerHTML = filtered[0].unit.text;
+        institution.innerHTML = filtered[0].institution.text;
+        blurb.innerHTML = filtered[0].blurb.text;
+        linkText.innerHTML = filtered[0].linkLabel.text;
 
         var pictures = filtered[0].images;
-        var link = filtered[0].links[0];
+        var link = filtered[0].link.text;
 
         let position = 0;
         const moveRight = () => {
             console.log('moveRight');
             if (position >= pictures.length - 1) {
                 position = 0
-                image.style.backgroundImage = "url('" + pictures[position] + "')";
+                image.src = pictures[position].text;
                 return;
             }
-            image.style.backgroundImage = "url('" + pictures[position + 1] + "')";
+            image.src = pictures[position + 1].text;
             position++;
         }
         const moveLeft = () => {
             console.log('moveLeft');
             if (position < 1) {
                 position = pictures.length - 1;
-                image.style.backgroundImage = "url('" + pictures[position] + "')";
+                image.src = pictures[position].text;
                 return;
             }
-            image.style.backgroundImage = "url('" + pictures[position - 1] + "')";
+            image.src = pictures[position - 1].text;
             position--;
         }
 
@@ -205,27 +216,22 @@
         fetchPosts("homePage", category, subCategory);
     }
 
-    function homePageRender(category, subCategory) {
-        console.log(category, subCategory);
-        categoryArray = projectsArray.filter(projects => projects.category == category);
-        console.log(categoryArray);
-        subCategoryArray = categoryArray.filter(projects => projects.subcategory == subCategory);
-        console.log(subCategoryArray);
-        for (let i = 0; i < subCategoryArray.length; i++) {
-            console.log(subCategoryArray[i].id);
-        }
+    function homePageRender(projectsArray) {
+
+
     }
 
 
     async function fetchPosts(pageType, category, subCategory) {
-        let response = await fetch("https://bradleysans.uk/projects/posts.json");
+        let response = await fetch("https://bradleysans.uk/projects/posts.xml");
 
         if (response.ok) { // if HTTP-status is 200-299
             // get the response body (the method explained below)
-            projects = await response.json();
-            projectsArray = projects.posts;
+            projects = await response.text();
+            // console.log(projects);
+            projectsArray = xmlToJSON.parseString(projects, myOptions).rss.channel.item;
             console.log(projectsArray);
-            filtered = projectsArray.filter(project => project.id == currentProject)
+            filtered = projectsArray.filter(project => project.guid.text.split("?")[1] == currentProject);
             console.log(filtered);
             if (filtered.length === 0) {
                 projectNotFound();
