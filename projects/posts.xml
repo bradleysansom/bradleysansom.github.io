@@ -27,6 +27,7 @@
             <title>⚠ This feed is under construction</title>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description>My newest stuff is on this RSS feed; I'm currently rebuilding my website. My older projects are accessible through my homepage, and will be added here in due course. New stuff will make it on here as well.</description>
+
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?crystaliser</guid>
@@ -47,6 +48,7 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/crystaliser/record.png</bs:images>
             <bs:images>/projects/crystaliser/voodoo.png</bs:images>
+            <category>featured</category>
             <category>music</category>
             <category>vector</category>
             <category>graphic design</category>
@@ -73,6 +75,7 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/interlude/books.jpg</bs:images>
             <bs:images>/projects/interlude/foil.jpg</bs:images>
+            <category>featured</category>
             <category>book covers</category>
             <category>physical</category>
             <category>graphic design</category>
@@ -95,6 +98,7 @@
             <link>https://bradleysans.uk/schematics/</link>
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/maps/triple.jpg</bs:images>
+            <category>featured</category>
             <category>maps</category>
             <category>vector</category>
             <category>graphic design</category>
@@ -120,6 +124,7 @@
             <bs:images>/projects/terrors/IMG_8488.jpg</bs:images>
             <bs:images>/projects/terrors/IMG_8564.JPG</bs:images>
             <bs:images>/projects/terrors/green.jpg</bs:images>
+            <category>featured</category>
             <category>graphic design</category>
             <category>photography</category>
             <category>fashion</category>
@@ -137,7 +142,7 @@
             <bs:institution>Manchester School of Art</bs:institution>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/greta/greta.jpg" height="200px" width="600px" alt="Terrors">
+                    <img src="https://bradleysans.uk/projects/greta/greta.png" height="200px" width="600px" alt="Melting typeface">
                     <p>Faced with a brief to bring new life to the words of a speech by Greta Thunberg, I created a set of fonts which 'melt away', and explored how they could be used across a range of applications.</p>
                 ]]>
             </description>
@@ -145,7 +150,8 @@
             <link>https://terrors.live/</link>
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/greta/tablet.png</bs:images>
-            <bs:images>/projects/greta/greta.jpg</bs:images>
+            <bs:images>/projects/greta/greta.png</bs:images>
+            <category>featured</category>
             <category>graphic design</category>
             <category>typography</category>
             <category>web development</category>
@@ -168,6 +174,7 @@
             <link>https://bradleysans.uk/magazines#vic</link>
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/magazines/crit.jpg</bs:images>
+            <category>featured</category>
             <category>graphic design</category>
             <category>editorial</category>
             <category>writing</category>
