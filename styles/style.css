@@ -278,6 +278,10 @@ nav a {
     margin: 10px;
 }
 
+.vcard.animated {
+    animation: 3s fade-in-rest forwards;
+}
+
 .gallery.animated,
 #before-emley.animated,
 #emley.animated {
@@ -300,6 +304,49 @@ nav a {
     }
 }
 
+.filterSelection {
+    display: flex;
+    gap: 10px;
+    margin-block-end: 10px;
+}
+
+.filterSelection p {
+    color: white;
+    font: var(--body);
+}
+
+.filterSelection button {
+    border: 3px solid var(--orange);
+    background-color: #222222;
+    padding: 10px;
+    color: white;
+    font: var(--headline);
+    transition: .5s;
+
+}
+
+.filterSelection button span {
+    margin-inline-end: 10px;
+}
+
+.filterSelection button:hover {
+    background-color: var(--orange);
+}
+
+.filterSelection button.active {
+    background-color: #222222;
+    border: 6px solid white;
+    padding: 7px;
+    transition: .5s;
+    color: white;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
 .label {
     background: var(--orange);
     padding: 10px;
@@ -308,6 +355,8 @@ nav a {
     display: inline-block;
     font-size: 1.5rem;
     margin: 0;
+    inline-size: fit-content;
+
 }
 
 .carousel {
@@ -315,15 +364,13 @@ nav a {
     height: unset !important;
     aspect-ratio: 16 / 9 !important;
     color: black;
-    background-size: cover;
+    object-fit: cover;
     transition: .25s;
 
 }
 
 .beneath {
     display: flex;
-    margin-block-start: -7px;
-    /* this fixes the odd issue with the gap under the image, but its hacky */
 }
 
 .comment {
@@ -469,11 +516,14 @@ hr {
     display: flex;
     padding: 10px;
     font: var(--body);
+    word-break: break-word;
 }
 
-.vcard section p {
+.vcard section .p-note {
     margin: 0;
+    max-inline-size: 60%;
 }
+
 
 .vcard section.contactLinks {
     display: grid;
@@ -499,6 +549,7 @@ hr {
 
 .vcard section.contactLinks section p,
 .vcard section.contactLinks section div {
+    margin: 0;
     padding-inline-start: 10px;
 
 }
@@ -733,7 +784,7 @@ hr {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 10px;
-        margin-inline-end: 10px;
+        margin-inline: 10px;
         justify-content: space-evenly;
     }
 
@@ -751,7 +802,7 @@ hr {
     .articles {
         grid-template-columns: 33% 33% 33%;
         gap: 10px;
-        margin-inline-end: 10px;
+        margin-inline: 10px;
     }
 
     .vcard section.contactLinks {
@@ -764,7 +815,7 @@ hr {
     .articles {
         grid-template-columns: 24% 24% 24% 24%;
         gap: 10px;
-        margin-inline-end: 10px;
+        margin-inline: 10px;
     }
 }
 

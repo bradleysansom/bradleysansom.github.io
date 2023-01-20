@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icons';
-    src: url('fonts/icons.eot?dtj19r');
-    src: url('fonts/icons.eot?dtj19r#iefix') format('embedded-opentype'),
-        url('fonts/icons.ttf?dtj19r') format('truetype'),
-        url('fonts/icons.woff?dtj19r') format('woff'),
-        url('fonts/icons.svg?dtj19r#icons') format('svg');
+    src: url('fonts/icons.eot?hjmux9');
+    src: url('fonts/icons.eot?hjmux9#iefix') format('embedded-opentype'),
+        url('fonts/icons.ttf?hjmux9') format('truetype'),
+        url('fonts/icons.woff?hjmux9') format('woff'),
+        url('fonts/icons.svg?hjmux9#icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -42,8 +42,16 @@
     content: "\e900";
 }
 
+.icon-box:before {
+    content: "\e902";
+}
+
 .icon-chevron-right:before {
     content: "\61";
+}
+
+.icon-code:before {
+    content: "\e903";
 }
 
 .icon-github:before {
@@ -58,6 +66,10 @@
     content: "\4c";
 }
 
+.icon-list:before {
+    content: "\e904";
+}
+
 .icon-mail:before {
     content: "\45";
 }
@@ -66,6 +78,26 @@
     content: "\e901";
 }
 
+.icon-moon:before {
+    content: "\e905";
+}
+
+.icon-pen-tool:before {
+    content: "\e906";
+}
+
+.icon-star:before {
+    content: "\e907";
+}
+
+.icon-sun:before {
+    content: "\e908";
+}
+
 .icon-twitter:before {
     content: "\54";
+}
+
+.icon-type:before {
+    content: "\e909";
 }

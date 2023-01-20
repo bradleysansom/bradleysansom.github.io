@@ -24,10 +24,10 @@
 
         <item>
             <guid>https://bradleysans.uk/projects?underconstruction</guid>
-            <title>⚠ This feed is under construction</title>
+            <title>I'm rebuilding my website</title>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description>My newest stuff is on this RSS feed; I'm currently rebuilding my website. My older projects are accessible through my homepage, and will be added here in due course. New stuff will make it on here as well.</description>
-
+            <bs:blurb>Hi, I'm currently in the process of rebuilding my website. This section is the first part of it. This new site includes my most recent projects, but more of my older work as well as personal projects will be added soon.</bs:blurb>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?crystaliser</guid>
@@ -90,14 +90,14 @@
             <bs:course>Personal project</bs:course>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/maps/triple.jpg" height="200px" width="600px" alt="Maps">
+                    <img src="https://bradleysans.uk/projects/maps/map.png" height="200px" width="600px" alt="Maps">
                     <p>A pair of Tube map style diagrams featuring motorways and trunk roads in the north of England, and a circular map of the road network within Greater Manchester. I made them for my family to use and have also made a version which is available to print and use.</p>
                 ]]>
             </description>
             <bs:blurb>A pair of Tube map style diagrams featuring motorways and trunk roads in the north of England, and a circular map of the road network within Greater Manchester. I made them for my family to use and have also made a version which is available to print and use.</bs:blurb>
             <link>https://bradleysans.uk/schematics/</link>
             <bs:linkLabel>Visit</bs:linkLabel>
-            <bs:images>/projects/maps/triple.jpg</bs:images>
+            <bs:images>/projects/maps/map.png</bs:images>
             <category>featured</category>
             <category>maps</category>
             <category>vector</category>

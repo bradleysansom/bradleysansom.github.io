@@ -137,6 +137,7 @@ function homePageInitialise(filter, ordering) {
 function homePageRender(filter, ordering) {
     // set up articles container
     articlesContainer = document.getElementById("articlesContainer");
+    articlesContainer.innerHTML = "";
 
     // specity filtering and ordering
     console.log("filtering projects by " + filter);
@@ -148,6 +149,21 @@ function homePageRender(filter, ordering) {
             console.log(projectsArray[index].title.text);
             homePageSectionRender(projectsArray[index]);
 
+        }
+    } else {
+        for (let index = 0; index < projectsArray.length; index++) {
+            if (projectsArray[index].category !== undefined) {
+                console.log(projectsArray[index].category[0].text);
+                for (let catIndex = 0; catIndex < projectsArray[index].category.length; catIndex++) {
+                    if (projectsArray[index].category[catIndex].text === filter) {
+                        console.log(projectsArray[index].title.text);
+                        homePageSectionRender(projectsArray[index]);
+                    }
+
+                }
+
+
+            }
         }
     }
 }
@@ -173,48 +189,106 @@ function homePageSectionRender(project) {
 
     var comment = document.createElement("section");
     comment.setAttribute("class", "comment");
-    beneath.appendChild(comment);
+
+
+
+    var attribution = document.createElement("aside");
+    attribution.setAttribute("class", "attribution");
+
+    if (project.unit !== undefined) {
+        var unit = document.createElement("p");
+        unit.setAttribute("class", "unit");
+        unit.innerHTML = project.unit.text;
+        attribution.appendChild(unit);
+    }
+
+    if (project.institution !== undefined) {
+        var institution = document.createElement("p");
+        institution.setAttribute("class", "institution");
+        institution.innerHTML = project.institution.text;
+        attribution.appendChild(institution);
+    }
+
+    if (project.unit === undefined && project.institution === undefined) {
+        console.log("Not rendering attribution")
+    } else {
+        comment.appendChild(attribution);
+    }
+
+    if (project.blurb !== undefined) {
+        var blurb = document.createElement("p");
+        blurb.setAttribute("class", "blurb");
+        blurb.innerHTML = project.blurb.text;
+        comment.appendChild(blurb);
+    }
 
     var controls = document.createElement("section");
     controls.setAttribute("class", "controls");
 
-    var arrows = document.createElement("arrows");
-    arrows.setAttribute("class", "arrows");
+    if (project.images !== undefined) {
+        if (Array.isArray(project.images)) {
+            var arrows = document.createElement("section");
+            arrows.setAttribute("class", "arrows");
 
-    var leftBtn = document.createElement("button");
-    leftBtn.setAttribute("class", "left-arrow");
-    leftBtn.setAttribute("title", "Previous image");
+            var leftBtn = document.createElement("button");
+            leftBtn.setAttribute("class", "left-arrow");
+            leftBtn.setAttribute("title", "Previous image");
 
-    var leftBtnArrowSpan = document.createElement("span");
-    leftBtnArrowSpan.setAttribute("class", "material-symbols-outlined");
+            var leftBtnArrowSpan = document.createElement("span");
+            leftBtnArrowSpan.setAttribute("class", "material-symbols-outlined");
 
-    var leftBtnArrow = document.createElement("span");
-    leftBtnArrow.setAttribute("class", "icon-arrow-left");
+            var leftBtnArrow = document.createElement("span");
+            leftBtnArrow.setAttribute("class", "icon-arrow-left");
 
-    leftBtnArrowSpan.appendChild(leftBtnArrow);
-    leftBtn.appendChild(leftBtnArrowSpan);
+            leftBtnArrowSpan.appendChild(leftBtnArrow);
+            leftBtn.appendChild(leftBtnArrowSpan);
 
-    var rightBtn = document.createElement("button");
-    rightBtn.setAttribute("class", "right-arrow");
-    rightBtn.setAttribute("title", "Next image");
+            var rightBtn = document.createElement("button");
+            rightBtn.setAttribute("class", "right-arrow");
+            rightBtn.setAttribute("title", "Next image");
 
-    var rightBtnArrowSpan = document.createElement("span");
-    rightBtnArrowSpan.setAttribute("class", "material-symbols-outlined");
+            var rightBtnArrowSpan = document.createElement("span");
+            rightBtnArrowSpan.setAttribute("class", "material-symbols-outlined");
 
-    var rightBtnArrow = document.createElement("span");
-    rightBtnArrow.setAttribute("class", "icon-arrow-right");
+            var rightBtnArrow = document.createElement("span");
+            rightBtnArrow.setAttribute("class", "icon-arrow-right");
 
-    rightBtnArrowSpan.appendChild(rightBtnArrow);
-    rightBtn.appendChild(rightBtnArrowSpan);
+            rightBtnArrowSpan.appendChild(rightBtnArrow);
+            rightBtn.appendChild(rightBtnArrowSpan);
 
-    arrows.appendChild(leftBtn);
-    arrows.appendChild(rightBtn);
+            arrows.appendChild(leftBtn);
+            arrows.appendChild(rightBtn);
 
-    controls.appendChild(arrows);
+            controls.appendChild(arrows);
+        } else {
+            var placeholderArrows = document.createElement("section");
+            placeholderArrows.setAttribute("class", "arrows placeholderArrows");
+            var leftBtn = document.createElement("button");
+            leftBtn.setAttribute("class", "left-arrow");
+            var rightBtn = document.createElement("button");
+            rightBtn.setAttribute("class", "right-arrow");
+            placeholderArrows.appendChild(leftBtn);
+            placeholderArrows.appendChild(rightBtn);
 
+            controls.appendChild(placeholderArrows);
+        }
+    }
+
+    if (project.link !== undefined) {
+        var link = document.createElement("button");
+        link.setAttribute("class", "link");
+        link.setAttribute("title", project.title.text);
+        link.innerHTML = "Visit <span class='material-symbols-outlined'><span class='icon-chevron-right'></span></span>";
+        const visit = () => {
+            window.location.href = project.link.text;
+        }
+        link.addEventListener("click", visit);
+        controls.appendChild(link);
+    }
+
+    beneath.appendChild(comment);
     beneath.appendChild(controls);
 
-    // add image
 
 
 
@@ -312,5 +386,14 @@ function projectNotFound() {
 }
 
 
-
+function toggleActive(event) {
+    var target = event.target || event.srcElement;
+    var buttonList = document.querySelectorAll(".filterSelection button");
+    buttonList.forEach(function (button) {
+        if (button === target && !button.classList.contains("active")) {
+            return button.classList.add("active");
+        }
+        return button.classList.remove("active");
+    });
+}
 
