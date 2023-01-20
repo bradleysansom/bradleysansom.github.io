@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icons';
-    src: url('fonts/icons.eot?hjmux9');
-    src: url('fonts/icons.eot?hjmux9#iefix') format('embedded-opentype'),
-        url('fonts/icons.ttf?hjmux9') format('truetype'),
-        url('fonts/icons.woff?hjmux9') format('woff'),
-        url('fonts/icons.svg?hjmux9#icons') format('svg');
+    src: url('fonts/icons.eot?qgdhqq');
+    src: url('fonts/icons.eot?qgdhqq#iefix') format('embedded-opentype'),
+        url('fonts/icons.ttf?qgdhqq') format('truetype'),
+        url('fonts/icons.woff?qgdhqq') format('woff'),
+        url('fonts/icons.svg?qgdhqq#icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -24,6 +24,18 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-building-o:before {
+    content: "\e90a";
+}
+
+.icon-letter-b:before {
+    content: "\e90b";
+}
+
+.icon-mmu:before {
+    content: "\e90c";
 }
 
 .icon-mastodon:before {
@@ -54,8 +66,16 @@
     content: "\e903";
 }
 
+.icon-edit-2:before {
+    content: "\e90d";
+}
+
 .icon-github:before {
     content: "\47";
+}
+
+.icon-globe:before {
+    content: "\e90e";
 }
 
 .icon-instagram:before {

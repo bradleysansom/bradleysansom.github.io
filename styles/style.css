@@ -346,6 +346,7 @@ nav a {
 article {
     display: flex;
     flex-direction: column;
+    transition: .5s;
 }
 
 .label {
@@ -366,7 +367,9 @@ article {
     aspect-ratio: 16 / 9 !important;
     color: black;
     object-fit: cover;
-    transition: .25s;
+    transition: .5s;
+    animation: oversize 10s infinite ease-in-out;
+
 
 }
 
@@ -647,7 +650,19 @@ hr {
 
 
 
+@keyframes oversize {
+    0% {
+        object-position: top left;
+    }
 
+    90% {
+        object-position: bottom right;
+    }
+
+    100% {
+        object-position: top left;
+    }
+}
 
 
 

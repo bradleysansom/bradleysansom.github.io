@@ -397,3 +397,36 @@ function toggleActive(event) {
     });
 }
 
+var currentSorting = "newest";
+
+function createCategoryFilters() {
+    var categoryFilters = [
+        ["featured", "icon-star"],
+        ["all", "icon-list"],
+        ["graphic design", "icon-box"],
+        ["vector graphics", "icon-pen-tool"],
+        ["web development", "icon-globe"],
+        ["university", "icon-mmu"],
+        ["college", "icon-building-o"],
+        ["personal projects", "icon-letter-b"],
+        ["blog posts", "icon-edit-2"],
+        ["creative coding", "icon-code"],
+        ["typography", "icon-type"]
+
+    ]
+    var filtersContainer = document.getElementById("filterContainer");
+    for (let index = 0; index < categoryFilters.length; index++) {
+        var filterName = categoryFilters[index][0];
+        console.log(filterName);
+        var filterIcon = categoryFilters[index][1];
+        var filterButton = document.createElement("button");
+        filterButton.setAttribute("name", filterName);
+        filterButton.setAttribute("onClick", 'homePageInitialise("' + filterName + '", "' + currentSorting + '"); toggleActive(event)');
+
+        filterButton.innerHTML = '<span class="' + filterIcon + '" ></span>' + filterName.charAt(0).toUpperCase() + filterName.slice(1);
+        if (filterName === "featured") {
+            filterButton.setAttribute("class", "active");
+        };
+        filtersContainer.appendChild(filterButton);
+    }
+}

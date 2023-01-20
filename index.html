@@ -100,9 +100,9 @@
     <main class="gallery animated">
         <h2 class="section-header">Projects</h2>
         <section class="projects">
-            <section class="filterSelection">
+            <section class="filterSelection" id="filterContainer">
                 <p>View</p>
-                <button name="featured" id="featuredButton"
+                <!-- <button name="featured" id="featuredButton"
                     onClick='homePageInitialise("featured", "newest"); toggleActive(event)' class="active"><span
                         class="icon-star"></span> Featured</button>
                 <button name="all" id="allButton" onClick='homePageInitialise("all", "newest"); toggleActive(event)'
@@ -118,7 +118,7 @@
                 <button name="web development" id="webDevelopmentButton"
                     onClick='homePageInitialise("web development", "newest"); toggleActive(event)' class=""><span
                         class="icon-code"></span>Web
-                    development</button>
+                    development</button> -->
             </section>
             <div class="articles" id="articlesContainer">
 
@@ -191,6 +191,7 @@
 <script src="/scripts/xml2json.js"></script>
 <script src="/scripts/project.js"></script>
 <script>
+    createCategoryFilters();
     homePageInitialise("featured", "newest");
 </script>
 <script src="/scripts/greeting.js"></script>
