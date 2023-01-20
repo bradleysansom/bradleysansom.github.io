@@ -308,6 +308,7 @@ nav a {
     display: flex;
     gap: 10px;
     margin-block-end: 10px;
+    flex-wrap: wrap;
 }
 
 .filterSelection p {
