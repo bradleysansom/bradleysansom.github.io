@@ -307,37 +307,46 @@ nav a {
 .filterSelection {
     display: flex;
     gap: 10px;
-    margin-block-end: 10px;
-    flex-wrap: wrap;
+    margin-block: 20px;
+    flex-direction: row;
+    align-items: center;
 }
+
 
 .filterSelection p {
     color: white;
     font: var(--body);
 }
 
-.filterSelection button {
+#filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+#filterContainer button {
     border: 3px solid var(--orange);
     background-color: #222222;
-    padding: 10px;
+    padding: 7px 10px;
     color: white;
     font: var(--headline);
     transition: .5s;
+    font-size: 0.85rem;
 
 }
 
-.filterSelection button span {
+#filterContainer button span {
     margin-inline-end: 10px;
 }
 
-.filterSelection button:hover {
+#filterContainer button:hover {
     background-color: var(--orange);
 }
 
-.filterSelection button.active {
+#filterContainer button.active {
     background-color: #222222;
-    border: 6px solid white;
-    padding: 7px;
+    border: 5px solid white;
+    padding: 5px 8px;
     transition: .5s;
     color: white;
 }
@@ -404,8 +413,16 @@ article {
 
 .blurb {
     font: var(--body);
-    padding: 0px 0px 0px 8px;
+    padding-inline-start: 8px;
     margin: 0;
+}
+
+.beneathDate {
+    font: var(--headline);
+    text-align: right;
+    color: grey;
+    margin-block-start: 10px;
+    min-width: max-content;
 }
 
 button {

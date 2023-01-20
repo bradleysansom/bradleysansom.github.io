@@ -222,6 +222,8 @@ function homePageSectionRender(project) {
         comment.appendChild(blurb);
     }
 
+
+
     var controls = document.createElement("section");
     controls.setAttribute("class", "controls");
 
@@ -284,6 +286,14 @@ function homePageSectionRender(project) {
         }
         link.addEventListener("click", visit);
         controls.appendChild(link);
+    }
+
+    if (project.pubDate !== undefined) {
+        var date = document.createElement("p");
+        date.setAttribute("class", "beneathDate");
+        var projectDate = project.pubDate.text.toString().slice(5, 16);
+        date.innerHTML = projectDate;
+        controls.appendChild(date);
     }
 
     beneath.appendChild(comment);
