@@ -52,11 +52,11 @@
             <category>university</category>
             <category>featured</category>
             <category>music</category>
-            <category>vectorGraphics</category>
-            <category>graphicDesign</category>
-            <category>webDevelopment</category>
-            <category>dataVisualisation</category>
-            <category>creativeCoding</category>
+            <category>vector graphics</category>
+            <category>graphic design</category>
+            <category>web development</category>
+            <category>data visualisation</category>
+            <category>creative coding</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?interlude</guid>
@@ -80,12 +80,12 @@
             <bs:images>/projects/interlude/foil.jpg</bs:images>
             <category>university</category>
             <category>featured</category>
-            <category>bookCovers</category>
+            <category>book covers</category>
             <category>physical</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>print</category>
-            <category>hotFoil</category>
-            <category>vectorGraphics</category>
+            <category>hot foil</category>
+            <category>vector graphics</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?maps</guid>
@@ -105,8 +105,8 @@
             <category>personal projects</category>
             <category>featured</category>
             <category>maps</category>
-            <category>vectorGraphics</category>
-            <category>graphicDesign</category>
+            <category>vector graphics</category>
+            <category>graphic design</category>
             <category>print</category>
         </item>
         <item>
@@ -132,12 +132,12 @@
             <bs:images>/projects/terrors/green.jpg</bs:images>
             <category>university</category>
             <category>featured</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>photography</category>
             <category>fashion</category>
-            <category>artDirection</category>
-            <category>webDevelopment</category>
-            <category>groupProject</category>
+            <category>art direction</category>
+            <category>web development</category>
+            <category>group project</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?greta</guid>
@@ -161,10 +161,10 @@
             <bs:images>/projects/greta/greta.png</bs:images>
             <category>university</category>
             <category>featured</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>typography</category>
-            <category>webDevelopment</category>
-            <category>creativeCoding</category>
+            <category>web development</category>
+            <category>creative coding</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?victoria</guid>
@@ -187,7 +187,7 @@
             <bs:images>/projects/magazines/crit.jpg</bs:images>
             <category>university</category>
             <category>featured</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>editorial</category>
             <category>writing</category>
             <category>typography</category>
@@ -213,7 +213,7 @@
             <bs:images>/projects/magazines/mockups-1.png</bs:images>
             <bs:images>/projects/magazines/auteur.png</bs:images>
             <category>university</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>editorial</category>
             <category>typography</category>
         </item>
@@ -237,9 +237,9 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/26+1/u.gif</bs:images>
             <category>university</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>typography</category>
-            <category>vectorGraphics</category>
+            <category>vector graphics</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects?letterspace</guid>
@@ -261,7 +261,7 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/26+1/twentysixboth.png</bs:images>
             <category>university</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>typography</category>
             <category>photography</category>
         </item>
@@ -287,11 +287,11 @@
             <bs:images>/projects/broadcasting/touchscreen.gif</bs:images>
             <bs:images>/projects/broadcasting/landmarks.gif</bs:images>
             <category>college</category>
-            <category>graphicDesign</category>
+            <category>graphic design</category>
             <category>branding</category>
-            <category>webDevelopment</category>
-            <category>vectorGraphics</category>
-            <category>creativeCoding</category>
+            <category>web development</category>
+            <category>vector graphics</category>
+            <category>creative coding</category>
         </item>
     </channel>
 </rss>
