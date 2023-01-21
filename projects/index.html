@@ -121,7 +121,20 @@
         <section class="comments">
             <div class="commentbox"></div>
             <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-            <script>commentBox('5659085189939200-proj')</script>
+            <script>            import qs from 'qs';
+
+                commentBox('5659085189939200-proj', {
+                    createBoxUrl(boxId, pageLocation) {
+
+                        const queryParams = qs.parse(pageLocation.search.replace('?', ''));
+                        const relevantParams = {
+                            'page_id': queryParams['page_id']
+                        };
+                        pageLocation.search = qs.stringify(relevantParams); // we will now include "?page_id=5" in the box URL
+                        pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
+                        return pageLocation.href; // return url string
+                    }
+                });</script>
 
 
         </section>
