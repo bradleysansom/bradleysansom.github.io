@@ -126,12 +126,8 @@
                 commentBox('5659085189939200-proj', {
                     createBoxUrl(boxId, pageLocation) {
 
-                        const url = new URL(pageLocation);
-                        const queryParams = new URLSearchParams(url.search);
-                        const relevantParams = {
-                            '': queryParams['']
-                        };
-                        pageLocation.search = relevantParams.toString(); // we will now include "?page_id=5" in the box URL
+
+
                         pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
                         return pageLocation.href; // return url string
                     }
