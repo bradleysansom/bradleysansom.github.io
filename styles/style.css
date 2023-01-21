@@ -2,12 +2,35 @@
 
 :root {
     --orange: #c1420d;
-    --grey: #cccccc;
+    --darkGrey: #222222;
+    --white: #ffffff;
     --headline: italic 800 1rem 'bodoni-egyptian-pro', serif;
     --body: normal 400 1rem 'p22-underground', sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--darkGrey);
+        --foreground: var(--white);
+        --grey: #cccccc;
+    }
 
+    body>header a {
+        color: var(--white);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: var(--white);
+        --foreground: var(--darkGrey);
+        --grey: #777777;
+    }
+
+    body>header a {
+        color: var(--darkGrey);
+    }
+}
 
 
 body {
@@ -132,7 +155,7 @@ nav.animated ul li {
 }
 
 .nav-icon {
-    color: white;
+    color: var(--white);
     font-size: 2rem;
     display: flex;
     background-color: var(--orange);
@@ -146,7 +169,7 @@ nav.animated ul li {
 }
 
 .nav-icon:hover {
-    background-color: white;
+    background-color: var(--background);
     color: var(--orange);
     outline: 3px solid var(--orange);
     outline-offset: -3px;
@@ -183,7 +206,7 @@ nav a {
 }
 
 #triple-box-words {
-    color: white;
+    color: var(--white);
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -315,7 +338,7 @@ nav a {
 
 
 .filterSelection p {
-    color: white;
+    color: var(--foreground);
     font: var(--body);
 }
 
@@ -327,9 +350,9 @@ nav a {
 
 #filterContainer button {
     border: 3px solid var(--orange);
-    background-color: #222222;
+    background-color: var(--background);
     padding: 7px 10px;
-    color: white;
+    color: var(--foreground);
     font: var(--headline);
     transition: .5s;
     font-size: 0.85rem;
@@ -342,14 +365,15 @@ nav a {
 
 #filterContainer button:hover {
     background-color: var(--orange);
+    color: var(--white);
 }
 
 #filterContainer button.active {
-    background-color: #222222;
-    border: 5px solid white;
+    background-color: var(--background);
+    border: 5px solid var(--foreground);
     padding: 5px 8px;
     transition: .5s;
-    color: white;
+    color: var(--foreground);
 }
 
 
@@ -362,7 +386,7 @@ article {
 .label {
     background: var(--orange);
     padding: 10px;
-    color: white;
+    color: var(--white);
     font: var(--headline);
     display: inline-block;
     font-size: 1.5rem;
@@ -441,7 +465,7 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    color: white;
+    color: var(--foreground);
     font-size: 2rem;
     cursor: pointer;
 
@@ -455,7 +479,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--white);
     transition: .5s;
 }
 
@@ -467,7 +491,7 @@ button {
 .link {
     background-color: var(--orange);
     height: 15vw;
-    color: white;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -483,7 +507,7 @@ button {
 }
 
 .link:hover {
-    background-color: white;
+    background-color: var(--background);
     color: var(--orange);
     outline: 3px solid var(--orange);
     outline-offset: -3px;
@@ -512,7 +536,7 @@ button {
 
 .link.offline:hover {
     background-color: var(--orange);
-    color: white;
+    color: var(--foreground);
     outline: unset;
     outline-offset: unset;
     cursor: not-allowed;
@@ -529,7 +553,7 @@ hr {
 
 .vcard {
     background-color: var(--orange);
-    color: white;
+    color: var(--white);
     margin: 10px;
     padding: 10px;
 }
@@ -555,7 +579,7 @@ hr {
 
 .vcard section.contactLinks section {
     padding: 0;
-    border: 3px solid white;
+    border: 3px solid var(--white);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -564,7 +588,7 @@ hr {
 
 .vcard section.contactLinks section span {
     padding: 10px;
-    background-color: white;
+    background-color: var(--white);
     color: var(--orange);
     font-size: 1.5rem;
 }
@@ -593,12 +617,12 @@ hr {
     max-width: 7ch;
     line-height: 1;
     transition: 1s;
-    -webkit-text-stroke: 0px white;
+    -webkit-text-stroke: 0px var(--white);
 }
 
 .vcard header h2:hover {
     color: var(--orange);
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 2px var(--white);
 
 }
 
@@ -608,9 +632,12 @@ hr {
     max-width: 30vw;
     max-height: 30vw;
     aspect-ratio: 1;
-    outline: 5px white solid;
+    outline: 5px var(--white) solid;
 }
 
+.vcard a {
+    color: var(--white) !important;
+}
 
 
 
@@ -641,7 +668,7 @@ hr {
 
 .outro {
     font: var(--headline);
-    color: white;
+    color: var(--white);
 }
 
 #nonsequitur {
@@ -655,7 +682,7 @@ hr {
 
 .wideOrange {
     background-color: var(--orange);
-    color: white;
+    color: var(--white);
     margin: 10px;
     padding: 10px;
 }
@@ -860,36 +887,35 @@ hr {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #222222;
-    }
 
-    .name {
-        color: white;
-    }
+body {
+    background-color: var(--background);
+}
 
-    .section-header {
-        color: white;
-    }
+.name {
+    color: var(--foreground);
+}
 
-    .blurb {
-        color: white;
-    }
+.section-header {
+    color: var(--foreground);
+}
 
-    .institution {
-        color: white;
-    }
+.blurb {
+    color: var(--foreground);
+}
 
-    a {
-        color: white !important;
-    }
+.institution {
+    color: var(--foreground);
+}
 
-    .link:hover {
-        background-color: #222222;
-    }
+a {
+    color: var(--foreground) !important;
+}
 
-    .nav-icon:hover {
-        background-color: #222222;
-    }
+.link:hover {
+    background-color: var(--background);
+}
+
+.nav-icon:hover {
+    background-color: var(--background);
 }
