@@ -175,7 +175,7 @@ function homePageSectionRender(project) {
     projectContainer.setAttribute("id", project.guid.text.split("?")[1]);
 
     // add label
-    var label = document.createElement("h4");
+    var label = document.createElement("h3");
     label.setAttribute("class", "label");
     label.innerHTML = project.title.text;
     projectContainer.appendChild(label);
@@ -267,8 +267,10 @@ function homePageSectionRender(project) {
             placeholderArrows.setAttribute("class", "arrows placeholderArrows");
             var leftBtn = document.createElement("button");
             leftBtn.setAttribute("class", "left-arrow");
+            leftBtn.setAttribute("title", "Previous picture")
             var rightBtn = document.createElement("button");
             rightBtn.setAttribute("class", "right-arrow");
+            rightBtn.setAttribute("title", "Next picture")
             placeholderArrows.appendChild(leftBtn);
             placeholderArrows.appendChild(rightBtn);
 
@@ -313,6 +315,7 @@ function homePageSectionRender(project) {
         image.setAttribute("class", "carousel");
         image.setAttribute("width", "100%");
         image.setAttribute("height", "250px");
+        image.setAttribute("alt", project.title.text);
 
         if (Array.isArray(project.images)) {
             image.src = project.images[0].text;

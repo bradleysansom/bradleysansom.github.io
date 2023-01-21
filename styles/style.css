@@ -2,6 +2,7 @@
 
 :root {
     --orange: #c1420d;
+    --grey: #cccccc;
     --headline: italic 800 1rem 'bodoni-egyptian-pro', serif;
     --body: normal 400 1rem 'p22-underground', sans-serif;
 }
@@ -407,7 +408,7 @@ article {
 }
 
 .institution {
-    color: grey;
+    color: var(--grey);
     margin: 0;
 }
 
@@ -420,7 +421,7 @@ article {
 .beneathDate {
     font: var(--headline);
     text-align: right;
-    color: grey;
+    color: var(--grey);
     margin-block-start: 10px;
     min-width: max-content;
 }
@@ -519,7 +520,7 @@ button {
 
 hr {
     border: none;
-    border-block-end: 4px dotted grey;
+    border-block-end: 4px dotted var(--grey);
 }
 
 #election_carousel {
@@ -648,7 +649,7 @@ hr {
 }
 
 .quiet {
-    color: grey;
+    color: var(--grey);
 }
 
 
