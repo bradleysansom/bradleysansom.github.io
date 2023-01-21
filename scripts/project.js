@@ -413,16 +413,15 @@ function createCategoryFilters() {
     var categoryFilters = [
         ["featured", "icon-star"],
         ["all", "icon-list"],
-        ["graphic design", "icon-box"],
-        ["vector graphics", "icon-pen-tool"],
-        ["web development", "icon-globe"],
         ["university", "icon-mmu"],
         ["college", "icon-building-o"],
         ["personal projects", "icon-letter-b"],
-        ["blog posts", "icon-edit-2"],
+        ["graphic design", "icon-box"],
+        ["web development", "icon-globe"],
         ["creative coding", "icon-code"],
-        ["typography", "icon-type"]
-
+        ["vector graphics", "icon-pen-tool"],
+        ["typography", "icon-type"],
+        ["blog posts", "icon-edit-2"]
     ]
     var filtersContainer = document.getElementById("filterContainer");
     for (let index = 0; index < categoryFilters.length; index++) {
