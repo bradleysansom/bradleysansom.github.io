@@ -204,7 +204,7 @@
             <description>
                 <![CDATA[
                     <img src="https://bradleysans.uk/projects/magazines/mockups-1.png" height="200px" width="600px" alt="Wes Anderson">
-                    <p>Set a brief to design a set of spreads about food, I wrote an words and created the pages for a magazine article about the use of food as a comedic device by Victoria Wood to tell stories in her sitcom dinnerladies.</p>
+                    <p>Designing two spreads using assigned assets and content, about the films of director Wes Anderson.</p>
                 ]]>
             </description>
             <bs:blurb>Designing two spreads using assigned assets and content, about the films of director Wes Anderson.</bs:blurb>
@@ -292,6 +292,148 @@
             <category>web development</category>
             <category>vector graphics</category>
             <category>creative coding</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects?local</guid>
+            <title>My Local Area</title>
+            <pubDate>Fri, 25 Jun 2021 21:00:00 GMT</pubDate>
+            <bs:course>A-level Computer Science</bs:course>
+            <bs:year>Second year</bs:year>
+            <bs:unit>A-level Computer Science</bs:unit>
+            <bs:institution>New College Bradford</bs:institution>
+            <bs:grade>A*</bs:grade>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/local/sk93ab.png" height="200px" width="600px" alt="My Local Area">
+                    <p>A web app which takes a user's postcode and retrieves data from a range of APIs about their neighbourhood, such as weather, local politicians, council areas, nearby GPs and dentists, and local community groups.</p>
+                ]]>
+            </description>
+            <bs:blurb>A web app which takes a user's postcode and retrieves data from a range of APIs about their neighbourhood, such as weather, local politicians, council areas, nearby GPs and dentists, and local community groups.</bs:blurb>
+            <link>https://bradleysans.uk/local</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/local/sk93ab.png</bs:images>
+            <bs:images>/projects/local/postcode.png</bs:images>
+            <category>college</category>
+            <category>computer science</category>
+            <category>web development</category>
+            <category>data</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects?wayfinding</guid>
+            <title>Wayfinding design</title>
+            <pubDate>Fri, 29 May 2020 21:00:00 GMT</pubDate>
+            <bs:course>A-level Graphic Design</bs:course>
+            <bs:year>First year</bs:year>
+            <bs:unit>A-level Graphic Design</bs:unit>
+            <bs:institution>New College Bradford</bs:institution>
+            <bs:grade>A*</bs:grade>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/wayfinding/roundabout.png" height="200px" width="600px" alt="Wayfinding design">
+                    <p>Producing a set of wayfinding signs for various locations in Bradford city centre with the aim of making it a nicer place for pedestrians. The arrival of the lockdown meant that the project had to be completed using found imagery without being able to visit the sites in person, allowing me to explore 360° panoramic images. I also designed a family of icons representing major public buildings in Bradford which I incorporated on to the signage.</p>
+                ]]>
+            </description>
+            <bs:blurb>Producing a set of wayfinding signs for various locations in Bradford city centre with the aim of making it a nicer place for pedestrians. The arrival of the lockdown meant that the project had to be completed using found imagery without being able to visit the sites in person, allowing me to explore 360° panoramic images. I also designed a family of icons representing major public buildings in Bradford which I incorporated on to the signage.</bs:blurb>
+            <link>https://bradleysans.uk/portfolio-2021#wayfinding</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/wayfinding/roundabout.png</bs:images>
+            <bs:images>/projects/wayfinding/nelson.png</bs:images>
+            <bs:images>/projects/wayfinding/kirkgate.png</bs:images>
+            <category>college</category>
+            <category>graphic design</category>
+            <category>vector graphics</category>
+            <category>data</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects?branding</guid>
+            <title>Skin Kitchen Co branding</title>
+            <pubDate>Fri, 27 Mar 2020 21:00:00 GMT</pubDate>
+            <bs:course>A-level Graphic Design</bs:course>
+            <bs:year>First year</bs:year>
+            <bs:unit>A-level Graphic Design</bs:unit>
+            <bs:institution>New College Bradford</bs:institution>
+            <bs:grade>A*</bs:grade>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/branding/style.png" height="200px" width="600px" alt="Skin Kitchen Co branding">
+                    <p>Responding to a live brief to design the brand for a local skincare company, I produced a branding system, set of guidelines, and range of application mock-ups. The owner really liked my designs, saying I "followed the brief really well, it would be a pleasure to work with Bradley in future".</p>
+                ]]>
+            </description>
+            <bs:blurb>Responding to a live brief to design the brand for a local skincare company, I produced a branding system, set of guidelines, and range of application mock-ups. The owner really liked my designs, saying I "followed the brief really well, it would be a pleasure to work with Bradley in future".</bs:blurb>
+            <link>https://bradleysans.uk/portfolio-2021#branding</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/branding/style.png</bs:images>
+            <bs:images>/projects/branding/vanphone.png</bs:images>
+            <category>college</category>
+            <category>graphic design</category>
+            <category>vector graphics</category>
+            <category>branding</category>
+            <category>featured</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects?infographics</guid>
+            <title>Election infographic</title>
+            <pubDate>Thu, 12 Dec 2019 21:00:00 GMT</pubDate>
+            <bs:course>A-level Graphic Design</bs:course>
+            <bs:year>First year</bs:year>
+            <bs:unit>A-level Graphic Design</bs:unit>
+            <bs:institution>New College Bradford</bs:institution>
+            <bs:grade>A*</bs:grade>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/.png" height="200px" width="600px" alt="My Local Area">
+                    <p>In the lead-up to the 2019 general election, I produced an infographic aimed at young first-time voters aiming to explain how Britain's democratic systems work in an informal and engaging manner.</p>
+                ]]>
+            </description>
+            <bs:blurb>In the lead-up to the 2019 general election, I produced an infographic aimed at young first-time voters aiming to explain how Britain's democratic systems work in an informal and engaging manner.</bs:blurb>
+            <link>https://bradleysans.uk/portfolio-2021#infographics</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/infographics/poster.png</bs:images>
+            <bs:images>/projects/infographics/gens.png</bs:images>
+            <category>college</category>
+            <category>graphic design</category>
+            <category>vector graphics</category>
+            <category>infographics</category>
+            <category>typography</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects?psblyric</guid>
+            <title>Tube map-style road diagrams</title>
+            <pubDate>Fri, 24 Dec 2021 18:00:00 GMT</pubDate>
+            <bs:course>Personal project</bs:course>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps">
+                    <p>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</p>
+                ]]>
+            </description>
+            <bs:blurb>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</bs:blurb>
+            <link>https://twitter.com/psblyric/</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/psblyric/psblyric.png</bs:images>
+            <category>personal projects</category>
+            <category>music</category>
+            <category>web development</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects?justaminute</guid>
+            <title>Just a Minute game</title>
+            <pubDate>Sat, 11 Sep 2020 18:00:00 GMT</pubDate>
+            <bs:course>Personal project</bs:course>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps">
+                    A quick game I made in a couple of hours. Based on the <a href="https://en.wikipedia.org/wiki/Just_a_Minute" style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel show of the same name</a>, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. 
+                ]]>
+            </description>
+            <bs:blurb>A quick game I made in a couple of hours. Based on the <a href="https://en.wikipedia.org/wiki/Just_a_Minute" style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel show of the same name</a>, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. </bs:blurb>
+            <link>https://bradleysans.uk/justaminute</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/justaminute/jam.png</bs:images>
+            <bs:images>/projects/justaminute/nicholas.jpg</bs:images>
+            <category>personal projects</category>
+            <category>games</category>
+            <category>web development</category>
         </item>
     </channel>
 </rss>
