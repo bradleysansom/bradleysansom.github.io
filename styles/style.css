@@ -49,6 +49,7 @@ body>header {
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
+    align-items: center;
 }
 
 body>header a {
@@ -76,6 +77,8 @@ h1 {
     padding: 10px 10px 0px 10px;
     font-size: 2.4rem;
     transition: .5s;
+    margin-block: 10px;
+    line-height: 1;
 }
 
 .name.animated {
@@ -272,7 +275,8 @@ nav a {
 .intro {
     padding: 10px;
     font: var(--headline);
-    font-size: 2.5rem;
+    font-size: clamp(1.2rem, 4vw, 2.7rem);
+    line-height: 1.2;
     margin: 0;
 
 }
@@ -282,6 +286,7 @@ nav a {
     font: var(--body);
     font-size: 1.2rem;
     margin: 0;
+    max-width: 30ch;
 }
 
 #triple-box-half {
@@ -763,20 +768,13 @@ hr {
         gap: 10px;
     }
 
-    .intro {
-        font-size: 1.5rem;
-    }
+
 }
 
-@media screen and (min-width:500px) {
-    .intro {
-        font-size: 2rem;
-    }
-}
 
 @media screen and (min-width:650px) {
     .intro {
-        font-size: 2.5rem;
+
         max-width: 450px;
     }
 
@@ -790,9 +788,7 @@ hr {
         display: initial;
     }
 
-    .intro {
-        font-size: 2.5rem;
-    }
+
 
     .vcard section.contactLinks {
         grid-template-columns: calc(33.3% - 10px) calc(33.3% - 10px) calc(33.3% - 10px);
@@ -825,7 +821,6 @@ hr {
         display: flex;
         align-items: center;
         text-align: start;
-        line-height: 1;
     }
 }
 
