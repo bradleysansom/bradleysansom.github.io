@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/bradleysans
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bradleysans.uk
+  * I am bradleysans (https://keybase.io/bradleysans) on keybase.
+  * I have a public key with fingerprint 2359 7382 D7E3 0AE2 24E3  B60A 5F29 3906 CBDF F4A0
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01014f8f7c867439223c2547f6c53b87a7ca7e43f2738609f2f45bbf5b76c8df295b0a",
+      "fingerprint": "23597382d7e30ae224e3b60a5f293906cbdff4a0",
+      "host": "keybase.io",
+      "key_id": "5f293906cbdff4a0",
+      "kid": "01014f8f7c867439223c2547f6c53b87a7ca7e43f2738609f2f45bbf5b76c8df295b0a",
+      "uid": "c7cb6565a3dbac25cf3742cc436fa719",
+      "username": "bradleysans"
+    },
+    "service": {
+      "hostname": "bradleysans.uk",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1674421232,
+  "expire_in": 157680000,
+  "prev": "f14ec04b23c6ae8c9474fa04c636c314bec535027111f2f9bb9b148a134af5c2",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMM9AnicrZJ/TJVVGMcvEqUQQqCJjsF803AO9f393nsxRSqzzYiFzQFeL+8573kv
+b3DvxffeC6GhWRLNwWXYAGVoIsQcLgoDMuYQ6N5IjcIRJRSu8as22JUGCIpA52X1
+V/3Z+efsnOf7/Zzn+e54gv11gX43mn6+cb90bNjvdkeVSwe7ayaPEcAu5RHGY0Qm
+Wt5QloQcTnOmIhFGgqRIipX1sgD1vMAyBppmIM2xgsxDjgF6QRSgKCCWkWmB0fOk
+QaZllgNA5oDAQ70k0wYOkCIRS8iKzYLUbFWxOTGWZjgDNtCSgBhSRDTNIgbwpMhh
+A2MgeQgkWWZFEhsz7A7NgZsDogNtV+z4Dh/My+39h/5/7tu1jIMCBDzHcyIjARGD
+oMwILA0hy/CyKFAGTehAqk20IqwGqihloTyHaHMQ+bEELuQoEGnZasP8W7TdlYkB
+2ardaYf2LFzLcDqzHUbN68zL1sS5CJj/xpiBYpNwmNiRg1SHYrcRRgoroVPRuBQe
+l6UpmqFjCfR2tqIis6IpOIHXk3hp76AcjJQpFkGSBTgYXkR6aGAFVhZJFvIMDxmK
+BQgnxZG0QFEUTscAgAFQrF6kGFaUOUgT2mBHbHbCyOE2RQtGOhSLTXS6VETkd3Yc
+ekLnF6h7MmCF9sl0gatC//l6lV+FLGwIr2toGoSW39LnC4Icb/5e/8KgN2AxYuSd
+NS3Koed3/zg6OlsXZD684/y6XNNC9debio1Tr18rPN5Em0pmLmZcbaOTZscHBuz5
+4r6YZ1tnakv6vKSuMj32etNZIi0hOrJNrbhafOKCZaTMNxyU7E01CW2dynj7TWdl
+SrkceXMUWhonZLf74/36D8NqUt07lbceX370WthT5QN15g2heUG784cfL82uTr5U
+EUZuXuktaBSibvmEanVF4o4tr5R9uWjocG+k467RH7gzolNyc+N99MJwyLuvhp6J
+60NpraaeF/eNX+x/WcntthoscWmbvEc6rT+k3qqpmtpyYK5oav2ccXC6pLqg12qu
+HX/EtoevPZG0yrpnuPKbqD+eazk5UfSp9ZTn8y/mk062yM/E110imrrWUjMbEw/W
+qiM60XLlwVH+YMQF8aVdyYv1O83fNy94fp1Uj39Crgw7dfmcZWpovl2aU33TY+kf
+fWbeG1MKng7v+Ta8r6HZ1FV/G5R7et93jplCemtT/MsL7xFKZMjdyQRQ1z8x1Fja
+zRTdbSj75U9rT5SvJS1pl8frH/zg4US0+4582EUufpfnerhm/5V7CTGFp2uPFocV
+rpvWb/Ymh66vTvQFwIXyM3t+utPgt21o7P71CrK5tSv9wNbI+m1nV/e/lxjvkaq2
+Ni/tDV6KKCx6o+AvHprTHw==
+=MHGd
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bradleysans
+
+==================================================================

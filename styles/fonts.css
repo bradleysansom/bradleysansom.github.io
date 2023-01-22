@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icons';
-    src: url('fonts/icons.eot?qgdhqq');
-    src: url('fonts/icons.eot?qgdhqq#iefix') format('embedded-opentype'),
-        url('fonts/icons.ttf?qgdhqq') format('truetype'),
-        url('fonts/icons.woff?qgdhqq') format('woff'),
-        url('fonts/icons.svg?qgdhqq#icons') format('svg');
+    src: url('fonts/icons.eot?sbwiyh');
+    src: url('fonts/icons.eot?sbwiyh#iefix') format('embedded-opentype'),
+        url('fonts/icons.ttf?sbwiyh') format('truetype'),
+        url('fonts/icons.woff?sbwiyh') format('woff'),
+        url('fonts/icons.svg?sbwiyh#icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -26,98 +26,106 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-building-o:before {
-    content: "\e90a";
+.icon-orcid:before {
+    content: "\1f194";
 }
 
 .icon-letter-b:before {
-    content: "\e90b";
+    content: "\1f468";
 }
 
 .icon-mmu:before {
-    content: "\e90c";
+    content: "\1f393";
 }
 
 .icon-mastodon:before {
-    content: "\4d";
+    content: "\1f418";
+}
+
+.icon-building-o:before {
+    content: "\1f3eb";
 }
 
 .icon-arrow-left:before {
-    content: "\6c";
+    content: "\2b05";
 }
 
 .icon-arrow-right:before {
-    content: "\72";
+    content: "\27a1";
 }
 
 .icon-book-open:before {
-    content: "\e900";
+    content: "\1f4d6";
 }
 
 .icon-box:before {
-    content: "\e902";
+    content: "\1f5bc";
 }
 
 .icon-chevron-right:before {
-    content: "\61";
+    content: "\25b6";
 }
 
 .icon-code:before {
-    content: "\e903";
+    content: "\1f4bb";
 }
 
 .icon-edit-2:before {
-    content: "\e90d";
+    content: "\270f";
 }
 
 .icon-github:before {
-    content: "\47";
+    content: "\1f431";
 }
 
 .icon-globe:before {
-    content: "\e90e";
+    content: "\1f310";
 }
 
 .icon-instagram:before {
-    content: "\49";
+    content: "\1f4f7";
 }
 
 .icon-linkedin:before {
-    content: "\4c";
+    content: "\1f4bc";
 }
 
 .icon-list:before {
-    content: "\e904";
+    content: "\1f4d3";
 }
 
 .icon-mail:before {
-    content: "\45";
+    content: "\1f4e7";
 }
 
 .icon-map-pin:before {
-    content: "\e901";
+    content: "\1f4cd";
 }
 
 .icon-moon:before {
-    content: "\e905";
+    content: "\1f319";
 }
 
 .icon-pen-tool:before {
-    content: "\e906";
+    content: "\1f58a";
 }
 
 .icon-star:before {
-    content: "\e907";
+    content: "\1f31f";
 }
 
 .icon-sun:before {
-    content: "\e908";
+    content: "\1f31e";
 }
 
 .icon-twitter:before {
-    content: "\54";
+    content: "\1f426";
 }
 
 .icon-type:before {
-    content: "\e909";
+    content: "\1f520";
+}
+
+.icon-youtube:before {
+    content: "\1f4fa";
 }

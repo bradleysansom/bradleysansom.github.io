@@ -144,7 +144,7 @@ function homePageRender(filter, ordering) {
     console.log("ordering projects by " + ordering);
 
 
-    if (filter === "all") {
+    if (filter === "everything") {
         for (let index = 0; index < projectsArray.length; index++) {
             console.log(projectsArray[index].title.text);
             homePageSectionRender(projectsArray[index]);
@@ -154,12 +154,12 @@ function homePageRender(filter, ordering) {
         if (filter === "search=") {
             console.log("search term blank, re-rendering");
             document.getElementById("searchBox").value = "";
-            homePageRender("all", "newest");
+            homePageRender("everything", "newest");
 
-            var restoreActive = document.getElementById("allButton").classList;
+            var restoreActive = document.getElementById("everythingButton").classList;
             restoreActive.add("active");
-            document.getElementById("allButton").textContent = restoreActive;
-            document.getElementById("allButton").innerHTML = '<span class="icon-list"></span>All';
+            document.getElementById("everythingButton").textContent = restoreActive;
+            document.getElementById("everythingButton").innerHTML = '<span class="icon-list"></span>Everything';
             document.getElementById("searchBox").style.border = '3px solid var(--orange)';
             document.getElementById("searchBox").style.padding = '7px 10px';
 
@@ -185,8 +185,6 @@ function homePageRender(filter, ordering) {
                         }
                     }
                 }
-            }
-            for (let index = 0; index < projectsArray.length; index++) {
                 if (projectsArray[index].blurb !== undefined) {
                     console.log(projectsArray[index].blurb.text);
                     if (projectsArray[index].blurb.text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
@@ -199,8 +197,6 @@ function homePageRender(filter, ordering) {
                     }
 
                 }
-            }
-            for (let index = 0; index < projectsArray.length; index++) {
                 if (projectsArray[index].title !== undefined) {
                     console.log(projectsArray[index].title.text);
                     if (projectsArray[index].title.text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
@@ -213,7 +209,20 @@ function homePageRender(filter, ordering) {
                     }
 
                 }
+                if (projectsArray[index].pubDate !== undefined) {
+                    console.log(projectsArray[index].pubDate.text);
+                    if (projectsArray[index].pubDate.text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
+                        console.log(projectsArray[index].pubDate.text);
+                        if (!alreadyIncluded.includes(projectsArray[index].guid)) {
+                            homePageSectionRender(projectsArray[index]);
+                            alreadyIncluded.push(projectsArray[index].guid);
+                            console.log(alreadyIncluded);
+                        }
+                    }
+
+                }
             }
+
 
         }
     } else {
@@ -481,7 +490,6 @@ var currentSorting = "newest";
 function createCategoryFilters() {
     var categoryFilters = [
         ["featured", "icon-star"],
-        ["all", "icon-list"],
         ["university", "icon-mmu"],
         ["college", "icon-building-o"],
         ["personal projects", "icon-letter-b"],
@@ -490,7 +498,8 @@ function createCategoryFilters() {
         ["creative coding", "icon-code"],
         ["vector graphics", "icon-pen-tool"],
         ["typography", "icon-type"],
-        ["blog posts", "icon-edit-2"]
+        ["blog posts", "icon-edit-2"],
+        ["everything", "icon-list"]
     ]
     var filtersContainer = document.getElementById("filterContainer");
     for (let index = 0; index < categoryFilters.length; index++) {
