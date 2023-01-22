@@ -1,0 +1,63 @@
+
+name: Fetch webmentions
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+
+  # Run every 30 minutes
+  schedule:
+    - cron: "*/30 * * * *"
+
+  # Allow manual workflow dispatch
+  workflow_dispatch: {}
+
+# Jobs
+jobs:
+
+  # Fetch webmentions
+  webmentions:
+    name: Fetch webmentions
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules-v1
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Fetch webmentions
+        env:
+          WEBMENTION_API_KEY: ${{ secrets.WEBMENTION_API_KEY }}
+        run: npm run wm:fetch
+
+      - name: Commit webmention changes
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          git config --global user.name "bradleysansom"
+          git config --global user.email "19352051+rowanbot@users.noreply.github.com"
+          git remote set-url origin "https://bradleysansom:${DEPLOY_KEY}@github.com/${GITHUB_REPOSITORY}.git"
+          git checkout main
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Fetch webmentions"; git push origin main)
