@@ -101,7 +101,7 @@
         <h2 class="section-header">Projects</h2>
         <section class="projects">
             <section class="filterSelection">
-                <p>View</p>
+
                 <section id="filterContainer">
 
                 </section>
@@ -111,6 +111,9 @@
 
 
             </div>
+            <noscript>Sorry, your browser doesn't support Javascript and so this section won't work properly. You could
+                instead read through <a href="/projects/posts.xml">my RSS feed</a> to keep up with what I've been making
+                and doing.</noscript>
         </section>
 
 
@@ -179,7 +182,13 @@
 <script src="/scripts/project.js"></script>
 <script>
     createCategoryFilters();
+    createSearchBox();
+
     homePageInitialise("featured", "newest");
+
+
+
+
 </script>
 <script src="/scripts/greeting.js"></script>
 <script src="/scripts/outro.js"></script>

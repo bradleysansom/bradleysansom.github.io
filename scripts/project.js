@@ -128,7 +128,7 @@ function projectPageRender() {
 }
 
 
-
+var alreadyIncluded = [];
 
 function homePageInitialise(filter, ordering) {
     fetchPosts("homePage", filter, ordering);
@@ -148,6 +148,72 @@ function homePageRender(filter, ordering) {
         for (let index = 0; index < projectsArray.length; index++) {
             console.log(projectsArray[index].title.text);
             homePageSectionRender(projectsArray[index]);
+
+        }
+    } else if (filter.indexOf("search=") === 0) {
+        if (filter === "search=") {
+            console.log("search term blank, re-rendering");
+            document.getElementById("searchBox").value = "";
+            homePageRender("all", "newest");
+
+            var restoreActive = document.getElementById("allButton").classList;
+            restoreActive.add("active");
+            document.getElementById("allButton").textContent = restoreActive;
+            document.getElementById("allButton").innerHTML = '<span class="icon-list"></span>All';
+            document.getElementById("searchBox").style.border = '3px solid var(--orange)';
+            document.getElementById("searchBox").style.padding = '7px 10px';
+
+
+        } else {
+            var searchTermFilter = filter.split("=")[1];
+            alreadyIncluded.length = 0;
+            console.log("SEARCH TERM", searchTermFilter);
+            document.getElementById("searchBox").style.border = '5px solid var(--foreground)';
+            document.getElementById("searchBox").style.padding = '5px 8px';
+
+            for (let index = 0; index < projectsArray.length; index++) {
+                if (projectsArray[index].category !== undefined) {
+                    console.log(projectsArray[index].category[0].text);
+                    for (let catIndex = 0; catIndex < projectsArray[index].category.length; catIndex++) {
+                        if (projectsArray[index].category[catIndex].text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
+                            console.log(projectsArray[index].title.text);
+                            if (!alreadyIncluded.includes(projectsArray[index].guid)) {
+                                homePageSectionRender(projectsArray[index]);
+                                alreadyIncluded.push(projectsArray[index].guid);
+                                console.log(alreadyIncluded);
+                            }
+                        }
+                    }
+                }
+            }
+            for (let index = 0; index < projectsArray.length; index++) {
+                if (projectsArray[index].blurb !== undefined) {
+                    console.log(projectsArray[index].blurb.text);
+                    if (projectsArray[index].blurb.text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
+                        console.log(projectsArray[index].title.text);
+                        if (!alreadyIncluded.includes(projectsArray[index].guid)) {
+                            homePageSectionRender(projectsArray[index]);
+                            alreadyIncluded.push(projectsArray[index].guid);
+                            console.log(alreadyIncluded);
+                        }
+                    }
+
+                }
+            }
+            for (let index = 0; index < projectsArray.length; index++) {
+                if (projectsArray[index].title !== undefined) {
+                    console.log(projectsArray[index].title.text);
+                    if (projectsArray[index].title.text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
+                        console.log(projectsArray[index].title.text);
+                        if (!alreadyIncluded.includes(projectsArray[index].guid)) {
+                            homePageSectionRender(projectsArray[index]);
+                            alreadyIncluded.push(projectsArray[index].guid);
+                            console.log(alreadyIncluded);
+                        }
+                    }
+
+                }
+            }
 
         }
     } else {
@@ -433,6 +499,8 @@ function createCategoryFilters() {
         var filterIcon = categoryFilters[index][1];
         var filterButton = document.createElement("button");
         filterButton.setAttribute("name", filterName);
+        filterButton.setAttribute("class", "filterButton")
+        filterButton.setAttribute("id", filterName.replace(/\s/g, "-") + "Button")
         filterButton.setAttribute("onClick", 'homePageInitialise("' + filterName + '", "' + currentSorting + '"); toggleActive(event)');
 
         filterButton.innerHTML = '<span class="' + filterIcon + '" ></span>' + filterName.charAt(0).toUpperCase() + filterName.slice(1);
@@ -441,4 +509,28 @@ function createCategoryFilters() {
         };
         filtersContainer.appendChild(filterButton);
     }
+}
+
+function createSearchBox() {
+    var filtersContainer = document.getElementById("filterContainer");
+    var searchBox = document.createElement("input");
+    searchBox.setAttribute("type", "text");
+    searchBox.setAttribute("id", "searchBox");
+    searchBox.setAttribute("name", "searchBox");
+    searchBox.setAttribute("placeholder", 'Search...');
+    searchBox.setAttribute("spellcheck", "false");
+
+    searchBox.setAttribute("oninput", "searchFilter();toggleActive(event);")
+    filtersContainer.appendChild(searchBox);
+
+}
+
+
+function searchFilter() {
+    var searchTerm = document.getElementById("searchBox").value;
+    console.log(searchTerm);
+
+    homePageInitialise("search=" + searchTerm, "newest");
+
+
 }

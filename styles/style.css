@@ -381,6 +381,16 @@ nav a {
     color: var(--foreground);
 }
 
+#filterContainer input {
+    border: 3px solid var(--orange);
+    background-color: var(--background);
+    padding: 7px 10px;
+    color: var(--foreground);
+    font: var(--headline);
+    font-size: 0.85rem;
+    transition: .5s;
+}
+
 
 article {
     display: flex;
