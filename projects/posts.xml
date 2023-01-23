@@ -23,14 +23,14 @@
         <atom:link href="https://bradleysans.uk/projects/posts.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <guid>https://bradleysans.uk/projects?underconstruction</guid>
+            <guid>https://bradleysans.uk/projects#underconstruction</guid>
             <title>I'm rebuilding my website</title>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description>My newest stuff is on this RSS feed; I'm currently rebuilding my website. My older projects are accessible through my homepage, and will be added here in due course. New stuff will make it on here as well.</description>
             <bs:blurb>Hi, I'm currently in the process of rebuilding my website. This section is the first part of it. This new site includes my most recent projects, but more of my older work as well as personal projects will be added soon.</bs:blurb>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?crystaliser</guid>
+            <guid>https://bradleysans.uk/projects#crystaliser</guid>
             <title>Graphical scores</title>
             <pubDate>Fri, 16 Dec 2022 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -59,7 +59,7 @@
             <category>creative coding</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?interlude</guid>
+            <guid>https://bradleysans.uk/projects#interlude</guid>
             <title>Interlude series</title>
             <pubDate>Thu, 27 Oct 2022 17:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -88,7 +88,7 @@
             <category>vector graphics</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?maps</guid>
+            <guid>https://bradleysans.uk/projects#maps</guid>
             <title>Tube map-style road diagrams</title>
             <pubDate>Wed, 26 Oct 2022 18:00:00 GMT</pubDate>
             <bs:course>Personal project</bs:course>
@@ -110,7 +110,7 @@
             <category>print</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?terrors</guid>
+            <guid>https://bradleysans.uk/projects#terrors</guid>
             <title>Terrors</title>
             <pubDate>Mon, 09 May 2022 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -140,7 +140,7 @@
             <category>group project</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?greta</guid>
+            <guid>https://bradleysans.uk/projects#greta</guid>
             <title>Melting typeface</title>
             <pubDate>Fri, 04 Mar 2022 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -167,7 +167,7 @@
             <category>creative coding</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?victoria</guid>
+            <guid>https://bradleysans.uk/projects#victoria</guid>
             <title>dinnerladies article and design</title>
             <pubDate>Fri, 17 Dec 2021 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -193,7 +193,7 @@
             <category>typography</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?wes</guid>
+            <guid>https://bradleysans.uk/projects#wes</guid>
             <title>Wes Anderson magazine design</title>
             <pubDate>Fri, 03 Dec 2021 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -218,7 +218,7 @@
             <category>typography</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?letterspace</guid>
+            <guid>https://bradleysans.uk/projects#letterspace</guid>
             <title>Letterspace</title>
             <pubDate>Fri, 29 Oct 2021 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -242,7 +242,7 @@
             <category>vector graphics</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?letterspace</guid>
+            <guid>https://bradleysans.uk/projects#letterspace</guid>
             <title>Urban/rural found alphabet</title>
             <pubDate>Fri, 08 Oct 2021 21:00:00 GMT</pubDate>
             <bs:course>BA Graphic Design</bs:course>
@@ -266,7 +266,7 @@
             <category>photography</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?channel8</guid>
+            <guid>https://bradleysans.uk/projects#channel8</guid>
             <title>Broadcast branding</title>
             <pubDate>Fri, 25 Jun 2021 21:00:00 GMT</pubDate>
             <bs:course>A-level Graphic Design</bs:course>
@@ -294,7 +294,7 @@
             <category>creative coding</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?local</guid>
+            <guid>https://bradleysans.uk/projects#local</guid>
             <title>My Local Area</title>
             <pubDate>Fri, 25 Jun 2021 21:00:00 GMT</pubDate>
             <bs:course>A-level Computer Science</bs:course>
@@ -319,7 +319,7 @@
             <category>data</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?wayfinding</guid>
+            <guid>https://bradleysans.uk/projects#wayfinding</guid>
             <title>Wayfinding design</title>
             <pubDate>Fri, 29 May 2020 21:00:00 GMT</pubDate>
             <bs:course>A-level Graphic Design</bs:course>
@@ -345,7 +345,7 @@
             <category>data</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?branding</guid>
+            <guid>https://bradleysans.uk/projects#branding</guid>
             <title>Skin Kitchen Co branding</title>
             <pubDate>Fri, 27 Mar 2020 21:00:00 GMT</pubDate>
             <bs:course>A-level Graphic Design</bs:course>
@@ -371,7 +371,7 @@
             <category>featured</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?infographics</guid>
+            <guid>https://bradleysans.uk/projects#infographics</guid>
             <title>Election infographic</title>
             <pubDate>Thu, 12 Dec 2019 21:00:00 GMT</pubDate>
             <bs:course>A-level Graphic Design</bs:course>
@@ -398,7 +398,7 @@
             <category>typography</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?psblyric</guid>
+            <guid>https://bradleysans.uk/projects#psblyric</guid>
             <title>Pet Shop Boys lyrics Twitter bot</title>
             <pubDate>Fri, 24 Dec 2021 18:00:00 GMT</pubDate>
             <bs:course>Personal project</bs:course>
@@ -417,7 +417,7 @@
             <category>web development</category>
         </item>
         <item>
-            <guid>https://bradleysans.uk/projects?justaminute</guid>
+            <guid>https://bradleysans.uk/projects#justaminute</guid>
             <title>Just a Minute game</title>
             <pubDate>Sat, 11 Sep 2020 18:00:00 GMT</pubDate>
             <bs:course>Personal project</bs:course>
