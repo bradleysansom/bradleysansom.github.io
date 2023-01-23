@@ -39,7 +39,7 @@ var myOptions = {
 
 function getCurrentProject() {
     url = window.location.href;
-    currentProject = url.split('?')[1]
+    currentProject = url.split('#')[1]
     console.log(currentProject);
     projectPageInitialise();
 
