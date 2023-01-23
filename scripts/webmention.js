@@ -117,7 +117,7 @@ A more detailed example:
         return document.currentScript.getAttribute("data-" + key) || dfl;
     }
 
-    const refurl = getCfg("page-url", window.location.href.replace(/#.*$/, ""));
+    const refurl = getCfg("page-url", window.location.href.replace(/.*$/, ""));
     const addurls = getCfg("add-urls", undefined);
     const containerID = getCfg("id", "webmentions");
     /** @type {Number} */
