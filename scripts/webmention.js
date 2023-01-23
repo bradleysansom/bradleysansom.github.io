@@ -116,6 +116,8 @@ A more detailed example:
     function getCfg(key, dfl) {
         return document.currentScript.getAttribute("data-" + key) || dfl;
     }
+    // removed to allow for hashes on end of urls
+    // const refurl = getCfg("page-url", window.location.href.replace(/#.*$/, ""));
 
     const refurl = getCfg("page-url", window.location.href);
     console.log(refurl);
