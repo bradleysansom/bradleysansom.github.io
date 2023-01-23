@@ -654,9 +654,99 @@ hr {
     color: var(--white) !important;
 }
 
+#webmentionsContainer {
+    margin: 10px;
+}
+
+#webmentions {
+    margin: 0;
+    position: relative;
+    z-index: 100;
+    line-height: 1.2em;
+}
+
+#webmentions .comments {
+
+    overflow-x: hidden;
+}
+
+#webmentions h2 {
+    margin: 0;
+    padding: 2px;
+    font: var(--headline);
+    font-size: 2rem;
+    color: var(--foreground);
+    text-decoration: 4px underline dotted var(--orange);
+
+}
+
+#webmentions .reacts img {
+    margin: 3px -1ex 1px 0;
+}
+
+#webmentions ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 4px;
+}
 
 
 
+#webmentions a.reaction {
+    position: relative;
+    text-decoration: none;
+    margin-inline-end: 1ex;
+    font-family: 'icons';
+}
+
+#webmentions a.reaction img {
+    max-height: 2rem;
+    margin-inline-end: -1ex;
+    border-radius: 100%;
+}
+
+#webmentions a.reaction sub {
+    font-size: 50%;
+}
+
+#webmentions .comments li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#webmentions .comments li .text {
+    font: var(--body);
+    color: var(--foreground);
+    text-decoration: none;
+}
+
+#webmentions .comments a.source {
+    margin-inline-start: 10px;
+    font: var(--headline);
+    color: var(--foreground);
+}
+
+#webmentions .comments li .name {
+    color: var(--foreground);
+}
+
+.webmentionBlurb {
+    font: var(--body);
+    color: var(--foreground);
+}
+
+#currentUrl {
+    background-color: var(--orange);
+    font-family: monospace;
+    padding: 5px;
+    display: inline-flex;
+    gap: 10px;
+}
 
 
 

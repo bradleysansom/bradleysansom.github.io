@@ -159,7 +159,7 @@ A more detailed example:
         "like-of": "❤️",
         "repost-of": "🔄",
         "bookmark-of": "⭐️",
-        "mention-of": "💬",
+        "mention-of": "🚗",
         "rsvp": "📅",
         "follow-of": "🐜"
     };

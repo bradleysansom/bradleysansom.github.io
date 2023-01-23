@@ -233,6 +233,15 @@
     <hr>
     <section id="webmentionsContainer">
         <div id="webmentions"></div>
+        <p class="webmentionBlurb">Respond to this post via <a id="respondViaTwitter">Twitter</a>, Mastodon, or
+            your own site with <a href="https://www.w3.org/TR/webmention/">Webmentions</a> enabled. </p>
+        <p class="webmentionBlurb">Simply make a post
+            using the URL
+            <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
+                copyUrlButtonIcon.innerHTML="✔" ;'><span id="urlGoesHere"></span><span class="icon-clipboard"
+                    id="copyUrlButtonIcon">📋</span></button>
+
+        </p>
     </section>
     <hr id="before-emley" class="animated">
     <section id="emley" class="animated"
@@ -254,7 +263,8 @@
 
 </script>
 <script src="/scripts/greeting.js"></script>
-<script src="/scripts/webmention.js" async></script>
+<script src="/scripts/webmention.js" data-page-url="https://bradleysans.uk/" async></script>
+<script src="/scripts/respond.js"></script>
 <script src="/scripts/outro.js"></script>
 
 
