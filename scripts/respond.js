@@ -1,8 +1,8 @@
 var respondViaTwitter = document.getElementById("respondViaTwitter");
-respondViaTwitter.href = "https://twitter.com/intent/tweet?text=" + window.location.href;
+respondViaTwitter.href = "https://twitter.com/intent/tweet?text=" + window.location.href.replace("#", "%23");
 
 var respondViaReddit = document.getElementById("respondViaReddit");
-respondViaReddit.href = "https://www.reddit.com/submit?url=" + window.location.href;
+respondViaReddit.href = "https://www.reddit.com/submit?url=" + window.location.href.replace("#", "%23");
 
 var currentUrl = document.getElementById("urlGoesHere");
 currentUrl.textContent = window.location.href;
@@ -17,7 +17,7 @@ function respondViaMastodon() {
     if (domain == "" || domain == null) {
         return;
     }
-    url = "https://" + domain + "/share?text=" + window.location.href;
+    url = "https://" + domain + "/share?text=" + window.location.href.replace("#", "%23");
     window.open(url, '_blank');
 }
 
