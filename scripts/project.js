@@ -63,7 +63,7 @@ function projectPageInitialise() {
 }
 
 function projectPageRender() {
-    filtered = projectsArray.filter(project => project.guid.text.split("?")[1] == currentProject);
+    filtered = projectsArray.filter(project => project.guid.text.split("#")[1] == currentProject);
     console.log(filtered);
     if (filtered.length === 0) {
         projectNotFound();
@@ -247,13 +247,16 @@ function homePageRender(filter, ordering) {
 function homePageSectionRender(project) {
     // create container for each project
     var projectContainer = document.createElement("article");
-    projectContainer.setAttribute("id", project.guid.text.split("?")[1]);
+    projectContainer.setAttribute("id", project.guid.text.split("#")[1]);
 
     // add label
+    var labelLink = document.createElement("a");
+    labelLink.setAttribute("href", project.guid.text);
     var label = document.createElement("h3");
     label.setAttribute("class", "label");
     label.innerHTML = project.title.text;
-    projectContainer.appendChild(label);
+    labelLink.appendChild(label);
+    projectContainer.appendChild(labelLink);
 
     console.log(project);
     console.log(project.images);
