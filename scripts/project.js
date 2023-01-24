@@ -11,6 +11,7 @@ var tagsList;
 var courseYear;
 var course;
 var pubDate;
+var permalink;
 
 var currentCategory;
 var currentSubCategory;
@@ -59,6 +60,7 @@ function projectPageInitialise() {
     courseYear = document.getElementsByClassName("courseYear")[0];
     course = document.getElementsByClassName("course")[0];
     pubDate = document.getElementsByClassName("pubDate")[0];
+    permalink = document.getElementById("permalink");
     fetchPosts("project");
 }
 
@@ -71,19 +73,24 @@ function projectPageRender() {
 
         // populate data fields
         headline.innerHTML = filtered[0].title.text;
-        image.src = filtered[0].images[0].text;
         unit.innerHTML = filtered[0].unit.text;
         institution.innerHTML = filtered[0].institution.text;
         blurb.innerHTML = filtered[0].blurb.text;
         linkText.innerHTML = filtered[0].linkLabel.text;
         course.innerHTML = filtered[0].course.text;
         courseYear.innerHTML = filtered[0].year.text;
-        pubDate.innerHTML = "Published " + filtered[0].pubDate.text;
+        pubDate.innerHTML = filtered[0].pubDate.text;
+        var pubDateIso = new Date(filtered[0].pubDate.text).toISOString();
+        pubDate.setAttribute("datetime", pubDateIso);
+        permalink.href = filtered[0].guid.text;
+
 
         // set document title;
         document.title = filtered[0].title.text + " | Bradley Sansom";
 
         if (filtered[0].images !== undefined) {
+
+            image.src = filtered[0].images[0].text;
 
             var newOgImage = document.createElement("meta");
             newOgImage.setAttribute("property", "og:image");
