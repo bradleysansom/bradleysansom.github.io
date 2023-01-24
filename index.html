@@ -39,8 +39,7 @@
     <link rel="pingback" href="https://webmention.io/bradleysans.uk/xmlrpc" />
 
 
-    <script src="/scripts/xml2json.js"></script>
-    <script src="/scripts/project.js"></script>
+
 
 </head>
 
@@ -236,9 +235,11 @@
     </section>
     <hr>
     <section id="webmentionsContainer">
+        <h2 class="section-header">Responses</h2>
         <div id="webmentions"></div>
-        <p class="webmentionBlurb">Add a response via <a id="respondViaTwitter">Twitter</a>, <a
-                href="javascript:respondViaMastodon()">Mastodon</a>, <a id="respondViaReddit">Reddit</a>, or
+        <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
+                id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
+                id="respondViaReddit">Reddit</a>, or
             your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>. </p>
         <p class="webmentionBlurb">Simply make a post which links to the URL
             <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
@@ -246,10 +247,8 @@
                     class="icon-clipboard" id="copyUrlButtonIcon">📋</span></button>
 
         </p>
-        <a href="https://google.com/" class="iconLink">Google</a>
-        <a href="http://mmu.ac.uk" class="iconLink">MMU</a>
-
     </section>
+
     <hr id="before-emley" class="animated">
     <section id="emley" class="animated"
         title="The view from my local park in Bradford towards the Emley Moor TV transmitter, the tallest freestanding structure in the UK">
@@ -257,10 +256,13 @@
                 id="nonsequitur"></span></div>
     </section>
 </body>
+<script src="/scripts/xml2json.js"></script>
+<script src="/scripts/project.js"></script>
 <script>
     createCategoryFilters();
     createSearchBox();
     homePageInitialise("featured", "newest");
+
 </script>
 <script src="/scripts/greeting.js"></script>
 <script src="/scripts/webmention.js" async></script>

@@ -670,15 +670,8 @@ hr {
     overflow-x: hidden;
 }
 
-#webmentions h2 {
-    margin: 0;
-    padding: 2px;
-    font: var(--headline);
-    font-size: 2rem;
-    color: var(--foreground);
-    text-decoration: 4px underline dotted var(--orange);
 
-}
+
 
 #webmentions .reacts img {
     margin: 3px -1ex 1px 0;
@@ -747,6 +740,10 @@ hr {
     display: inline-flex;
     gap: 10px;
     cursor: pointer;
+}
+
+a.iconLink {
+    font: var(--body);
 }
 
 a.iconLink img {
