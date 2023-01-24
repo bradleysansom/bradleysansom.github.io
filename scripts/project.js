@@ -1,3 +1,4 @@
+var post;
 var headline;
 var image;
 var unit;
@@ -47,7 +48,7 @@ function getCurrentProject() {
 }
 
 function projectPageInitialise() {
-    post = document.getElementById("mainPost");
+    post = document.getElementsByTagName("article")[0];
     headline = document.getElementsByClassName("headline")[0];
     image = document.getElementById("carousel");
     unit = document.getElementsByClassName("unit")[0];
@@ -88,7 +89,9 @@ function projectPageRender() {
         pubDate.setAttribute("class", "pubDate dt-published")
         permalink.href = filtered[0].guid.text;
         permalink.setAttribute("class", "u-url u-uid");
-        post.setAttribute("class", "h-entry");
+        post.setAttribute("class", "article h-entry");
+        var fragment = filtered[0].guid.text.split("#")[1]
+        post.setAttribute("id", fragment);
 
 
         // set document title;
