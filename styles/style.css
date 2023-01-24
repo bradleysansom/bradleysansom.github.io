@@ -746,6 +746,7 @@ hr {
     padding: 5px;
     display: inline-flex;
     gap: 10px;
+    cursor: pointer;
 }
 
 

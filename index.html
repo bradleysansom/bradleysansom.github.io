@@ -233,12 +233,13 @@
     <hr>
     <section id="webmentionsContainer">
         <div id="webmentions"></div>
-        <p class="webmentionBlurb">Add a response via <a id="respondViaTwitter">Twitter</a>, Mastodon, Reddit, or
-            your own site with <a href="https://www.w3.org/TR/webmention/">Webmentions</a> enabled. </p>
+        <p class="webmentionBlurb">Add a response via <a id="respondViaTwitter">Twitter</a>, <a
+                href="javascript:respondViaMastodon()">Mastodon</a>, <a id="respondViaReddit">Reddit</a>, or
+            your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>. </p>
         <p class="webmentionBlurb">Simply make a post which links to the URL
             <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
-                copyUrlButtonIcon.innerHTML="✔" ;'><span id="urlGoesHere"></span><span class="icon-clipboard"
-                    id="copyUrlButtonIcon">📋</span></button>
+                copyUrlButtonIcon.innerHTML="✔" ;' title="Copy URL of this page"><span id="urlGoesHere"></span><span
+                    class="icon-clipboard" id="copyUrlButtonIcon">📋</span></button>
 
         </p>
     </section>
