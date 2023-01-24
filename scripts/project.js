@@ -47,6 +47,7 @@ function getCurrentProject() {
 }
 
 function projectPageInitialise() {
+    post = document.getElementById("mainPost");
     headline = document.getElementsByClassName("headline")[0];
     image = document.getElementById("carousel");
     unit = document.getElementsByClassName("unit")[0];
@@ -73,16 +74,21 @@ function projectPageRender() {
 
         // populate data fields
         headline.innerHTML = filtered[0].title.text;
+        headline.setAttribute("class", "headline p-name");
         unit.innerHTML = filtered[0].unit.text;
         institution.innerHTML = filtered[0].institution.text;
         blurb.innerHTML = filtered[0].blurb.text;
+        blurb.setAttribute("class", "blurb p-summary")
         linkText.innerHTML = filtered[0].linkLabel.text;
         course.innerHTML = filtered[0].course.text;
         courseYear.innerHTML = filtered[0].year.text;
         pubDate.innerHTML = filtered[0].pubDate.text;
         var pubDateIso = new Date(filtered[0].pubDate.text).toISOString();
         pubDate.setAttribute("datetime", pubDateIso);
+        pubDate.setAttribute("class", "pubDate dt-published")
         permalink.href = filtered[0].guid.text;
+        permalink.setAttribute("class", "u-url u-uid");
+        post.setAttribute("class", "h-entry");
 
 
         // set document title;
