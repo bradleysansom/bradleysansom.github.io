@@ -696,6 +696,7 @@ hr {
     max-height: 2rem;
     margin-inline-end: -1ex;
     border-radius: 100%;
+    background-color: var(--white);
 }
 
 #webmentions a.reaction sub {
@@ -708,8 +709,9 @@ hr {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     gap: 5px;
+    margin-block-end: 10px;
 }
 
 #webmentions .comments li .text {
