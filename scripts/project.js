@@ -80,41 +80,63 @@ function projectPageRender() {
         courseYear.innerHTML = filtered[0].year.text;
         pubDate.innerHTML = "Published " + filtered[0].pubDate.text;
 
-        // initialise image array and link
-        var pictures = filtered[0].images;
-        var link = filtered[0].link.text;
+        // set document title;
+        document.title = filtered[0].title.text + " | Bradley Sansom";
 
-        // set up carousel
-        let position = 0;
-        const moveRight = () => {
-            console.log('moveRight');
-            if (position >= pictures.length - 1) {
-                position = 0
-                image.src = pictures[position].text;
-                return;
+        if (filtered[0].images !== undefined) {
+
+            var newOgImage = document.createElement("meta");
+            newOgImage.setAttribute("property", "og:image");
+            newOgImage.setAttribute("content", "https://bradleysans.uk" + filtered[0].images[0].text);
+            document.head.appendChild(newOgImage);
+
+            var newTwitterImage = document.createElement("meta");
+            newTwitterImage.setAttribute("property", "twitter:image");
+            newTwitterImage.setAttribute("content", "https://bradleysans.uk" + filtered[0].images[0].text);
+            document.head.appendChild(newTwitterImage);
+
+            var pictures = filtered[0].images;
+
+            // set up carousel
+            let position = 0;
+            const moveRight = () => {
+                console.log('moveRight');
+                if (position >= pictures.length - 1) {
+                    position = 0
+                    image.src = pictures[position].text;
+                    return;
+                }
+                image.src = pictures[position + 1].text;
+                position++;
             }
-            image.src = pictures[position + 1].text;
-            position++;
-        }
-        const moveLeft = () => {
-            console.log('moveLeft');
-            if (position < 1) {
-                position = pictures.length - 1;
-                image.src = pictures[position].text;
-                return;
+            const moveLeft = () => {
+                console.log('moveLeft');
+                if (position < 1) {
+                    position = pictures.length - 1;
+                    image.src = pictures[position].text;
+                    return;
+                }
+                image.src = pictures[position - 1].text;
+                position--;
             }
-            image.src = pictures[position - 1].text;
-            position--;
+
+            // event handlers for left and right and visit buttons
+            rightBtn.addEventListener("click", moveRight);
+            leftBtn.addEventListener("click", moveLeft);
         }
 
-        // event handlers for left and right and visit buttons
-        rightBtn.addEventListener("click", moveRight);
-        leftBtn.addEventListener("click", moveLeft);
-        const visit = () => {
-            window.location.href = link;
-        }
-        visitButton.addEventListener("click", visit);
+        if (filtered[0].link !== undefined) {
+            // initialise image array and link
 
+            var link = filtered[0].link.text;
+
+
+            const visit = () => {
+                window.location.href = link;
+            }
+            visitButton.addEventListener("click", visit);
+
+        }
 
         // render categories list
         var categories = filtered[0].category;
