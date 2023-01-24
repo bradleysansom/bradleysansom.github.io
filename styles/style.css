@@ -665,14 +665,6 @@ hr {
     line-height: 1.2em;
 }
 
-#webmentions .comments {
-
-    overflow-x: hidden;
-}
-
-
-
-
 #webmentions .reacts img {
     margin: 3px -1ex 1px 0;
 }
@@ -704,12 +696,10 @@ hr {
 }
 
 #webmentions .comments li {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    flex-wrap: wrap;
     gap: 5px;
     margin-block-end: 10px;
 }
@@ -742,6 +732,12 @@ hr {
     display: inline-flex;
     gap: 10px;
     cursor: pointer;
+    line-break: anywhere;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 5px;
 }
 
 a.iconLink {
