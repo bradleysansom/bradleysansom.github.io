@@ -749,6 +749,10 @@ hr {
     cursor: pointer;
 }
 
+a.iconLink img {
+    padding-inline-end: 5px;
+}
+
 
 
 #emley {
