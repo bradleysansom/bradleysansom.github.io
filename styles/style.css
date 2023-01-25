@@ -1020,3 +1020,18 @@ a {
         animation: none !important;
     }
 }
+
+@media (prefers-contrast: more) {
+    .unit {
+        color: var(--foreground);
+    }
+
+    .section-header-subtitle {
+        color: var(--foreground);
+    }
+}
+
+noscript {
+    color: var(--white);
+    font: var(--body);
+}
