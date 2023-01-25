@@ -1014,3 +1014,9 @@ a {
 .nav-icon:hover {
     background-color: var(--background);
 }
+
+@media (prefers-reduced-motion) {
+    * {
+        animation: none !important;
+    }
+}
