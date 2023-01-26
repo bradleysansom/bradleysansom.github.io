@@ -392,7 +392,7 @@ nav a {
 }
 
 
-article {
+article.homePageSection {
     display: flex;
     flex-direction: column;
     transition: .5s;
@@ -559,6 +559,7 @@ button {
 
 hr {
     border: none;
+    width: 100%;
     border-block-end: 4px dotted var(--grey);
 }
 
@@ -792,9 +793,128 @@ a.iconLink img {
     padding: 10px;
 }
 
+noscript {
+    color: var(--white);
+    font: var(--body);
+}
 
+/* debug
+section.introduction {
+    background-color: red;
+}
 
+section.metadata {
+    background-color: orange;
+}
 
+section.postContent {
+    background-color: yellow;
+}
+
+section.related {
+    background-color: green;
+}
+
+section.mentions {
+    background-color: blue;
+}
+
+section.share {
+    background-color: purple;
+}
+*/
+
+section.underConstruction {
+    margin: 10px;
+}
+
+article.post {
+    display: grid !important;
+    grid-template-columns: 100%;
+    margin: 5px;
+}
+
+article.post>section {
+    margin: 5px;
+}
+
+article.post section.mentions#webmentionsContainer {
+    margin: 0;
+}
+
+article.post h2.label {
+    font-size: 2rem;
+}
+
+article.post .arrows {
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+}
+
+article.post section.metadata {
+    font: var(--body);
+    display: flex;
+    gap: 5px;
+}
+
+article.post section.metadata a#permalink {
+    font-size: 1.5rem;
+}
+
+article.post section.metadata a#permalink p {
+    display: inline;
+}
+
+article.post section.metadata aside.attribution {
+    height: fit-content;
+}
+
+article.post section.metadata aside.attribution p.course,
+article.post section.metadata aside.attribution p.institution {
+    color: var(--foreground);
+    margin: 0;
+}
+
+article.post section.metadata aside.attribution p.unit,
+article.post section.metadata aside.attribution p.grade {
+    color: var(--orange);
+    margin: 0;
+}
+
+article.post section.metadata ul#tagsList {
+    margin: 0;
+    padding-inline-start: 10px;
+    list-style-type: "#";
+    color: var(--white);
+}
+
+article.post section.metadata ul#tagsList li::marker {
+    color: var(--orange);
+}
+
+article.post section.metadata ul#tagsList li {
+    margin-block-end: 5px;
+}
+
+article.post section.postContent {
+    font: var(--body);
+    color: var(--foreground);
+}
+
+article.post section.related h3 {
+    color: var(--orange);
+}
+
+article.post section.related .relatedPostTitleLink p {
+    margin-block-end: 5px;
+    font: var(--headline);
+}
+
+article.post section.related .relatedPostDate {
+    color: var(--foreground);
+    font: var(--body);
+}
 
 
 
@@ -888,7 +1008,34 @@ a.iconLink img {
         display: initial;
     }
 
+    article.post {
+        grid-template-columns: [postMain] 75% [sidebar] 25%;
+        grid-auto-flow: row;
+    }
 
+    article.post>section {
+        align-self: start;
+    }
+
+    article.post section.metadata {
+        margin-block-start: 69px;
+    }
+
+    article.post section.postContent {
+        transform: translateY(-60px);
+    }
+
+    article.post section.postContent :first-child {
+        max-width: calc(100% - 130px)
+    }
+
+    article.post section.metadata {
+        flex-direction: column;
+    }
+
+    article.post [sidebar] {
+        margin-inline-end: 10px;
+    }
 
     .vcard section.contactLinks {
         grid-template-columns: calc(33.3% - 10px) calc(33.3% - 10px) calc(33.3% - 10px);
@@ -1029,9 +1176,4 @@ a {
     .section-header-subtitle {
         color: var(--foreground);
     }
-}
-
-noscript {
-    color: var(--white);
-    font: var(--body);
 }

@@ -13,6 +13,7 @@ var courseYear;
 var course;
 var pubDate;
 var permalink;
+var grade;
 
 var currentCategory;
 var currentSubCategory;
@@ -20,7 +21,17 @@ var currentSubCategory;
 var filtered;
 var projects;
 var projectsArray;
-var projectsArrayTwo
+var projectsArrayTwo;
+
+var type;
+
+var courseRelatedContainer;
+var subjectRelatedContainer;
+var featuredContainer;
+
+var courseRelatedHeader;
+var subjectRelatedHeader;
+var featuredHeader;
 
 var url;
 var currentProject;
@@ -49,7 +60,7 @@ function getCurrentProject() {
 
 function projectPageInitialise() {
     post = document.getElementsByTagName("article")[0];
-    headline = document.getElementsByClassName("headline")[0];
+    headline = document.getElementById("headline");
     image = document.getElementById("carousel");
     unit = document.getElementsByClassName("unit")[0];
     institution = document.getElementsByClassName("institution")[0];
@@ -62,7 +73,9 @@ function projectPageInitialise() {
     courseYear = document.getElementsByClassName("courseYear")[0];
     course = document.getElementsByClassName("course")[0];
     pubDate = document.getElementsByClassName("pubDate")[0];
+    grade = document.getElementsByClassName("grade")[0];
     permalink = document.getElementById("permalink");
+    postType = document.getElementById("postType");
     fetchPosts("project");
 }
 
@@ -74,28 +87,57 @@ function projectPageRender() {
     } else {
 
         // populate data fields
-        headline.innerHTML = filtered[0].title.text;
-        headline.setAttribute("class", "headline p-name");
-        unit.innerHTML = filtered[0].unit.text;
-        institution.innerHTML = filtered[0].institution.text;
-        blurb.innerHTML = filtered[0].blurb.text;
-        blurb.setAttribute("class", "blurb p-summary")
-        linkText.innerHTML = filtered[0].linkLabel.text;
-        course.innerHTML = filtered[0].course.text;
-        courseYear.innerHTML = filtered[0].year.text;
-        pubDate.innerHTML = filtered[0].pubDate.text;
-        var pubDateIso = new Date(filtered[0].pubDate.text).toISOString();
-        pubDate.setAttribute("datetime", pubDateIso);
-        pubDate.setAttribute("class", "pubDate dt-published")
-        permalink.href = filtered[0].guid.text;
-        permalink.setAttribute("class", "u-url u-uid");
-        post.setAttribute("class", "article h-entry");
+        if (filtered[0].title !== undefined) {
+            headline.innerHTML = filtered[0].title.text;
+            headline.setAttribute("class", "label headline p-name");
+        }
+        if (filtered[0].category.filter(kind => kind.text === "blog post").length > 0) {
+            type = "blog post";
+        } else {
+            type = "project";
+        }
+
+        if (filtered[0].category.filter(kind => kind.text === "university").length > 0) {
+            if (filtered[0].unit !== undefined) {
+                unit.innerHTML = filtered[0].unit.text;
+            }
+            if (filtered[0].institution !== undefined) {
+                institution.innerHTML = filtered[0].institution.text;
+            }
+            if (filtered[0].course !== undefined) {
+                course.innerHTML = filtered[0].course.text;
+            }
+            if (filtered[0].grade !== undefined) {
+                grade.innerHTML = "Graded " + filtered[0].grade.text;
+            }
+        }
+
+
+        if (filtered[0].linkLabel !== undefined) {
+            linkText.innerHTML = filtered[0].linkLabel.text;
+        }
+
+        if (filtered[0].pubDate !== undefined) {
+            console.log(type.slice(0, 1).toUpperCase());
+            postType.innerHTML = type.charAt(0).toUpperCase() + type.slice(1);
+            pubDate.innerHTML = filtered[0].pubDate.text.slice(0, 22);
+            var pubDateIso = new Date(filtered[0].pubDate.text).toISOString();
+            pubDate.setAttribute("datetime", pubDateIso);
+            pubDate.setAttribute("class", "pubDate dt-published")
+            permalink.href = filtered[0].guid.text;
+            permalink.setAttribute("class", "u-url u-uid");
+        }
+
+        // set document title;
+        document.title = filtered[0].title.text + " | Bradley Sansom";
+
+
+        post.setAttribute("class", "article post h-entry");
         var fragment = filtered[0].guid.text.split("#")[1]
         post.setAttribute("id", fragment);
 
 
-        // set document title;
-        document.title = filtered[0].title.text + " | Bradley Sansom";
+
 
         if (filtered[0].images !== undefined) {
 
@@ -155,20 +197,102 @@ function projectPageRender() {
         }
 
         // render categories list
-        var categories = filtered[0].category;
-        for (let index = 0; index < categories.length; index++) {
-            var tag = document.createElement("li");
-            tag.innerHTML = categories[index].text;
-            tagsList.appendChild(tag);
+        if (filtered[0].category !== undefined) {
+            var categories = filtered[0].category;
+            for (let index = 0; index < categories.length; index++) {
+                var link = document.createElement("a");
+                link.href = "/?filter=" + filtered[0].category[index].text + "#articlesContainer";
+                var tag = document.createElement("li");
+                tag.innerHTML = categories[index].text;
+                link.appendChild(tag);
+                tagsList.appendChild(link);
 
+            }
         }
+
+        // render related posts
+        console.log("rendering related posts");
+        courseRelatedContainer = document.getElementById("courseRelatedContainer");
+
+        courseRelatedHeader = courseRelatedContainer.getElementsByTagName("h3")[0];
+        if (filtered[0].category.filter(kind => kind.text === "university").length > 0) {
+            fetchPosts("justData", "university", "newest", 5, courseRelatedContainer, filtered[0].guid.text);
+            courseRelatedHeader.innerHTML = "More university work";
+
+        } else if (filtered[0].category.filter(kind => kind.text === "college").length > 0) {
+            fetchPosts("justData", "college", "newest", 5, courseRelatedContainer, filtered[0].guid.text);
+
+            courseRelatedHeader.innerHTML = "More college work";
+        } else if (filtered[0].category.filter(kind => kind.text === "personal projects").length > 0) {
+            fetchPosts("justData", "personal projects", "newest", 5, courseRelatedContainer, filtered[0].guid.text);
+
+            courseRelatedHeader.innerHTML = "More personal projects";
+        }
+
+        subjectRelatedContainer = document.getElementById("subjectRelatedContainer");
+        subjectRelatedHeader = subjectRelatedContainer.getElementsByTagName("h3")[0];
+        if (filtered[0].category.filter(kind => kind.text === "photography").length > 0) {
+            fetchPosts("justData", "photography", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+            subjectRelatedHeader.innerHTML = "More photography projects";
+        } else if (filtered[0].category.filter(kind => kind.text === "writing").length > 0) {
+            fetchPosts("justData", "writing", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+
+            subjectRelatedHeader.innerHTML = "More writing projects";
+        } else if (filtered[0].category.filter(kind => kind.text === "creative coding").length > 0) {
+            fetchPosts("justData", "creative coding", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+
+            subjectRelatedHeader.innerHTML = "More creative coding projects";
+        } else if (filtered[0].category.filter(kind => kind.text === "web development").length > 0) {
+            fetchPosts("justData", "web development", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+
+            subjectRelatedHeader.innerHTML = "More web development projects";
+        } else if (filtered[0].category.filter(kind => kind.text === "vector graphics").length > 0) {
+            fetchPosts("justData", "vector graphics", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+
+            subjectRelatedHeader.innerHTML = "More typography projects";
+        } else if (filtered[0].category.filter(kind => kind.text === "typography").length > 0) {
+            fetchPosts("justData", "typography", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+
+            subjectRelatedHeader.innerHTML = "More vector graphics projects";
+        } else if (filtered[0].category.filter(kind => kind.text === "graphic design").length > 0) {
+            fetchPosts("justData", "graphic design", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
+            subjectRelatedHeader.innerHTML = "More graphic design projects";
+        }
+
+        featuredContainer = document.getElementById("featuredContainer");
+        featuredHeader = featuredContainer.getElementsByTagName("h3")[0];
+        fetchPosts("justData", "featured", "newest", 5, featuredContainer, filtered[0].guid.text);
+
     }
+}
+
+function renderRelatedPost(post, container) {
+
 }
 
 
 var alreadyIncluded = [];
+var hasBeenSearched = false;
 
 function homePageInitialise(filter, ordering) {
+    if (hasBeenSearched === true) {
+        searchTerm = "";
+        document.getElementById("searchBox").value = "";
+        document.getElementById("searchBox").style.border = '3px solid var(--orange)';
+        document.getElementById("searchBox").style.padding = '7px 10px';
+
+    } else {
+        var searchTerm = new URL(window.location.href).search.split("=")[1];
+
+        if (searchTerm !== undefined) {
+            filter = decodeURIComponent(searchTerm);
+            document.getElementById("searchBox").value = filter;
+            document.getElementById("featuredButton").setAttribute("class", "filterButton")
+            document.getElementById("searchBox").style.border = '5px solid var(--foreground)';
+            document.getElementById("searchBox").style.padding = '5px 8px';
+            hasBeenSearched = true;
+        }
+    }
     fetchPosts("homePage", filter, ordering);
 }
 
@@ -285,6 +409,7 @@ function homePageRender(filter, ordering) {
 function homePageSectionRender(project) {
     // create container for each project
     var projectContainer = document.createElement("article");
+    projectContainer.setAttribute("class", "homePageSection");
     projectContainer.setAttribute("id", project.guid.text.split("#")[1]);
 
     // add label
@@ -481,7 +606,7 @@ function homePageSectionRender(project) {
 }
 
 
-async function fetchPosts(pageType, filter, ordering) {
+async function fetchPosts(pageType, filter, ordering, number, container, currentProjectGuid) {
     let response = await fetch("https://bradleysans.uk/projects/posts.xml");
 
     if (response.ok) { // if HTTP-status is 200-299
@@ -498,6 +623,9 @@ async function fetchPosts(pageType, filter, ordering) {
         } else if (pageType === "homePage") {
             console.log("page type: homepage");
             homePageRender(filter, ordering);
+        } else if (pageType === "justData") {
+            console.log("page type: just getting data");
+            justDataRender(filter, ordering, number, container, currentProjectGuid);
         }
 
 
@@ -584,3 +712,66 @@ function searchFilter() {
 
 
 }
+var postsOfType = [];
+function justDataRender(filter, ordering, number, container, currentProjectGuid) {
+
+    // specity filtering and ordering
+    console.log("filtering projects by " + filter);
+    console.log("ordering projects by " + ordering);
+
+
+    var searchTermFilter = filter;
+    alreadyIncluded.length = 0;
+
+    for (let index = 0; index < projectsArray.length; index++) {
+        if (projectsArray[index].category !== undefined) {
+            console.log(projectsArray[index].category[0].text);
+            for (let catIndex = 0; catIndex < projectsArray[index].category.length; catIndex++) {
+                if (projectsArray[index].category[catIndex].text.toString().toLowerCase().includes(searchTermFilter.toLowerCase())) {
+                    if (projectsArray[index].guid.text !== currentProjectGuid) {
+                        console.log(projectsArray[index].title.text);
+                        if (!alreadyIncluded.includes(projectsArray[index].guid)) {
+                            postsOfType.push(projectsArray[index]);
+                            alreadyIncluded.push(projectsArray[index].guid);
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+    }
+    console.log(postsOfType);
+    renderRelatedPost(postsOfType, number, container);
+    postsOfType = [];
+
+
+}
+
+function renderRelatedPost(postsOfType, number, container) {
+    for (let relatedRenderIndex = 0; relatedRenderIndex < number; relatedRenderIndex++) {
+        var postTitle = postsOfType[relatedRenderIndex].title.text;
+        var postGuid = postsOfType[relatedRenderIndex].guid.text;
+        var postDate = postsOfType[relatedRenderIndex].pubDate.text.slice(5, 16);
+        var titleContainer = document.createElement("p");
+        titleContainer.innerHTML = postTitle;
+        var titleLink = document.createElement("a");
+        titleLink.setAttribute("class", "relatedPostTitleLink");
+        titleLink.href = postGuid;
+        titleLink.appendChild(titleContainer);
+        var dateContainer = document.createElement("date");
+        dateContainer.setAttribute("class", "relatedPostDate");
+        var postDateIso = new Date(postDate).toISOString();
+        dateContainer.setAttribute("datetime", postDateIso);
+        dateContainer.innerHTML = postDate;
+        container.appendChild(titleLink);
+        container.appendChild(dateContainer);
+
+
+    }
+}
+
+
+

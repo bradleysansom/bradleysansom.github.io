@@ -92,62 +92,95 @@
                 and style is still a work in progress.</h2>
         </section>
         <hr>
-        <article>
-            <h2 class="headline" id="headline"></h2>
-            <img id="carousel" width="100%" height="250px"></img>
-            <section class="beneath">
-                <section class="comment">
-                    <aside class="attribution">
-                        <p class="unit"></p>
-                        <p class="institution"></p>
-                        <p class="courseYear"></p>
-                        <p class="course"></p>
-                    </aside>
-                    <p class="blurb"></p>
-                </section>
+        <article class="post">
+            <section class="introduction">
+                <h2 class="headline label" id="headline"></h2>
+                <img id="carousel" class="carousel"></img>
                 <section class="controls">
-                    <section class="arrows">
+                    <div class="arrows">
                         <button class="left-arrow" title="Previous image"><span class="material-symbols-outlined">
                                 <span class="icon-arrow-left"></span>
                             </span></button>
                         <button class="right-arrow" title="Next image"><span class="material-symbols-outlined">
                                 <span class="icon-arrow-right"></span>
                             </span></button>
-                    </section>
-                    <button class="link" id="visitButton"><span id="linkText"></span><span
-                            class="material-symbols-outlined">
-                            <span class="icon-chevron-right"></span>
-                        </span></button>
+                    </div>
                 </section>
 
             </section>
-            <section class="tags">
-                <ul id="tagsList"></ul>
-            </section>
+
             <section class="metadata">
-                <a id="permalink"><time class="pubDate"></time></a>
+                <section class="permalink">
+                    <a id="permalink">
+                        <p id="postType"></p>
+                        <p>published </p><time class="pubDate"></time>
+                    </a>
+                </section>
+                <aside class="attribution">
+                    <p class="course"></p>
+                    <p class="institution"></p>
+                    <p class="unit"></p>
+                    <p class="grade"></p>
+                </aside>
+                <section class="tags">
+                    <ul id="tagsList"></ul>
+                </section>
             </section>
-            <section class="postBody e-content">
-                <p>Hello world</p>
+
+            <section class="postContent e-content">
+
+                <p>Hello World</p>
+                <button class="link" id="visitButton"><span id="linkText"></span><span
+                        class="material-symbols-outlined">
+                        <span class="icon-chevron-right"></span>
+                    </span></button>
 
             </section>
+
+            <section class="related">
+                <hr>
+
+                <h2 class="section-header">Related</h2>
+                <section id="subjectRelatedContainer">
+                    <h3>Similar projects</h3>
+                </section>
+                <section id="courseRelatedContainer">
+                    <h3>Same course</h3>
+                </section>
+                <section id="featuredContainer">
+                    <h3>Featured projects</h3>
+                </section>
+
+            </section>
+
+            <section class="mentions" id="webmentionsContainer">
+                <hr>
+                <h2 class="section-header">Responses</h2>
+                <div id="webmentions"></div>
+                <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
+                        id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
+                        id="respondViaReddit">Reddit</a>, or
+                    your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>. </p>
+                <p class="webmentionBlurb">Simply make a post which links to the URL
+                    <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
+                        copyUrlButtonIcon.innerHTML="✔" ;' title="Copy URL of this page"><span
+                            id="urlGoesHere"></span><span class="icon-clipboard"
+                            id="copyUrlButtonIcon">📋</span></button>
+
+                </p>
+
+            </section>
+
+            <section class="share">
+                <hr>
+                <h2 class="section-header">Share</h2>
+            </section>
+
+
 
 
         </article>
-        <section id="webmentionsContainer">
-            <h2 class="section-header">Responses</h2>
-            <div id="webmentions"></div>
-            <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
-                    id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
-                    id="respondViaReddit">Reddit</a>, or
-                your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>. </p>
-            <p class="webmentionBlurb">Simply make a post which links to the URL
-                <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
-                        copyUrlButtonIcon.innerHTML="✔" ;' title="Copy URL of this page"><span
-                        id="urlGoesHere"></span><span class="icon-clipboard" id="copyUrlButtonIcon">📋</span></button>
 
-            </p>
-        </section>
         <section class="vcard animated h-card p-author">
             <header>
                 <a href="https://bradleysans.uk" class="u-url u-uid">
