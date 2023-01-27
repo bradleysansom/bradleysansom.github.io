@@ -934,7 +934,7 @@ section.dashboard section {
     min-width: 200px;
 }
 
-section.dashboard div.scrobblesArrangement {
+section.dashboard div.dashboardArrangement {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -966,7 +966,7 @@ section.dashboard .dashboardHeadline {
 
 }
 
-section.dashboard #lastPlayedImage {
+section.dashboard .dashboardImage {
     max-width: 50px;
     max-height: 50px;
     aspect-ratio: 1;

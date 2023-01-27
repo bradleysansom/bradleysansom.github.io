@@ -246,14 +246,14 @@
             </section>
             <section class="scrobbles">
                 <p id="lastPlayed" class="dashboardTitle" style="display:none;">last song played</p>
-                <div class="scrobblesArrangement">
-                    <div class="trackInfo">
+                <div class="dashboardArrangement">
+                    <div class="arrangementLeft">
                         <a id="lastPlayedLink">
                             <p id="lastPlayedTrack" class="dashboardHeadline"></p>
                         </a>
                         <p id="lastPlayedArtist" class="dashboardSubtitle"></p>
                     </div>
-                    <img id="lastPlayedImage">
+                    <img id="lastPlayedImage" class="dashboardImage">
                 </div>
             </section>
             <section class="repositories">
@@ -262,6 +262,19 @@
                     <p id="recentRepoName" class="dashboardHeadline"></p>
                 </a>
                 <p id="recentRepoStars" class="dashboardTrend"></p>
+            </section>
+            <section class="checkins">
+                <p id="recentCheckin" class="dashboardTitle" style="display:none;">most recent visit</p>
+                <div class="dashboardArrangement">
+                    <div class="arrangementLeft">
+                        <a id="recentCheckinLink">
+                            <p id="recentCheckinName" class="dashboardHeadline"></p>
+                        </a>
+                    </div>
+                    <img id="recentCheckinImage" class="dashboardImage">
+                </div>
+
+
             </section>
 
         </div>
@@ -310,7 +323,6 @@
     fetchScrobbles();
     fetchRepos();
     fetchCheckins();
-    fetchBooks();
 </script>
 
 </html>

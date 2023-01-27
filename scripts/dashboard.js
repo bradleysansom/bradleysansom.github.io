@@ -1,5 +1,5 @@
 async function fetchSteps() {
-    let response = await fetch("https://opensheet.elk.sh/15wQl0bv14OMuMdzJgjfQIXV2TdJbAsbeibPUQ76URJ4/history");
+    let response = await fetch("https://opensheet.elk.sh/15wQl0bv14OMuMdzJgjfQIXV2TdJbAsbeibPUQ76URJ4/metrics");
     if (response.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)
         var sheet = await response.json();
@@ -25,12 +25,14 @@ async function fetchSteps() {
         // console.log("Steps two days ago (", dayBeforeDay, ") :", stepsDayBeforeDay);
         var differenceBetweenDays = stepsMostRecentDay - stepsDayBeforeDay;
         // console.log("Difference", differenceBetweenDays)
+        console.log("BOOOOOO", stepsMostRecentDay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         document.getElementById("stepsToday").style.display = "initial";
-        document.getElementById("stepsTodayCount").innerHTML = stepsMostRecentDay;
+        document.getElementById("stepsTodayCount").innerHTML = stepsMostRecentDay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
         if (differenceBetweenDays > 0) {
-            document.getElementById("stepsTrend").innerHTML = '<span class="icon-chevron-up trendIcon"></span> ' + differenceBetweenDays + ' vs ' + dayBeforeDay;
+            document.getElementById("stepsTrend").innerHTML = '<span class="icon-chevron-up trendIcon"></span> ' + differenceBetweenDays.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' vs ' + dayBeforeDay;
         } else if (differenceBetweenDays < 0) {
-            document.getElementById("stepsTrend").innerHTML = '<span class="icon-chevron-down trendIcon"></span> ' + differenceBetweenDays.toString().substring(1, 500) + ' vs ' + dayBeforeDay;
+            document.getElementById("stepsTrend").innerHTML = '<span class="icon-chevron-down trendIcon"></span> ' + differenceBetweenDays.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").substring(1, 500) + ' vs ' + dayBeforeDay;
         } else {
             document.getElementById("stepsTrend").innerHTML = 'same as ' + dayBeforeDay;
         }
@@ -40,7 +42,7 @@ async function fetchSteps() {
 }
 
 async function fetchScrobbles() {
-    let response = await fetch("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=bradleysans&api_key=04734fa847d8fdf0b2b2652391c304e2&format=json&limit=1");
+    let response = await fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=bradleysans&api_key=04734fa847d8fdf0b2b2652391c304e2&format=json&limit=1");
     if (response.ok) {
         var feed = await response.json();
 
@@ -62,9 +64,12 @@ async function fetchScrobbles() {
         document.getElementById("lastPlayedArtist").innerHTML = mostRecentTrackArtist;
         document.getElementById("lastPlayedImage").src = mostRecentTrackImage;
 
+    } else {
+        alert("HTTP-Error: " + response.status);
     }
-
 }
+
+
 
 async function fetchRepos() {
     let response = await fetch("https://api.github.com/users/bradleysansom/repos?sort=pushed&per_page=50");
@@ -87,8 +92,11 @@ async function fetchRepos() {
             document.getElementById("recentRepoStars").innerHTML = '<span class="icon-star trendIcon"></span> ' + repoStars;
 
         }
+    } else {
+        alert("HTTP-Error: " + response.status);
     }
 }
+
 
 async function fetchCheckins() {
 
@@ -96,7 +104,17 @@ async function fetchCheckins() {
     if (response.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)
         var sheet = await response.json();
-        console.log(sheet);
+        console.log(sheet[sheet.length - 1]);
+
+        var checkinName = sheet[sheet.length - 1].Location;
+        var checkinUrl = sheet[sheet.length - 1].URL;
+        var checkinImage = sheet[sheet.length - 1].Map;
+
+        document.getElementById("recentCheckin").style.display = "initial";
+        document.getElementById("recentCheckinName").innerHTML = checkinName;
+        document.getElementById("recentCheckinLink").href = checkinUrl;
+        document.getElementById("recentCheckinImage").src = checkinImage;
+
 
     } else {
         alert("HTTP-Error: " + response.status);
@@ -104,11 +122,14 @@ async function fetchCheckins() {
 }
 
 async function fetchBooks() {
-    let response = await fetch("https://oku.club/rss/collection/pOC84");
+    let response = await fetch("https://oku.club/rss/collection/pOC84.xml");
     if (response.ok) {
         var feed = await response.text();
         console.log(feed);
+    } else {
+        alert("HTTP-Error: " + response.status);
     }
 }
+
 
 
