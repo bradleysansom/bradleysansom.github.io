@@ -105,7 +105,7 @@
     </aside>
     <hr>
     <main class="gallery animated">
-        <h2 class="section-header">Projects</h2>
+        <h2 class="sectionHeader">Projects</h2>
         <section class="projects">
             <section class="filterSelection">
 
@@ -234,8 +234,42 @@
 
     </section>
     <hr>
+    <section class="dashboard" id="now">
+        <h2 class="sectionHeader">
+            Now
+        </h2>
+        <div class="counters">
+            <section class="steps">
+                <p id="stepsToday" class="dashboardTitle" style="display:none;">steps yesterday</p>
+                <p id="stepsTodayCount" class="dashboardCounter"></p>
+                <p id="stepsTrend" class="dashboardTrend"></p>
+            </section>
+            <section class="scrobbles">
+                <p id="lastPlayed" class="dashboardTitle" style="display:none;">last song played</p>
+                <div class="scrobblesArrangement">
+                    <div class="trackInfo">
+                        <a id="lastPlayedLink">
+                            <p id="lastPlayedTrack" class="dashboardHeadline"></p>
+                        </a>
+                        <p id="lastPlayedArtist" class="dashboardSubtitle"></p>
+                    </div>
+                    <img id="lastPlayedImage">
+                </div>
+            </section>
+            <section class="repositories">
+                <p id="recentRepo" class="dashboardTitle" style="display:none;">last repository commit</p>
+                <a id="recentRepoLink">
+                    <p id="recentRepoName" class="dashboardHeadline"></p>
+                </a>
+                <p id="recentRepoStars" class="dashboardTrend"></p>
+            </section>
+
+        </div>
+
+    </section>
+    <hr>
     <section id="webmentionsContainer">
-        <h2 class="section-header">Responses</h2>
+        <h2 class="sectionHeader">Responses</h2>
         <div id="webmentions"></div>
         <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
                 id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
@@ -269,5 +303,14 @@
 <script src="/scripts/respond.js"></script>
 <script src="/scripts/outro.js"></script>
 <script src="/scripts/linkIcons.js"></script>
+<script src="/scripts/dashboard.js"></script>
+<script>
+
+    fetchSteps();
+    fetchScrobbles();
+    fetchRepos();
+    fetchCheckins();
+    fetchBooks();
+</script>
 
 </html>

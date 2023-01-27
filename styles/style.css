@@ -528,14 +528,14 @@ button {
     outline-offset: -3px;
 }
 
-.section-header {
+.sectionHeader {
     font: var(--headline);
     font-size: 2rem;
     text-decoration: 4px underline dotted var(--orange);
     margin-block-end: 5px;
 }
 
-.section-header-subtitle {
+.sectionHeader-subtitle {
     font: var(--headline);
     font-size: 1.4rem;
     color: var(--orange);
@@ -916,6 +916,105 @@ article.post section.related .relatedPostDate {
     font: var(--body);
 }
 
+section.dashboard {
+    margin-inline: 10px;
+}
+
+section.dashboard div.counters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+section.dashboard section {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+section.dashboard div.scrobblesArrangement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+section.dashboard .dashboardCounter {
+    font: var(--body);
+    font-weight: bold;
+    color: var(--foreground);
+    font-size: 2.5rem;
+    margin-block: 0;
+    text-align: right;
+
+}
+
+section.dashboard section.scrobbles {
+    align-items: flex-end;
+}
+
+section.dashboard .dashboardHeadline {
+    font: var(--body);
+    font-weight: bold;
+    color: var(--foreground);
+    font-size: 1.5rem;
+    text-align: right;
+    max-width: 14ch;
+    margin-block: 0;
+
+}
+
+section.dashboard #lastPlayedImage {
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 1;
+    margin-block-end: 5px;
+}
+
+section.dashboard section.repositories {
+
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+
+}
+
+section.dashboard p#recentRepoName {
+    text-overflow: ellipsis;
+    max-width: unset;
+}
+
+section.dashboard .dashboardSubtitle {
+    font: var(--headline);
+    color: var(--foreground);
+    margin-block: 0;
+    text-align: right;
+}
+
+section.dashboard .dashboardTitle {
+    font: var(--headline);
+    color: var(--orange);
+    margin-block-end: 5px;
+    text-align: left;
+    align-self: flex-start;
+}
+
+section.dashboard .dashboardTrend {
+    font: var(--body);
+    color: var(--foreground);
+    margin: 0;
+    text-align: right;
+}
+
+section.dashboard .icon-chevron-up.trendIcon {
+    color: green;
+}
+
+.icon-chevron-down.trendIcon {
+    color: red;
+}
 
 
 
@@ -1138,7 +1237,7 @@ body {
     color: var(--foreground);
 }
 
-.section-header {
+.sectionHeader {
     color: var(--foreground);
 }
 
@@ -1173,7 +1272,7 @@ a {
         color: var(--foreground);
     }
 
-    .section-header-subtitle {
+    .sectionHeader-subtitle {
         color: var(--foreground);
     }
 }
