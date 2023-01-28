@@ -92,6 +92,7 @@ function projectPageRender() {
             headline.innerHTML = filtered[0].title.text;
             headline.setAttribute("class", "label headline p-name");
         }
+
         if (filtered[0].category.filter(kind => kind.text === "blog post").length > 0) {
             type = "blog post";
         } else {
@@ -111,6 +112,8 @@ function projectPageRender() {
             if (filtered[0].grade !== undefined) {
                 grade.innerHTML = "Graded " + filtered[0].grade.text;
             }
+        } else {
+            document.getElementsByClassName("attribution")[0].style.display = "none";
         }
 
 
@@ -141,47 +144,52 @@ function projectPageRender() {
 
 
         if (filtered[0].images !== undefined) {
+            if (Array.isArray(filtered[0].images)) {
+                image.src = filtered[0].images[0].text;
 
-            image.src = filtered[0].images[0].text;
+                var newOgImage = document.createElement("meta");
+                newOgImage.setAttribute("property", "og:image");
+                newOgImage.setAttribute("content", "https://bradleysans.uk" + filtered[0].images[0].text);
+                document.head.appendChild(newOgImage);
 
-            var newOgImage = document.createElement("meta");
-            newOgImage.setAttribute("property", "og:image");
-            newOgImage.setAttribute("content", "https://bradleysans.uk" + filtered[0].images[0].text);
-            document.head.appendChild(newOgImage);
+                var newTwitterImage = document.createElement("meta");
+                newTwitterImage.setAttribute("property", "twitter:image");
+                newTwitterImage.setAttribute("content", "https://bradleysans.uk" + filtered[0].images[0].text);
+                document.head.appendChild(newTwitterImage);
 
-            var newTwitterImage = document.createElement("meta");
-            newTwitterImage.setAttribute("property", "twitter:image");
-            newTwitterImage.setAttribute("content", "https://bradleysans.uk" + filtered[0].images[0].text);
-            document.head.appendChild(newTwitterImage);
+                var pictures = filtered[0].images;
 
-            var pictures = filtered[0].images;
-
-            // set up carousel
-            let position = 0;
-            const moveRight = () => {
-                console.log('moveRight');
-                if (position >= pictures.length - 1) {
-                    position = 0
-                    image.src = pictures[position].text;
-                    return;
+                // set up carousel
+                let position = 0;
+                const moveRight = () => {
+                    console.log('moveRight');
+                    if (position >= pictures.length - 1) {
+                        position = 0
+                        image.src = pictures[position].text;
+                        return;
+                    }
+                    image.src = pictures[position + 1].text;
+                    position++;
                 }
-                image.src = pictures[position + 1].text;
-                position++;
-            }
-            const moveLeft = () => {
-                console.log('moveLeft');
-                if (position < 1) {
-                    position = pictures.length - 1;
-                    image.src = pictures[position].text;
-                    return;
+                const moveLeft = () => {
+                    console.log('moveLeft');
+                    if (position < 1) {
+                        position = pictures.length - 1;
+                        image.src = pictures[position].text;
+                        return;
+                    }
+                    image.src = pictures[position - 1].text;
+                    position--;
                 }
-                image.src = pictures[position - 1].text;
-                position--;
-            }
 
-            // event handlers for left and right and visit buttons
-            rightBtn.addEventListener("click", moveRight);
-            leftBtn.addEventListener("click", moveLeft);
+                // event handlers for left and right and visit buttons
+                rightBtn.addEventListener("click", moveRight);
+                leftBtn.addEventListener("click", moveLeft);
+            } else {
+
+                document.getElementsByClassName("arrows")[0].style.display = "none";
+                image.src = filtered[0].images.text;
+            }
         }
 
         if (filtered[0].link !== undefined) {

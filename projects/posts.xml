@@ -28,6 +28,7 @@
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description>My newest stuff is on this RSS feed; I'm currently rebuilding my website. My older projects are accessible through my homepage, and will be added here in due course. New stuff will make it on here as well.</description>
             <bs:blurb>Hi, I'm currently in the process of rebuilding my website. This section is the first part of it. This new site includes my most recent projects, but more of my older work as well as personal projects will be added soon.</bs:blurb>
+            <category>blog post</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects#crystaliser</guid>
