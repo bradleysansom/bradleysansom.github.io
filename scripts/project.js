@@ -119,6 +119,8 @@ function projectPageRender() {
 
         if (filtered[0].linkLabel !== undefined) {
             linkText.innerHTML = filtered[0].linkLabel.text;
+        } else {
+            document.getElementById("visitButton").style.display = "none";
         }
 
         if (filtered[0].pubDate !== undefined) {
@@ -130,6 +132,8 @@ function projectPageRender() {
             pubDate.setAttribute("class", "pubDate dt-published")
             permalink.href = filtered[0].guid.text;
             permalink.setAttribute("class", "u-url u-uid");
+        } else {
+            pubDate.style.display = "none";
         }
 
         // set document title;
@@ -190,20 +194,20 @@ function projectPageRender() {
                 document.getElementsByClassName("arrows")[0].style.display = "none";
                 image.src = filtered[0].images.text;
             }
+        } else {
+            image.style.display = "none";
+            document.getElementsByClassName("arrows")[0].style.display = "none";
+            document.getElementsByClassName("metadata")[0].style.marginBlockStart = "5px";
         }
 
         if (filtered[0].link !== undefined) {
-            // initialise image array and link
-
             var link = filtered[0].link.text;
-
-
             const visit = () => {
                 window.location.href = link;
             }
             visitButton.addEventListener("click", visit);
-
         }
+
         if (filtered[0].description !== undefined) {
             var body = filtered[0].description.text;
             postBody.innerHTML = body;
@@ -214,12 +218,12 @@ function projectPageRender() {
         if (filtered[0].category !== undefined) {
             var categories = filtered[0].category;
             for (let index = 0; index < categories.length; index++) {
-                var link = document.createElement("a");
-                link.href = "/?filter=" + filtered[0].category[index].text + "#filterSelection";
+                var catLink = document.createElement("a");
+                catLink.href = "/?filter=" + filtered[0].category[index].text + "#filterSelection";
                 var tag = document.createElement("li");
                 tag.innerHTML = categories[index].text;
-                link.appendChild(tag);
-                tagsList.appendChild(link);
+                catLink.appendChild(tag);
+                tagsList.appendChild(catLink);
 
             }
         }
@@ -241,6 +245,8 @@ function projectPageRender() {
             fetchPosts("justData", "personal projects", "newest", 5, courseRelatedContainer, filtered[0].guid.text);
 
             courseRelatedHeader.innerHTML = "More personal projects";
+        } else {
+            courseRelatedContainer.style.display = "none";
         }
 
         subjectRelatedContainer = document.getElementById("subjectRelatedContainer");
@@ -271,12 +277,23 @@ function projectPageRender() {
         } else if (filtered[0].category.filter(kind => kind.text === "graphic design").length > 0) {
             fetchPosts("justData", "graphic design", "newest", 5, subjectRelatedContainer, filtered[0].guid.text);
             subjectRelatedHeader.innerHTML = "More graphic design projects";
+        } else {
+            subjectRelatedContainer.style.display = "none";
         }
 
         featuredContainer = document.getElementById("featuredContainer");
         featuredHeader = featuredContainer.getElementsByTagName("h3")[0];
         fetchPosts("justData", "featured", "newest", 5, featuredContainer, filtered[0].guid.text);
 
+
+        if (type === "blog post") {
+            document.getElementById("share").innerHTML = '<span class="icon-share-2"></span> Share this post';
+        } else if (type === "project") {
+            document.getElementById("share").innerHTML = '<span class="icon-share-2"></span> Share this project';
+        } else {
+            document.getElementById("share").innerHTML = '<span class="icon-share-2"></span> Share'
+
+        }
     }
 }
 
