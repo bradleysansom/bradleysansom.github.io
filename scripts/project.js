@@ -443,9 +443,15 @@ function homePageSectionRender(project) {
     // add label
     var labelLink = document.createElement("a");
     labelLink.setAttribute("href", project.guid.text);
-    var label = document.createElement("h3");
+    var label;
+    if (project.logo !== undefined) {
+        label = document.createElement("img");
+        label.src = project.logo.text;
+    } else {
+        label = document.createElement("h3");
+        label.innerHTML = project.title.text;
+    }
     label.setAttribute("class", "label");
-    label.innerHTML = project.title.text;
     labelLink.appendChild(label);
     projectContainer.appendChild(labelLink);
 

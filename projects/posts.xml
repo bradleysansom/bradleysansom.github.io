@@ -169,6 +169,25 @@
             <category>creative coding</category>
         </item>
         <item>
+            <guid>https://bradleysans.uk/projects#psblyric</guid>
+            <title>Pet Shop Boys lyrics Twitter bot</title>
+            <pubDate>Fri, 24 Dec 2021 18:00:00 GMT</pubDate>
+            <bs:course>Personal project</bs:course>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps">
+                    <p>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</p>
+                ]]>
+            </description>
+            <bs:blurb>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</bs:blurb>
+            <link>https://twitter.com/psblyric/</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/psblyric/psblyric.png</bs:images>
+            <category>personal projects</category>
+            <category>music</category>
+            <category>web development</category>
+        </item>
+        <item>
             <guid>https://bradleysans.uk/projects#victoria</guid>
             <title>dinnerladies article and design</title>
             <pubDate>Fri, 17 Dec 2021 21:00:00 GMT</pubDate>
@@ -304,6 +323,7 @@
             <bs:unit>A-level Computer Science</bs:unit>
             <bs:institution>New College Bradford</bs:institution>
             <bs:grade>A*</bs:grade>
+            <bs:logo>/projects/local/mylocalarea.png</bs:logo>
             <description>
                 <![CDATA[
                     <img src="https://bradleysans.uk/projects/local/sk93ab.png" height="200px" width="600px" alt="My Local Area">
@@ -319,6 +339,26 @@
             <category>computer science</category>
             <category>web development</category>
             <category>data</category>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects#justaminute</guid>
+            <title>Just a Minute game</title>
+            <pubDate>Sat, 11 Sep 2020 18:00:00 GMT</pubDate>
+            <bs:course>Personal project</bs:course>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/justaminute/jam.png" height="200px" width="600px" alt="Maps">
+                    A quick game I made in a couple of hours. Based on the <a href="https://en.wikipedia.org/wiki/Just_a_Minute" style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel show of the same name</a>, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. 
+                ]]>
+            </description>
+            <bs:blurb>A quick game I made in a couple of hours. Based on the BBC Radio 4 panel show of the same name, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. </bs:blurb>
+            <link>https://bradleysans.uk/justaminute</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/justaminute/jam.png</bs:images>
+            <bs:images>/projects/justaminute/nicholas.jpg</bs:images>
+            <category>personal projects</category>
+            <category>games</category>
+            <category>web development</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects#wayfinding</guid>
@@ -399,44 +439,7 @@
             <category>infographics</category>
             <category>typography</category>
         </item>
-        <item>
-            <guid>https://bradleysans.uk/projects#psblyric</guid>
-            <title>Pet Shop Boys lyrics Twitter bot</title>
-            <pubDate>Fri, 24 Dec 2021 18:00:00 GMT</pubDate>
-            <bs:course>Personal project</bs:course>
-            <description>
-                <![CDATA[
-                    <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps">
-                    <p>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</p>
-                ]]>
-            </description>
-            <bs:blurb>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</bs:blurb>
-            <link>https://twitter.com/psblyric/</link>
-            <bs:linkLabel>Visit</bs:linkLabel>
-            <bs:images>/projects/psblyric/psblyric.png</bs:images>
-            <category>personal projects</category>
-            <category>music</category>
-            <category>web development</category>
-        </item>
-        <item>
-            <guid>https://bradleysans.uk/projects#justaminute</guid>
-            <title>Just a Minute game</title>
-            <pubDate>Sat, 11 Sep 2020 18:00:00 GMT</pubDate>
-            <bs:course>Personal project</bs:course>
-            <description>
-                <![CDATA[
-                    <img src="https://bradleysans.uk/projects/justaminute/jam.png" height="200px" width="600px" alt="Maps">
-                    A quick game I made in a couple of hours. Based on the <a href="https://en.wikipedia.org/wiki/Just_a_Minute" style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel show of the same name</a>, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. 
-                ]]>
-            </description>
-            <bs:blurb>A quick game I made in a couple of hours. Based on the BBC Radio 4 panel show of the same name, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. </bs:blurb>
-            <link>https://bradleysans.uk/justaminute</link>
-            <bs:linkLabel>Visit</bs:linkLabel>
-            <bs:images>/projects/justaminute/jam.png</bs:images>
-            <bs:images>/projects/justaminute/nicholas.jpg</bs:images>
-            <category>personal projects</category>
-            <category>games</category>
-            <category>web development</category>
-        </item>
+
+
     </channel>
 </rss>
