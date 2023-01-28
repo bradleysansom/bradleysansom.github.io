@@ -474,6 +474,7 @@ button {
 .controls {
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
 
 .arrows {
@@ -509,7 +510,7 @@ button {
     color: var(--white);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-inline-start: 10px;
     font: var(--headline);
     transition: .5s;
@@ -526,6 +527,13 @@ button {
     color: var(--orange);
     outline: 3px solid var(--orange);
     outline-offset: -3px;
+}
+
+.readMoreLink {
+    color: var(--orange) !important;
+    font: var(--body);
+    padding-inline-start: 8px;
+    font-weight: bold;
 }
 
 .sectionHeader {
@@ -587,13 +595,16 @@ hr {
 }
 
 
-.vcard section.contactLinks {
+.vcard section.contactLinks,
+.vcard div.otherContactLinks.show {
     display: grid;
+    padding-inline: 10px;
     grid-template-columns: 100%;
     gap: 10px;
 }
 
-.vcard section.contactLinks section {
+.vcard section.contactLinks section,
+.vcard div.otherContactLinks.show section {
     padding: 0;
     border: 3px solid var(--white);
     display: flex;
@@ -602,7 +613,8 @@ hr {
 
 }
 
-.vcard section.contactLinks section span {
+.vcard section.contactLinks section span,
+.vcard div.otherContactLinks.show section span {
     padding: 10px;
     background-color: var(--white);
     color: var(--orange);
@@ -610,10 +622,26 @@ hr {
 }
 
 .vcard section.contactLinks section p,
-.vcard section.contactLinks section div {
+.vcard div.otherContactLinks.show section p,
+.vcard section.contactLinks section div,
+.vcard div.otherContactLinks.show section div {
     margin: 0;
     padding-inline-start: 10px;
 
+}
+
+.vcard div.otherContactLinks {
+    display: none;
+}
+
+.vcard div.otherContactLinks.show {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+}
+
+.vcard #contactDropdown {
+    cursor: pointer;
 }
 
 .vcard header {
@@ -838,6 +866,10 @@ article.post>section {
     margin: 5px;
 }
 
+article.post>section.introduction {
+    margin-block-end: 0;
+}
+
 article.post section.mentions#webmentionsContainer {
     margin: 0;
 }
@@ -846,20 +878,50 @@ article.post h2.label {
     font-size: 2rem;
 }
 
+article.post .controls {
+    align-items: flex-start;
+}
+
 article.post .arrows {
     justify-content: right;
     margin: 0;
     padding: 0;
 }
 
+article.post .link {
+    width: 120px;
+    justify-items: right;
+}
+
 article.post section.metadata {
+    margin-block-start: 0;
     font: var(--body);
     display: flex;
     gap: 5px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+article.post section.notTags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+
+/* 
+article.post section.metadata section.permalink,
+article.post section.metadata aside.attribution,
+article.post section.metadata section.tags {
+    flex-grow: 1;
+} */
+
+
+
 article.post section.metadata a#permalink {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 article.post section.metadata a#permalink p {
@@ -868,6 +930,11 @@ article.post section.metadata a#permalink p {
 
 article.post section.metadata aside.attribution {
     height: fit-content;
+    padding-inline-end: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    white-space: nowrap;
+    gap: 0px 10px;
 }
 
 article.post section.metadata aside.attribution p.course,
@@ -887,6 +954,10 @@ article.post section.metadata ul#tagsList {
     padding-inline-start: 10px;
     list-style-type: "#";
     color: var(--white);
+    display: grid;
+    grid-template-columns: 100%;
+
+
 }
 
 article.post section.metadata ul#tagsList li::marker {
@@ -916,6 +987,20 @@ article.post section.related .relatedPostDate {
     font: var(--body);
 }
 
+article.post #postBody img:first-of-type {
+    display: none;
+}
+
+article.post #postBody img {
+    width: 100%;
+    height: fit-content;
+}
+
+
+
+
+
+
 section.dashboard {
     margin-inline: 10px;
 }
@@ -926,12 +1011,15 @@ section.dashboard div.counters {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 50px;
+    margin-block: 20px;
 }
 
 section.dashboard section {
     display: flex;
     flex-direction: column;
     min-width: 200px;
+    border: 1px solid var(--grey);
+    padding: 10px;
 }
 
 section.dashboard div.dashboardArrangement {
@@ -996,9 +1084,17 @@ section.dashboard .dashboardSubtitle {
 section.dashboard .dashboardTitle {
     font: var(--headline);
     color: var(--orange);
+    margin-block-start: -25px;
+    margin-inline-start: -20px;
+    background-color: var(--background);
+    padding: 0px 10px 5px 0px;
     margin-block-end: 5px;
     text-align: left;
     align-self: flex-start;
+}
+
+section.dashboard .dashboardTitle span {
+    padding-inline-end: 10px;
 }
 
 section.dashboard .dashboardTrend {
@@ -1016,6 +1112,27 @@ section.dashboard .icon-chevron-up.trendIcon {
     color: red;
 }
 
+
+.shareButton {
+    background-color: var(--orange);
+
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 5px;
+    font: var(--headline);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.shareButton:hover {
+    background-color: var(--background);
+    color: var(--orange);
+    outline: 3px solid var(--orange);
+    outline-offset: -3px;
+}
 
 
 
@@ -1088,6 +1205,16 @@ section.dashboard .icon-chevron-up.trendIcon {
     }
 
 
+
+    article.post section.metadata ul#tagsList {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    article.post section.metadata aside.attribution {
+        grid-template-columns: 50% 50%;
+    }
 }
 
 
@@ -1097,49 +1224,15 @@ section.dashboard .icon-chevron-up.trendIcon {
         max-width: 450px;
     }
 
+    .vcard div.otherContactLinks.show,
     .vcard section.contactLinks {
         grid-template-columns: 50% 50%;
     }
-}
 
-@media screen and (min-width: 900px) {
-    #triple-box-half {
-        display: initial;
+    article.post section.metadata ul#tagsList {
+        grid-template-columns: 33.3% 33.3% 33.3%;
     }
 
-    article.post {
-        grid-template-columns: [postMain] 75% [sidebar] 25%;
-        grid-auto-flow: row;
-    }
-
-    article.post>section {
-        align-self: start;
-    }
-
-    article.post section.metadata {
-        margin-block-start: 69px;
-    }
-
-    article.post section.postContent {
-        transform: translateY(-60px);
-    }
-
-    article.post section.postContent :first-child {
-        max-width: calc(100% - 130px)
-    }
-
-    article.post section.metadata {
-        flex-direction: column;
-    }
-
-    article.post [sidebar] {
-        margin-inline-end: 10px;
-    }
-
-    .vcard section.contactLinks {
-        grid-template-columns: calc(33.3% - 10px) calc(33.3% - 10px) calc(33.3% - 10px);
-        gap: 10px;
-    }
 }
 
 @media screen and (min-width: 750px) {
@@ -1168,20 +1261,11 @@ section.dashboard .icon-chevron-up.trendIcon {
         align-items: center;
         text-align: start;
     }
-}
 
-@media screen and (min-width:1000px) {
-    .name:hover {
-        letter-spacing: 10px;
-
+    article.post section.metadata ul#tagsList {
+        grid-template-columns: 25% 25% 25% 25%;
     }
 
-    .name.animated {
-        animation: 2s narrow-in 1;
-    }
-}
-
-@media screen and (min-width: 750px) {
     .articles {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -1200,6 +1284,90 @@ section.dashboard .icon-chevron-up.trendIcon {
     }
 }
 
+@media screen and (min-width: 900px) {
+    #triple-box-half {
+        display: initial;
+    }
+
+    article.post {
+        grid-template-columns: [postMain] 75% [sidebar] 25%;
+        grid-auto-flow: row;
+    }
+
+    article.post>section {
+        align-self: start;
+    }
+
+    article.post section.metadata {
+        margin-block-start: 69px;
+    }
+
+    article.post section.metadata section.permalink {
+        max-width: unset;
+    }
+
+    article.post section.metadata a#permalink {
+        font-size: 1.5rem;
+    }
+
+
+
+    article.post section.metadata {
+        flex-direction: column;
+        height: calc(100% - 76px);
+    }
+
+    article.post section.metadata aside.attribution {
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+
+    article.post section.metadata ul#tagsList {
+        grid-template-columns: 50% 50%;
+    }
+
+    article.post section.metadata ul#tagsList a {
+        margin-inline-end: 5px;
+    }
+
+    article.post section.metadata ul#tagsList a li {
+        margin-inline-end: 5px;
+    }
+
+    article.post section.metadata .controls {
+        flex-direction: row;
+        transform: translateX(-10px)
+    }
+
+    article.post section.metadata .link {
+        height: 60px;
+    }
+
+    article.post [sidebar] {
+        margin-inline-end: 10px;
+    }
+
+    .vcard div.otherContactLinks.show,
+    .vcard section.contactLinks {
+        grid-template-columns: calc(33.3% - 10px) calc(33.3% - 10px) calc(33.3% - 10px);
+        gap: 10px;
+    }
+}
+
+
+
+@media screen and (min-width:1000px) {
+    .name:hover {
+        letter-spacing: 10px;
+
+    }
+
+    .name.animated {
+        animation: 2s narrow-in 1;
+    }
+}
+
+
 @media screen and (min-width: 1125px) {
     .articles {
         grid-template-columns: 33% 33% 33%;
@@ -1207,9 +1375,22 @@ section.dashboard .icon-chevron-up.trendIcon {
         margin-inline: 10px;
     }
 
+    .vcard div.otherContactLinks.show,
     .vcard section.contactLinks {
         grid-template-columns: calc(25% - 10px) calc(25% - 10px) calc(25% - 10px) calc(25% - 10px);
         gap: 10px;
+    }
+
+
+}
+
+@media screen and (min-width: 1350px) {
+    article.post section.metadata .controls {
+        flex-direction: column;
+    }
+
+    article.post section.metadata .link {
+        height: 120px;
     }
 }
 
@@ -1253,9 +1434,7 @@ a {
     color: var(--foreground) !important;
 }
 
-.link:hover {
-    background-color: var(--background);
-}
+
 
 .nav-icon:hover {
     background-color: var(--background);

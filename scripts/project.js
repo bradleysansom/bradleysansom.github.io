@@ -76,6 +76,7 @@ function projectPageInitialise() {
     grade = document.getElementsByClassName("grade")[0];
     permalink = document.getElementById("permalink");
     postType = document.getElementById("postType");
+    body = document.getElementById("postBody");
     fetchPosts("project");
 }
 
@@ -195,6 +196,11 @@ function projectPageRender() {
             visitButton.addEventListener("click", visit);
 
         }
+        if (filtered[0].description !== undefined) {
+            var body = filtered[0].description.text;
+            postBody.innerHTML = body;
+
+        }
 
         // render categories list
         if (filtered[0].category !== undefined) {
@@ -266,9 +272,6 @@ function projectPageRender() {
     }
 }
 
-function renderRelatedPost(post, container) {
-
-}
 
 
 var alreadyIncluded = [];
@@ -462,6 +465,12 @@ function homePageSectionRender(project) {
         blurb.innerHTML = project.blurb.text;
         comment.appendChild(blurb);
     }
+
+    var readMoreLink = document.createElement("a");
+    readMoreLink.setAttribute("class", "readMoreLink");
+    readMoreLink.innerHTML = 'Continue reading <span class="icon-arrow-right"></span>';
+    readMoreLink.href = project.guid.text;
+    comment.appendChild(readMoreLink);
 
 
 
@@ -744,6 +753,9 @@ function justDataRender(filter, ordering, number, container, currentProjectGuid)
 
     }
     console.log(postsOfType);
+    if (postsOfType.length < number) {
+        number = postsOfType.length;
+    }
     renderRelatedPost(postsOfType, number, container);
     postsOfType = [];
 
@@ -752,6 +764,7 @@ function justDataRender(filter, ordering, number, container, currentProjectGuid)
 
 function renderRelatedPost(postsOfType, number, container) {
     for (let relatedRenderIndex = 0; relatedRenderIndex < number; relatedRenderIndex++) {
+        // console.log("bingo bingo", postsOfType[relatedRenderIndex]);
         var postTitle = postsOfType[relatedRenderIndex].title.text;
         var postGuid = postsOfType[relatedRenderIndex].guid.text;
         var postDate = postsOfType[relatedRenderIndex].pubDate.text.slice(5, 16);

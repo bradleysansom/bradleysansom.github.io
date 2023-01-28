@@ -169,6 +169,13 @@
                 <span class="icon-linkedin"></span>
                 <p class="linkedin"><a href="https://linkedin.com/in/bradleysans" rel="me">@bradleysans</a></p>
             </section>
+            <section id="contactDropdown" class="down">
+                <span class="icon-chevron-down"></span>
+                <p class="dropdown">More</p>
+            </section>
+
+        </section>
+        <div class="otherContactLinks">
             <section id="contactYouTube">
                 <span class="icon-youtube"></span>
                 <p class="youtube"><a href="https://youtube.com/@bradleysans" rel="me">@bradleysans</a></p>
@@ -184,11 +191,13 @@
             </section>
             <section id="contactOpenStreetMap">
                 <span class="icon-map"></span>
-                <p class="openStreetMap"><a href="https://www.openstreetmap.org/user/BradleySans">bradleysans</a></p>
+                <p class="openStreetMap"><a href="https://www.openstreetmap.org/user/BradleySans">bradleysans</a>
+                </p>
             </section>
             <section id="contactFindAGrave">
                 <span class="icon-grave"></span>
-                <p class="findAGrave"><a href="https://www.findagrave.com/user/profile/51228033">Bradley Sansom</a></p>
+                <p class="findAGrave"><a href="https://www.findagrave.com/user/profile/51228033">Bradley Sansom</a>
+                </p>
             </section>
             <section id="contactArchive">
                 <span class="icon-library"></span>
@@ -201,6 +210,14 @@
             <section id="contactFlickr">
                 <span class="icon-flickr"></span>
                 <p class="flickr"><a href="https://www.flickr.com/people/bradleysans/">bradleysans</a></p>
+            </section>
+            <section id="contactFoursquare">
+                <span class="icon-foursquare"></span>
+                <p class="foursqaure"><a href="https://www.foursquare.com/user/185653927">bradleysans</a></p>
+            </section>
+            <section id="contactLastFm">
+                <span class="icon-lastfm"></span>
+                <p class="lastFm"><a href="https://www.last.fm/user/bradleysans">bradleysans</a></p>
             </section>
             <section id="contactP5">
                 <span class="icon-p5js"></span>
@@ -222,6 +239,7 @@
                 <span class="icon-lock"></span>
                 <p class="keybase"><a href="https://keybase.io/bradleysans">5F29 3906 CBDF F4A0</a></p>
             </section>
+
             <section id="contactAddressBook">
                 <span class="icon-book-open"></span>
                 <p class="addressBook"><a href="http://h2vx.com/vcf/bradleysans.uk">
@@ -229,23 +247,26 @@
                     </a></p>
 
             </section>
-        </section>
+        </div>
 
 
     </section>
     <hr>
     <section class="dashboard" id="now">
         <h2 class="sectionHeader">
-            Now
+            Activity
         </h2>
         <div class="counters">
             <section class="steps">
-                <p id="stepsToday" class="dashboardTitle" style="display:none;">steps yesterday</p>
+                <p id="stepsToday" class="dashboardTitle" style="display:none;"><span
+                        class="icon-directions_walk"></span>
+                    Steps yesterday</p>
                 <p id="stepsTodayCount" class="dashboardCounter"></p>
                 <p id="stepsTrend" class="dashboardTrend"></p>
             </section>
             <section class="scrobbles">
-                <p id="lastPlayed" class="dashboardTitle" style="display:none;">last song played</p>
+                <p id="lastPlayed" class="dashboardTitle" style="display:none;"><span class="icon-lastfm"></span>
+                    Last song played</p>
                 <div class="dashboardArrangement">
                     <div class="arrangementLeft">
                         <a id="lastPlayedLink">
@@ -257,14 +278,16 @@
                 </div>
             </section>
             <section class="repositories">
-                <p id="recentRepo" class="dashboardTitle" style="display:none;">last repository commit</p>
+                <p id="recentRepo" class="dashboardTitle" style="display:none;"><span class="icon-github"></span>
+                    Last repository commit</p>
                 <a id="recentRepoLink">
                     <p id="recentRepoName" class="dashboardHeadline"></p>
                 </a>
                 <p id="recentRepoStars" class="dashboardTrend"></p>
             </section>
             <section class="checkins">
-                <p id="recentCheckin" class="dashboardTitle" style="display:none;">most recent visit</p>
+                <p id="recentCheckin" class="dashboardTitle" style="display:none;"><span class="icon-swarm"></span>
+                    Most recent checkin</p>
                 <div class="dashboardArrangement">
                     <div class="arrangementLeft">
                         <a id="recentCheckinLink">
@@ -273,8 +296,12 @@
                     </div>
                     <img id="recentCheckinImage" class="dashboardImage">
                 </div>
-
-
+            </section>
+            <section class="drinks">
+                <p id="yesterdayDrinks" class="dashboardTitle" style="display:none;"><span class="icon-droplet"></span>
+                    Water drunk yesterday</p>
+                <p id="yesterdayDrinksCount" class="dashboardCounter"></p>
+                <p id="drinksTrend" class="dashboardTrend"></p>
             </section>
 
         </div>
@@ -287,8 +314,8 @@
         <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
                 id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
                 id="respondViaReddit">Reddit</a>, or
-            your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>. </p>
-        <p class="webmentionBlurb">Simply make a post which links to the URL
+            your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>, by making a post
+            which links to the URL
             <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
                 copyUrlButtonIcon.innerHTML="✔" ;' title="Copy URL of this page"><span id="urlGoesHere"></span><span
                     class="icon-clipboard" id="copyUrlButtonIcon">📋</span></button>
@@ -313,6 +340,7 @@
 </script>
 <script src="/scripts/greeting.js"></script>
 <script src="/scripts/webmention.js" async></script>
+<script src="/scripts/dropdown.js"></script>
 <script src="/scripts/respond.js"></script>
 <script src="/scripts/outro.js"></script>
 <script src="/scripts/linkIcons.js"></script>
@@ -323,6 +351,7 @@
     fetchScrobbles();
     fetchRepos();
     fetchCheckins();
+    fetchDrink();
 </script>
 
 </html>

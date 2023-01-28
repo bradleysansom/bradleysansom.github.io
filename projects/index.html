@@ -86,16 +86,37 @@
     </header>
     <hr>
     <main>
-        <section class="underConstruction">
-            <h2 class="sectionHeader">This part of my site is under construction. All the data's here but the
-                layout
-                and style is still a work in progress.</h2>
-        </section>
-        <hr>
+
         <article class="post">
             <section class="introduction">
                 <h2 class="headline label" id="headline"></h2>
                 <img id="carousel" class="carousel"></img>
+
+
+            </section>
+
+            <section class="metadata">
+                <section class="notControls">
+                    <section class="notTags">
+                        <section class="permalink">
+                            <a id="permalink">
+                                <p id="postType"></p>
+                                <p>published </p><time class="pubDate"></time>
+                            </a>
+                        </section>
+                        <aside class="attribution">
+                            <p class="course"></p>
+                            <p class="institution"></p>
+                            <p class="unit"></p>
+                            <p class="grade"></p>
+                        </aside>
+                    </section>
+
+                    <section class="tags">
+                        <ul id="tagsList"></ul>
+                    </section>
+                </section>
+
                 <section class="controls">
                     <div class="arrows">
                         <button class="left-arrow" title="Previous image"><span class="material-symbols-outlined">
@@ -105,37 +126,19 @@
                                 <span class="icon-arrow-right"></span>
                             </span></button>
                     </div>
-                </section>
-
-            </section>
-
-            <section class="metadata">
-                <section class="permalink">
-                    <a id="permalink">
-                        <p id="postType"></p>
-                        <p>published </p><time class="pubDate"></time>
-                    </a>
-                </section>
-                <aside class="attribution">
-                    <p class="course"></p>
-                    <p class="institution"></p>
-                    <p class="unit"></p>
-                    <p class="grade"></p>
-                </aside>
-                <section class="tags">
-                    <ul id="tagsList"></ul>
+                    <button class="link" id="visitButton"><span id="linkText"></span><span
+                            class="material-symbols-outlined">
+                            <span class="icon-chevron-right"></span>
+                        </span></button>
                 </section>
             </section>
 
-            <section class="postContent e-content">
+            <section class="postContent e-content" id="postBody">
 
-                <p>Hello World</p>
-                <button class="link" id="visitButton"><span id="linkText"></span><span
-                        class="material-symbols-outlined">
-                        <span class="icon-chevron-right"></span>
-                    </span></button>
+
 
             </section>
+
 
             <section class="related">
                 <hr>
@@ -160,8 +163,9 @@
                 <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
                         id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
                         id="respondViaReddit">Reddit</a>, or
-                    your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>. </p>
-                <p class="webmentionBlurb">Simply make a post which links to the URL
+                    your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>, by making
+                    a
+                    post which links to the URL
                     <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
                         copyUrlButtonIcon.innerHTML="✔" ;' title="Copy URL of this page"><span
                             id="urlGoesHere"></span><span class="icon-clipboard"
@@ -173,7 +177,9 @@
 
             <section class="share">
                 <hr>
-                <h2 class="sectionHeader">Share</h2>
+                <button name="share" id="share" class="shareButton">
+                    <span class="icon-share-2"></span> Share
+                </button>
             </section>
 
 
@@ -226,6 +232,13 @@
                     <span class="icon-linkedin"></span>
                     <p class="linkedin"><a href="https://linkedin.com/in/bradleysans" rel="me">@bradleysans</a></p>
                 </section>
+                <section id="contactDropdown" class="down">
+                    <span class="icon-chevron-down"></span>
+                    <p class="dropdown">More</p>
+                </section>
+
+            </section>
+            <div class="otherContactLinks">
                 <section id="contactYouTube">
                     <span class="icon-youtube"></span>
                     <p class="youtube"><a href="https://youtube.com/@bradleysans" rel="me">@bradleysans</a></p>
@@ -262,6 +275,14 @@
                     <span class="icon-flickr"></span>
                     <p class="flickr"><a href="https://www.flickr.com/people/bradleysans/">bradleysans</a></p>
                 </section>
+                <section id="contactFoursquare">
+                    <span class="icon-foursquare"></span>
+                    <p class="foursqaure"><a href="https://www.foursquare.com/user/185653927">bradleysans</a></p>
+                </section>
+                <section id="contactLastFm">
+                    <span class="icon-lastfm"></span>
+                    <p class="lastFm"><a href="https://www.last.fm/user/bradleysans">bradleysans</a></p>
+                </section>
                 <section id="contactP5">
                     <span class="icon-p5js"></span>
                     <p class="p5"><a href="https://editor.p5js.org/bradleysans/sketches">bradleysans</a></p>
@@ -282,6 +303,7 @@
                     <span class="icon-lock"></span>
                     <p class="keybase"><a href="https://keybase.io/bradleysans">5F29 3906 CBDF F4A0</a></p>
                 </section>
+
                 <section id="contactAddressBook">
                     <span class="icon-book-open"></span>
                     <p class="addressBook"><a href="http://h2vx.com/vcf/bradleysans.uk">
@@ -289,7 +311,7 @@
                         </a></p>
 
                 </section>
-            </section>
+            </div>
 
 
         </section>
@@ -304,5 +326,7 @@
 </script>
 <script src="/scripts/webmention.js" async></script>
 <script src="/scripts/respond.js"></script>
+<script src="/scripts/dropdown.js"></script>
+<script src="/scripts/share.js"></script>
 
 </html>

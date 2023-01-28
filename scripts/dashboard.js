@@ -131,5 +131,44 @@ async function fetchBooks() {
     }
 }
 
+async function fetchDrink() {
+    let response = await fetch("https://opensheet.elk.sh/1Xue4SuHLJnYRA2vBS_DiCJjgYCar8b99c5qa3KGhCV0/Sheet1");
+    if (response.ok) {
+        var sheet = await response.json();
+        console.log(sheet);
+        var mostRecent = sheet.length - 1;
+        var mostRecentDay = sheet[mostRecent];
+        // console.log(mostRecentDay);
+        var drinksMostRecentDay = mostRecentDay.drunk;
+        var mostRecentDate = mostRecentDay.date;
+        var mostRecentDateParts = mostRecentDate.split("/");
+        var mostRecentDateObject = new Date(+mostRecentDateParts[2], mostRecentDateParts[1] - 1, +mostRecentDateParts[0]);
+        var mostRecentDateString = mostRecentDateObject.toString();
+        var mostRecentDay = mostRecentDateString.substring(0, 3);
+        // console.log("Steps yesterday (", mostRecentDay, ") :", stepsMostRecentDay);
+        var dayBefore = mostRecent - 1;
+        var dayBeforeDay = sheet[dayBefore];
+        var drinksDayBeforeDay = dayBeforeDay.drunk;
+        var dayBeforeDate = dayBeforeDay.date;
+        var dayBeforeDateParts = dayBeforeDate.split("/");
+        var dayBeforeDateObject = new Date(+dayBeforeDateParts[2], dayBeforeDateParts[1] - 1, +dayBeforeDateParts[0]);
+        var dayBeforeDateString = dayBeforeDateObject.toString();
+        var dayBeforeDay = dayBeforeDateString.substring(0, 3);
+        // console.log("Steps two days ago (", dayBeforeDay, ") :", stepsDayBeforeDay);
+        var differenceBetweenDays = drinksMostRecentDay - drinksDayBeforeDay;
+        // console.log("Difference", differenceBetweenDays)
+        console.log("BOOOOOO", drinksMostRecentDay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        document.getElementById("yesterdayDrinks").style.display = "initial";
+        document.getElementById("yesterdayDrinksCount").innerHTML = drinksMostRecentDay + "L";
+
+        if (differenceBetweenDays > 0) {
+            document.getElementById("drinksTrend").innerHTML = '<span class="icon-chevron-up trendIcon"></span> ' + differenceBetweenDays + 'L vs ' + dayBeforeDay;
+        } else if (differenceBetweenDays < 0) {
+            document.getElementById("drinksTrend").innerHTML = '<span class="icon-chevron-down trendIcon"></span> ' + differenceBetweenDays.toString().substring(1, 500) + 'l vs ' + dayBeforeDay;
+        } else {
+            document.getElementById("drinksTrend").innerHTML = 'same as ' + dayBeforeDay;
+        }
+    }
+}
 
 
