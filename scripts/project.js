@@ -215,7 +215,7 @@ function projectPageRender() {
             var categories = filtered[0].category;
             for (let index = 0; index < categories.length; index++) {
                 var link = document.createElement("a");
-                link.href = "/?filter=" + filtered[0].category[index].text + "#articlesContainer";
+                link.href = "/?filter=" + filtered[0].category[index].text + "#filterSelection";
                 var tag = document.createElement("li");
                 tag.innerHTML = categories[index].text;
                 link.appendChild(tag);
