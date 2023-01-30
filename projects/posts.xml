@@ -48,7 +48,7 @@
         the song.</p>
     <img src="/projects/crystaliser/verses.png" alt="">
     <p>The track was <a href="https://www.youtube.com/watch?v=wPLvWwMlnZU" class="iconLink">Voodoo Ray</a>, by <a href="https://en.wikipedia.org/wiki/A_Guy_Called_Gerald" class="iconLink">A Guy Called Gerald</a>. I transcribed the instrumentation and structure using Excel,
-        collecting <a href="http://crystaliser.github.io/voodoo-ray.csv" class="iconLink>5,280 data points in total</a>.</p>
+        collecting <a href="http://crystaliser.github.io/voodoo-ray.csv" class="iconLink">5,280 data points in total</a>.</p>
     <p>I then <a href="https://github.com/crystaliser/crystaliser.github.io" class="iconLink">coded a system</a> which converts the track data into animated interactive diagrams. The track's 4/4 time
         signature is conveyed through a cyclical diamond structure. When the verses' diagrams are shown successively,
         the track's layered composition becomes apparent.</p>
