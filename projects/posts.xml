@@ -255,8 +255,31 @@
             <description>
                 <![CDATA[
                     <img src="https://bradleysans.uk/projects/terrors/IMG_8488.jpg" height="200px" width="600px" alt="Terrors">
-                    <p>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then curated an interactive digital lookbook.</p>
-                ]]>
+                    <p>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a
+        fashion
+        shoot inspired by the work of Bruce Asbestos and then curated an interactive digital lookbook.</p>
+
+    <h3 class="sectionHeader">Our monsters</h3>
+    <p>At the centre of our concept was the idea of 'monsters' - personal and societal demons that we wanted to tackle
+        through our designs. I chose to confront consumerism, therefore I was focussed on upcycling various materials
+        into a new piece of art.</p>
+    <img src="/projects/terrors/seamstress.png" alt="Our monsters">
+    <p>I transformed dozens of shopping receipts into an outfit, incorporating the hallmark dayglo colours of Bruce
+        Asbestos.</p>
+    <img src="/projects/terrors/workshop.png" alt="Workshop">
+    <h3 class="sectionHeader">Fashion shoot</h3>
+    <p>As a team, we got together our various creations along with other items of clothing, directing a fashion shoot.
+    </p>
+    <img src="/projects/terrors/shoot.png" alt="Fashion shoot">
+    <h3 class="sectionHeader">Creating a digital lookbook</h3>
+    <p>The area of the project which I led on was the creation of a web-based digital lookbook.</p>
+    <img src="/projects/terrors/portfolio.png" alt="Lookbook">
+    <iframe src="https://www.terrors.live" frameborder="0"></iframe>
+    <button name="visit" value="visit" onclick='window.locaation.href = "https\:\/\/www.terrors.live"'>Visit <span
+            class="icon-chevron-right"></span></button>
+    <p>The site was built using Greensock for animation, along with scroll snapping to give the site more of a paged
+        feel.</p>
+        ]]>
             </description>
             <bs:blurb>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then curated an interactive digital lookbook.</bs:blurb>
             <link>https://terrors.live/</link>
