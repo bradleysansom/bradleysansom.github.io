@@ -47,9 +47,9 @@
     <p>I was given a track and told to interpret it however I wished, by designing something which visualises data about
         the song.</p>
     <img src="/projects/crystaliser/verses.png" alt="">
-    <p>The track was Voodoo Ray, by A Guy Called Gerald. I transcribed the instrumentation and structure using Excel,
-        collecting 5,280 data points in total.</p>
-    <p>I then coded a system which converts the track data into animated interactive diagrams. The track's 4/4 time
+    <p>The track was <a href="https://www.youtube.com/watch?v=wPLvWwMlnZU" class="iconLink">Voodoo Ray</a>, by <a href="https://en.wikipedia.org/wiki/A_Guy_Called_Gerald" class="iconLink">A Guy Called Gerald</a>. I transcribed the instrumentation and structure using Excel,
+        collecting <a href="http://crystaliser.github.io/voodoo-ray.csv" class="iconLink>5,280 data points in total</a>.</p>
+    <p>I then <a href="https://github.com/crystaliser/crystaliser.github.io" class="iconLink">coded a system</a> which converts the track data into animated interactive diagrams. The track's 4/4 time
         signature is conveyed through a cyclical diamond structure. When the verses' diagrams are shown successively,
         the track's layered composition becomes apparent.</p>
     <p>Finally, I transported the designs from the screen to print, by producing a set of posters showing each of the
@@ -153,7 +153,7 @@
         true or false, one or zero. There are parallels in this binary representation of the track, and the composition,
         which used analogue synthesisers which were turned on and off to create the track.</p>
     <p>I produced a simple diamond template in Illustrator which was exported as an SVG and placed into a webpage. I
-        then used <a href="https://www.papaparse.com">PapaParse</a> to convert the CSV of the spreadsheet into an object
+        then used <a href="https://www.papaparse.com" class="iconLink">PapaParse</a> to convert the CSV of the spreadsheet into an object
         which can be parsed from Javascript.</p>
     <p>I wrote a script which renders diamonds for each of the track's 33 verses, illuminating the different sections of
         the diagrams in accordance with the values derived from the spreadsheet.</p>
@@ -257,7 +257,7 @@
                     <img src="https://bradleysans.uk/projects/terrors/IMG_8488.jpg" height="200px" width="600px" alt="Terrors">
                     <p>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a
         fashion
-        shoot inspired by the work of Bruce Asbestos and then curated an interactive digital lookbook.</p>
+        shoot inspired by the work of <a href="https://www.bruceasbestos.info" class="iconLink">Bruce Asbestos</a> and then curated an interactive digital lookbook.</p>
 
     <h3 class="sectionHeader">Our monsters</h3>
     <p>At the centre of our concept was the idea of 'monsters' - personal and societal demons that we wanted to tackle
@@ -276,8 +276,7 @@
     <img src="/projects/terrors/portfolio.png" alt="Lookbook">
     <iframe src="https://terrors.live" frameborder="0"></iframe>
     <a href="https://terrors.live/" class="link">Visit<span class="icon-chevron-right"></span></a>
-    <p>The site was built using Greensock for animation, along with scroll snapping to give the site more of a paged
-        feel.</p>
+    <p>The site was built using <a href="https://greensock.com/gsap/" class="iconLink">Greensock</a> for animation, and makes use of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap" class="iconLink"><code>scroll-snap</code></a> to give the site more of a paged feel.</p>
         ]]>
             </description>
             <bs:blurb>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a fashion shoot inspired by the work of Bruce Asbestos and then curated an interactive digital lookbook.</bs:blurb>
