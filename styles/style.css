@@ -774,7 +774,8 @@ a.iconLink {
 }
 
 a.iconLink img {
-    padding-inline-end: 5px;
+    margin-inline: 5px;
+    vertical-align: text-top;
 }
 
 
@@ -994,6 +995,11 @@ article.post #postBody img.featureImage {
 article.post #postBody img {
     width: 100%;
     height: fit-content;
+}
+
+article.post #postBody a.iconLink img {
+    width: 16px;
+    height: 16px;
 }
 
 
