@@ -997,6 +997,14 @@ article.post #postBody img {
 }
 
 
+article.post #postBody iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+article.post #postBody .link {
+    margin: auto;
+}
 
 
 

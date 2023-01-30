@@ -274,9 +274,8 @@
     <h3 class="sectionHeader">Creating a digital lookbook</h3>
     <p>The area of the project which I led on was the creation of a web-based digital lookbook.</p>
     <img src="/projects/terrors/portfolio.png" alt="Lookbook">
-    <iframe src="https://www.terrors.live" frameborder="0"></iframe>
-    <button name="visit" value="visit" onclick='window.locaation.href = "https\:\/\/www.terrors.live"'>Visit <span
-            class="icon-chevron-right"></span></button>
+    <iframe src="https://terrors.live" frameborder="0"></iframe>
+    <a href="https://terrors.live/" class="link">Visit<span class="icon-chevron-right"></span></a>
     <p>The site was built using Greensock for animation, along with scroll snapping to give the site more of a paged
         feel.</p>
         ]]>
