@@ -303,6 +303,15 @@
                 <p id="yesterdayDrinksCount" class="dashboardCounter"></p>
                 <p id="drinksTrend" class="dashboardTrend"></p>
             </section>
+            <section class="books">
+                <p id="currentlyReading" class="dashboardTitle" style="display:none;"><span
+                        class="icon-book-open"></span>Currently reading</p>
+                <a id="currentlyReadingLink">
+                    <p id="currentlyReadingTitle" class="dashboardHeadline"></p>
+
+                    <p id="currentlyReadingAuthor" class="dashboardSubtitle"></p>
+                </a>
+            </section>
 
         </div>
 
@@ -352,6 +361,7 @@
     fetchRepos();
     fetchCheckins();
     fetchDrink();
+    fetchBooks();
 </script>
 
 </html>

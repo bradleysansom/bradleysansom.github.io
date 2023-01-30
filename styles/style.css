@@ -1020,6 +1020,8 @@ section.dashboard section {
     min-width: 200px;
     border: 1px solid var(--grey);
     padding: 10px;
+    align-items: flex-end;
+    width: 80%;
 }
 
 section.dashboard div.dashboardArrangement {
@@ -1214,6 +1216,10 @@ section.dashboard .icon-chevron-up.trendIcon {
 @media screen and (min-width: 550px) {
     article.post section.metadata aside.attribution {
         grid-template-columns: 50% 50%;
+    }
+
+    div.counters section {
+        width: unset;
     }
 }
 

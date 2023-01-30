@@ -121,11 +121,38 @@ async function fetchCheckins() {
     }
 }
 
+var myOptions = {
+    mergeCDATA: true,
+    xmlns: false,
+    attrsAsObject: false,
+    stripAttrPrefix: true,
+    childrenAsArray: false,
+    textKey: 'text'
+}
+
 async function fetchBooks() {
-    let response = await fetch("https://oku.club/rss/collection/pOC84.xml");
+
+    let response = await fetch('https://corsproxy.io/?' + encodeURIComponent('https://oku.club/rss/collection/pOC84'));
     if (response.ok) {
         var feed = await response.text();
-        console.log(feed);
+        console.log("books", feed);
+        var booksArray = xmlToJSON.parseString(feed, myOptions).rss.channel.item;
+        console.log(booksArray);
+        var mostRecentBook = booksArray[0];
+        var mostRecentBookTitle = mostRecentBook.title.text;
+        var mostRecentBookAuthor = mostRecentBook.creator.text.split(",")[0];
+        var mostRecentBookLink = mostRecentBook.link.text;
+        console.log(mostRecentBookTitle, mostRecentBookLink, mostRecentBookAuthor);
+        document.getElementById("currentlyReading").style.display = "initial";
+        document.getElementById("currentlyReadingTitle").innerHTML = mostRecentBookTitle;
+        document.getElementById("currentlyReadingAuthor").innerHTML = "by " + mostRecentBookAuthor;
+        document.getElementById("currentlyReadingLink").href = mostRecentBookLink;
+
+
+
+
+
+
     } else {
         alert("HTTP-Error: " + response.status);
     }
@@ -170,5 +197,7 @@ async function fetchDrink() {
         }
     }
 }
+
+
 
 

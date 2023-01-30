@@ -493,7 +493,7 @@ function homePageSectionRender(project) {
 
     var readMoreLink = document.createElement("a");
     readMoreLink.setAttribute("class", "readMoreLink");
-    readMoreLink.innerHTML = 'Continue reading <span class="icon-arrow-right"></span>';
+    readMoreLink.innerHTML = 'Continue reading <span class="icon-chevron-right"></span>';
     readMoreLink.href = project.guid.text;
     comment.appendChild(readMoreLink);
 
