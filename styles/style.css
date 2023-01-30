@@ -987,7 +987,7 @@ article.post section.related .relatedPostDate {
     font: var(--body);
 }
 
-article.post #postBody img:first-of-type {
+article.post #postBody img.featureImage {
     display: none;
 }
 

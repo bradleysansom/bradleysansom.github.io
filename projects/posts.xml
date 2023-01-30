@@ -42,7 +42,7 @@
             <bs:grade>85</bs:grade>
             <description>
                 <![CDATA[
-                <img src="https://bradleysans.uk/projects/crystaliser/voodoo.png" height="200px" width="600px" alt="Crystaliser">
+                <img src="https://bradleysans.uk/projects/crystaliser/voodoo.png" height="200px" width="600px" alt="Crystaliser" class="featureImage">
     <p>A generative system which produces graphical music scores based on track data inputted in a spreadsheet.</p>
     <p>I was given a track and told to interpret it however I wished, by designing something which visualises data about
         the song.</p>
@@ -203,7 +203,7 @@
             <bs:grade>Pending</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/interlude/books.jpg" height="200px" width="600px" alt="Interlude">
+                    <img src="https://bradleysans.uk/projects/interlude/books.jpg" height="200px" width="600px" alt="Interlude" class="featureImage">
                     <p> Designing a series of three book covers, unified through an interactive chalkboard print finish and a set of geometric patterns. I relished the opportunity to use manual processes including hot foil and debossing to craft my three books.</p>
                 ]]>
             </description>
@@ -228,7 +228,7 @@
             <bs:course>Personal project</bs:course>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/maps/map.png" height="200px" width="600px" alt="Maps">
+                    <img src="https://bradleysans.uk/projects/maps/map.png" height="200px" width="600px" alt="Maps" class="featureImage">
                     <p>A pair of Tube map style diagrams featuring motorways and trunk roads in the north of England, and a circular map of the road network within Greater Manchester. I made them for my family to use and have also made a version which is available to print and use.</p>
                 ]]>
             </description>
@@ -254,7 +254,7 @@
             <bs:grade>85</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/terrors/IMG_8488.jpg" height="200px" width="600px" alt="Terrors">
+                    <img src="https://bradleysans.uk/projects/terrors/IMG_8488.jpg" height="200px" width="600px" alt="Terrors" class="featureImage">
                     <p>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a
         fashion
         shoot inspired by the work of <a href="https://www.bruceasbestos.info" class="iconLink">Bruce Asbestos</a> and then curated an interactive digital lookbook.</p>
@@ -305,7 +305,7 @@
             <bs:grade>85</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/greta/greta.png" height="200px" width="600px" alt="Melting typeface">
+                    <img src="https://bradleysans.uk/projects/greta/greta.png" height="200px" width="600px" alt="Melting typeface" class="featureImage">
                     <p>Faced with a brief to bring new life to the words of a speech by Greta Thunberg, I created a set of fonts which 'melt away', and explored how they could be used across a range of applications.</p>
                 ]]>
             </description>
@@ -328,7 +328,7 @@
             <bs:course>Personal project</bs:course>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps">
+                    <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps" class="featureImage">
                     <p>A (moderately successful) Twitter and Mastodon bot that I run, which posts hourly snippets of lyrics from the back catalogue of 80s synth pop stars the Pet Shop Boys. I host it on my phone, running through the Tasker app and IFTTT. Not affiliated with Pet Shop Boys</p>
                 ]]>
             </description>
@@ -351,7 +351,7 @@
             <bs:grade>75</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/magazines/crit.jpg" height="200px" width="600px" alt="Dinnerladies">
+                    <img src="https://bradleysans.uk/projects/magazines/crit.jpg" height="200px" width="600px" alt="Dinnerladies" class="featureImage">
                     <p>Set a brief to design a set of spreads about food, I wrote an words and created the pages for a magazine article about the use of food as a comedic device by Victoria Wood to tell stories in her sitcom dinnerladies.</p>
                 ]]>
             </description>
@@ -377,7 +377,7 @@
             <bs:grade>75</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/magazines/mockups-1.png" height="200px" width="600px" alt="Wes Anderson">
+                    <img src="https://bradleysans.uk/projects/magazines/mockups-1.png" height="200px" width="600px" alt="Wes Anderson" class="featureImage">
                     <p>Designing two spreads using assigned assets and content, about the films of director Wes Anderson.</p>
                 ]]>
             </description>
@@ -402,7 +402,7 @@
             <bs:grade>75</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/26+1/u.gif" height="200px" width="600px" alt="Wes Anderson">
+                    <img src="https://bradleysans.uk/projects/26+1/u.gif" height="200px" width="600px" alt="Wes Anderson" class="featureImage">
                     <p>Creating a letter with a personal connection, telling the story of my unlikely journey to art school.</p>
                 ]]>
             </description>
@@ -426,7 +426,7 @@
             <bs:grade>75</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/26+1/twentysixboth.png" height="200px" width="600px" alt="Wes Anderson">
+                    <img src="https://bradleysans.uk/projects/26+1/twentysixboth.png" height="200px" width="600px" alt="Wes Anderson" class="featureImage">
                     <p>Exploring typography as an introduction to my degree course, through seeing and photographing letterforms in unusual places.</p>
                 ]]>
             </description>
@@ -450,7 +450,7 @@
             <bs:grade>A*</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/broadcasting/styleboard.png" height="200px" width="600px" alt="Channel 8">
+                    <img src="https://bradleysans.uk/projects/broadcasting/styleboard.png" height="200px" width="600px" alt="Channel 8" class="featureImage">
                     <p>Producing a comprehensive branding system for a fictional local TV channel, inspired by technical test cards and patterns. I extended the brief to include coded elements incorporating randomisation and graphic generation to blend the worlds of graphics and computing. Later parts of the project focussed on designing branding for local elections news coverage, including set design and 3D rendering.</p>
                 ]]>
             </description>
@@ -479,7 +479,7 @@
             <bs:logo>/projects/local/mylocalarea.png</bs:logo>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/local/sk93ab.png" height="200px" width="600px" alt="My Local Area">
+                    <img src="https://bradleysans.uk/projects/local/sk93ab.png" height="200px" width="600px" alt="My Local Area" class="featureImage">
                     <p>A web app which takes a user's postcode and retrieves data from a range of APIs about their neighbourhood, such as weather, local politicians, council areas, nearby GPs and dentists, and local community groups.</p>
                 ]]>
             </description>
@@ -500,7 +500,7 @@
             <bs:course>Personal project</bs:course>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/justaminute/jam.png" height="200px" width="600px" alt="Maps">
+                    <img src="https://bradleysans.uk/projects/justaminute/jam.png" height="200px" width="600px" alt="Just a Minute" class="featureImage">
                     A quick game I made in a couple of hours. Based on the <a href="https://en.wikipedia.org/wiki/Just_a_Minute" style="color:black;font-weight:normal;text-decoration:underline;">BBC Radio 4 panel show of the same name</a>, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players. 
                 ]]>
             </description>
@@ -524,7 +524,7 @@
             <bs:grade>A*</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/wayfinding/roundabout.png" height="200px" width="600px" alt="Wayfinding design">
+                    <img src="https://bradleysans.uk/projects/wayfinding/roundabout.png" height="200px" width="600px" alt="Wayfinding design" class="featureImage">
                     <p>Producing a set of wayfinding signs for various locations in Bradford city centre with the aim of making it a nicer place for pedestrians. The arrival of the lockdown meant that the project had to be completed using found imagery without being able to visit the sites in person, allowing me to explore 360° panoramic images. I also designed a family of icons representing major public buildings in Bradford which I incorporated on to the signage.</p>
                 ]]>
             </description>
@@ -550,7 +550,7 @@
             <bs:grade>A*</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/projects/branding/style.png" height="200px" width="600px" alt="Skin Kitchen Co branding">
+                    <img src="https://bradleysans.uk/projects/branding/style.png" height="200px" width="600px" alt="Skin Kitchen Co branding" class="featureImage">
                     <p>Responding to a live brief to design the brand for a local skincare company, I produced a branding system, set of guidelines, and range of application mock-ups. The owner really liked my designs, saying I "followed the brief really well, it would be a pleasure to work with Bradley in future".</p>
                 ]]>
             </description>
@@ -576,7 +576,7 @@
             <bs:grade>A*</bs:grade>
             <description>
                 <![CDATA[
-                    <img src="https://bradleysans.uk/.png" height="200px" width="600px" alt="My Local Area">
+                    <img src="https://bradleysans.uk/projects/infographics/poster.png" height="200px" width="600px" alt="Election poster" class="featureImage">
                         
                     <p>In the lead-up to the 2019 general election, I produced an infographic aimed at young first-time voters aiming to explain how Britain's democratic systems work in an informal and engaging manner.</p>
                 ]]>
