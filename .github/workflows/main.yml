@@ -7,13 +7,8 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: chrisreddington/rss-parser-action@main
-        with:
-          branch_prefix: 'project'
-          extension: '.html'
-          feed_url: 'https://bradleysans.uk/projects/posts.xml'
-          last_parsed_file: '.github/last_parsed.json'
-          script_output: 'pull_request'
-          subfolder: 'projects/'
+        uses: bradleysansom/proj@v1
+          with:
+            milliseconds: 1000
 
       

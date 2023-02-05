@@ -19,11 +19,4 @@ plugins:
 - jekyll-feed
 - name: Cache
   uses: actions/cache@v3.2.2
-- uses: chrisreddington/rss-parser-action@main
-  with:
-    branch_prefix: create-project-post
-    extension: html
-    feed_url: https://bradleysans.uk/projects/posts.xml
-    last_parsed_file: parses.md
-    script_output: pull_request
-    subfolder: projects
+older: projects
