@@ -10,10 +10,10 @@ jobs:
         uses: chrisreddington/rss-parser-action@main
         with:
           branch_prefix: 'project'
-          extension: 'html'
+          extension: '.html'
           feed_url: 'https://bradleysans.uk/projects/posts.xml'
-          last_parsed_file: 'last_parsed'
+          last_parsed_file: 'last_parsed.json'
           script_output: 'pull_request'
-          subfolder: 'projects'
+          subfolder: 'projects/'
 
       
