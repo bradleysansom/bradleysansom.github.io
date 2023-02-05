@@ -12,7 +12,7 @@ jobs:
           branch_prefix: 'project'
           extension: '.html'
           feed_url: 'https://bradleysans.uk/projects/posts.xml'
-          last_parsed_file: 'last_parsed.json'
+          last_parsed_file: '.github/last_parsed.json'
           script_output: 'pull_request'
           subfolder: 'projects/'
 
