@@ -8,7 +8,7 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: bradleysansom/proj@v1
-          with:
-            milliseconds: 1000
+        with:
+          milliseconds: 1000
 
       
