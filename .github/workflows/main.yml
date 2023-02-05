@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: bradleysansom/project-create
+        uses: bradleysansom/project-create@1.0
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
