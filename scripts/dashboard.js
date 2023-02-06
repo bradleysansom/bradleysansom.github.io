@@ -189,9 +189,9 @@ async function fetchDrink() {
         document.getElementById("yesterdayDrinksCount").innerHTML = drinksMostRecentDay + "L";
 
         if (differenceBetweenDays > 0) {
-            document.getElementById("drinksTrend").innerHTML = '<span class="icon-chevron-up trendIcon"></span> ' + differenceBetweenDays + 'L vs ' + dayBeforeDay;
+            document.getElementById("drinksTrend").innerHTML = '<span class="icon-chevron-up trendIcon"></span> ' + differenceBetweenDays.toString().substring(0, 5) + 'L vs ' + dayBeforeDay;
         } else if (differenceBetweenDays < 0) {
-            document.getElementById("drinksTrend").innerHTML = '<span class="icon-chevron-down trendIcon"></span> ' + differenceBetweenDays.toString().substring(1, 500) + 'l vs ' + dayBeforeDay;
+            document.getElementById("drinksTrend").innerHTML = '<span class="icon-chevron-down trendIcon"></span> ' + differenceBetweenDays.toString().substring(1, 5) + 'l vs ' + dayBeforeDay;
         } else {
             document.getElementById("drinksTrend").innerHTML = 'same as ' + dayBeforeDay;
         }
