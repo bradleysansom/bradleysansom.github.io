@@ -244,6 +244,30 @@
             <category>print</category>
         </item>
         <item>
+            <guid>https://bradleysans.uk/projects#deceit</guid>
+            <title>Twenty minutes, two colours, one typeface</title>
+            <pubDate>Tue, 18 Oct 2022, 12:30:00 GMT</pubDate>
+            <bs:course>BA Graphic Design</bs:course>
+            <bs:year>Second year</bs:year>
+            <bs:unit>Type workshop</bs:unit>
+            <bs:institution>Manchester School of Art</bs:institution>
+            <description>
+                <![CDATA[
+                    <img src="https://bradleysans.uk/projects/deceit/yellow.png" height="200px" width="600px" alt="States of danger and deceit film poster" class="featureImage">
+                    <p>Provided with a few sentences of copy, and given a short amount of time to "play about with Helvetica", I designed a poster for a film festival using a limited colour and typographic palette. I loved being given such a restrictive brief; paradoxically, it brings out my creativity to a greater degree.</p>
+                ]]>
+            </description>
+            <bs:blurb>Provided with a few sentences of copy, and given a short amount of time to "play about with Helvetica", I designed a poster for a film festival using a limited colour and typographic palette. I loved being given such a restrictive brief; paradoxically, it brings out my creativity to a greater degree.</bs:blurb>
+            <bs:images>/projects/deceit/posters.png</bs:images>
+            <bs:images>/projects/deceit/yellow.png</bs:images>
+            <category>university</category>
+            <category>featured</category>
+            <category>graphic design</category>
+            <category>typography</category>
+            <category>modernism</category>
+            <category>vector graphics</category>
+        </item>
+        <item>
             <guid>https://bradleysans.uk/projects#terrors</guid>
             <title>Terrors</title>
             <pubDate>Mon, 09 May 2022 21:00:00 GMT</pubDate>
