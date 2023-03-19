@@ -23,13 +23,29 @@
         <atom:link href="https://bradleysans.uk/projects/posts.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <guid>https://bradleysans.uk/projects#underconstruction</guid>
-            <title>I'm rebuilding my website</title>
-            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
-            <description>My newest stuff is on this RSS feed; I'm currently rebuilding my website. My older projects are accessible through my homepage, and will be added here in due course. New stuff will make it on here as well.</description>
-            <bs:blurb>Hi, I'm currently in the process of rebuilding my website. This section is the first part of it. This new site includes my most recent projects, but more of my older work as well as personal projects will be added soon.</bs:blurb>
-            <category>blog post</category>
+            <guid>https://bradleysans.uk/projects#energy</guid>
+            <title>aAh! The ENERGY Issue</title>
+            <pubDate>Fri, 10 Mar 2023 18:00:00 GMT</pubDate>
+            <description>I've spent the last few months designing for aAh!, Manchester's student-led arts and culture magazine. In March 2023, the newest issue was published, and I designed a few of the spreads within, in collaboration with photographers, illustrators, and other designers. In the run-up to the launch, I helped out with the social media promotion of the issue, creating graphics and animations to create a buzz around the issue. Additionally, I've developed a web app which allows for the creation of consistent social media graphics for the promotion of stories across the magazine.</description>
+            <bs:blurb>I've spent the last few months designing for aAh!, Manchester's student-led arts and culture magazine. In March 2023, the newest issue was published, and I designed a few of the spreads within, in collaboration with photographers, illustrators, and other designers. In the run-up to the launch, I helped out with the social media promotion of the issue, creating graphics and animations to create a buzz around the issue. Additionally, I've developed a web app which allows for the creation of consistent social media graphics for the promotion of stories across the magazine.</bs:blurb>
+            <category>project</category>
+            <category>graphic design</category>
+            <category>vector graphics</category>
             <category>web development</category>
+            <category>editorial</category>
+            <category>university</category>
+            <category>featured</category>
+            <category>physical</category>
+            <category>print</category>
+            <category>typography</category>
+            <category>group project</category>
+            <bs:images>/projects/energy/cover.png</bs:images>
+            <bs:images>/projects/energy/coffee.png</bs:images>
+            <bs:images>/projects/energy/editors.png</bs:images>
+            <bs:images>/projects/energy/jewelz.png</bs:images>
+            <bs:images>/projects/energy/opinion.png</bs:images>
+            <link>https://aah-magazine.co.uk/aah-the-energy-issue/</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects#crystaliser</guid>
@@ -200,7 +216,7 @@
             <bs:year>Second year</bs:year>
             <bs:unit>Visual Communication 2.1</bs:unit>
             <bs:institution>Manchester School of Art</bs:institution>
-            <bs:grade>Pending</bs:grade>
+            <bs:grade>85</bs:grade>
             <description>
                 <![CDATA[
                     <img src="https://bradleysans.uk/projects/interlude/books.jpg" height="200px" width="600px" alt="Interlude" class="featureImage">

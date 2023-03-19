@@ -310,7 +310,7 @@ function homePageInitialise(filter, ordering) {
         document.getElementById("searchBox").style.padding = '7px 10px';
 
     } else {
-        var searchTerm = new URL(window.location.href).search.split("=")[1];
+        var searchTerm = new URL(window.location.href).search.split("filter=")[1];
 
         if (searchTerm !== undefined) {
             filter = decodeURIComponent(searchTerm);
