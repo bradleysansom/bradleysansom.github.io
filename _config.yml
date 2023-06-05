@@ -10,9 +10,10 @@ collections:
     output: true
 description: I make things, sometimes.
 baseurl: ''
-url: ''
+domain: bradleysans.uk
+url: https://bradleysans.uk
 github_username: bradleysansom
-email: bradley-sansom@outlook.com
+email: hello@bradleysans.uk
 flickr: bradleysans
 theme: minima
 plugins:
