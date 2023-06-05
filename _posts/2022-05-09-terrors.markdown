@@ -1,0 +1,37 @@
+---
+layout: post
+title: Terrors
+tag:
+- university
+- featured
+- graphic design
+- photography
+- fashion
+- art direction
+- web development
+- group project
+---
+
+<img src="https://bradleysans.uk/projects/terrors/IMG_8488.jpg" height="200px" width="600px" alt="Terrors" class="featureImage">
+                    <p>Collaborating with four students from across the Graphic Design and Fashion Art Direction courses, we directed a
+        fashion
+        shoot inspired by the work of <a href="https://www.bruceasbestos.info" class="iconLink">Bruce Asbestos</a> and then curated an interactive digital lookbook.</p>
+
+    <h3 class="sectionHeader">Our monsters</h3>
+    <p>At the centre of our concept was the idea of 'monsters' - personal and societal demons that we wanted to tackle
+        through our designs. I chose to confront consumerism, therefore I was focussed on upcycling various materials
+        into a new piece of art.</p>
+    <img src="/projects/terrors/seamstress.png" alt="Our monsters">
+    <p>I transformed dozens of shopping receipts into an outfit, incorporating the hallmark dayglo colours of Bruce
+        Asbestos.</p>
+    <img src="/projects/terrors/workshop.png" alt="Workshop">
+    <h3 class="sectionHeader">Fashion shoot</h3>
+    <p>As a team, we got together our various creations along with other items of clothing, directing a fashion shoot.
+    </p>
+    <img src="/projects/terrors/shoot.png" alt="Fashion shoot">
+    <h3 class="sectionHeader">Creating a digital lookbook</h3>
+    <p>The area of the project which I led on was the creation of a web-based digital lookbook.</p>
+    <img src="/projects/terrors/portfolio.png" alt="Lookbook">
+    <iframe src="https://terrors.live" frameborder="0"></iframe>
+    <a href="https://terrors.live/" class="link">Visit<span class="icon-chevron-right"></span></a>
+    <p>The site was built using <a href="https://greensock.com/gsap/" class="iconLink">Greensock</a> for animation, and makes use of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap" class="iconLink"><code>scroll-snap</code></a> to give the site more of a paged feel.</p>
