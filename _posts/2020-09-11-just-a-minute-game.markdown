@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Just a Minute game
-tag:
+date: 2020-09-11 00:00:00 Z
+tags:
 - personal projects
 - games
 - web development
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/justaminute/jam.png" height="200px" width="600px" alt="Just a Minute" class="featureImage">

@@ -1,13 +1,14 @@
 ---
-layout: post
 title: dinnerladies article and design
-tag:
+date: 2021-12-17 00:00:00 Z
+tags:
 - university
 - featured
 - graphic design
 - editorial
 - writing
 - typography
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/magazines/crit.jpg" height="200px" width="600px" alt="Dinnerladies" class="featureImage">

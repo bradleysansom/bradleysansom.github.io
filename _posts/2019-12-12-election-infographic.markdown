@@ -1,12 +1,13 @@
 ---
-layout: post
 title: Election infographic
-tag:
+date: 2019-12-12 00:00:00 Z
+tags:
 - college
 - graphic design
 - vector graphics
 - infographics
 - typography
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/infographics/poster.png" height="200px" width="600px" alt="Election poster"

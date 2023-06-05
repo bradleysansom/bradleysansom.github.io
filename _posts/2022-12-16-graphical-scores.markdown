@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Graphical scores
-tag:
+date: 2022-12-16 00:00:00 Z
+tags:
 - university
 - featured
 - music
@@ -10,6 +10,7 @@ tag:
 - web development
 - data visualisation
 - creative coding
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/crystaliser/voodoo.png" height="200px" width="600px" alt="Crystaliser" class="featureImage">

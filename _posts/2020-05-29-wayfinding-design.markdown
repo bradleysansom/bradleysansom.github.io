@@ -1,11 +1,12 @@
 ---
-layout: post
 title: Wayfinding design
-tag:
+date: 2020-05-29 00:00:00 Z
+tags:
 - college
 - graphic design
 - vector graphics
 - data
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/wayfinding/roundabout.png" height="200px" width="600px" alt="Wayfinding design" class="featureImage">

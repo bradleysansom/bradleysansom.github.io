@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Pet Shop Boys lyrics Twitter bot
-tag:
+date: 2021-12-24 00:00:00 Z
+tags:
 - personal projects
 - music
 - web development
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/psblyric/psblyric.png" height="200px" width="600px" alt="Maps" class="featureImage">

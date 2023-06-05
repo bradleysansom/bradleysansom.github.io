@@ -1,13 +1,14 @@
 ---
-layout: post
 title: Twenty minutes, two colours, one typeface
-tag:
+date: 2022-10-18 00:00:00 Z
+tags:
 - university
 - featured
 - graphic design
 - typography
 - modernism
 - vector graphics
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/deceit/yellow.png" height="200px" width="600px" alt="States of danger and deceit film poster" class="featureImage">
