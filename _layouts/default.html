@@ -13,7 +13,7 @@
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://bradleysans.uk">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ page.title }} | Bradley Sansom">
+    <meta property="og:title" content="Bradley Sansom">
     <meta property="og:description"
         content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
     <meta property="og:image" content="https://bradleysans.uk/thumbnail.png">
@@ -22,409 +22,113 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="bradleysans.uk">
     <meta property="twitter:url" content="https://bradleysans.uk">
-    <meta name="twitter:title" content="{{ page.title }} | Bradley Sansom">
+    <meta name="twitter:title" content="Bradley Sansom">
     <meta name="twitter:description"
         content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
     <meta name="twitter:image" content="https://bradleysans.uk/thumbnail.png">
 
-    <style>
-        @import url("https://use.typekit.net/skx0vho.css");
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
 
-        :root {
-            --orange: #c1420d;
-            --headline: italic 800 1rem 'bodoni-egyptian-pro', serif;
-            --body: normal 400 1rem 'p22-underground', sans-serif;
-        }
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="Bradley Sansom updates" href="/projects/posts.xml" />
 
+    <!-- Webmentions -->
+    <link rel="webmention" href="https://webmention.io/bradleysans.uk/webmention" />
+    <link rel="pingback" href="https://webmention.io/bradleysans.uk/xmlrpc" />
 
 
 
-        body {
-            padding: 0;
-            margin: 0;
-            border: 0;
-            transition: .5s;
-            cursor: default;
-        }
 
-        header {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: flex-start;
-        }
-
-        .name {
-            font: var(--headline);
-            text-transform: uppercase;
-            text-align: center;
-            padding: 10px 10px 0px 10px;
-            font-size: 2.4rem;
-            transition: .5s;
-            cursor: pointer;
-        }
-
-        .name:hover {
-            color: var(--orange);
-        }
-
-
-
-
-        nav {
-            width: 100%;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            width: 100%;
-            justify-content: space-evenly;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            margin-inline-end: 10px;
-
-        }
-
-        nav ul li {
-            display: inline;
-            animation: 2.5s fade-in-nav forwards;
-
-        }
-
-        @keyframes fade-in-nav {
-            0% {
-                opacity: 0;
-            }
-
-            60% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .nav-icon {
-            color: white;
-            font-size: 2rem;
-            display: flex;
-            background-color: var(--orange);
-            height: 15vw;
-            width: 15vw;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: .5s;
-        }
-
-        .nav-icon:hover {
-            background-color: white;
-            color: var(--orange);
-            outline: 3px solid var(--orange);
-            outline-offset: -3px;
-
-        }
-
-
-
-        .section-header {
-            font: var(--headline);
-            font-size: 2rem;
-            text-decoration: 4px underline dotted var(--orange);
-            margin-bottom: 5px;
-        }
-
-        .section-header-subtitle {
-            font: var(--headline);
-            font-size: 1.4rem;
-            color: var(--orange);
-
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-
-        .link.offline {
-            padding: 0;
-            opacity: .5;
-        }
-
-        .link.offline:hover {
-            background-color: var(--orange);
-            color: white;
-            outline: unset;
-            outline-offset: unset;
-            cursor: not-allowed;
-        }
-
-        hr {
-            border: none;
-            border-bottom: 4px dotted grey;
-        }
-
-
-
-        #emley {
-            width: calc(100% - 20px);
-            aspect-ratio: 3/1;
-            background-image: url('https://bradleysans.uk/emley.jpg');
-            margin: 0 10px;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-
-
-
-
-        .outro {
-            font: var(--headline);
-            color: white;
-        }
-
-        #nonsequitur {
-            font: var(--body);
-        }
-
-        .quiet {
-            color: grey;
-        }
-
-
-
-
-
-        @media screen and (min-width: 750px) {
-            header {
-                flex-direction: row;
-                flex-wrap: nowrap;
-            }
-
-            nav ul {
-                width: unset;
-                justify-content: flex-end;
-                gap: 10px;
-            }
-
-            .nav-icon {
-                width: 10vw;
-                height: 10vw;
-                aspect-ratio: 1;
-                max-height: 120px;
-                max-width: 120px;
-                font-size: 3rem;
-            }
-
-            .name {
-                display: flex;
-                align-items: center;
-                text-align: left;
-                line-height: 1;
-            }
-        }
-
-
-
-
-
-
-
-
-        @media screen and (min-width: 1600px) {
-            body {
-                max-width: 1600px;
-                margin: auto;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #222222;
-            }
-
-            .name {
-                color: white;
-            }
-
-            .section-header {
-                color: white;
-            }
-
-
-
-            a {
-                color: white !important;
-            }
-
-            .link:hover {
-                background-color: #222222;
-            }
-
-            .nav-icon:hover {
-                background-color: #222222;
-            }
-        }
-    </style>
-
-    <style>
-        @font-face {
-            font-family: 'icons';
-            src: url('https://bradleysans.uk/fonts/icons.eot?ikjlwh');
-            src: url('https://bradleysans.uk/fonts/icons.eot?ikjlwh#iefix') format('embedded-opentype'),
-                url('https://bradleysans.uk/fonts/icons.ttf?ikjlwh') format('truetype'),
-                url('https://bradleysans.uk/fonts/icons.woff?ikjlwh') format('woff'),
-                url('https://bradleysans.uk/fonts/icons.svg?ikjlwh#icons') format('svg');
-            font-weight: normal;
-            font-style: normal;
-            font-display: block;
-        }
-
-        [class^="icon-"],
-        [class*=" icon-"] {
-            /* use !important to prevent issues with browser extensions that change fonts */
-            font-family: 'icons' !important;
-            speak: never;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-
-            /* Better Font Rendering =========== */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .icon-arrow-left:before {
-            content: "\6c";
-        }
-
-        .icon-arrow-right:before {
-            content: "\72";
-        }
-
-        .icon-chevron-right:before {
-            content: "\61";
-            font-size: 2rem;
-        }
-
-        .icon-github:before {
-            content: "\47";
-        }
-
-        .icon-instagram:before {
-            content: "\49";
-        }
-
-        .icon-linkedin:before {
-            content: "\4c";
-        }
-
-        .icon-mail:before {
-            content: "\45";
-        }
-
-        .icon-twitter:before {
-            content: "\54";
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1 class="name">Bradley Sansom</h1>
-        <nav>
+    <header role="banner" name="header">
+        <a href="/">
+            <h1 class="name animated">Bradley Sansom</h1>
+        </a>
+        <nav class="animated">
             <ul>
                 <li>
-                    <div class="nav-icon" id="email" title="Send me an email"><span class="icon-mail"></span></div>
+                    <a href="mailto:bradley-sansom@outlook.com" rel="me">
+                        <figure class="nav-icon" id="email" title="Send me an email"><span class="icon-mail"></span>
+                        </figure>
+                    </a>
                 </li>
                 <li>
-                    <div class="nav-icon" id="github" title="GitHub"><span class="icon-github"></span></div>
+                    <a href="https://github.com/bradleysansom" rel="me">
+                        <figure class="nav-icon" id="github" title="GitHub"><span class="icon-github"></span></figure>
+                    </a>
                 </li>
                 <li>
-                    <div class="nav-icon" id="linkedin" title="LinkedIn"><span class="icon-linkedin"></span></div>
+                    <a href="https://linkedin.com/in/bradleysans" rel="me">
+                        <figure class="nav-icon" id="linkedin" title="LinkedIn"><span class="icon-linkedin"></span>
+                        </figure>
+                    </a>
                 </li>
                 <li>
-                    <div class="nav-icon" id="twitter" title="Twitter"><span class="icon-twitter"></span></div>
+                    <a href="https://twitter.com/bradleysans" rel="me">
+                        <figure class="nav-icon" id="twitter" title="Twitter"><span class="icon-twitter"></span>
+                        </figure>
+                    </a>
                 </li>
                 <li>
-                    <div class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span></div>
+                    <a href="https://instagram.com/bradleysans" rel="me">
+                        <figure class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mastodon.me.uk/@bradleysans" rel="me">
+                        <figure class="nav-icon" id="mastodon" title="Mastodon"><span class="icon-mastodon"></span>
+                        </figure>
+                    </a>
                 </li>
 
             </ul>
         </nav>
     </header>
     <hr>
+    <main>
+        {{ content }}
+    </main>
+    <hr>
+    <section id="webmentionsContainer">
+        <h2 class="sectionHeader">Responses</h2>
+        <div id="webmentions"></div>
+        <p class="webmentionBlurb">Add a <a id="respondViaCommentParade">comment</a>, or respond via <a
+                id="respondViaTwitter">Twitter</a>, <a href="javascript:respondViaMastodon()">Mastodon</a>, <a
+                id="respondViaReddit">Reddit</a>, or
+            your own site if it supports <a href="https://www.w3.org/TR/webmention/">Webmentions</a>, by making a post
+            which links to the URL
+            <button id="currentUrl" onclick='navigator.clipboard.writeText(window.location.href);
+                copyUrlButtonIcon.innerHTML="✔" ;' title="Copy URL of this page"><span id="urlGoesHere"></span><span
+                    class="icon-clipboard" id="copyUrlButtonIcon">📋</span></button>
 
+        </p>
+    </section>
 
-    {{ content }}
-
-    <hr id="before-emley">
-    <section id="emley"
+    <hr id="before-emley" class="animated">
+    <section id="emley" class="animated"
         title="The view from my local park in Bradford towards the Emley Moor TV transmitter, the tallest freestanding structure in the UK">
         <div class="outro"><span id="copyright">© Bradley Sansom </span><span id="year"></span><br><span
                 id="nonsequitur"></span></div>
     </section>
 </body>
-
-
-
+<script src="/scripts/xml2json.js"></script>
+<script src="/scripts/project.js"></script>
 <script>
-    const homepage_link = document.getElementByClassName('name')[0];
-    const email_link = document.getElementById('email');
-    const github_link = document.getElementById('github');
-    const linkedin_link = document.getElementById('linkedin');
-    const twitter_link = document.getElementById('twitter');
-    const instagram_link = document.getElementById('instagram');
-    const homepage_visit = () => {
-        window.location.href = "https://bradleysans.uk/";
-    }
-    homepage_link.addEventListener("click", homepage_visit);
-    const email_visit = () => {
-        window.location.href = "mailto:bradley-sansom@outlook.com";
-    }
-    email_link.addEventListener("click", email_visit);
-    const github_visit = () => {
-        window.location.href = "https://github.com/bradleysansom";
-    }
-    github_link.addEventListener("click", github_visit);
-    const linkedin_visit = () => {
-        window.location.href = "https://linkedin.com/in/bradleysans";
-    }
-    linkedin_link.addEventListener("click", linkedin_visit);
-    const twitter_visit = () => {
-        window.location.href = "https://twitter.com/bradleysans";
-    }
-    twitter_link.addEventListener("click", twitter_visit);
-    const instagram_visit = () => {
-        window.location.href = "https://instagram.com/bradleysans";
-    }
-    instagram_link.addEventListener("click", instagram_visit);
-</script>
+    createCategoryFilters();
+    createSearchBox();
+    homePageInitialise("featured", "newest");
 
-<script>
-    // Outro
-    var year_placeholder = document.getElementById('year');
-    var nonsequitur_placeholder = document.getElementById('nonsequitur');
-    let year = new Date().getFullYear();
-    year_placeholder.innerHTML = year;
-    var nonsequiturs = [
-        'Your home may be reposessed if you do not keep up repayments on your mortgage',
-        'Your call is important to us, please stay on the line',
-        'Now with 20% extra free',
-        'Made in Yorkshire',
-        'GOLF CLUBS FOR SALE - used twice, £20 o.n.o.',
-        'Now in widescreen',
-        'Best wishes, kindest regards'
-    ];
-    var nonsequitur = nonsequiturs[Math.floor(Math.random() * nonsequiturs.length)];
-    nonsequitur_placeholder.innerHTML = nonsequitur;
 </script>
+<script src="/scripts/greeting.js"></script>
+<script src="/scripts/webmention.js" async></script>
+<script src="/scripts/dropdown.js"></script>
+<script src="/scripts/respond.js"></script>
+
+<script src="/scripts/linkIcons.js"></script>
 
 </html>
