@@ -1,13 +1,14 @@
 ---
-layout: post
 title: Melting typeface
-tag:
+date: 2022-03-04 00:00:00 Z
+tags:
 - university
 - featured
 - graphic design
 - typography
 - web development
 - creative coding
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/greta/greta.png" height="200px" width="600px" alt="Melting typeface" class="featureImage">

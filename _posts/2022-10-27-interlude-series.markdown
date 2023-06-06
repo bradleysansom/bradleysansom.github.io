@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Interlude series
-tag:
+date: 2022-10-27 00:00:00 Z
+tags:
 - university
 - featured
 - book covers
@@ -10,6 +10,7 @@ tag:
 - print
 - hot foil
 - vector graphics
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/interlude/books.jpg" height="200px" width="600px" alt="Interlude" class="featureImage">

@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Broadcast branding
-tag:
+date: 2021-06-25 00:00:00 Z
+tags:
 - college
 - graphic design
 - branding
@@ -20,6 +20,7 @@ images:
 - /projects/broadcasting/styleboard.png
 - /projects/broadcasting/touchscreen.gif
 - /projects/broadcasting/landmarks.gif
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/broadcasting/styleboard.png" height="200px" width="600px" alt="Channel 8" class="featureImage">

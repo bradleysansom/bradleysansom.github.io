@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Skin Kitchen Co branding
-tag:
+date: 2020-03-27 00:00:00 Z
+tags:
 - college
 - graphic design
 - vector graphics
@@ -18,6 +18,7 @@ link: https://bradleysans.uk/portfolio-2021#branding
 images: 
 - /projects/branding/style.png
 - /projects/branding/vanphone.png
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/branding/style.png" height="200px" width="600px" alt="Skin Kitchen Co branding" class="featureImage">

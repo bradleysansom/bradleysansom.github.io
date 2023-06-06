@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Election infographic
-tag:
+date: 2019-12-12 00:00:00 Z
+tags:
 - college
 - graphic design
 - vector graphics

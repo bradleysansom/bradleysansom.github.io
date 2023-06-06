@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Terrors
-tag:
+date: 2022-05-09 00:00:00 Z
+tags:
 - university
 - featured
 - graphic design
@@ -10,6 +10,7 @@ tag:
 - art direction
 - web development
 - group project
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/terrors/IMG_8488.jpg" height="200px" width="600px" alt="Terrors" class="featureImage">

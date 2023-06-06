@@ -1,12 +1,13 @@
 ---
-layout: post
 title: Tube map-style road diagrams
-tag:
+date: 2022-10-26 00:00:00 Z
+tags:
 - personal projects
 - maps
 - vector graphics
 - graphic design
 - print
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/maps/map.png" height="200px" width="600px" alt="Maps" class="featureImage">

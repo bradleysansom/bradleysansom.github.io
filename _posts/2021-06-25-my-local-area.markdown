@@ -1,11 +1,12 @@
 ---
-layout: post
 title: My Local Area
-tag:
+date: 2021-06-25 00:00:00 Z
+tags:
 - college
 - computer science
 - web development
 - data
+layout: post
 ---
 
 <img src="https://bradleysans.uk/projects/local/sk93ab.png" height="200px" width="600px" alt="My Local Area" class="featureImage">
