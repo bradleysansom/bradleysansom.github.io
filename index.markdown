@@ -1,6 +1,0 @@
----
-layout: home
----
-
- hello world
-
