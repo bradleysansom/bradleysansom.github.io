@@ -6,12 +6,15 @@ tags:
 - games
 - web development
 course: Personal project
-blurb: A quick game I made in a couple of hours. Based on the BBC Radio 4 panel show of the same name, where players have to speak for sixty seconds on a subject without hesitation, repetition, or deviation, this web app allows you to play along at home, with between two and four players.
+blurb: A quick game I made in a couple of hours. Based on the BBC Radio 4 panel show
+  of the same name, where players have to speak for sixty seconds on a subject without
+  hesitation, repetition, or deviation, this web app allows you to play along at home,
+  with between two and four players.
 linkLabel: Play
 link: https://bradleysans.uk/justaminute
-images: 
-- /projects/justaminute/jam.png
-- /projects/justaminute/nicholas.jpg
+images:
+- "/projects/justaminute/jam.png"
+- "/projects/justaminute/nicholas.jpg"
 layout: post
 ---
 

@@ -11,12 +11,13 @@ courseYear: First year
 courseUnit: Visual Thinking 2
 courseInstitution: Manchester School of Art
 courseGrade: 75
-blurb: Designing two spreads using assigned assets and content, about the films of director Wes Anderson.
+blurb: Designing two spreads using assigned assets and content, about the films of
+  director Wes Anderson.
 linkLabel: Visit
 link: https://bradleysans.uk/magazines#wes
-images: 
-- /projects/magazines/mockups-1.png
-- /projects/magazines/auteur.png
+images:
+- "/projects/magazines/mockups-1.png"
+- "/projects/magazines/auteur.png"
 layout: post
 ---
 
