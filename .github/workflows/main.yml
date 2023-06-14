@@ -3,12 +3,14 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: Project page create
+    name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: bradleysansom/proj@v1
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: bradleysansom/blog-action@v1
         with:
-          milliseconds: 1000
+          who-to-greet: 'Bradley'
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: bash
 
       
