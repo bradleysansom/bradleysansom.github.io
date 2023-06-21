@@ -635,8 +635,22 @@ function homePageSectionRender(project) {
     } */
 
     // projectContainer.appendChild(link);
-
+    if (project.guid.text.split("#")[1] === "greta") {
+        console.log("GRETA THUNBERG!!!!!")
+        var meltingFrame = document.createElement("iframe");
+        meltingFrame.setAttribute("class", "carousel");
+        meltingFrame.setAttribute("width", "100%");
+        meltingFrame.setAttribute("height", "250px");
+        meltingFrame.setAttribute("alt", "melting typeface");
+        meltingFrame.setAttribute("src", "https://bradleysans.uk/melting/forgive.html");
+        meltingFrame.setAttribute("scrolling", "no");
+        meltingFrame.setAttribute("style", "border:none;outline:none;pointer-events: none;")
+        image.replaceWith(meltingFrame);
+        console.log("replaced Greta")
+    }
     articlesContainer.appendChild(projectContainer);
+
+
 }
 
 
