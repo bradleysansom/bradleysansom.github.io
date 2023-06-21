@@ -343,7 +343,7 @@
         <button
           id="currentUrl"
           onclick='navigator.clipboard.writeText(window.location.href);
-                                        copyUrlButtonIcon.innerHTML="✔" ;'
+                                                    copyUrlButtonIcon.innerHTML="✔" ;'
           title="Copy URL of this page">
           <span id="urlGoesHere"></span>
           <span class="icon-clipboard" id="copyUrlButtonIcon">📋</span>
@@ -367,13 +367,10 @@
   <script src="/scripts/xml2json.js"></script>
   <script src="/scripts/project.js"></script>
 
-  <script src="/scripts/meltingframe.js"></script>
   <script>
     createCategoryFilters();
     createSearchBox();
     homePageInitialise("featured", "newest");
-
-    meltingFrame();
   </script>
   <script src="/scripts/greeting.js"></script>
   <script src="/scripts/webmention.js" async></script>
