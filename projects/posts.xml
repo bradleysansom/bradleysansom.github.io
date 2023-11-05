@@ -22,8 +22,30 @@
         </image>
         <atom:link href="https://bradleysans.uk/projects/posts.xml" rel="self" type="application/rss+xml" />
         <item>
+            <guid>https://bradleysans.uk/projects#poem</guid>
+            <title>Typography, Oxford Road</title>
+            <pubDate>Fri, 6 Oct 2023 17:00:00 GMT</pubDate>
+            <bs:course>BA Graphic Design</bs:course>
+            <bs:year>Third year</bs:year>
+            <bs:unit>Graphic Design Practice 1</bs:unit>
+            <bs:institution>Manchester School of Art</bs:institution>
+            <bs:grade>Pending</bs:grade>
+            <description>
+                Set a brief to create an animation to accompany the poem Topography Oxford Road by Andrew MacMillan, my group filmed scenes in Manchester and assembled them into a video, adding motion-tracked typographic details to ground the poem within its setting and reflect the touching story within.
+            </description>
+            <bs:blurb>Set a brief to create an animation to accompany the poem Topography Oxford Road by Andrew MacMillan, my group filmed scenes in Manchester and assembled them into a video, adding motion-tracked typographic details to ground the poem within its setting and reflect the touching story within.</bs:blurb>
+            <link>https://mmutube.mmu.ac.uk/media/Topography%20Oxford%20Road%20-%20Rachel%20and%20Bradley/1_vx8grvfi</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/poem/motion.png</bs:images>
+            <category>university</category>
+            <category>featured</category>
+            <category>film</category>
+            <category>graphic design</category>
+            <category>typography</category>
+        </item>
+        <item>
             <guid>https://bradleysans.uk/projects#energy</guid>
-            <title>aAh! The FRESHERS Issue 23/24</title>
+            <title>aAh! The FRESHERS Issue</title>
             <pubDate>Fri, 29 Sep 2023 18:00:00 GMT</pubDate>
             <description>Over the summer, I worked alongside writers, illustrators, photographers, and other designers on the newest issue of aAh!, Manchester's student-led arts and culture magazine. With the theme of Welcome Home to Manchester, we aimed to greet new arrivals to the city with an issue featuring a vintage aesthetic, including a suite of patterns I designed based on Mancunian architecture. The magazine also featured an article I wrote about the best green spots in the city, and I also assisted with the distribution and promotion of the issue.</description>
             <bs:blurb>Over the summer, I worked alongside writers, illustrators, photographers, and other designers on the newest issue of aAh!, Manchester's student-led arts and culture magazine. With the theme of Welcome Home to Manchester, we aimed to greet new arrivals to the city with an issue featuring a vintage aesthetic, including a suite of patterns I designed based on Mancunian architecture. The magazine also featured an article I wrote about the best green spots in the city, and I also assisted with the distribution and promotion of the issue. </bs:blurb>
@@ -55,6 +77,30 @@
             <bs:images>/projects/shaw/society.png</bs:images>
             <link>https://shawsociety.net/</link>
             <bs:linkLabel>Visit</bs:linkLabel>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects#ballot</guid>
+            <title>Ballot Box</title>
+            <pubDate>Thu, 9 Jun 2023 17:00:00 GMT</pubDate>
+            <bs:course>BA Graphic Design</bs:course>
+            <bs:year>Second year</bs:year>
+            <bs:unit>Unit X 2023</bs:unit>
+            <bs:institution>Manchester School of Art</bs:institution>
+            <bs:grade>85</bs:grade>
+            <description>
+                Working alongside local archives including the Portico Library and North West Film Archive, I designed and built an interactive exhibit which used rear projection to tell stories about democracy in Manchester's history, with the aim of increasing youth awareness and participation in local elections.
+            </description>
+            <bs:blurb>Working alongside local archives including the Portico Library and North West Film Archive, I designed and built an interactive exhibit which used rear projection to tell stories about democracy in Manchester's history, with the aim of increasing youth awareness and participation in local elections.</bs:blurb>
+            <link>https://www.instagram.com/stories/highlights/18213220771208755/</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+            <bs:images>/projects/ballot/box.jpg</bs:images>
+            <category>university</category>
+            <category>featured</category>
+            <category>exhibition</category>
+            <category>physical</category>
+            <category>graphic design</category>
+            <category>archives</category>
+            <category>film</category>
         </item>
         <item>
             <guid>https://bradleysans.uk/projects#energy</guid>
@@ -227,7 +273,7 @@
     <script async src="https://www.instagram.com/embed.js"></script>
             ]]>
             </description>
-            <bs:blurb>Having extracted data from the track Voodoo Ray by A Guy Called Gerald, I produced a program that algorithmically generated animated graphical scores by analysing instrumentation data.</bs:blurb>
+            <bs:blurb>Having extracted musical data from the track Voodoo Ray by A Guy Called Gerald, I produced a program that algorithmically generated animated graphical scores by analysing instrumentation and timing.</bs:blurb>
             <link>https://crystaliser.github.io/</link>
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/crystaliser/record.png</bs:images>
@@ -432,7 +478,6 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/magazines/crit.jpg</bs:images>
             <category>university</category>
-            <category>featured</category>
             <category>graphic design</category>
             <category>editorial</category>
             <category>writing</category>
@@ -560,6 +605,7 @@
             <bs:linkLabel>Visit</bs:linkLabel>
             <bs:images>/projects/local/sk93ab.png</bs:images>
             <bs:images>/projects/local/postcode.png</bs:images>
+            <category>featured</category>
             <category>college</category>
             <category>computer science</category>
             <category>web development</category>
