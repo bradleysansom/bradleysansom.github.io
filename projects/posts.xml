@@ -21,7 +21,41 @@
             <link>https://bradleysans.uk/</link>
         </image>
         <atom:link href="https://bradleysans.uk/projects/posts.xml" rel="self" type="application/rss+xml" />
-
+        <item>
+            <guid>https://bradleysans.uk/projects#energy</guid>
+            <title>aAh! The FRESHERS Issue 23/24</title>
+            <pubDate>Fri, 29 Sep 2023 18:00:00 GMT</pubDate>
+            <description>Over the summer, I worked alongside writers, illustrators, photographers, and other designers on the newest issue of aAh!, Manchester's student-led arts and culture magazine. With the theme of Welcome Home to Manchester, we aimed to greet new arrivals to the city with an issue featuring a vintage aesthetic, including a suite of patterns I designed based on Mancunian architecture. The magazine also featured an article I wrote about the best green spots in the city, and I also assisted with the distribution and promotion of the issue.</description>
+            <bs:blurb>Over the summer, I worked alongside writers, illustrators, photographers, and other designers on the newest issue of aAh!, Manchester's student-led arts and culture magazine. With the theme of Welcome Home to Manchester, we aimed to greet new arrivals to the city with an issue featuring a vintage aesthetic, including a suite of patterns I designed based on Mancunian architecture. The magazine also featured an article I wrote about the best green spots in the city, and I also assisted with the distribution and promotion of the issue. </bs:blurb>
+            <category>project</category>
+            <category>graphic design</category>
+            <category>editorial</category>
+            <category>featured</category>
+            <category>physical</category>
+            <category>print</category>
+            <category>typography</category>
+            <category>group project</category>
+            <bs:images>/projects/freshers/mockup.png</bs:images>
+            <link>https://aah-magazine.co.uk/wp-content/uploads/2023/09/freshers2324-web.pdf</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+        </item>
+        <item>
+            <guid>https://bradleysans.uk/projects#shaw</guid>
+            <title>SHAW Society</title>
+            <pubDate>Fri, 14 Jul 2023 18:00:00 GMT</pubDate>
+            <description>I upgraded and redesigned the website for the Society for the History of Women in the Americas, and updated their brand with a set of guidelines and deliverables. I also assisted with social media coverage of their conference, and was involved in the university’s history outreach events.</description>
+            <bs:blurb>I upgraded and redesigned the website for the Society for the History of Women in the Americas, and updated their brand with a set of guidelines and deliverables. I also assisted with social media coverage of their conference, and was involved in the university’s history outreach events. </bs:blurb>
+            <category>project</category>
+            <category>graphic design</category>
+            <category>web development</category>
+            <category>featured</category>
+            <category>branding</category>
+            <category>typography</category>
+            <category>group project</category>
+            <bs:images>/projects/shaw/society.png</bs:images>
+            <link>https://shawsociety.net/</link>
+            <bs:linkLabel>Visit</bs:linkLabel>
+        </item>
         <item>
             <guid>https://bradleysans.uk/projects#energy</guid>
             <title>aAh! The ENERGY Issue</title>
