@@ -655,7 +655,7 @@ function homePageSectionRender(project) {
 
 
 async function fetchPosts(pageType, filter, ordering, number, container, currentProjectGuid) {
-    let response = await fetch("https://bradleysansom.github.io/projects/posts.xml");
+    let response = await fetch("https://bradleysans.uk/projects/posts.xml");
 
     if (response.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)
