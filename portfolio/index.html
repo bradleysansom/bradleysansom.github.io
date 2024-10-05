@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bradley Sansom</title>
+    <style>
+        :root {
+            --orange: #c1420d;
+            --darkGrey: #222222;
+            --white: #ffffff;
+        }
+
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: local('IBM Plex Sans'), local('IBMPlexSans'),
+                url('/styles/fonts/IBMPlexSans.woff2') format('woff2'),
+                url('/styles/fonts/IBMPlexSans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'),
+                url('/styles/fonts/IBMPlexSans-Bold.woff2') format('woff2'),
+                url('/styles/fonts/IBMPlexSans-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+
+        html {
+            scroll-snap-type: y mandatory;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            outline: 0;
+            font-family: 'IBM Plex Sans';
+            background-color: #eee;
+        }
+
+        @media (orientation:landscape) {
+            section {
+                height: 100vh;
+            }
+
+            section .background {
+                height: 100%;
+            }
+        }
+
+        @media (orientation:portrait) {
+            section {
+                height: 50vh;
+            }
+
+            section .background {
+                height: 50%;
+            }
+        }
+
+        section {
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+
+        }
+
+        .welcome {
+            background: var(--orange);
+        }
+
+        section .background {
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        section .information {
+            margin: 20px;
+            width: calc(100% - 40px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+
+        h2 {
+            background-color: var(--white);
+            color: var(--darkGrey);
+            padding: 10px;
+            margin-block: 0;
+            height: fit-content;
+        }
+
+        .description {
+            color: var(--white);
+            max-width: 30ch;
+        }
+
+        .action {
+            background-color: var(--white);
+            color: var(--darkGrey);
+            padding: 5px;
+        }
+
+        .action:hover {
+            color: var(--white);
+            background-color: var(--orange);
+        }
+
+
+        section#portal .background {
+            background-image: url('/images/portal.webp');
+        }
+
+        section#trams .background {
+            background-image: url('/images/trams.webp');
+        }
+
+        section#aah-fonts .background {
+            background-image: url('/images/grosvenor.webp');
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+
+        <section class="welcome">
+
+            <h1>Bradley Sansom</h1>
+            <p>Graphic designer, Manchester</p>
+            <div class="links"><a href="/portfolio.pdf">Portfolio (PDF)</a>
+                <a href="mailto:hello@bradleysans.uk">E-mail</a>
+                <a href="https://instagram.com/bradleysans">Instagram</a>
+                <a href="https://linkedin.com/in/bradleysans">Linkedin</a>
+            </div>
+        </section>
+        <section class="project" id="portal">
+            <div class="information">
+                <h2>Colorplan vinyl</h2>
+                <div class="blurb">
+                    <p class="description">My data-led design for G.F Smith's Portal vinyl sleeves</p>
+                    <a href="https://gfsmith.com/colorplan-vinyl-2" class="action">See more on gfsmith.com →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class="project" id="trams">
+            <div class="information">
+                <h2>known/unknowns</h2>
+                <div class="blurb">
+                    <p class="description">A zine exploring the journeys made on the Manchester Metrolink using publicly-available ridership data.</p>
+                    <a href="#" class="action">Read more →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class="project" id="aah-fonts">
+            <div class="information">
+                <h2>aAh! typefaces</h2>
+                <div class="blurb">
+                    <p class="description">A series of fonts I've created for aAh!, Manchester Met's student magazine. The first is based on the School of Art's wordmark, while the second series were produced in the letterpress workshop for the new issue.</p>
+                    <a href="/fonts/" class="action">Explore the typefaces →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+    </main>
+
+</body>
+
+</html>
