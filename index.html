@@ -1,384 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bradley Sansom</title>
+    <style>
+        :root {
+            --orange: #c1420d;
+            --darkGrey: #222222;
+            --white: #ffffff;
+        }
 
-    <meta name="description" content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: local('IBM Plex Sans'), local('IBMPlexSans'),
+                url('/IBMPlexSans.woff2') format('woff2'),
+                url('/IBMPlexSans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://bradleysans.uk">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bradley Sansom">
-    <meta property="og:description" content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
-    <meta property="og:image" content="https://bradleysans.uk/thumbnail.png">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="bradleysans.uk">
-    <meta property="twitter:url" content="https://bradleysans.uk">
-    <meta name="twitter:title" content="Bradley Sansom">
-    <meta name="twitter:description" content="Hi! I like to make things. I'm a designer, a creator, a developer, and many things besides, from Manchester, UK.">
-    <meta name="twitter:image" content="https://bradleysans.uk/thumbnail.png">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/fonts.css">
-
-    <!-- RSS feed -->
-    <link rel="alternate"
-      type="application/rss+xml"
-      title="Bradley Sansom updates"
-      href="/projects/posts.xml" />
-
-    <!-- Webmentions -->
-    <link rel="webmention" href="https://webmention.io/bradleysans.uk/webmention" />
-    <link rel="pingback" href="https://webmention.io/bradleysans.uk/xmlrpc" />
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'),
+                url('/IBMPlexSans-Bold.woff2') format('woff2'),
+                url('/IBMPlexSans-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
 
 
 
-  </head>
+        html {
+            scroll-snap-type: y mandatory;
+        }
 
-  <body>
-    <header role="banner" name="header">
-      <a href="/">
-        <h1 class="name animated">Bradley Sansom</h1>
-      </a>
-      <nav class="animated">
-        <ul>
-          <li><a href="mailto:bradley-sansom@outlook.com" rel="me"><figure class="nav-icon" id="email" title="Send me an email"><span class="icon-mail"></span></figure></a></li>
-          <li><a href="https://github.com/bradleysansom" rel="me"><figure class="nav-icon" id="github" title="GitHub"><span class="icon-github"></span></figure></a></li>
-          <li><a href="https://linkedin.com/in/bradleysans" rel="me"><figure class="nav-icon" id="linkedin" title="LinkedIn"><span class="icon-linkedin"></span></figure></a></li>
-          <li><a href="https://twitter.com/bradleysans" rel="me"><figure class="nav-icon" id="twitter" title="Twitter"><span class="icon-twitter"></span></figure></a></li>
-          <li><a href="https://instagram.com/bradleysans" rel="me"><figure class="nav-icon" id="instagram" title="Instagram"><span class="icon-instagram"></span></figure></a></li>
-          <li><a href="https://mastodon.me.uk/@bradleysans" rel="me"><figure class="nav-icon" id="mastodon" title="Mastodon"><span class="icon-mastodon"></span></figure></a></li>
+        body {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            outline: 0;
+            font-family: 'IBM Plex Sans';
+            background-color: #eee;
+        }
 
-        </ul>
-      </nav>
-    </header>
-    <hr>
-    <aside class="triple">
-      <section class="triple-box animated" id="triple-box-words">
-        <h2 class="intro">Designer, creator, developer, maker</h2>
-        <h3 class="rest">
-          <span id="greetingText"></span>I'm Bradley. I like to make things. I then share them here.</h3>
-      </section>
-      <section
-        class="triple-box animated"
-        id="triple-box-half"
-        title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022"></section>
-      <section
-        class="triple-box animated"
-        id="triple-box-photo"
-        title="Me, pictured here, exhausted after crossing the finish line in the Great Manchester Run 2022"></section>
-    </aside>
-    <hr>
-    <main class="gallery animated">
-      <h2 class="sectionHeader">Projects</h2>
-      <section class="projects">
-        <section class="filterSelection">
+        @media (orientation:landscape) {
+            section {
+                height: 100vh;
+            }
+        }
 
-          <section id="filterContainer"></section>
+        @media (orientation:portrait) {
+            section {
+                height: 50vh;
+            }
+        }
+
+        section {
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+        }
+
+        .welcome {
+            background: var(--orange);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links a {
+            color: black;
+
+        }
+
+        main {
+            width: 800px;
+            max-width: 90vw;
+            margin: auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            color: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Bradley Sansom</h1>
+        <p>Graphic designer, Manchester</p>
+        <div class="links"><a href="/portfolio.pdf">Portfolio (PDF)</a>
+            <a href="mailto:hello@bradleysans.uk">E-mail</a>
+            <a href="https://instagram.com/bradleysans">Instagram</a>
+            <a href="https://linkedin.com/in/bradleysans">Linkedin</a>
+        </div>
+        <footer>
+            <p>Under construction. New site coming soon.</p>
+        </footer>
+        <!--<section class="welcome">
+            <header>Bradley Sansom</header>
+            
         </section>
-
-        <div class="articles" id="articlesContainer"></div>
-        <noscript>Sorry, your browser doesn't support Javascript and so this section won't work properly. You could
-          instead read through
-          <a href="/projects/posts.xml">my RSS feed</a>
-          to keep up with what I've been making
-          and doing.</noscript>
-      </section>
-
-
+        <section class="project" id="portal">
+            <h2>G.F Smith Portal</h2>
+        </section>-->
     </main>
-    <hr>
-    <section class="vcard animated h-card">
-      <header>
-        <a href="https://bradleysans.uk" class="u-url u-uid">
-          <h2 class="fn p-name">Bradley Sansom</h2>
-        </a>
-        <img
-          src="/images/me/me-square.jpeg"
-          class="photo fn u-photo"
-          alt="Bradley Sansom"
-          width="200px"
-          height="200px">
-      </header>
-      <section id="contactNote">
-        <p class="p-note">Hi! I like to make things. I'm a designer, a creator, a developer, and many things
-          besides. Currently studying for BA Graphic Design at the Manchester School of Art</p>
-      </section>
-      <section class="contactLinks">
-        <section id="contactEmail">
-          <span class="icon-letter-b"></span>
-          <p>
-            <a href="https://bradleysans.uk" class="url u-url">bradleysans.uk</a>
-          </p>
-        </section>
-        <section id="contactEmail">
-          <span class="icon-mail"></span>
-          <p>
-            <a href="mailto:bradley-sansom@outlook.com" class="email u-email">bradley-sansom@outlook.com</a>
-          </p>
-        </section>
-        <section id="contactTwitter">
-          <span class="icon-twitter"></span>
-          <p class="twitter">
-            <a
-              href="https://twitter.com/bradleysans"
-              rel="me"
-              class="u-url">@bradleysans</a>
-          </p>
-        </section>
-        <section id="contactInstagram">
-          <span class="icon-instagram"></span>
-          <p class="instagram">
-            <a href="https://instagram.com/bradleysans" rel="me">@bradleysans</a>
-          </p>
-        </section>
-        <section id="contactMastodon">
-          <span class="icon-mastodon"></span>
-          <p class="mastodon">
-            <a href="https://mastodon.me.uk/@bradleysans" rel="me">@bradleysans@mastodon.me.uk</a>
-          </p>
-        </section>
-        <section id="contactGithub">
-          <span class="icon-github"></span>
-          <p class="github">
-            <a href="https://github.com/bradleysansom" rel="me">@bradleysansom</a>
-          </p>
-        </section>
-        <section id="contactLinkedin">
-          <span class="icon-linkedin"></span>
-          <p class="linkedin">
-            <a href="https://linkedin.com/in/bradleysans" rel="me">@bradleysans</a>
-          </p>
-        </section>
-        <section id="contactDropdown" class="down">
-          <span class="icon-chevron-down"></span>
-          <p class="dropdown">More</p>
-        </section>
 
-      </section>
-      <div class="otherContactLinks">
-        <section id="contactYouTube">
-          <span class="icon-youtube"></span>
-          <p class="youtube">
-            <a href="https://youtube.com/@bradleysans" rel="me">@bradleysans</a>
-          </p>
-        </section>
-        <section id="contactWikipedia">
-          <span class="icon-wikipedia"></span>
-          <p class="wikipedia">
-            <a href="https://en.wikipedia.org/wiki/User:BradleySans" rel="me">bradleysans</a>
-          </p>
-        </section>
-        <section id="contactReddit">
-          <span class="icon-reddit"></span>
-          <p class="reddit">
-            <a href="https://www.reddit.com/user/bradleysans">u/bradleysans</a>
-          </p>
-        </section>
-        <section id="contactOpenStreetMap">
-          <span class="icon-map"></span>
-          <p class="openStreetMap">
-            <a href="https://www.openstreetmap.org/user/BradleySans">bradleysans</a>
-          </p>
-        </section>
-        <section id="contactFindAGrave">
-          <span class="icon-grave"></span>
-          <p class="findAGrave">
-            <a href="https://www.findagrave.com/user/profile/51228033">Bradley Sansom</a>
-          </p>
-        </section>
-        <section id="contactArchive">
-          <span class="icon-library"></span>
-          <p class="archive">
-            <a href="https://archive.org/details/@bradleysans">@bradleysans</a>
-          </p>
-        </section>
-        <section id="contactDiscord">
-          <span class="icon-discord"></span>
-          <p class="discord">
-            <a href="https://discord.com/users/626374826315087873">bradleysans#5171</a>
-          </p>
-        </section>
-        <section id="contactFlickr">
-          <span class="icon-flickr"></span>
-          <p class="flickr">
-            <a href="https://www.flickr.com/people/bradleysans/">bradleysans</a>
-          </p>
-        </section>
-        <section id="contactFoursquare">
-          <span class="icon-foursquare"></span>
-          <p class="foursqaure">
-            <a href="https://www.foursquare.com/user/185653927">bradleysans</a>
-          </p>
-        </section>
-        <section id="contactLastFm">
-          <span class="icon-lastfm"></span>
-          <p class="lastFm">
-            <a href="https://www.last.fm/user/bradleysans">bradleysans</a>
-          </p>
-        </section>
-        <section id="contactP5">
-          <span class="icon-p5js"></span>
-          <p class="p5">
-            <a href="https://editor.p5js.org/bradleysans/sketches">bradleysans</a>
-          </p>
-        </section>
-        <section id="contactLocation">
-          <span class="icon-map-pin"></span>
-          <div class="geo">
-            <abbr class="latitude p-latitude" title="53.478056">53&deg;28&#39;41&quot;N</abbr>,
-            <abbr class="longitude p-longitude" title="-2.244722">2&deg;14&#39;41&quot;W</abbr>
-          </div>
-        </section>
-        <section id="contactOrcid">
-          <span class="icon-orcid"></span>
-          <p class="orcid">
-            <a href="https://orcid.org/0000-0002-9126-5180" rel="me">0000-0002-9126-5180</a>
-          </p>
-        </section>
-        <section id="contactKeybase">
-          <span class="icon-lock"></span>
-          <p class="keybase">
-            <a href="https://keybase.io/bradleysans">5F29 3906 CBDF F4A0</a>
-          </p>
-        </section>
-
-        <section id="contactAddressBook">
-          <span class="icon-book-open"></span>
-          <p class="addressBook">
-            <a href="http://h2vx.com/vcf/bradleysans.uk">
-              Add to address book
-            </a>
-          </p>
-
-        </section>
-      </div>
-
-
-    </section>
-    <!-- <hr>
-    <section class="dashboard" id="now">
-    <h2 class="sectionHeader">
-    Activity
-    </h2>
-    <div class="counters">
-    <section class="steps">
-    <p id="stepsToday" class="dashboardTitle" style="display:none;"><span
-    class="icon-directions_walk"></span>
-    Steps yesterday</p>
-    <p id="stepsTodayCount" class="dashboardCounter"></p>
-    <p id="stepsTrend" class="dashboardTrend"></p>
-    </section>
-    <section class="scrobbles">
-    <p id="lastPlayed" class="dashboardTitle" style="display:none;"><span class="icon-lastfm"></span>
-    Last song played</p>
-    <div class="dashboardArrangement">
-    <div class="arrangementLeft">
-    <a id="lastPlayedLink">
-    <p id="lastPlayedTrack" class="dashboardHeadline"></p>
-    </a>
-    <p id="lastPlayedArtist" class="dashboardSubtitle"></p>
-    </div>
-    <img id="lastPlayedImage" class="dashboardImage">
-    </div>
-    </section>
-    <section class="repositories">
-    <p id="recentRepo" class="dashboardTitle" style="display:none;"><span class="icon-github"></span>
-    Last repository commit</p>
-    <a id="recentRepoLink">
-    <p id="recentRepoName" class="dashboardHeadline"></p>
-    </a>
-    <p id="recentRepoStars" class="dashboardTrend"></p>
-    </section>
-    <section class="checkins">
-    <p id="recentCheckin" class="dashboardTitle" style="display:none;"><span class="icon-swarm"></span>
-    Most recent checkin</p>
-    <div class="dashboardArrangement">
-    <div class="arrangementLeft">
-    <a id="recentCheckinLink">
-    <p id="recentCheckinName" class="dashboardHeadline"></p>
-    </a>
-    </div>
-    <img id="recentCheckinImage" class="dashboardImage">
-    </div>
-    </section>
-    <section class="drinks">
-    <p id="yesterdayDrinks" class="dashboardTitle" style="display:none;"><span class="icon-droplet"></span>
-    Water drunk yesterday</p>
-    <p id="yesterdayDrinksCount" class="dashboardCounter"></p>
-    <p id="drinksTrend" class="dashboardTrend"></p>
-    </section>
-    <section class="books">
-    <p id="currentlyReading" class="dashboardTitle" style="display:none;"><span
-    class="icon-book-open"></span>Currently reading</p>
-    <a id="currentlyReadingLink">
-    <p id="currentlyReadingTitle" class="dashboardHeadline"></p>
-
-    <p id="currentlyReadingAuthor" class="dashboardSubtitle"></p>
-    </a>
-    </section>
-
-    </div>
-
-    </section> -->
-    <hr>
-    <section id="webmentionsContainer">
-      <h2 class="sectionHeader">Responses</h2>
-      <div id="webmentions"></div>
-      <p class="webmentionBlurb">Add a
-        <a id="respondViaCommentParade">comment</a>, or respond via
-        <a id="respondViaTwitter">Twitter</a>,
-        <a href="javascript:respondViaMastodon()">Mastodon</a>,
-        <a id="respondViaReddit">Reddit</a>, or
-        your own site if it supports
-        <a href="https://www.w3.org/TR/webmention/">Webmentions</a>, by making a post
-        which links to the URL
-        <button
-          id="currentUrl"
-          onclick='navigator.clipboard.writeText(window.location.href);
-                                                    copyUrlButtonIcon.innerHTML="✔" ;'
-          title="Copy URL of this page">
-          <span id="urlGoesHere"></span>
-          <span class="icon-clipboard" id="copyUrlButtonIcon">📋</span>
-        </button>
-
-      </p>
-    </section>
-
-    <hr id="before-emley" class="animated">
-    <section
-      id="emley"
-      class="animated"
-      title="The view from my local park in Bradford towards the Emley Moor TV transmitter, the tallest freestanding structure in the UK">
-      <div class="outro">
-        <span id="copyright">© Bradley Sansom
-        </span>
-        <span id="year"></span><br><span id="nonsequitur"></span>
-      </div>
-    </section>
-  </body>
-  <script src="/scripts/xml2json.js"></script>
-  <script src="/scripts/project.js"></script>
-
-  <script>
-    createCategoryFilters();
-    createSearchBox();
-    homePageInitialise("featured", "newest");
-  </script>
-  <script src="/scripts/greeting.js"></script>
-  <script src="/scripts/webmention.js" async></script>
-  <script src="/scripts/dropdown.js"></script>
-  <script src="/scripts/respond.js"></script>
-
-  <script src="/scripts/linkIcons.js"></script>
-
-
+</body>
 
 </html>
