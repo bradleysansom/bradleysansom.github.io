@@ -80,7 +80,8 @@
         }
 
         .welcome {
-            background: var(--orange);
+            background: var(--darkGrey);
+            height: 51px;
         }
 
         section .background {
@@ -92,13 +93,14 @@
         }
 
         section .information {
-            margin: 20px;
+            padding: 20px;
             width: calc(100% - 40px);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-end;
             flex-wrap: wrap;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
         }
 
 
@@ -126,6 +128,34 @@
             background-color: var(--orange);
         }
 
+        .blurb {
+            text-wrap: balance;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            color: var(--white);
+            scroll-snap-type: none;
+        }
+
+        header h1 {
+            margin-block: 0;
+            background-color: var(--orange);
+            padding: 10px;
+            color: var(--white);
+        }
+
+        section:first-of-type {
+            scroll-snap-type: none;
+        }
+
 
         section#portal .background {
             background-image: url('/images/portal.webp');
@@ -135,25 +165,44 @@
             background-image: url('/images/trams.webp');
         }
 
+        section#freshers24 .background {
+            background-image: url('/images/covers-yellow.webp');
+        }
+
         section#aah-fonts .background {
             background-image: url('/images/grosvenor.webp');
+        }
+
+        section#shaw .background {
+            background-image: url('/images/shaw.webp');
+        }
+
+        section#degreeshow .background {
+            background-image: url('/images/degreeshow.webp');
+        }
+
+        section#firsttenyears .background {
+            background-image: url('/images/ten.webp');
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <h1>Bradley Sansom</h1>
+
+        <div class="links"><a href="/portfolio.pdf">Portfolio (PDF)</a>
+            <a href="mailto:hello@bradleysans.uk">E-mail</a>
+            <a href="https://instagram.com/bradleysans">Instagram</a>
+            <a href="https://linkedin.com/in/bradleysans">Linkedin</a>
+        </div>
+    </header>
     <main>
 
 
         <section class="welcome">
 
-            <h1>Bradley Sansom</h1>
-            <p>Graphic designer, Manchester</p>
-            <div class="links"><a href="/portfolio.pdf">Portfolio (PDF)</a>
-                <a href="mailto:hello@bradleysans.uk">E-mail</a>
-                <a href="https://instagram.com/bradleysans">Instagram</a>
-                <a href="https://linkedin.com/in/bradleysans">Linkedin</a>
-            </div>
+
         </section>
         <section class="project" id="portal">
             <div class="information">
@@ -175,6 +224,62 @@
             </div>
             <div class="background"></div>
         </section>
+        <section class="project" id="freshers24">
+            <div class="information">
+                <h2>aAh! The FRESHERS Issue 24</h2>
+                <div class="blurb">
+                    <p class="description">The newest issue of Manchester Met's student arts and culture magazine. I led the design collective, creating an issue celebrating authenticity made using manual processes including letterpress.</p>
+                    <a href="https://aah-magazine.co.uk/wp-content/uploads/2024/09/Freshers-24-Online.pdf" class="action">Read the issue →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class='project' id='degreeshow'>
+            <div class='information'>
+                <h2>THIS IS THE PLACE</h2>
+                <div class='blurb'>
+                    <p class='description'>The Manchester School of Art's 2024 Graphic Design degree show. My team were responsible for the concept and branding, and I led the digital side, producing a website to showcase students' work.</p><a href='https://thisistheplace.co.uk' class='action'>View the site →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='firsttenyears'>
+            <div class='information'>
+                <h2>aAh! The First Ten Years</h2>
+                <div class='blurb'>
+                    <p class='description'>A special publication celebrating a decade of aAh! Magazine and the Multimedia Journalism course at Manchester Met.</p><a href='https://aah-magazine.co.uk/wp-content/uploads/2024/10/The-first-ten-years-aAh-MMJ.pdf' class='action'>Read the book →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='dunn'>
+            <div class='information'>
+                <h2>Richard Dunn typeface</h2>
+                <div class='blurb'>
+                    <p class='description'>Type family based on the Richard Dunn Sports Centre, a brutalist Bradford landmark. It's based on the building's structure, with tall ascenders and extended counters matching the space-age structure.</p><a href='' class='action'>Read more →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='aahlegacy'>
+            <div class='information'>
+                <h2>aAh! The LEGACY Issue</h2>
+                <div class='blurb'>
+                    <p class='description'>A special expanded edition of Manchester Met's student magazine, marking 200 years of the university. Leading a team of student designers, illustrators, and photographers, we produced an issue to be proud of.</p><a href='https://aah-magazine.co.uk/wp-content/uploads/2024/03/The-LEGACY-Issue-Online.pdf' class='action'>Read the issue →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='shaw'>
+            <div class='information'>
+                <h2>SHAW Society</h2>
+                <div class='blurb'>
+                    <p class='description'>I upgraded and redesigned the website for the Society for the History of Women in the Americas, and updated their brand with a set of guidelines and deliverables.</p><a href='https://shawsociety.net' class='action'>shawsociety.net →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+
         <section class="project" id="aah-fonts">
             <div class="information">
                 <h2>aAh! typefaces</h2>
@@ -184,6 +289,42 @@
                 </div>
             </div>
             <div class="background"></div>
+        </section>
+        <section class='project' id='sheet'>
+            <div class='information'>
+                <h2>Student welcome sheet</h2>
+                <div class='blurb'>
+                    <p class='description'>A handy little sheet containing an at-a-glance view of the student support services the university offers, which has now been distributed to new students arriving at uni.</p>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='freshers23'>
+            <div class='information'>
+                <h2>aAh! The FRESHERS Issue 23</h2>
+                <div class='blurb'>
+                    <p class='description'>A mini edition of aAh!, themed Welcome Home to Manchester, featuring vintage typography and Mancunian-inspired patterns.</p><a href='https://aah-magazine.co.uk/wp-content/uploads/2023/09/freshers2324-web.pdf' class='action'>Read the issue →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='typography'>
+            <div class='information'>
+                <h2>Typography, Oxford Road</h2>
+                <div class='blurb'>
+                    <p class='description'>Animation to accompany the poem Topography Oxford Road by Andrew MacMillan, with motion-tracked typographic details to ground the poem within its setting and reflect the touching story within.</p><a href='https://mmutube.mmu.ac.uk/media/Topography%20Oxford%20Road%20-%20Rachel%20and%20Bradley/1_vx8grvfi' class='action'>Watch →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='voodooray'>
+            <div class='information'>
+                <h2>Voodoo Ray graphical score</h2>
+                <div class='blurb'>
+                    <p class='description'>Animated graphical musical score representing the structure and instrumentation of Voodoo Ray, a 1988 acid house track by A Guy Called Gerald.</p><a href='https://crystaliser.github.io' class='action'>Visit →</a>
+                </div>
+            </div>
+            <div class='background'></div>
         </section>
     </main>
 
