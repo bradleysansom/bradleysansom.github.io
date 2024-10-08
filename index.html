@@ -15,8 +15,8 @@
         @font-face {
             font-family: 'IBM Plex Sans';
             src: local('IBM Plex Sans'), local('IBMPlexSans'),
-                url('/IBMPlexSans.woff2') format('woff2'),
-                url('/IBMPlexSans.woff') format('woff');
+                url('/styles/fonts/IBMPlexSans-Regular.woff2') format('woff2'),
+                url('/styles/fonts/IBMPlexSans-Regular.woff') format('woff');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -25,8 +25,8 @@
         @font-face {
             font-family: 'IBM Plex Sans';
             src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'),
-                url('/IBMPlexSans-Bold.woff2') format('woff2'),
-                url('/IBMPlexSans-Bold.woff') format('woff');
+                url('/styles/fonts/IBMPlexSans-Bold.woff2') format('woff2'),
+                url('/styles/fonts/IBMPlexSans-Bold.woff') format('woff');
             font-weight: bold;
             font-style: normal;
             font-display: swap;
@@ -36,6 +36,11 @@
 
         html {
             scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+            font-size: 0.8rem;
+            scroll-snap-stop: always;
+            overscroll-behavior-y: none;
         }
 
         body {
@@ -45,11 +50,17 @@
             outline: 0;
             font-family: 'IBM Plex Sans';
             background-color: #eee;
+            overscroll-behavior-y: none;
         }
 
         @media (orientation:landscape) {
             section {
                 height: 100vh;
+            }
+
+            section .background {
+                height: 100vh;
+                background-attachment: fixed;
             }
         }
 
@@ -57,63 +68,425 @@
             section {
                 height: 50vh;
             }
+
+            section .background {
+                height: 50vh;
+                background-attachment: scroll;
+            }
+
+            .links a.optional {
+                display: none;
+            }
         }
 
         section {
             width: 100%;
             scroll-snap-align: start;
             display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+
         }
 
         .welcome {
-            background: var(--orange);
+            background: var(--darkGrey);
+            color: var(--white);
+            z-index: 3;
+            position: relative;
         }
 
-        .links {
+
+
+        .bigname {
+            font-size: 10rem;
+            font-family: 'IBM Plex Sans';
+            line-height: 0.8;
+            color: var(--orange);
+            font-weight: bold;
+            letter-spacing: -5px;
+
+
+        }
+
+        .bigname p {
+            margin-block: 0;
+        }
+
+        .welcome .blurb {
+            max-width: 50ch;
+        }
+
+        section .background {
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        section .information {
+            padding: 20px;
+            width: calc(100% - 40px);
             display: flex;
-            flex-direction: column;
+            height: fit-content;
+            min-height: 30%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        section.project .information {
+
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+
+        h2 {
+            background-color: var(--white);
+            color: var(--darkGrey);
+            padding: 10px;
+            margin-block: 0;
+            max-width: 40%;
+            display: inline;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        .description {
+            color: var(--white);
+            max-width: 30ch;
+            text-shadow: 0 1px 5px var(--darkGrey);
+        }
+
+        .action {
+            background-color: var(--white);
+            color: var(--darkGrey);
+            padding: 5px;
+        }
+
+        .action:hover {
+            color: var(--white);
+            background-color: var(--orange);
+        }
+
+        .blurb {
+            text-wrap: balance;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            color: var(--white);
+            scroll-snap-type: none;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        header h1 {
+            margin-block: 0;
+            background-color: var(--orange);
+            padding: 10px;
+            color: var(--white);
         }
 
         .links a {
-            color: black;
-
+            font-size: 2.5rem;
+            color: var(--white);
+            text-decoration: none;
+            margin-inline: 10px;
         }
 
-        main {
-            width: 800px;
-            max-width: 90vw;
-            margin: auto;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        .links a:hover {
+            color: var(--orange);
         }
 
-        footer {
-            color: grey;
+        section:first-of-type {
+            scroll-snap-type: none;
+        }
 
+
+        section#portal .background {
+            background-image: url('/images/portal.webp');
+        }
+
+        section#trams .background {
+            background-image: url('/images/trams.webp');
+        }
+
+        section#freshers24 .background {
+            background-image: url('/images/covers-yellow.webp');
+        }
+
+        section#grosvenor .background {
+            background-image: url('/images/grosvenor.webp');
+        }
+
+        section#shaw .background {
+            background-image: url('/images/shaw.webp');
+        }
+
+        section#degreeshow .background {
+            background-image: url('/images/degreeshow.webp');
+        }
+
+        section#firsttenyears .background {
+            background-image: url('/images/ten.webp');
+        }
+
+        section#legacy .background {
+            background-image: url('/images/legacy.webp')
+        }
+
+        section#sheet .background {
+            background-image: url('/images/sheet.webp');
+        }
+
+        section#freshers23 .background {
+            background-image: url('/images/freshers23.webp')
+        }
+
+        section#typography .background {
+            background-image: url('/images/motion.avif');
+        }
+
+        section#voodooray .background {
+            background-image: url('/images/voodoo.webp');
+        }
+
+        section#dunn .background {
+            background-image: url('/images/dunn.webp');
+        }
+
+        @font-face {
+            font-family: 'icons';
+            src: url('/styles/fonts/icons.eot?o4zukl');
+            src: url('/styles/fonts/icons.eot?o4zukl#iefix') format('embedded-opentype'),
+                url('/styles/fonts/icons.ttf?o4zukl') format('truetype'),
+                url('/styles/fonts/icons.woff?o4zukl') format('woff'),
+                url('/styles/fonts/icons.svg?o4zukl#icons') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icons' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-github:before {
+            content: "\1f431";
+        }
+
+        .icon-instagram:before {
+            content: "\1f4f7";
+        }
+
+        .icon-linkedin:before {
+            content: "\1f4bc";
+        }
+
+        .icon-mail:before {
+            content: "\1f4e7";
+        }
+
+        .icon-twitter:before {
+            content: "\1f426";
+        }
+
+        .icon-discord:before {
+            content: "\1f5e3";
+        }
+
+        .icon-mastodon:before {
+            content: "\1f418";
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <h1>Bradley Sansom</h1>
-        <p>Graphic designer, Manchester</p>
-        <div class="links"><a href="/portfolio.pdf">Portfolio (PDF)</a>
-            <a href="mailto:hello@bradleysans.uk">E-mail</a>
-            <a href="https://instagram.com/bradleysans">Instagram</a>
-            <a href="https://linkedin.com/in/bradleysans">Linkedin</a>
+    <header>
+        <a href="#">
+            <h1>Bradley Sansom</h1>
+        </a>
+
+        <div class="links">
+            <a href="mailto:hello@bradleysans.uk"><span class="icon-mail"></span></a>
+            <a href="https://instagram.com/bradleysans"><span class="icon-instagram"></span></a>
+            <a href="https://linkedin.com/in/bradleysans"><span class="icon-linkedin"></span></a>
+            <a href="https://github.com/bradleysansom" class="optional"><span class="icon-github"></span></a>
+            <a href="https://discordapp.com/users/bradleysans" class="optional"><span class="icon-discord"></span></a>
+            <a href="https://twitter.com/bradleysans" class="optional"><span class="icon-twitter"></span></a>
+            <a href="https://mastodon.me.uk/@bradleysans" class="optional"><span class="icon-mastodon"></span></a>
+
         </div>
-        <footer>
-            <p>Under construction. New site coming soon.</p>
-        </footer>
-        <!--<section class="welcome">
-            <header>Bradley Sansom</header>
-            
+    </header>
+    <main>
+
+
+        <section class="welcome">
+            <div class="information">
+
+                <div class="bigname">
+                    <p>Bradley</p>
+                    <p>Sansom</p>
+                </div>
+                <div class="blurb">
+                    <p>Hello! I'm a designer and developer from Manchester, UK. Below are a selection of my projects, get in touch if you'd like to know more.</p>
+                    <a href="mailto:hello@bradleysans.uk" class="action">E-mail me →</a>
+                    <a href="https://instagram.com/bradleysans" class="action">Instagram →</a>
+                    <a href="https://linkedin.com/in/bradleysans" class="action">Linkedin →</a>
+                    <a href="/portfolio.pdf" class="action">Portfolio (pdf) →</a>
+
+                </div>
+            </div>
+
+
         </section>
         <section class="project" id="portal">
-            <h2>G.F Smith Portal</h2>
-        </section>-->
+            <div class="information">
+                <h2>Colorplan vinyl</h2>
+                <div class="blurb">
+                    <p class="description">My data-led design for G.F Smith's Portal vinyl sleeves</p>
+                    <a href="https://gfsmith.com/colorplan-vinyl-2" class="action">See more on gfsmith.com →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class="project" id="trams">
+            <div class="information">
+                <h2>known/unknowns</h2>
+                <div class="blurb">
+                    <p class="description">A zine exploring the journeys made on the Manchester Metrolink using publicly-available ridership data.</p>
+                    <a href="#" class="action">Read more →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class="project" id="freshers24">
+            <div class="information">
+                <h2>aAh! The FRESHERS Issue 24</h2>
+                <div class="blurb">
+                    <p class="description">The newest issue of Manchester Met's student arts and culture magazine. I led the design collective, creating an issue celebrating authenticity made using manual processes including letterpress.</p>
+                    <a href="https://aah-magazine.co.uk/wp-content/uploads/2024/09/Freshers-24-Online.pdf" class="action">Read the issue →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class='project' id='degreeshow'>
+            <div class='information'>
+                <h2>THIS IS THE PLACE</h2>
+                <div class='blurb'>
+                    <p class='description'>The Manchester School of Art's 2024 Graphic Design degree show. My team were responsible for the concept and branding, and I led the digital side, producing a website to showcase students' work.</p><a href='https://thisistheplace.co.uk' class='action'>View the site →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='firsttenyears'>
+            <div class='information'>
+                <h2>aAh! The First Ten Years</h2>
+                <div class='blurb'>
+                    <p class='description'>A special publication celebrating a decade of aAh! Magazine and the Multimedia Journalism course at Manchester Met.</p><a href='https://aah-magazine.co.uk/wp-content/uploads/2024/10/The-first-ten-years-aAh-MMJ.pdf' class='action'>Read the book →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='dunn'>
+            <div class='information'>
+                <h2>Richard Dunn typeface</h2>
+                <div class='blurb'>
+                    <p class='description'>Type family based on the Richard Dunn Sports Centre, a brutalist Bradford landmark. It's based on the building's structure, with tall ascenders and extended counters matching the space-age structure.</p>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='legacy'>
+            <div class='information'>
+                <h2>aAh! The LEGACY Issue</h2>
+                <div class='blurb'>
+                    <p class='description'>A special expanded edition of Manchester Met's student magazine, marking 200 years of the university. Leading a team of student designers, illustrators, and photographers, we produced an issue to be proud of.</p><a href='https://aah-magazine.co.uk/wp-content/uploads/2024/03/The-LEGACY-Issue-Online.pdf' class='action'>Read the issue →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='shaw'>
+            <div class='information'>
+                <h2>SHAW Society</h2>
+                <div class='blurb'>
+                    <p class='description'>I upgraded and redesigned the website for the Society for the History of Women in the Americas, and updated their brand with a set of guidelines and deliverables.</p><a href='https://shawsociety.net' class='action'>shawsociety.net →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+
+        <section class="project" id="grosvenor">
+            <div class="information">
+                <h2>aAh! typefaces</h2>
+                <div class="blurb">
+                    <p class="description">A series of fonts I've created for aAh!, Manchester Met's student magazine. The first is based on the School of Art's wordmark, while the second series were produced in the letterpress workshop for the new issue.</p>
+                    <a href="/fonts/" class="action">Explore the typefaces →</a>
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
+        <section class='project' id='sheet'>
+            <div class='information'>
+                <h2>Student welcome sheet</h2>
+                <div class='blurb'>
+                    <p class='description'>A handy little sheet containing an at-a-glance view of the student support services the university offers, which has now been distributed to new students arriving at uni.</p>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='freshers23'>
+            <div class='information'>
+                <h2>aAh! The FRESHERS Issue 23</h2>
+                <div class='blurb'>
+                    <p class='description'>A mini edition of aAh!, themed Welcome Home to Manchester, featuring vintage typography and Mancunian-inspired patterns.</p><a href='https://aah-magazine.co.uk/wp-content/uploads/2023/09/freshers2324-web.pdf' class='action'>Read the issue →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='typography'>
+            <div class='information'>
+                <h2>Typography, Oxford Road</h2>
+                <div class='blurb'>
+                    <p class='description'>Animation to accompany the poem Topography Oxford Road by Andrew MacMillan, with motion-tracked typographic details to ground the poem within its setting and reflect the touching story within.</p><a href='https://mmutube.mmu.ac.uk/media/Topography%20Oxford%20Road%20-%20Rachel%20and%20Bradley/1_vx8grvfi' class='action'>Watch →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
+        <section class='project' id='voodooray'>
+            <div class='information'>
+                <h2>Voodoo Ray graphical score</h2>
+                <div class='blurb'>
+                    <p class='description'>Animated graphical musical score representing the structure and instrumentation of Voodoo Ray, a 1988 acid house track by A Guy Called Gerald.</p><a href='https://crystaliser.github.io' class='action'>Visit →</a>
+                </div>
+            </div>
+            <div class='background'></div>
+        </section>
     </main>
 
 </body>
