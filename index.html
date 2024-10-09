@@ -200,7 +200,16 @@
             color: var(--white);
         }
 
+        .line-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-wrap: nowrap;
+            gap: 5px;
+        }
+
         .links a {
+            display: inline-block;
             font-size: 2.5rem;
             color: var(--white);
             text-decoration: none;
@@ -355,10 +364,12 @@
                 </div>
                 <div class="blurb">
                     <p>Hello! I'm a designer and developer from Manchester, UK. Below are a selection of my projects, get in touch if you'd like to know more.</p>
-                    <a href="mailto:hello@bradleysans.uk" class="action">E-mail me →</a>
-                    <a href="https://instagram.com/bradleysans" class="action">Instagram →</a>
-                    <a href="https://linkedin.com/in/bradleysans" class="action">Linkedin →</a>
-                    <a href="/portfolio.pdf" class="action">Portfolio (pdf) →</a>
+                    <div class="line-links"><a href="mailto:hello@bradleysans.uk" class="action">E-mail me →</a>
+                        <a href="https://instagram.com/bradleysans" class="action">Instagram →</a>
+                        <a href="https://linkedin.com/in/bradleysans" class="action">Linkedin →</a>
+                        <a href="/portfolio.pdf" class="action">Portfolio (pdf) →</a>
+                        <a href="/cv.pdf" class="action">CV (pdf) →</a>
+                    </div>
 
                 </div>
             </div>
