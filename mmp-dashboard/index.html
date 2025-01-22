@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        :root {
+            --mmp-green: rgb(53, 118, 85);
+            --mmp-lightGrey: #ddd;
+        }
+        
+
+.raleway-text {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+        body {
+            margin:10px;
+            background-color:var(--mmp-lightGrey);
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+            font-family: "Raleway";
+        }
+        section, header {
+            border-radius: 10px;
+            padding:10px;
+        }
+        header {
+            background-color: var(--mmp-green);
+            color:white;
+        }
+        section {
+            outline:1px solid #ccc;
+        }
+        section h2 {
+            font-size: 1rem;
+        }
+        .jumbo {
+            font-size:5rem;
+            margin-block:0;
+            font-weight:900;
+            font-variant-numeric: tabular-nums lining-nums;
+        }
+        
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><h1>Dashboard</h1></header>
+    <section id="clock"><h2>Clock</h2><p class="jumbo" id="currentTime"></p>
+    <p id="countdownTo"></p></section>
+</body>
+<script>
+    var clockContainer = document.getElementById('currentTime');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  clockContainer.textContent = 
+    ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+}
+
+setInterval(time, 1000);
+</script>
+<script>
+    var countdownContainer = document.getElementById('countdownTo');
+ function countdownToFivePM() {
+  var now = new Date();
+  var target = new Date(now);
+  target.setHours(17, 0, 0, 0); // Set target to 5 PM today
+
+  // If it's already past 5 PM today, set the target to 5 PM tomorrow
+  if (now > target) {
+    target.setDate(target.getDate() + 1);
+  }
+
+  var countdownInterval = setInterval(() => {
+    var now = new Date();
+    var timeRemaining = target - now; // Time in milliseconds
+
+    if (timeRemaining <= 0) {
+      clearInterval(countdownInterval); // Stop when we reach 5 PM
+      console.log("It's 5 PM!");
+    } else {
+      var secondsRemaining = Math.floor(timeRemaining / 1000); // Convert to seconds
+      var minutesRemaining = Math.floor(secondsRemaining / 60);
+      var hoursRemaining = Math.floor(minutesRemaining / 24);
+      if (hoursRemaining >= 24) {
+hoursRemaining = hoursRemaining - 24;
+      }
+      var minutesRemainder = minutesRemaining - (hoursRemaining * 24);
+      var secondsRemainder = secondsRemaining - (minutesRemaining * 60);
+      countdownContainer.textContent = minutesRemaining + " minutes and " + secondsRemainder + " seconds til 5pm";
+    }
+  }, 1000); // Update every second
+}
+
+countdownToFivePM();
+</script>
+</html>
