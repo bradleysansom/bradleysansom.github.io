@@ -112,8 +112,7 @@
     var map = L.map('map').setView([53.4809, - 2.2779], 11);
     var tram = L.tileLayer('https://api.mapbox.com/styles/v1/bradleysans/cma88qdvr00h301s4fwq90wxl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYnJhZGxleXNhbnMiLCJhIjoiY2tmZ3pudHh1MDdwdDJzcDhtNXdubmhqcyJ9.kOSeuC8KlIZolPvk9kfEWg', {
         minZoom: 0,
-        maxZoom: 20,
-        ext: 'png'
+        maxZoom: 20
     }).addTo(map);
 
 
@@ -335,6 +334,8 @@ var overlayMaps = {
    
 
     var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+    L.control.browserPrint({position: 'topleft', title: 'Print ...'}).addTo(map);
 
 
 
