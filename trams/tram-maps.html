@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>known/unknowns</title>
+</head>
+<style>
+    section {
+        min-height: 100vh;
+        margin-block: 20vh;
+    }
+
+    #circles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stop {
+        background: orange;
+        border-radius: 100%;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    body {
+        border: 0;
+        padding: 20px;
+        margin: 0;
+        font-family: "calmetta", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    #map,
+    #blankMap {
+        height: 800px;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        gap: 10px;
+    }
+
+    #poster {
+        background: #ddd;
+        padding: 40px;
+    }
+
+    .poster {
+        aspect-ratio: 1/1.414;
+        max-height: 90vh;
+        background: white;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        align-items: baseline;
+    }
+
+    .different {
+        color: grey;
+        border: 3px solid grey;
+        padding: 10px;
+    }
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet-omnivore/0.3.4/leaflet-omnivore.min.js'></script>
+
+<script src="leaflet.browser.print.min.js"></script>
+
+<link rel="stylesheet" href="https://use.typekit.net/lrp0btv.css">
+
+<body>
+    
+    <section id="blobsmap">
+        <div id="map">
+
+        </div>
+    </section>
+ 
+
+
+</body>
+<script>
+    var map = L.map('map').setView([53.4809, - 2.2779], 11);
+    var tram = L.tileLayer('https://api.mapbox.com/styles/v1/bradleysans/cma88qdvr00h301s4fwq90wxl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYnJhZGxleXNhbnMiLCJhIjoiY2tmZ3pudHh1MDdwdDJzcDhtNXdubmhqcyJ9.kOSeuC8KlIZolPvk9kfEWg', {
+        minZoom: 0,
+        maxZoom: 20,
+        ext: 'png'
+    }).addTo(map);
+    omnivore.kml('hinterlands.kml').addTo(map);
+   
+    var baseMaps = {
+    "OpenStreetMap": tram
+};
+
+var overlayMaps = {
+   
+};
+    var layerGroup = L.layerGroup().addTo(map);
+
+    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+   
+
+
+
+
+
+
+
+</script>
+
+
+</html>
