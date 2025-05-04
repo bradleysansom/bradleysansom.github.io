@@ -119,8 +119,7 @@
     var myStyle = {
     color: "#ffffff",
     weight: 0,
-    opacity: 0.8
-};
+    opacity: 1};
 
 
 
@@ -128,7 +127,13 @@
 
 var customLayer = L.geoJson(null, {style: myStyle});
         
-    var hinterland_Abraham_Moss = omnivore.geojson('hinterland_Abraham Moss.geojson', null, customLayer).addTo(map);
+    var hinterland_Abraham_Moss = omnivore.geojson('hinterland_Abraham Moss.geojson', {
+    style: {
+        fillColor: '#ffffff',
+        weight: 0,
+        opacity: 1
+    }
+}).addTo(map);
     var hinterland_Altrincham = omnivore.geojson('hinterland_Altrincham.geojson', null, customLayer).addTo(map);
     var hinterland_Anchorage = omnivore.geojson('hinterland_Anchorage.geojson', null, customLayer).addTo(map);
     var hinterland_Ashton_Moss = omnivore.geojson('hinterland_Ashton Moss.geojson', null, customLayer).addTo(map);
