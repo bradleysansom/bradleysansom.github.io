@@ -215,6 +215,7 @@
     var hinterland_Withington = omnivore.geojson('hinterland_Withington.geojson').addTo(map);
     var hinterland_Wythenshawe_Park = omnivore.geojson('hinterland_Wythenshawe Park.geojson').addTo(map);
     var hinterland_Wythenshawe_Town_Centre = omnivore.geojson('hinterland_Wythenshawe Town Centre.geojson').addTo(map);
+    
     var baseMaps = {
     "OpenStreetMap": tram
 };
@@ -322,7 +323,14 @@ var overlayMaps = {
    "Wythenshawe Park": hinterland_Wythenshawe_Park,
    "Wythenshawe Town Centre": hinterland_Wythenshawe_Town_Centre
 };
+
+var myStyle = {
+    "color": "#ffffff",
+    "weight": 0,
+    "opacity": 0.8
+};
     var layerGroup = L.layerGroup().addTo(map);
+    layerGroup.options.style = myStyle;
 
     var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
