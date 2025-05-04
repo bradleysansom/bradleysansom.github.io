@@ -116,14 +116,14 @@
         maxZoom: 20,
         ext: 'png'
     }).addTo(map);
-    omnivore.kml('hinterlands.kml').addTo(map);
+    var hinterlands = omnivore.kml('hinterlands.kml').addTo(map);
    
     var baseMaps = {
     "OpenStreetMap": tram
 };
 
 var overlayMaps = {
-   
+   "Hinterlands": hinterlands
 };
     var layerGroup = L.layerGroup().addTo(map);
 
