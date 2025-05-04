@@ -116,18 +116,23 @@
         maxZoom: 20,
         ext: 'png'
     }).addTo(map);
-    var hinterlands = omnivore.geojson('hinterlands.geojson').addTo(map);
-   
+    var hinterlandsDG = omnivore.geojson('hinterlands-dg.geojson').addTo(map);
+    var hinterlandsRest = omnivore.geojson('hinterlands-rest.geojson').addTo(map);
     var baseMaps = {
     "OpenStreetMap": tram
 };
 
 var overlayMaps = {
-   "Hinterlands": hinterlands
+   "Deansgate": hinterlandsDG,
+   "The rest": hinterlandsRest
 };
     var layerGroup = L.layerGroup().addTo(map);
 
     var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+
+    
 
    
 
