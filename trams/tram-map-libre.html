@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tram map libre</title>
+</head>
+<style>
+    section {
+        min-height: 100vh;
+        margin-block: 20vh;
+    }
+
+    #circles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stop {
+        background: orange;
+        border-radius: 100%;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    body {
+        border: 0;
+        margin: 0;
+        font-family: "calmetta", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    #map,
+    #blankMap {
+        height: 100vh;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        gap: 10px;
+    }
+
+    #poster {
+        background: #ddd;
+        padding: 40px;
+    }
+
+    .poster {
+        aspect-ratio: 1/1.414;
+        max-height: 90vh;
+        background: white;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        align-items: baseline;
+    }
+
+    .different {
+        color: grey;
+        border: 3px solid grey;
+        padding: 10px;
+    }
+</style>
+<script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
+<link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
+
+
+<link rel="stylesheet" href="https://use.typekit.net/lrp0btv.css">
+
+<body>
+    
+    
+        <div id="map">
+
+        </div>
+    
+<script>
+    var map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://bradleysans.uk/trams/metrolink.json', // stylesheet location
+      center: [-2.243, 53.47], // starting position [lng, lat]
+      zoom: 9 // starting zoom
+    });
+    </script>
+ 
+
+
+</body>
+
+
+</html>
